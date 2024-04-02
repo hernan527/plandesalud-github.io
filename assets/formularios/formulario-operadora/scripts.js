@@ -2,7 +2,7 @@
 
 	jQuery(document).ready(function(){
 
-		jQuery("#form").validate({
+		jQuery("#contact-form").validate({
 
 			rules:{
 				idTipo:{required: true},
@@ -25,7 +25,7 @@
 			},
 
 			submitHandler: function(form){
-				var form = jQuery('#form');
+				var form = jQuery('#contact-form');
 				var formErro = 0;
 				jQuery(form).find('.required').each(function(index, obj){
 					if(jQuery(obj).val()==''){
@@ -35,8 +35,8 @@
 				});
 
 				if(formErro ==0){
-					jQuery("#form input[type='submit']").attr('disabled', true);
-					jQuery('#form .loader').fadeIn();
+					jQuery("#contact-form input[type='submit']").attr('disabled', true);
+					jQuery('#contact-form .loader').fadeIn();
 					var dados = form.serialize();
 					jQuery.ajax({
 						url : 'formularios/formulario-operadora/EnvioForm.php',
@@ -47,20 +47,20 @@
 							console.log(x);
 
 							if (x.resp == 'success') {
-								jQuery("#form input[type='submit']").hide();
-								jQuery('#form .loader').hide();
-								jQuery('#form').append('<span class="sucesso">ENVIO EXITOSO!</span>');
+								jQuery("#contact-form input[type='submit']").hide();
+								jQuery('#contact-form .loader').hide();
+								jQuery('#contact-form' ).append('<span class="sucesso">ENVIO EXITOSO!</span>');
 								salvaCookies();
 								setTimeout(function(){ window.location.href = 'https://www.plandesalud.ar/index,com/'; }, 3000);
 							}else{
-								jQuery('#form').append('<span class="falha-envio">' + x.resp + '</span>');
-								jQuery("#form input[type='submit']").hide();
-								jQuery('#form .loader').hide();
+								jQuery('#contact-form' ).append('<span class="falha-envio">' + x.resp + '</span>');
+								jQuery("#contact-form input[type='submit']").hide();
+								jQuery('#contact-form .loader').hide();
 
 								setTimeout(function(){
-									jQuery('#form .falha-envio').hide();
-									jQuery("#form input[type='submit']").fadeIn();
-									jQuery("#form input[type='submit']").attr('disabled', false);
+									jQuery('#contact-form .falha-envio').hide();
+									jQuery("#contact-form input[type='submit']").fadeIn();
+									jQuery("#contact-form input[type='submit']").attr('disabled', false);
 								}, 3000);
 							}
 						}

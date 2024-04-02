@@ -15,24 +15,24 @@ require '../PHPMailer/Exception.php';
 require '../PHPMailer/PHPMailer.php';
 require '../PHPMailer/SMTP.php';
 
-$Pagina_y_Formulario = $_POST['formulario-pagina'];
-$Prepaga_Elegida = $_POST['Operadora'];
-$Grupo_Familiar = $_POST['idCapitas'];
-$Edad_Titular = $_POST['edad_1'];
-$Edad_Pareja = $_POST['edad_2'];
-$Edades_Hijos = $_POST['hijos_num'];
-$Tipo_Asociado = $_POST['poseeOS'];
-$Sueldo = $_POST['sueldo'];
-$Nombre = $_POST['Name'];
-$Telefono = $_POST['Telefone'];
-$email = $_POST['email'];  
+$Pagina_y_Formulario = $_POST['formulario-pagina'] ?? '';
+$Prepaga_Elegida = $_POST['Operadora'] ?? '';
+$Grupo_Familiar = $_POST['idCapitas'] ?? '';
+$Edad_Titular = $_POST['edad_1'] ?? '';
+$Edad_Pareja = $_POST['edad_2'] ?? '';
+$Edades_Hijos = $_POST['hijos_num'] ?? '';
+$Tipo_Asociado = $_POST['poseeOS'] ?? '';
+$Sueldo = $_POST['sueldo'] ?? '';
+$Nombre = $_POST['Name'] ?? '';
+$Telefono = $_POST['Telefone'] ?? '';
+$email = $_POST['email'] ?? '';  
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    // No se ha enviado el formulario, devuelve una respuesta de error
-    $response = array('status' => false, 'message' => 'No se ha enviado el formulario');
-    echo json_encode($response);
-    exit;
-}
+// if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+//     // No se ha enviado el formulario, devuelve una respuesta de error
+//     $response = array('status' => false, 'message' => 'No se ha enviado el formulario');
+//     echo json_encode($response);
+//     exit;
+// }
 
 // if (empty($_POST['email'])) {
 //     // Falta uno o más campos requeridos, devuelve una respuesta de error
@@ -55,17 +55,18 @@ try {
         // https://docs.google.com/forms/d/e/1FAIpQLSf4MN3ugd5iBpbCEPDTsZmoEu-3TkGCl1jbzRzLXYUjmh-d_Q/viewform?usp=sf_link
         $url = 'https://docs.google.com/forms/d/e/1FAIpQLSf4MN3ugd5iBpbCEPDTsZmoEu-3TkGCl1jbzRzLXYUjmh-d_Q/formResponse';
           // Obtener datos del formulario
-          $Pagina_y_Formulario = $_POST['formulario-pagina'];
-          $Prepaga_Elegida = $_POST['Operadora'];
-          $Grupo_Familiar = $_POST['idCapitas'];
-          $Edad_Titular = $_POST['edad_1'];
-          $Edad_Pareja = $_POST['edad_2'];
-          $Edades_Hijos = $_POST['hijos_num'];
-          $Tipo_Asociado = $_POST['poseeOS'];
-          $Sueldo = $_POST['sueldo'];
-          $Nombre = $_POST['Name'];
-          $Telefono = $_POST['Telefone'];
-          $email = $_POST['email'];  
+          $Pagina_y_Formulario = $_POST['formulario-pagina'] ?? '';
+$Prepaga_Elegida = $_POST['Operadora'] ?? '';
+$Grupo_Familiar = $_POST['idCapitas'] ?? '';
+$Edad_Titular = $_POST['edad_1'] ?? '';
+$Edad_Pareja = $_POST['edad_2'] ?? '';
+$Edades_Hijos = $_POST['hijos_num'] ?? '';
+$Tipo_Asociado = $_POST['poseeOS'] ?? '';
+$Sueldo = $_POST['sueldo'] ?? '';
+$Nombre = $_POST['Name'] ?? '';
+$Telefono = $_POST['Telefone'] ?? '';
+$email = $_POST['email'] ?? ''; 
+        
        
       
           
@@ -104,7 +105,7 @@ try {
             echo 'Error';
         }
     }
-    googleForm();
+    // googleForm();
     // Configuración del servidor SMTP
     $mail->SMTPDebug = 2;
     $mail->isSMTP();
@@ -136,7 +137,7 @@ try {
     $message .= "<tr><td><strong>Grupo Familiar</strong></td><td>" . strip_tags($Grupo_Familiar) . "</td></tr>";
     $message .= "<tr><td><strong>Edad Titular</strong></td><td>" . strip_tags($Edad_Titular) . "</td></tr>";
     $message .= "<tr><td><strong>Edad Pareja</strong></td><td>" . strip_tags($Edad_Pareja) . "</td></tr>";
-$message .= "<tr><td><strong>Edad/es hijo/s</strong></td><td>" . strip_tags($Edades_Hijos) . "</td></tr>";
+    $message .= "<tr><td><strong>Edad/es hijo/s</strong></td><td>" . strip_tags($Edades_Hijos) . "</td></tr>";
     $message .= "<tr><td><strong>|Teléfono|</strong></td><td>" . strip_tags($Telefono) . "</td></tr>";
     $message .= "<tr><td><strong>|Email|</strong></td><td>" . strip_tags($email) . "</td></tr>";
     $message .= "<tr><td><strong>Tipo asociado</strong></td><td>" . strip_tags($Tipo_Asociado) . "</td></tr>";

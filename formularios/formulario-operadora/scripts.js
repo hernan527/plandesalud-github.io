@@ -6,32 +6,32 @@
 
 			rules:{
 
-				// name:{required: true},
-				// email:{required: true},
-				// alias:{required: true},
+				name:{required: true},
+				email:{required: true},
+				alias:{required: true},
 		
-				// idTipo:{required: true},
-				// possuiCNPJ:{required: true},
-				// possuiPlano:{required: true},
-				// nome:{required: true},
-				// email:{required: true,email: true},
-				// Prefijo:{required: true,rangelength: [2,3]},
-				// telefone:{required: true,minlength: 9}
+				idTipo:{required: true},
+				possuiCNPJ:{required: true},
+				possuiPlano:{required: true},
+				nome:{required: true},
+				email:{required: true,email: true},
+				Prefijo:{required: true,rangelength: [2,3]},
+				telefone:{required: true,minlength: 9}
 			},
 
 			messages:{
-				// name:{required: "El campo nombre es necesario"},
-				// email:{required: "El campo email es necesario",email: "Ingrese un email válido"},
-				// alias:{required: "El campo alias es necesario"},
+				name:{required: "El campo nombre es necesario"},
+				email:{required: "El campo email es necesario",email: "Ingrese un email válido"},
+				alias:{required: "El campo alias es necesario"},
 
 
-				// idTipo:{required: "Seleccione uma opción"},
-				// possuiCNPJ:{required: "Seleccione uma opción"},
-				// possuiPlano:{required: "Seleccione uma opción"},
-				// nome:{required: "El campo nombre es necesario"},
-				// email:{required: "El campo email es necesario",email: "Ingrese un email válido"},
-				// Prefijo:{required: "El campo característica es necesario"},
-				// telefone:{required: "El campo teléfono es necesario"}
+				idTipo:{required: "Seleccione uma opción"},
+				possuiCNPJ:{required: "Seleccione uma opción"},
+				possuiPlano:{required: "Seleccione uma opción"},
+				nome:{required: "El campo nombre es necesario"},
+				email:{required: "El campo email es necesario",email: "Ingrese un email válido"},
+				Prefijo:{required: "El campo característica es necesario"},
+				telefone:{required: "El campo teléfono es necesario"}
 			},
             
           

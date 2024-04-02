@@ -19,16 +19,16 @@ $port = 587;
 $username = "hernan_pesce@hotmail.com";
 
 //La contraseña de autentificación
-$password = 'elprofe1';
+$password = 'Dilema2570$';
 
 //El usuario de autentificación
-// $username = "formulario@plandesalud.ar";
+// $username = "formulario@queplan.ar";
 
 //La contraseña de autentificación
 // $password = 'claveformulario8083';
 
 //El email que recibe los mensajes
-$email_receive = "formulario@plandesalud.ar";
+$email_receive = "hernan527@gmail.com";
 
 //Nombre quien persona o empresa que reecibe
 $name_receive = "solicitudes de presupuesto";

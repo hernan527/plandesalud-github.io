@@ -1,16 +1,4 @@
 
-<?php
-// Verificar si la cookie 'visitado' ya está establecida
-if (!isset($_COOKIE['visitado'])) {
-    // Si la cookie no está establecida, significa que el usuario no ha visitado la página antes
-  // Luego, establecer la cookie 'visitado'
-  setcookie('visitado', 'si', time() + 86400); // La cookie expirará en 1 día (86400 segundos)
-
-    // Aquí puedes realizar cualquier tarea adicional que desees antes de establecer la cookie
-    echo '<script src="contador-de-visitas.js"></script>';
-
-}
-?>
 
 <!doctype html>
 
@@ -40,16 +28,18 @@ if (!isset($_COOKIE['visitado'])) {
 <link rel="pingback" href="../xmlrpc.php" />
 <script async src="../assets/js/jquery-2.2.4.min.js"></script>
 
+<link rel="stylesheet" href="../assets/imagenes/stylea870.css?versao=5.0" />
 
 <script defer src="../assets/js/prefixfree.min.js"></script>
 <script defer src="../assets/js/modernizr-2.8.0.dev.js"></script>
+<script src="../contador-de-visitas.js"></script>
 
 <!-- IMPORTES DO WP_HEAD -->
 <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
 	<!-- This site is optimized with the Yoast SEO plugin v20.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
 	<meta name="description" content="Cotizar Ahora - Ahorre hasta un 30% en un nuevo plan. Es rápido y tambien garantizamos el mejor precio! Le acercamos las principales opciones de planes de salud de Argentina." />
-	<link rel="canonical" href="/" />
+	<link rel="canonical" href="index.html" />
 	<meta property="og:locale" content="pt_BR" />
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="Cotizar Ahora - Cotamos seuPlan de Salud emmais de 50 operadoras" />
@@ -69,45 +59,14 @@ if (!isset($_COOKIE['visitado'])) {
 <link rel="alternate" type="application/rss+xml" title="Feed paraPlan de Salud &raquo;" href="../feed/index.html" />
 <link rel="alternate" type="application/rss+xml" title="Feed de comentários paraPlan de Salud &raquo;" href="../comments/feed/index.html" />
 <link rel="stylesheet"  href="../assets/css/style-whats.css" type="text/css">
-<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet"  href="../assets/css/theme.css" type="text/css">
 
 
 <style>
 	.smooth-scroll {
-  transition: scroll-behavior 2s ease-in-out;
+  transition: scroll-behavior 1s ease-in-out;
 }
 </style>
-<style>
-/* Cambiar el color del borde del campo y el color del texto cuando está en estado inválido */
-.form-control:invalid {
-  border-color: rgba(255, 0, 0, 0.65); /* Color rojo para el borde */
-  color: rgba(255, 0, 0, 0.65); /* Color rojo para el texto */
-}
 
-/* Cambiar el color del fondo del campo cuando está en estado inválido */
-.form-control:invalid:focus {
-  background-color: rgba(255, 0, 0, 0.1); /* Color rojo tenue para el fondo */
-}
-
-/* Cambiar el color del placeholder del campo cuando está en estado inválido */
-.form-control:invalid::-webkit-input-placeholder {
-  color: rgba(255, 0, 0, 0.65); /* Color rojo para el placeholder */
-}
-
-/* Otros prefijos de navegadores */
-.form-control:invalid::-moz-placeholder {
-  color: rgba(255, 0, 0, 0.65);
-}
-
-.form-control:invalid:-moz-placeholder {
-  color: rgba(255, 0, 0, 0.65);
-}
-
-.form-control:invalid:-ms-input-placeholder {
-  color: rgba(255, 0, 0, 0.65);
-}
-</style>
 <style>
 	.row [class^="col-"] {
 	  display: inline-block;
@@ -165,42 +124,24 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
   gtag('config', 'AW-11164676710');
 </script>	
-<!-- Hotjar Tracking Code for plandesalud.ar -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:3925775,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-<script>
-.campo-invalido {
-    border-color: red;
-    box-shadow: 0 0 5px red;
-}
-</script>
+
+
 </head>   
 <body class="page-template page-template-page-simulador page-template-page-simulador-php page page-id-16">
    
-<div id="mensaje-validacion" style="display: none; background-color: #ffcccc; padding: 10px;">
-    Por favor, complete todos los campos obligatorios correctamente.
-</div>
 
-<!-- Agrega una imagen oculta que cargará el script contador.php -->
+
 	<header id="header" class="com-banner">
 		<div id="corpo-topo">
 
 				<!-- LOGO -->
-                <a class="logo" href="../"><img class="logo-desktop" src="../assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo.png" alt="Plan de Salud" title="Plan de Salud"><img class="logo-mobile" src="../assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo-movil.png" alt="Plan de Salud" title="Plan de Salud"></a>
+                <a class="logo" href="../index.html"><img class="logo-desktop" src="../assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo.png" alt="Plan de Salud" title="Plan de Salud"><img class="logo-mobile" src="../assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo-movil.png" alt="Plan de Salud" title="Plan de Salud"></a>
                 <!-- MENU -->
                 <div>
                     <div class="abre-menu-mobile"></div>
                     <nav id="nav" role="navigation" class="menu-lateral-logo">
-                        <div class="menu-principal-container"><ul id="menu-principal" class="menu"><li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-84"><a href="../">Inicio</a></li>
-    <li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-81 current_page_item menu-item-74"><a href="../cotizar-ahora/#1">COTIZAR AHORA</a></li>
+                        <div class="menu-principal-container"><ul id="menu-principal" class="menu"><li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-84"><a href="../index.html">Inicio</a></li>
+    <li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-81 current_page_item menu-item-74"><a href="../cotizar-ahora/index.html">COTIZAR AHORA</a></li>
     <!-- <li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83"><a href="../planes-de-salud-precios/index.html" aria-current="page">Mejores Planes</a></li> -->
     <!-- <li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222"><a href="../blog/index.html">Blog</a></li> -->
     </ul></div>                </nav>
@@ -212,7 +153,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                     <input type="search" id="s" name="s" placeholder="Buscar" />
                     <input type="submit" value="" id="searchsubmit" />
                 </form> -->
-                <!-- <div class="abre-busca-mobile"></div> -->
+                <div class="abre-busca-mobile"></div>
     
             </div>
             <script defer src="../assets/js/functions.js"></script>
@@ -233,7 +174,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
         <div class="corpo-titulo">
             <h1 class='titulo-da-pagina'>Cotizar Ahora</h1>
-            <p id="breadcrumbs"><span><span><a href="../">Inicio</a></span> » <span class="breadcrumb_last" aria-current="page">Cotizar Ahora</span></span></p>     
+            <p id="breadcrumbs"><span><span><a href="../index.html">Inicio</a></span> » <span class="breadcrumb_last" aria-current="page">Cotizar Ahora</span></span></p>     
               </div>
 
         <div class="entry">
@@ -249,23 +190,22 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <h2 class="passo-bandeiras">1º Paso: Selecione una empresa</h2>
                             
                             <div class="bandeiras" >
-                     <img href="3" src="../assets/imagenes/logos-prepagas-190x110/todas-las-empresas.png" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('Todos')" data-classe-operadora="multimarcas">
-    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude">
-    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint">
-    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora="">
-    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao">
-    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil">
-    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.png" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medifé')" data-classe-operadora="notredame">
-    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida">
-    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed">
-    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one">
-    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint">
-    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint">
+                     <img src="../assets/imagenes/logos-prepagas-190x110/todas-las-empresas.png" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('11')" data-classe-operadora="multimarcas">
+    <img src="../assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude">
+    <img src="../assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint">
+    <img src="../assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora="">
+    <img src="../assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao">
+    <img src="../assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil">
+    <img src="../assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.png" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medifé')" data-classe-operadora="notredame">
+    <img src="../assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida">
+    <img src="../assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed">
+    <img src="../assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one">
+    <img src="../assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint">
+    <img src="../assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint">
 
  </div>
- 
  <h2 class="passo-formulario"  >2º Completá el formulario</h2>
- <form id="contact-form"  class="form-cotacao" action="../includes/contact_form.php" method="post" >
+ <form id="contact-form"  class="form-cotacao" action="../includes/contacto_form.php" method="post">
 
     <input class="campo-pagina" type="hidden" name="formulario-pagina" id="formulario-pagina" value="cotizar-ahora-formulario-completo">
 
@@ -276,7 +216,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
          <div class="recebe-img"></div>
      </div>
 
-		<div class="tipo-de-plano" id="3">
+		<div class="tipo-de-plano">
 			<p><strong>Quienes ingresan al plan?</strong></p>
 			<input type="radio" id="individual" name="idCapitas" value="Individual"><b class="btn-vos"  >Vos </b>
 			<input type="radio" id="pareja" name="idCapitas" value="Pareja"><b class="btn-pareja">Pareja</b>
@@ -338,7 +278,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 		<p><strong>Necesitamos sus datos de contacto para enviar la cotización:</strong></p>
 
-		<span><i>Nombre Completo</i><input  autocomplete="off" class="campo-nome" type="text" name="Name"  id="Name"  placeholder="Su nombre" required=""></span>
+		<span><i>Nombre Completo</i><input class="campo-nome" type="text" name="Name"  id="Name"  placeholder="Su nombre"></span>
 		<div class="telefono">
 
 			<!-- <div class="col-6 edad_1">
@@ -347,16 +287,14 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 	</div> -->
 	<div>
-			<span><i>Teléfono</i>
-            <input  autocomplete="off" class="campo-telefone" type="tel" id="Telefone" name="Telefone" placeholder="Ej:11 65924325" oninput="limitarTelefono(event)" required="">
-
+			<span><i>Teléfono</i><input class="campo-telefone" type="tel"  id="Telefone" name="Telefone" placeholder="Ej:11 65924325"></span>
     
 	</div></div>
 	
-		<span><i>E-mail</i><input  autocomplete="off" class="campo-email" type="email"  id="email" name="email" placeholder="Ej: cotizar@plandesalud.ar" required=""></span>
+		<span><i>E-mail</i><input class="campo-email" type="email"  id="email" name="email" placeholder="Ej: cotizar@plandesalud.ar"></span>
 		</div>
         <div class="alert"></div>
-        <input type="submit" id="boton-enviar" onclick="finalizar('.form-cotacao')" value="RECIBIR COTIZACIÓN">
+        <input type="submit" onclick="finalizar('.form-cotacao')" value="RECIBIR COTIZACIÓN">
 		<br><br><br>
         <div class="loader" style="display: none;"></div>
 
@@ -460,7 +398,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                                         
 
                                             <div class="col">
-                                                <a class="logo" href="../index.php"><img src="../assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo-movil.png" alt="Plan de Salud" title="Plan de Salud"></a> <p>Somos asesores comerciales de las mayores prepagas de Argentina, Cotiza con nosotros y puede economizar hasta un 30% en su Plan de Salúd con la contratación de un nuevo plan. Todo online, simple sin burocracias!</p>                </div>
+                                                <a class="logo" href="../index.html"><img src="../assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo-movil.png" alt="Plan de Salud" title="Plan de Salud"></a> <p>Somos asesores comerciales de las mayores prepagas de Argentina, Cotiza con nosotros y puede economizar hasta un 30% en su Plan de Salúd con la contratación de un nuevo plan. Todo online, simple sin burocracias!</p>                </div>
                             
                                             <div class="col">
                                                 <a class='telefone' target='_blank' href='tel:01125608600'>(11) 2560-8600&nbsp;&nbsp;<txt style="font-size:12px">( 9 hs a 19 hs )</txt><br></a> 
@@ -485,26 +423,72 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             Main.boot( [] );
                             </script>
         
-  
+   <script>
+//   $(document).ready(function() {
+//   $('.form-cotacao').submit(function(event) {
+//     console.log('Form submitted');
+//     event.preventDefault();
+//     $('#feedback').html('');
+//     var Pagina_y_Formulario = $('formulario-pagina').val();
+//     var Prepaga_Elegida = $('#Operadora').val();
+//       var Grupo_Familiar = $('input[name="idCapitas"]:checked').val();
+//       var Edad_Titular = $('#edad_1').val();
+//       var Edad_Pareja = $('#edad_2').val();
+//       var Edades_Hijos = $('#hijos_num').val();
+//       var Tipo_Asociado = $('input[name="poseeOS"]:checked').val();
+//       var Tipo_Desregulado = $('input[name="cualOS"]:checked').val();
+//       var Sueldo = $('#sueldo').val();
+//       var Categoria_Monotributo = $('#categoriaMono').val();
+//       var Familiares_que_Aportan = $('#aportantesMono').val();
+//       var Nombre = $('#Name').val();
+//       var Prefijo = $('#Prefijo').val();
+//       var Telefono = $('#Telefone').val();
+//       var email = $('#email').val();
+//     // Obtener datos del formulario
+//     var data = {
+//         'entry.1971212034':Pagina_y_Formulario,
+//        'entry.1788353276':Prepaga_Elegida,
+//        'entry.2032223983':Grupo_Familiar,
+//        'entry.1763723729':Edad_Titular,
+//        'entry.1779532345':Edad_Pareja,
+//        'entry.1112113610':Edades_Hijos,
+//        'entry.632598661':Tipo_Asociado,
+//        'entry.1404611772':Tipo_Desregulado,
+//        'entry.1404611772':Sueldo,
+//        'entry.472026566':Categoria_Monotributo,
+//        'entry.38288768':Familiares_que_Aportan,
+//        'entry.1508322728':Nombre,
+//        'entry.527309604':Prefijo,
+//        'entry.1813933214':Telefono,
+//        'entry.710988652':email
+//     };
+    
+    
+   
+//     console.log(data);
 
-    <script>
-        function cambiarValor(valor) {
-  var input = document.getElementById('Operadora');
-  input.value = valor;
-}
+//     $.ajax({
+//       url: 'https://docs.google.com/forms/d/e/1FAIpQLSfd5MmQlkg_HQzLoquOiakVNxyRIP4XAs7l4zjEUMcOVtDEFw/formResponse',
+//       type: 'POST',
+//       data: data,
+//       dataType: 'xml',
+//       success: function(response) {
+//         // La solicitud se realizó correctamente, los datos se han enviado al formulario de Google Forms
+//         console.log('Enter on success');
+//         $('#feedback').html('<label class="text-success">Message sent!</label>');
+//       },
+//       error: function(error) {
+//         // Ocurrió un error al realizar la solicitud
+//         console.log('Enter on error');
+//         console.log(error); // Muestra el objeto de error en la consola
+//       }
+//     });
+//   });
+// });
 
-    </script>
-  
-<style>.wp-container-1 {display: flex;gap: 0.5em;flex-wrap: wrap;align-items: center;}.wp-container-1 > * { margin: 0; }</style>
-<style>.wp-container-2 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-2 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-2 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
-<style>.wp-container-3 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-3 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-3 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
-<style>.wp-container-4 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-4 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-4 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
-<style>.wp-container-5 {display: flex;gap: 0.5em;flex-wrap: wrap;align-items: center;}.wp-container-5 > * { margin: 0; }</style>
-<style>.wp-container-6 > .alignleft { float: left; margin-inline-start: 0; margin-inline-end: 2em; }.wp-container-6 > .alignright { float: right; margin-inline-start: 2em; margin-inline-end: 0; }.wp-container-6 > .aligncenter { margin-left: auto !important; margin-right: auto !important; }</style>
-<script type='text/javascript' src='assets/plugins/simple-share-buttons-adder/js/ssba1037.js?ver=1677985089' id='simple-share-buttons-adder-ssba-js'></script>
-<script type='text/javascript' id='simple-share-buttons-adder-ssba-js-after'>
-Main.boot( [] );
-</script>
+
+   </script>    
+
 <script>
     $(document).ready(function() {
       $.ajax({
@@ -531,41 +515,16 @@ Main.boot( [] );
       });
     });
     </script>
-<script>
-    var searchParams = new URLSearchParams(window.location.search)
-    if (searchParams.has('t') && (!getCookie('t') || searchParams.has('false'))) {
-        setCookie('t', searchParams.get('t'), 3);
-    }
-    if (searchParams.has('o') && (!getCookie('o') || searchParams.has('false'))) {
-        setCookie('o', searchParams.get('o'), 3);
-    }
-    if (!getCookie('urlPouso')) {
-        setCookie('urlPouso', window.location.href, 3);
-    }
-    function getCookie(name) {
-        var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
-        return v ? v[2] : null;
-    }
-    function setCookie(name, value, days) {
-        var d = new Date;
-        d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
-        document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
-    }
+    <script>
+        function cambiarValor(valor) {
+  var input = document.getElementById('Operadora');
+  input.value = valor;
+}
+
+    </script>
+<script type='text/javascript'>
+	document.oncontextmenu = function(){return false}
 </script>
-
-
-
-    <div class="margin-rodape"></div>
-    <span><div class="barra-rodape-mobile "></span>
-        <span class="simulador"><a href="cotizar-ahora/#1">COTIZADOR</a></span>
-        <span class="tel-fixo"><a href="tel:01130708070">LLAMAR</a></span>
-        <span class="whatsapp"><a href="https://api.whatsapp.com/send?phone=5491130708070&amp;text=Hola,%20estoy%20en%20el%20site%20Plan%20de%20Salúd%20(https://www.plandesalud.ar/)%20e%20quisiera%20me%20que%20me%20brinde%20más%20información.">HABLENOS POR WHATSAPP</a>
-        </div>
-        <script type='text/javascript'>
-            document.oncontextmenu = function(){return false}
-        </script>   
-
-
 
 </body>
                             

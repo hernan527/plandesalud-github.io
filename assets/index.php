@@ -1,3 +1,16 @@
+<?php
+// Verificar si la cookie 'visitado' ya está establecida
+if (!isset($_COOKIE['visitado'])) {
+    // Si la cookie no está establecida, significa que el usuario no ha visitado la página antes
+  // Luego, establecer la cookie 'visitado'
+  setcookie('visitado', 'si', time() + 86400); // La cookie expirará en 1 día (86400 segundos)
+
+    // Aquí puedes realizar cualquier tarea adicional que desees antes de establecer la cookie
+    echo '<script src="contador-de-visitas.js"></script>';
+
+}
+?>
+
 
 
 <!doctype html>
@@ -23,13 +36,14 @@
 
 <script defer src="assets/js/prefixfree.min.js"></script>
 <script defer src="assets/js/modernizr-2.8.0.dev.js"></script>
+<script src="contador-de-visitas.js"></script>
 
 <!-- IMPORTES DO WP_HEAD -->
 <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
 	<!-- This site is optimized with the Yoast SEO plugin v20.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
 	<meta name="description" content="Cotizar Ahora - Ahorre hasta un 30% en un nuevo plan. Es rápido y tambien garantizamos el mejor precio! Le acercamos las principales opciones de planes de salud de Argentina." />
-	<link rel="canonical" href="index.html" />
+	<link rel="canonical" href="." />
 	<meta property="og:locale" content="pt_BR" />
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="Cotizar Ahora - Cotizamos su plan de salud en las empresas más destacadasas" />
@@ -113,7 +127,17 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 	
 
     <!-- <script src="//code.tidio.co/ebbxct9l747twvw3j5nxl3q7ej5buc3e.js" async></script> -->
-
+<!-- Hotjar Tracking Code for plandesalud.ar -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3925775,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
 
 </head>
 <body class="home page-template page-template-page-sem-corpo page-template-page-sem-corpo-php page page-id-8">
@@ -124,13 +148,13 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 		<div id="corpo-topo">
 
 				<!-- LOGO -->
-                <a class="logo" href="index.html"><img class="logo-desktop" src="assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo.png" alt="Plan de Salud" title="Plan de Salud"><img class="logo-mobile" src="assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo-movil.png" alt="Plan de Salud" title="Plan de Salud"></a>
+                <a class="logo" href="."><img class="logo-desktop" src="assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo.png" alt="Plan de Salud" title="Plan de Salud"><img class="logo-mobile" src="assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo-movil.png" alt="Plan de Salud" title="Plan de Salud"></a>
                 <!-- MENU -->
                 <div>
                     <div class="abre-menu-mobile"></div>
                     <nav id="nav" role="navigation" class="menu-lateral-logo">
-                        <div class="menu-principal-container"><ul id="menu-principal" class="menu"><li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-81 current_page_itemmenu-item-84"><a href="index.html">Inicio</a></li>
-    <li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74"><a href="cotizar-ahora/index.html">COTIZAR AHORA</a></li>
+                        <div class="menu-principal-container"><ul id="menu-principal" class="menu"><li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-81 current_page_itemmenu-item-84"><a href=".">Inicio</a></li>
+    <li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74"><a href="cotizar-ahora/#1">COTIZAR AHORA</a></li>
     <!-- <li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83"><a href="planes-de-salud-precios/index.html" aria-current="page">Mejores Planes</a></li> -->
     <!-- <li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222"><a href="../blog/index.html">Blog</a></li> -->
     </ul></div>                </nav>
@@ -147,7 +171,6 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             </div>
             <script defer src="assets/js/functions.js"></script>
 	</header>
-
     <div class='banner-desktop' style='background-image: url(assets/imagenes/banners/banner.png)'><div class='corpo-banner'><p><strong> Planes de Salud</strong><br />
 Compará los Mejores para Vos y tu familia</p>
 <a href='cotizar-ahora/#1'>COTIZAR AHORA</a></div></div><div class='banner-mobile' style='background-image: url()'><div class='corpo-banner'><p><strong>Plan de Salud</strong><br />
@@ -157,14 +180,14 @@ Compará los Mejores para Vos y tu familia</p>
 
 
     <article class="post" id="post-8">
-
+  
         
         <div class="entry">
 
             
             
 <div class="wp-container-2 wp-block-group chamada-pos-banner"><div class="wp-block-group__inner-container">
-<h2>AHORRÁ HASTA 30% EN UN NUEVO PLAN</h2>
+<h2>AHORRÁ HASTA 50% EN UN NUEVO PLAN</h2>
 
 
 <p><strong>Todas estas Coberturas</strong> en un solo lugar! <strong>PLANES DE SALUD</strong> CON OPTIMO <strong>COSTO BENEFICIO</strong>.<br>Nuestro sitio propone tanto opciones de <strong>Medicina Prepaga </strong>como planes <strong>Sólo por aportes</strong> a obra social.<br><strong>Mejorá</strong> tu cobertura y <strong> Beneficiate!</strong></p>
@@ -172,7 +195,7 @@ Compará los Mejores para Vos y tu familia</p>
 
 
 <div class="wp-container-1 wp-block-buttons">
-<div class="wp-block-button"><a class="wp-block-button__link" href="cotizar-ahora/index.html">COTIZAR AHORA</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link" href="cotizar-ahora/#1">COTIZAR AHORA</a></div>
 </div>
 </div></div>
 
@@ -184,13 +207,27 @@ Compará los Mejores para Vos y tu familia</p>
 
 
 <div class="logos">
-<a href="plan-de-salud-hominis/index.html"><img src="assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" alt="Hominis" title="HominisAmil"></a>
-<a href="plan-de-salud-galeno/index.html"><img src="assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galenos"></a>
-<a href="plan-de-salud-omint/index.html"><img src="assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint"></a>
-<a href="plan-de-salud-sancorsalud/index.html"><img src="assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor Salud" title="SanCor Salud"></a>
-<a href="plan-de-salud-swiss-medical/index.html"><img src="assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical"></a>
-<a href="plan-de-salud-salud-central/index.html"><img src="assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" alt="Salud Central" title="Salud Central"></a>
-<a href="plan-de-salud-premedic/index.html"><img src="assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic"></a>
+<!-- <a href="plan-de-salud-hominis/index.html"> -->
+    <img src="assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" alt="Hominis" title="HominisAmil">
+<!-- </a> -->
+<!-- <a href="plan-de-salud-galeno/index.html"> -->
+    <img src="assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galenos">
+<!-- </a> -->
+<!-- <a href="plan-de-salud-omint/index.html"> -->
+    <img src="assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint">
+<!-- </a> -->
+<!-- <a href="plan-de-salud-sancorsalud/index.html"> -->
+    <img src="assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor Salud" title="SanCor Salud">
+<!-- </a> -->
+<!-- <a href="plan-de-salud-swiss-medical/index.html"> -->
+    <img src="assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical">
+<!-- </a> -->
+<!-- <a href="plan-de-salud-salud-central/index.html"> -->
+    <img src="assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" alt="Salud Central" title="Salud Central">
+<!-- </a> -->
+<!-- <a href="plan-de-salud-premedic/index.html"> -->
+    <img src="assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic">
+<!-- </a> -->
 <a href="plan-de-salud-doctored/index.html"><img src="assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" alt="Doctored" title="Doctored"></a>
 <a href="plan-de-salud-avalian/index.html"><img src="assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Avalian" title="Avalian"></a>
 <a href="plan-de-salud-prevencion-salud/index.html"><img src="assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" alt="Prevencion Salud" title="Prevencion Salud"></a>
@@ -313,22 +350,6 @@ Compará los Mejores para Vos y tu familia</p>
                    <img src="assets/prestadores/sanatorio-san-lucas.webp"  alt="Sanatorio San Lucas" title="Sanatorio San Lucas"  > 
        
    </marquee>
-<!-- 
-<div class="wp-container-4 wp-block-group fotos"><div class="wp-block-group__inner-container">
-<div class="fotos-hospitais">
-<div class="coluna-1">
-<div class="foto-1"><img src="assets/default-images/hospital-9-de-julho.jpg" alt="Hospital Nove de Julho"></div>
-</div>
-<div class="coluna-2">
-<div class="foto-2"><img src="assets/default-images/laboratorio-lavoisier.jpg" alt="Laboratório Lavoisier"></div>
-<div class="sub">
-<div class="foto-3"><img src="assets/default-images/hospital-oswaldo-cruz.jpg" alt="Hospital Oswaldo Cruz"></div>
-<div class="foto-4"><img src="assets/default-images/hospital-sao-luiz.jpg" alt="Hospital São Luiz"></div>
-</div>
-</div>
-</div>
-<div class="fotos-hospitais-mobile"><div class="coluna-1"><div class="foto-1"></div><div class="foto-2"></div></div><div class="coluna-2"><div class="foto-3"></div><div class="foto-4"></div></div></div>
-</div></div> -->
 
 <div class="wp-container-5 wp-block-buttons">
 <div class="wp-block-button"><a class="wp-block-button__link" href="cotizar-ahora/#1">PEDIR COTIZACIÓN</a>
@@ -352,7 +373,7 @@ Compará los Mejores para Vos y tu familia</p>
             <div>
 
                 <div class="col">
-                    <a class="logo" href="index.html"><img src="assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo-movil.png" alt="Plan de Salud" title="Plan de Salud"></a>                    <p>Somos asesores comerciales de las mayores prepagas de Argentina, Cotiza con nosotros y puede economizar hasta un 30% en su Plan de Salúd con la contratación de un nuevo plan. Todo online, simple sin burocracias!</p>
+                    <a class="logo" href="."><img src="assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo-movil.png" alt="Plan de Salud" title="Plan de Salud"></a>                    <p>Somos asesores comerciales de las mayores prepagas de Argentina, Cotiza con nosotros y puede economizar hasta un 30% en su Plan de Salúd con la contratación de un nuevo plan. Todo online, simple sin burocracias!</p>
                 </div>
 
                 <div class="col">
@@ -363,25 +384,14 @@ Compará los Mejores para Vos y tu familia</p>
             </div>
         </div>
 
-        <!--<div class="banner-rodape" >
-            <div class="corpo-banner">
-                <div class="coluna">
-                                    </div>
-                <div class="coluna">
-                    <strong>Central de Atendimento:</strong>
-                    <p>Confira os valores de Planos de Saúde <br>por telefone ou via WhatsApp</p>
-                    <div class="telefones">
-                                                                    </div>
-                </div>
-            </div>
-        </div>-->
+     
 
 <footer id="footer">
     <div id="corpo-rodape">
                             </div>
 
     <div class="copy">
-        <p>&copy;2023 Mejor Plan</p>
+        <p>&copy;2024 Mejor Plan</p>
     </div>
 </footer>
 
@@ -422,12 +432,12 @@ Main.boot( [] );
 
     <div class="margin-rodape"></div>
     <div class="barra-rodape-mobile "></span>
-        <span class="simulador"><a href="cotizar-ahora/index.html">COTIZADOR</a></span>
+        <span class="simulador"><a href="cotizar-ahora/#1">COTIZADOR</a></span>
         <span class="tel-fixo"><a href="tel:01130708070">LLAMAR</a></span>
         <span class="whatsapp"><a href="https://api.whatsapp.com/send?phone=5491130708070&amp;text=Hola,%20estoy%20en%20el%20site%20Plan%20de%20Salúd%20(https://www.plandesalud.ar/)%20e%20quisiera%20me%20que%20me%20brinde%20más%20información.">HABLENOS POR WHATSAPP</a>
         </div>
         <script type='text/javascript'>
-            // document.oncontextmenu = function(){return false}
+            document.oncontextmenu = function(){return false}
         </script>   
 
 </body>

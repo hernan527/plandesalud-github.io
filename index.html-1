@@ -23,6 +23,7 @@
 
 <script defer src="assets/js/prefixfree.min.js"></script>
 <script defer src="assets/js/modernizr-2.8.0.dev.js"></script>
+<script src="contador-de-visitas.js"></script>
 
 <!-- IMPORTES DO WP_HEAD -->
 <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
@@ -113,7 +114,17 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 	
 
     <!-- <script src="//code.tidio.co/ebbxct9l747twvw3j5nxl3q7ej5buc3e.js" async></script> -->
-
+<!-- Hotjar Tracking Code for plandesalud.ar -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3925775,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
 
 </head>
 <body class="home page-template page-template-page-sem-corpo page-template-page-sem-corpo-php page page-id-8">
@@ -130,7 +141,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                     <div class="abre-menu-mobile"></div>
                     <nav id="nav" role="navigation" class="menu-lateral-logo">
                         <div class="menu-principal-container"><ul id="menu-principal" class="menu"><li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-81 current_page_itemmenu-item-84"><a href="index.html">Inicio</a></li>
-    <li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74"><a href="cotizar-ahora/index.html#1">COTIZAR AHORA</a></li>
+    <li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74"><a href="cotizar-ahora/#1">COTIZAR AHORA</a></li>
     <!-- <li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83"><a href="planes-de-salud-precios/index.html" aria-current="page">Mejores Planes</a></li> -->
     <!-- <li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222"><a href="../blog/index.html">Blog</a></li> -->
     </ul></div>                </nav>
@@ -147,12 +158,11 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             </div>
             <script defer src="assets/js/functions.js"></script>
 	</header>
-s
     <div class='banner-desktop' style='background-image: url(assets/imagenes/banners/banner.png)'><div class='corpo-banner'><p><strong> Planes de Salud</strong><br />
 Compará los Mejores para Vos y tu familia</p>
-<a href='cotizar-ahora/index.html#1'>COTIZAR AHORA</a></div></div><div class='banner-mobile' style='background-image: url()'><div class='corpo-banner'><p><strong>Plan de Salud</strong><br />
+<a href='cotizar-ahora/#1'>COTIZAR AHORA</a></div></div><div class='banner-mobile' style='background-image: url()'><div class='corpo-banner'><p><strong>Plan de Salud</strong><br />
     Compará los Mejores Planes de Salud para Vos</p>
-<a href='cotizar-ahora/index.html#1'>COTIZAR AHORA</a></div></div>
+<a href='cotizar-ahora/#1'>COTIZAR AHORA</a></div></div>
 	<div id="wrapper">
 
 
@@ -172,7 +182,7 @@ Compará los Mejores para Vos y tu familia</p>
 
 
 <div class="wp-container-1 wp-block-buttons">
-<div class="wp-block-button"><a class="wp-block-button__link" href="cotizar-ahora/index.html#1">COTIZAR AHORA</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link" href="cotizar-ahora/#1">COTIZAR AHORA</a></div>
 </div>
 </div></div>
 
@@ -329,7 +339,7 @@ Compará los Mejores para Vos y tu familia</p>
    </marquee>
 
 <div class="wp-container-5 wp-block-buttons">
-<div class="wp-block-button"><a class="wp-block-button__link" href="cotizar-ahora/index.html#1">PEDIR COTIZACIÓN</a>
+<div class="wp-block-button"><a class="wp-block-button__link" href="cotizar-ahora/#1">PEDIR COTIZACIÓN</a>
 </div>
 </div>
 </div></div>
@@ -409,7 +419,7 @@ Main.boot( [] );
 
     <div class="margin-rodape"></div>
     <div class="barra-rodape-mobile "></span>
-        <span class="simulador"><a href="cotizar-ahora/index.html#1">COTIZADOR</a></span>
+        <span class="simulador"><a href="cotizar-ahora/#1">COTIZADOR</a></span>
         <span class="tel-fixo"><a href="tel:01130708070">LLAMAR</a></span>
         <span class="whatsapp"><a href="https://api.whatsapp.com/send?phone=5491130708070&amp;text=Hola,%20estoy%20en%20el%20site%20Plan%20de%20Salúd%20(https://www.plandesalud.ar/)%20e%20quisiera%20me%20que%20me%20brinde%20más%20información.">HABLENOS POR WHATSAPP</a>
         </div>

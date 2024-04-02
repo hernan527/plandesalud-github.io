@@ -192,7 +192,7 @@ if (!function_exists('Piwik_GetErrorMessagePage')) {
 
         $backLinks = '<p>'
                     . $optionalLinkBack
-                    . ' | <a href="index.php">Go to Matomo</a>'
+                    . ' | <a href="/">Go to Matomo</a>'
                     . '</p>';
 
         $redirectSection = '';

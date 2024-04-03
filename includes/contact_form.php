@@ -26,7 +26,7 @@ $sueldo = $_POST['sueldo'] ?? '';
 $name = $_POST['Name'] ?? '';
 $telefono = $_POST['telefone'] ?? '';
 $email = $_POST['email'] ?? '';
-$sheetRespueta = $_POST['Respuestas Google'] ?? '';
+$sheetRespueta = $_POST['Respuestas_Google'] ?? '';
 
 
 

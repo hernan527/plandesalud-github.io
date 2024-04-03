@@ -63,10 +63,9 @@ loader.style.display = 'block';
             console.log('Key: ' + pair[0] + ', Value: ' + pair[1]);
         }
      
-      
 	
         $.ajax({
-            url: form.action,
+            url: "https://servidor-queplan.onrender.com/cotizacion/",
             type: 'POST',
             data: formData,
             processData: false,
@@ -83,7 +82,7 @@ loader.style.display = 'block';
                loader.style.display = 'none';
                googleForm(data);
                $('#contact-form')[0].reset();
-   
+               senMail(formData,form,response)
     // salvaCookies();
 
     setTimeout(function() {
@@ -147,7 +146,7 @@ console.log(Telefono)
  
    formData.append('telefone', Telefono);
    formData.append('Name', Nombre);
-   formData.append('Respuestas Google','https://docs.google.com/spreadsheets/d/1M-XJiLh-G0VeExG5tQlOH6HfLJV2WNcdJiEKPUkqaSA/edit?resourcekey#gid=1797801513');
+   formData.append('Respuestas_Google','https://docs.google.com/spreadsheets/d/1M-XJiLh-G0VeExG5tQlOH6HfLJV2WNcdJiEKPUkqaSA/edit?resourcekey#gid=1797801513');
    var data = {
      'entry.1971212034': Pagina_y_Formulario,
    
@@ -193,6 +192,23 @@ console.log(Telefono)
     
     // Process contact form
     }
+
+function senMail(formClass,formData,response){
+  var form = document.querySelector(formClass);
+  form.action =  "../includes/contact_form.php";
+  console.log(form)
+  $.ajax({
+    url: form.action,
+    type: 'POST',
+    data: formData,
+    processData: false,
+    contentType: false,
+
+  });
+
+}
+
+
 function salvaCookies(){
   setCookie('data_lead_formulario_pagina', jQuery('.campo-pagina').val(), 3);
 setCookie('data_lead_Operadora', jQuery('.campo-operadora').val(), 3);

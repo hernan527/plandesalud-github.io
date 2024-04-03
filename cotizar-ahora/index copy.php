@@ -46,7 +46,7 @@ if (!isset($_COOKIE['visitado'])) {
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="../xmlrpc.php" />
 <script async src="../assets/js/jquery-2.2.4.min.js"></script>
-
+<script src="contador-de-visitas.js"></script>
 
 <script defer src="../assets/js/prefixfree.min.js"></script>
 <script defer src="../assets/js/modernizr-2.8.0.dev.js"></script>
@@ -156,7 +156,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 </script>
 
 </head>   
-<body class="page-template page-template-page-simulador page-template-page-simulador-php page page-id-16">
+<body class="page-template page-template-page-simulador page-template-page-simulador-php page page-id-16" style="margin-top:150px">
    
 
 <!-- Agrega una imagen oculta que cargará el script contador.php -->
@@ -209,28 +209,28 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         <div class="entry">
 
             <div class="conteudo-da-pagina">
-                            </div>
+            </div>
 
-                            <div class='chamada-simulador '><p><strong>Elija</strong> a continuación su operadora y descubra el valor de <strong>su plan de salud</strong>.</p>
-                                <p>¡Es rápido y aún así garantizamos el precio más bajo! Haga clic y compruébelo, somos socios de las mejores operadoras de Argentina.</p></div>
-                            <link href="../assets/css/style-formularioSimuladorGeneral.css" rel="stylesheet" type="text/css">
-                            <div class="contador"  id="1" ><h3>Hoy más de <span id="contador"></span> personas solicitaron una cotización</h3></div>
+<div class='chamada-simulador '><p><strong>Elija</strong> a continuación su operadora y descubra el valor de <strong>su plan de salud</strong>.</p>
+    <p>¡Es rápido y aún así garantizamos el precio más bajo! Haga clic y compruébelo, somos socios de las mejores operadoras de Argentina.</p></div>
+<link href="../assets/css/style-formularioSimuladorGeneral.css" rel="stylesheet" type="text/css">
+<div class="contador"  id="1" ><h3>Hoy más de <span id="contador"></span> personas solicitaron una cotización</h3></div>
 
-                            <h2 class="passo-bandeiras">1º Paso: Selecione una empresa</h2>
-                            
-                            <div class="bandeiras" >
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/todas-las-empresas.png" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('11')" data-classe-operadora="multimarcas"></a>
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude"></a>
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint"></a>
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora=""></a>
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao"></a>
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil"></a>
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.png" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medifé')" data-classe-operadora="notredame"></a>
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida"></a>
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed"></a>
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one"></a>
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint"></a>
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint"></a>
+<h2 class="passo-bandeiras">1º Paso: Selecione una empresa</h2>
+
+<div class="bandeiras" >
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/todas-las-empresas.png" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('11')" data-classe-operadora="multimarcas"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora=""></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.png" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medifé')" data-classe-operadora="notredame"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint"></a>
 
  </div>
  <h2 class="passo-formulario"  >2º Completá el formulario</h2>
@@ -240,8 +240,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
      <input class="campo-operadora" type="hidden" name="Operadora" id="Operadora" value="Sin Selección">
  
-     <div class="plano-selecionado"  >
-         <p id="3" >Plan Selecionado:</p>
+     <div class="plano-selecionado"  id="3">
+         <p>Plan Selecionado:</p>
          <div class="recebe-img"></div>
      </div>
 
@@ -259,17 +259,17 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 			<div class="col-6 edad_1">
 			
 	<span  class="span-alineado">
-    <input class="campo-edad" type="tel" id="edad_1" name="edad_1" placeholder="Su edad">
+    <input class="campo-edad" type="text" id="edad_1" name="edad_1" placeholder="Su edad">
     </span>
 	</div>
 	<div class="col-6 edad_2">
-		<span><input class="campo-edad-pareja" type="tel" id="edad_2" name="edad_2" placeholder="Edad pareja"></span>
+		<span><input class="campo-edad-pareja" type="text" id="edad_2" name="edad_2" placeholder="Edad pareja"></span>
 	</div></div>
 	<div class="row">
 <div class="hijos_num">
-	<p><strong>Cuantos hijos ingresan al plan_</strong></p>
+	<p><strong>Cuantos hijos ingresan al plan?</strong></p>
 	<div class="col-4">
-		<span><input class="campo-edades-hijos" type="tel" id="hijos_num" name="hijos_num" placeholder="cuantos hijos"></span>
+		<span><input class="campo-edades-hijos" type="text" id="hijos_num" name="hijos_num" placeholder="cuantos hijos"></span>
 	</div>	</div>
 </div>
 
@@ -293,7 +293,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 			<p><strong>Ingresa el importe de tu sueldo Bruto (sin descuentos)</strong></p>
 
 			
-	<span><input class="campo-sueldo" type="tel" name="sueldo" id="sueldo" placeholder="Sueldo Bruto ( antes de los descuentos) "></span>
+	<span><input class="campo-sueldo" type="text" name="sueldo" id="sueldo" placeholder="Sueldo Bruto ( antes de los descuentos) "></span>
 	
 	</div>
 	<div class="row monotributo">

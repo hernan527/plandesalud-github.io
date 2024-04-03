@@ -80,6 +80,24 @@ if (!isset($_COOKIE['visitado'])) {
   }
 
     marquee img{max-width:100px;padding-left:6px;padding-right:6px;}
+    .marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-container img {
+    display: inline-block;
+    animation: marquee 15 linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(-50%, 0);
+  }
+}
   </style>
 <style>
 	.row [class^="col-"] {
@@ -89,6 +107,7 @@ if (!isset($_COOKIE['visitado'])) {
 	}
 	
   </style>
+ 
 <style>
      .header {
       position:fixed;
@@ -154,18 +173,11 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                     <nav id="nav" role="navigation" class="menu-lateral-logo">
                         <div class="menu-principal-container"><ul id="menu-principal" class="menu"><li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-81 current_page_itemmenu-item-84"><a href=".">Inicio</a></li>
     <li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74"><a href="cotizar-ahora/#1">COTIZAR AHORA</a></li>
-    <!-- <li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83"><a href="planes-de-salud-precios/index.html" aria-current="page">Mejores Planes</a></li> -->
-    <!-- <li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222"><a href="../blog/index.html">Blog</a></li> -->
     </ul></div>                </nav>
                     <div class="fundo-preto"></div>
                 </div>
     
-                <!-- BUSCA -->
-               <!-- <form class="formulario-busca" role="search" method="get" id="searchform" action="http://localhost/mejorplan/">
-                    <input type="search" id="s" name="s" placeholder="Buscar" />
-                    <input type="submit" value="" id="searchsubmit" />
-                </form>
-                <div class="abre-busca-mobile"></div>-->
+               
     
             </div>
             <script defer src="assets/js/functions.js"></script>

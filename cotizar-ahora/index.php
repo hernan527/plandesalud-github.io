@@ -219,18 +219,18 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <h2 class="passo-bandeiras">1º Paso: Selecione una empresa</h2>
                             
                             <div class="bandeiras" >
-                     <img src="../assets/imagenes/logos-prepagas-190x110/todas-las-empresas.png" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('11')" data-classe-operadora="multimarcas">
-    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude">
-    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint">
-    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora="">
-    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao">
-    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil">
-    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.png" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medifé')" data-classe-operadora="notredame">
-    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida">
-    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed">
-    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one">
-    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint">
-    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint">
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/todas-las-empresas.png" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('11')" data-classe-operadora="multimarcas"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora=""></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.png" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medifé')" data-classe-operadora="notredame"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint"></a>
 
  </div>
  <h2 class="passo-formulario"  >2º Completá el formulario</h2>
@@ -240,12 +240,13 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
      <input class="campo-operadora" type="hidden" name="Operadora" id="Operadora" value="Sin Selección">
  
-     <div class="plano-selecionado">
+     <div class="plano-selecionado"  id="3">
          <p>Plan Selecionado:</p>
          <div class="recebe-img"></div>
      </div>
 
-		<div class="tipo-de-plano" id="3">
+		<div class="tipo-de-plano" >
+        <br>
 			<p><strong>Quienes ingresan al plan?</strong></p>
 			<input type="radio" id="individual" name="idCapitas" value="Individual"><b class="btn-vos"  >Vos </b>
 			<input type="radio" id="pareja" name="idCapitas" value="Pareja"><b class="btn-pareja">Pareja</b>
@@ -381,19 +382,19 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                                            </div>
                             
                             
-                            
-                                           <form href='#2' id="contact-form-whats" class="form-whats" action="../includes/form-contacto.php" method="post">
+                                           <form id="contact-form-whats"  class="form-whats">
+
                                             <h3><img src="../formularios/formulario-whatsapp/icone-whatsapp.svg">Cotice por WhatsApp</h3>
-                                            <input class="campo-ID-formulario" type="hidden" name="formulario_pagina" id="formulario_pagina" value="COTIZAR AHORA Whatsapp">
+                                            <input class="campo-ID-formulario" type="hidden" name="formulario_pagina_whats" id="formulario_pagina_whats" value="COTIZAR AHORA Whatsapp">
                                         
-                                            <div><b>Nombre:</b><input type="text" id="Name" name="Name" placeholder="Su nombre"></div>
+                                            <div><b>Nombre:</b><input type="text" id="Name_whats" name="Name_whats" placeholder="Su nombre"></div>
                                         
                                             <div>
-                                                <!-- <div><b>Prefijo:</b><input type="tel" id="prefijo" name="prefijo" placeholder="Pref."></div> -->
-                                                <div><b>Teléfono:</b><input type="tel" id="telefone" name="telefone" placeholder="Teléfono"></div>
+                                                <div><b>Teléfono:</b><input type="tel" id="telefone_whats" name="telefone_whats" placeholder="Teléfono"></div>
                             
                                             </div>
-                                            <input type="submit" id="submit" onclick="finalizarWhats('.form-whats')" value="SOLICITAR COTIZACIÓN">
+                                            <input id="submit" type="submit" value="RECIBIR COTIZACIÓN">
+                                            <div class="loader-whats" id="loader-whats" style="display: none;"></div>
 
                                         </form>
                             
@@ -447,22 +448,23 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                                 </div>
                             </footer>
                             
-                            <!-- <script type='text/javascript' src='../assets/plugins/simple-share-buttons-adder/js/ssba1037.js?ver=1677985089' id='simple-share-buttons-adder-ssba-js'></script>
+                            <script type='text/javascript' src='../assets/plugins/simple-share-buttons-adder/js/ssba1037.js?ver=1677985089' id='simple-share-buttons-adder-ssba-js'></script>
                             <script type='text/javascript' id='simple-share-buttons-adder-ssba-js-after'>
                             Main.boot( [] );
-                            </script> -->
+                            </script>
         
   
+
 <!-- Agrega tu script JavaScript aquí -->
 <script>
 
-            jQuery(document).ready(function(){
-            //     jQuery.validator.addMethod("telefone", function (value) {
-            //     // após o Prefijo, eu pedo os 4 primeiros numeros do telefone
-            //     var numbersFiltered = value.substring(0,4);
-            //     console.log(numbersFiltered)
-            //     if ( numbersFiltered === '0000' ) { return false; } else { return true;	};
-            // }, "Teléfono Inválido");           
+        jQuery(document).ready(function(){
+            jQuery.validator.addMethod("telefone", function (value) {
+			// após o Prefijo, eu pedo os 4 primeiros numeros do telefone
+			var numbersFiltered = value.substring(0,4);
+			console.log(numbersFiltered)
+			if ( numbersFiltered === '0000' ) { return false; jQuery(obj).addClass('ErrorFormIw') } else { return true;	};
+		}, "Teléfono Inválido");           
          jQuery("#contact-form").validate({
 
 			rules:{
@@ -521,9 +523,52 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 		jQuery("#telefone").mask("9000000000");
         jQuery("#sueldo").mask("9000000");
         
-		
+		jQuery(".bandeiras img").click(function(){
+			var srcImagem = jQuery(this).attr("src");
+			var idOperadpra = jQuery(this).attr("data-id-operadora");
+			jQuery('.recebe-img img').remove();
+			jQuery('.recebe-img').append('<img src="'+srcImagem+'">').attr('id', jQuery(this).data("classe-operadora"));
+			jQuery(".campo-operadora").val(idOperadpra);
+			jQuery(".plano-selecionado").fadeIn();
+		});
+
+	
+        
     })
     </script>
+<script>
+    jQuery(document).ready(function(){
+        console.log("1");
+        jQuery("#contact-form-whats").validate({
+            rules:{
+                formulario_pagina_whats : { required: false },
+                Name_whats : { required: true },
+                telefone_whats : { required: true, rangelength: [10,10] },
+            },
+            messages:{
+                formulario_pagina_whats : { required: "" },
+                Name_whats : { required: "El campo Nombre es necesario" },
+                telefone_whats : { required: "El campo Telefono es necesario" },
+            },
+            submitHandler: function(form){
+                var form = jQuery('#contact-form-whats');
+                var formErro = 0;
+                jQuery(form).find('.required').each(function(index, obj){
+                    if(jQuery(obj).val()==''){
+                        formErro += 1;
+                        // jQuery(obj).addClass('ErrorFormIw');
+                    }
+                });
+                console.log("5");
+                if(formErro == 0){
+                    finalizarWhats('.form-whats')
+                }
+            }
+        });
+        jQuery("#telefone_whats").mask("9000000000");
+    });
+</script>
+
     <script>
         function cambiarValor(valor) {
   var input = document.getElementById('Operadora');

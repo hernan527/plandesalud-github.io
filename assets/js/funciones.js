@@ -74,7 +74,6 @@ loader.style.display = 'block';
          
             // beforeSend: function() {
           
-                // $('form#contact-form .alert').addClass('alert-info');
                 // $('form#contact-form .alert strong').text('Enviando datos...');
             // },
             
@@ -117,67 +116,83 @@ loader.style.display = 'block';
 
 function finalizarWhats(formClass) {
  
-//     var form = document.querySelector(formClass);
-//     var boton = form.querySelector('[type=submit]');
-//     var formElement = document.getElementById('contact-form');
-//     var formErro = 0;
-//     var requiredInputs = formElement.querySelectorAll('.required');
-//     var submitButton = document.querySelector(".form-whats [type='submit']");
-
-//     boton.disabled = true;
-
-//     // requiredInputs.forEach(function(input) {
-//     //     if (input.value === '') {
-//     //         formErro += 1;
-//     //         input.classList.add('ErrorFormIw');
-//     //     }
-//     // });
-    
-//     // if (formErro == 0) {
-//         var formData = new FormData(form);
-        
-//         document.querySelector("#contact-form input[type='submit']").disabled = true;
-//         document.querySelector('#contact-form .loaderwhats').style.display = 'block';
-
-//         for (var pair of formData.entries()) {
-//             console.log('Key: ' + pair[0] + ', Value: ' + pair[1]);
-//         }
-
-//         $.ajax({
-//             url: form.getAttribute('action'),
-//             type: 'POST',
-//             data: formData,
-//             processData: false,
-//             contentType: false,
-//             beforeSend: function() {
-//                 $('form#contact-form button').prop('disabled', true);
-//                 $('.form-contact-form').css('cursor', 'wait');
-//                 $('form#contact-form .alert').addClass('alert-info');
-//                 $('form#contact-form .alert strong').text('Enviando datos...');
-//             },
-            
-//             success: function(response) {
-//                 var form = document.querySelector('#contact-form');
-//                 console.log(response)
-//     var submitButton = form.querySelector('input[type="submit"]');
-//     var loaderWhatsapp = form.querySelector('.loaderwhats');
-//     submitButton.value = '  ENVIO EXITOSO!  ';
-//     loaderWhatsapp.style.display = 'none';
+ 
+  var form = document.querySelector(formClass);
+  form.action =  "../includes/contact_form.php";
+console.log(form)
 
    
-//     // salvaCookies();
+var boton = form.querySelector('#submit');
+console.log(boton)
 
-//     setTimeout(function() {
-//         window.location.href = 'https://plandesalud.ar/gracias/';
-//     }, 3000);
-//             },
-//             error: function() {
-//                 console.log('Error al enviar el correo');
-//             }
-//         });
-//     }
-//     // Process contact form
 
+boton.disabled = true;
+
+var loader = form.querySelector('.loader-whats')
+
+loader.style.display = 'block';
+ // Obtener los valores de los campos del formulario usando jQuery
+ var Pagina_y_Formulario = $('#formulario_pagina_whats').val();
+ var Nombre = $('#Name_whats').val();
+ var Telefono = $('#telefone_whats').val();
+      var formData = new FormData();
+console.log(Pagina_y_Formulario)
+console.log(Nombre)
+
+console.log(Telefono)
+
+     
+   // Agregar los valores al objeto FormData
+   formData.append('formulario_pagina', Pagina_y_Formulario);
+ 
+   formData.append('telefone', Telefono);
+   formData.append('Name', Nombre);
+   formData.append('Respuestas Google','https://docs.google.com/spreadsheets/d/1M-XJiLh-G0VeExG5tQlOH6HfLJV2WNcdJiEKPUkqaSA/edit?resourcekey#gid=1797801513');
+   var data = {
+     'entry.1971212034': Pagina_y_Formulario,
+   
+     'entry.1508322728': Nombre,
+     'entry.1813933214': Telefono,
+     
+   };
+   
+        for (var pair of formData.entries()) {
+            console.log('Key: ' + pair[0] + ', Value: ' + pair[1]);
+        }
+
+        $.ajax({
+          url: form.action,
+          type: 'POST',
+          data: formData,
+          processData: false,
+          contentType: false,
+       
+          // beforeSend: function() {
+        
+              // $('form#contact-form .alert').addClass('alert-info');
+              // $('form#contact-form .alert strong').text('Enviando datos...');
+          // },
+          
+          success: function(res) {
+             console.log(res)
+             boton.value = '  ENVIO EXITOSO!  ';
+             loader.style.display = 'none';
+             googleForm(data);
+             $('#contact-form-whats')[0].reset();
+ 
+  // salvaCookies();
+
+  setTimeout(function() {
+      window.location.href = 'https://plandesalud.ar/gracias/';
+  }, 3000);
+          },
+          error: function() {
+              console.log('Error al enviar el correo');
+          }
+      });
+    
+    // Process contact form
+    }
 function salvaCookies(){
   setCookie('data_lead_formulario_pagina', jQuery('.campo-pagina').val(), 3);
 setCookie('data_lead_Operadora', jQuery('.campo-operadora').val(), 3);
@@ -198,4 +213,3 @@ function setCookie(name, value, days) {
 }
 }
    
-}

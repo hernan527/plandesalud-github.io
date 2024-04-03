@@ -26,7 +26,7 @@ $sueldo = $_POST['sueldo'] ?? '';
 $name = $_POST['Name'] ?? '';
 $telefono = $_POST['telefone'] ?? '';
 $email = $_POST['email'] ?? '';
-$sheetRespuetas = $_POST['Respuestas Google'] ?? '';
+$sheetRespueta = $_POST['Respuestas Google'] ?? '';
 
 
 
@@ -80,18 +80,19 @@ try {
 
     $message = '<html><body>';
     $message .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
-    $message .= "<tr style='background: #eee;'><td><strong>|Nombre|</strong></td><td>" . strip_tags($name) . "</td></tr>";
-    $message .= "<tr style='background: #eee;'><td><strong>Empresa Seleccionada:</strong></td><td>" . strip_tags($Operadora) . "</td></tr>";
-    $message .= "<tr><td><strong>Grupo Familiar</strong></td><td>" . strip_tags($idCapitas) . "</td></tr>";
-    $message .= "<tr><td><strong>Edad Titular</strong></td><td>" . strip_tags($edad_1) . "</td></tr>";
-    $message .= "<tr><td><strong>Edad Pareja</strong></td><td>" . strip_tags($edad_2) . "</td></tr>";
-    $message .= "<tr><td><strong>Edad/es hijo/s</strong></td><td>" . strip_tags($hijos_num) . "</td></tr>";
-    $message .= "<tr><td><strong>|Teléfono|</strong></td><td>" . strip_tags($telefono) . "</td></tr>";
-    $message .= "<tr><td><strong>|Email|</strong></td><td>" . strip_tags($email) . "</td></tr>";
-    $message .= "<tr><td><strong>Tipo asociado</strong></td><td>" . strip_tags($poseeOS) . "</td></tr>";
-    $message .= "<tr><td><strong>Sueldo Bruto</strong></td><td>" . strip_tags($sueldo) . "</td></tr>";
-    $message .= "<tr><td><strong>Formulario Origen</strong></td><td>" . strip_tags($Pagina_Origen) . "</td></tr>";
-    $message .= "<tr><td><strong>Respuestas Forms </strong></td><td>" . strip_tags($sheetRespueta) . "</td></tr>";
+    $message .= "<tr style='background: #eee;'><td><strong>|Nombre|</strong></td><td>" . (isset($name) ? strip_tags($name) : "") . "</td></tr>";
+    $message .= "<tr style='background: #eee;'><td><strong>Empresa Seleccionada:</strong></td><td>" . (isset($Operadora) ? strip_tags($Operadora) : "") . "</td></tr>";
+    $message .= "<tr><td><strong>Grupo Familiar</strong></td><td>" . (isset($idCapitas) ? strip_tags($idCapitas) : "") . "</td></tr>";
+    $message .= "<tr><td><strong>Edad Titular</strong></td><td>" . (isset($edad_1) ? strip_tags($edad_1) : "") . "</td></tr>";
+    $message .= "<tr><td><strong>Edad Pareja</strong></td><td>" . (isset($edad_2) ? strip_tags($edad_2) : "") . "</td></tr>";
+    $message .= "<tr><td><strong>Edad/es hijo/s</strong></td><td>" . (isset($hijos_num) ? strip_tags($hijos_num) : "") . "</td></tr>";
+    $message .= "<tr><td><strong>|Teléfono|</strong></td><td>" . (isset($telefono) ? strip_tags($telefono) : "") . "</td></tr>";
+    $message .= "<tr><td><strong>|Email|</strong></td><td>" . (isset($email) ? strip_tags($email) : "") . "</td></tr>";
+    $message .= "<tr><td><strong>Tipo asociado</strong></td><td>" . (isset($poseeOS) ? strip_tags($poseeOS) : "") . "</td></tr>";
+    $message .= "<tr><td><strong>Sueldo Bruto</strong></td><td>" . (isset($sueldo) ? strip_tags($sueldo) : "") . "</td></tr>";
+    $message .= "<tr><td><strong>Formulario Origen</strong></td><td>" . (isset($Pagina_Origen) ? strip_tags($Pagina_Origen) : "") . "</td></tr>";
+    $message .= "<tr><td><strong>Respuestas Forms </strong></td><td>" . (isset($sheetRespueta) ? strip_tags($sheetRespueta) : "") . "</td></tr>";
+    
     $message .= "</table>";
     $message .= "</body></html>";
 
@@ -109,10 +110,7 @@ try {
         'message' => 'Error al enviar el mensaje: ' . $mail->ErrorInfo
     );
 }
-echo 'Operadora: ' . $Operadora . '<br>';
-echo 'idCapitas: ' . $idCapitas . '<br>';
-echo 'edad_1: ' . $edad_1 . '<br>';
-echo 'edad_2: ' . $edad_2 . '<br>';
+
 
 echo json_encode($response);
 

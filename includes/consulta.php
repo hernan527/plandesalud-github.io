@@ -39,7 +39,7 @@ $conexion= $objeto->Conectar();
 
 $name = $_POST['Name'];
 $prefijo = $_POST['Prefijo'];
-$telefone = $_POST['Telefone'];
+$telefone = $_POST['telefone'];
 
 
 print json_encode ([$name,$prefijo,$telefone])

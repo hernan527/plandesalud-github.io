@@ -84,7 +84,7 @@ function finalizar(formClass) {
       console.log('Key: ' + pair[0] + ', Value: ' + pair[1]);
     }
     
-    var Pagina_y_Formulario = $('formulario-pagina').val();
+    var Pagina_y_Formulario = $('formulario_pagina').val();
     var Prepaga_Elegida = $('#Operadora').val();
     var Grupo_Familiar = $('input[name="idCapitas"]:checked').val();
     var Edad_Titular = $('#edad_1').val();
@@ -97,7 +97,7 @@ function finalizar(formClass) {
     var Familiares_que_Aportan = $('#aportantesMono').val();
     var Nombre = $('#Name').val();
     var Prefijo = $('#Prefijo').val();
-    var Telefono = $('#Telefone').val();
+    var Telefono = $('#telefone').val();
     var email = $('#email').val();
 
     // Obtener datos del formulario

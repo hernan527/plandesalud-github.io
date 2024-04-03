@@ -65,7 +65,7 @@
  <h2 class="passo-formulario"  >2º Completá el formulario</h2>
  <form id="contact-form"  class="form-cotacao" action="../includes/contact_form.php">
 
-    <input class="campo-pagina" type="hidden" name="formulario-pagina" id="formulario-pagina" value="cotizar-ahora-formulario-completo">
+    <input class="campo-pagina" type="hidden" name="formulario_pagina" id="formulario_pagina" value="cotizar-ahora-formulario-completo">
 
      <input class="campo-operadora" type="hidden" name="Operadora" id="Operadora" value="Sin Selección">
  
@@ -145,7 +145,7 @@
 
 	</div> -->
 	<div>
-			<span><i>Teléfono</i><input class="campo-telefone" type="tel"  id="Telefone" name="Telefone" placeholder="Ej:11 65924325"></span>
+			<span><i>Teléfono</i><input class="campo-telefone" type="tel"  id="telefone" name="telefone" placeholder="Ej:11 65924325"></span>
     
 	</div></div>
 	

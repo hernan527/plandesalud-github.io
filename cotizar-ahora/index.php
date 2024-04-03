@@ -35,12 +35,13 @@ if (!isset($_COOKIE['visitado'])) {
     <script type="text/javascript" src="../assets/js/formularios-cotizar.js"></script>
 
 <script src="../assets/js/funciones.js"></script>
+<script defer type='text/javascript' src='../assets/js/jquery.mask.min8a54.js?ver=1.0.0'></script>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <link rel="stylesheet" href="../assets/imagenes/stylea870.css?versao=5.0" />
 <!-- <link rel="stylesheet" src="../assets/formularios/formulario-simulador-geral/scripts.js"/> -->
-
+<!-- <script src="../assets/js/formulario-validaciones.js"></script> -->
 <!-- <script src="../assets/formularios/formulario-simulador-geral/scripts.js"></script> -->
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="../xmlrpc.php" />
@@ -113,6 +114,10 @@ if (!isset($_COOKIE['visitado'])) {
     }
     
 </style>
+<style class="container">.span-alineado {
+    display: inline-block;
+    vertical-align: middle;
+}</style>
 	<link rel='stylesheet' id='wp-block-library-css'  href='../assets/css/style.min1eb7.css?ver=6.0.3' type='text/css' media='all' />
 <style id='global-styles-inline-css' type='text/css'>
 body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
@@ -215,23 +220,23 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             
                             <div class="bandeiras" >
                      <img src="../assets/imagenes/logos-prepagas-190x110/todas-las-empresas.png" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('11')" data-classe-operadora="multimarcas">
-    <img src="../assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude">
-    <img src="../assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint">
-    <img src="../assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora="">
-    <img src="../assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao">
-    <img src="../assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil">
-    <img src="../assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.png" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medifé')" data-classe-operadora="notredame">
-    <img src="../assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida">
-    <img src="../assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed">
-    <img src="../assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one">
-    <img src="../assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint">
-    <img src="../assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint">
+    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude">
+    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint">
+    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora="">
+    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao">
+    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil">
+    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.png" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medifé')" data-classe-operadora="notredame">
+    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida">
+    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed">
+    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one">
+    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint">
+    <img href="3" src="../assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint">
 
  </div>
  <h2 class="passo-formulario"  >2º Completá el formulario</h2>
- <form id="contact-form"  class="form-cotacao"  onsubmit="return finalizar('.form-cotacao')">
+ <form id="contact-form"  class="form-cotacao">
 
-    <input class="campo-pagina" type="hidden" name="formulario-pagina" id="formulario-pagina" value="cotizar-ahora-formulario-completo">
+    <input class="campo-pagina" type="hidden" name="formulario_pagina" id="formulario_pagina" value="cotizar-ahora-formulario-completo">
 
      <input class="campo-operadora" type="hidden" name="Operadora" id="Operadora" value="Sin Selección">
  
@@ -240,7 +245,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
          <div class="recebe-img"></div>
      </div>
 
-		<div class="tipo-de-plano">
+		<div class="tipo-de-plano" id="3">
 			<p><strong>Quienes ingresan al plan?</strong></p>
 			<input type="radio" id="individual" name="idCapitas" value="Individual"><b class="btn-vos"  >Vos </b>
 			<input type="radio" id="pareja" name="idCapitas" value="Pareja"><b class="btn-pareja">Pareja</b>
@@ -252,7 +257,9 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 			<div class="col-6 edad_1">
 			
-	<span><input class="campo-edad" type="text" id="edad_1" name="edad_1" placeholder="Su edad"></span>
+	<span  class="span-alineado">
+    <input class="campo-edad" type="text" id="edad_1" name="edad_1" placeholder="Su edad">
+    </span>
 	</div>
 	<div class="col-6 edad_2">
 		<span><input class="campo-edad-pareja" type="text" id="edad_2" name="edad_2" placeholder="Edad pareja"></span>
@@ -304,15 +311,15 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 		<span><i>Nombre Completo</i><input class="campo-nome" type="text" name="Name"  id="Name"  placeholder="Su nombre"></span>
 		<div class="telefono">
-
+        
 			<!-- <div class="col-6 edad_1">
 			
 		<span><i>Prefijo</i><input class="campo-Prefijo" type="tel"  id="Prefijo" name="Prefijo" placeholder="Ej: 11"></span>
 
 	</div> -->
 	<div>
-			<span><i>Teléfono</i><input class="campo-telefone" type="tel"  id="Telefone" name="Telefone" placeholder="Ej:11 65924325"></span>
-    
+			<span><i>Teléfono</i><input class="campo-telefone" type="tel"  id="telefone" name="telefone" placeholder="Ej:11 65924325"></span>
+            
 	</div></div>
 	
 		<span><i>E-mail</i><input class="campo-email" type="email"  id="email" name="email" placeholder="Ej: cotizar@plandesalud.ar"></span>
@@ -377,18 +384,16 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             
                                            <form href='#2' id="contact-form-whats" class="form-whats" action="../includes/form-contacto.php" method="post">
                                             <h3><img src="../formularios/formulario-whatsapp/icone-whatsapp.svg">Cotice por WhatsApp</h3>
-                                            <input class="campo-ID-formulario" type="hidden" name="formulario-pagina" id="formulario-pagina" value="COTIZAR AHORA Whatsapp">
+                                            <input class="campo-ID-formulario" type="hidden" name="formulario_pagina" id="formulario_pagina" value="COTIZAR AHORA Whatsapp">
                                         
                                             <div><b>Nombre:</b><input type="text" id="Name" name="Name" placeholder="Su nombre"></div>
                                         
                                             <div>
-                                                <div><b>Prefijo:</b><input type="tel" id="prefijo" name="prefijo" placeholder="Pref."></div>
-                                                <div><b>Teléfono:</b><input type="tel" id="Telefone" name="Telefone" placeholder="Teléfono"></div>
+                                                <!-- <div><b>Prefijo:</b><input type="tel" id="prefijo" name="prefijo" placeholder="Pref."></div> -->
+                                                <div><b>Teléfono:</b><input type="tel" id="telefone" name="telefone" placeholder="Teléfono"></div>
                             
                                             </div>
-                                            <p >ggggggggggggggg</p>
                                             <input type="submit" id="submit" onclick="finalizarWhats('.form-whats')" value="SOLICITAR COTIZACIÓN">
-                                            <p >ggggggggggggggg</p>
 
                                         </form>
                             
@@ -442,109 +447,89 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                                 </div>
                             </footer>
                             
-                            <script type='text/javascript' src='../assets/plugins/simple-share-buttons-adder/js/ssba1037.js?ver=1677985089' id='simple-share-buttons-adder-ssba-js'></script>
+                            <!-- <script type='text/javascript' src='../assets/plugins/simple-share-buttons-adder/js/ssba1037.js?ver=1677985089' id='simple-share-buttons-adder-ssba-js'></script>
                             <script type='text/javascript' id='simple-share-buttons-adder-ssba-js-after'>
                             Main.boot( [] );
-                            </script>
+                            </script> -->
         
-   <script>
-//   $(document).ready(function() {
-//   $('.form-cotacao').submit(function(event) {
-//     console.log('Form submitted');
-//     event.preventDefault();
-//     $('#feedback').html('');
-//     var Pagina_y_Formulario = $('formulario-pagina').val();
-//     var Prepaga_Elegida = $('#Operadora').val();
-//       var Grupo_Familiar = $('input[name="idCapitas"]:checked').val();
-//       var Edad_Titular = $('#edad_1').val();
-//       var Edad_Pareja = $('#edad_2').val();
-//       var Edades_Hijos = $('#hijos_num').val();
-//       var Tipo_Asociado = $('input[name="poseeOS"]:checked').val();
-//       var Tipo_Desregulado = $('input[name="cualOS"]:checked').val();
-//       var Sueldo = $('#sueldo').val();
-//       var Categoria_Monotributo = $('#categoriaMono').val();
-//       var Familiares_que_Aportan = $('#aportantesMono').val();
-//       var Nombre = $('#Name').val();
-//       var Prefijo = $('#Prefijo').val();
-//       var Telefono = $('#Telefone').val();
-//       var email = $('#email').val();
-//     // Obtener datos del formulario
-//     var data = {
-//         'entry.1971212034':Pagina_y_Formulario,
-//        'entry.1788353276':Prepaga_Elegida,
-//        'entry.2032223983':Grupo_Familiar,
-//        'entry.1763723729':Edad_Titular,
-//        'entry.1779532345':Edad_Pareja,
-//        'entry.1112113610':Edades_Hijos,
-//        'entry.632598661':Tipo_Asociado,
-//        'entry.1404611772':Tipo_Desregulado,
-//        'entry.1404611772':Sueldo,
-//        'entry.472026566':Categoria_Monotributo,
-//        'entry.38288768':Familiares_que_Aportan,
-//        'entry.1508322728':Nombre,
-//        'entry.527309604':Prefijo,
-//        'entry.1813933214':Telefono,
-//        'entry.710988652':email
-//     };
-    
-    
-   
-//     console.log(data);
-
-//     $.ajax({
-//       url: 'https://docs.google.com/forms/d/e/1FAIpQLSfd5MmQlkg_HQzLoquOiakVNxyRIP4XAs7l4zjEUMcOVtDEFw/formResponse',
-//       type: 'POST',
-//       data: data,
-//       dataType: 'xml',
-//       success: function(response) {
-//         // La solicitud se realizó correctamente, los datos se han enviado al formulario de Google Forms
-//         console.log('Enter on success');
-//         $('#feedback').html('<label class="text-success">Message sent!</label>');
-//       },
-//       error: function(error) {
-//         // Ocurrió un error al realizar la solicitud
-//         console.log('Enter on error');
-//         console.log(error); // Muestra el objeto de error en la consola
-//       }
-//     });
-//   });
-// });
-
-
-   </script>    
-
+  
+<!-- Agrega tu script JavaScript aquí -->
 <script>
-    $(document).ready(function() {
-      $.ajax({
-        url: "../contador.json", // Reemplaza "ruta/al/archivo/contador.json" con la ruta correcta hacia el archivo contador.json
-        dataType: "json",
-        success: function(data) {
-          var visitas = data.visitas;
-          // Aquí puedes realizar las acciones necesarias con el valor del contador, como mostrarlo en un elemento HTML específico.
-          // Por ejemplo:
-          var contadorElement = $("#contador");
-          contadorElement.text("0"); // Establece el valor inicial en 0
-          
-          // Realiza la animación del contador desde 0 hasta el valor actual
-          contadorElement.animate({ count: visitas }, {
-            duration: 2000, // Duración de la animación en milisegundos
-            step: function(now) {
-              contadorElement.text(Math.floor(now)); // Actualiza el texto del contador en cada paso de la animación
-            },
-            complete: function() {
-              contadorElement.text(visitas); // Establece el valor final del contador después de completar la animación
-            }
-          });
-        }
-      });
-    });
+
+            jQuery(document).ready(function(){
+            //     jQuery.validator.addMethod("telefone", function (value) {
+            //     // após o Prefijo, eu pedo os 4 primeiros numeros do telefone
+            //     var numbersFiltered = value.substring(0,4);
+            //     console.log(numbersFiltered)
+            //     if ( numbersFiltered === '0000' ) { return false; } else { return true;	};
+            // }, "Teléfono Inválido");           
+         jQuery("#contact-form").validate({
+
+			rules:{
+        formulario_pagina :{required: false },
+        Operadora :{required: false },
+        idCapitas:{required: true },
+        edad_1 :{required: true,rangelength: [2,2]},
+        edad_2 :{required: true ,rangelength: [2,2]},
+        hijos_Num :{required: true ,rangelength: [1,1]},
+        poseeOS:{required: true },
+        cualOS:{required: true },
+        sueldo :{required: true,rangelength: [6,7] },
+        Name :{required: true },
+        telefone :{required: true,rangelength: [10,10]},
+        email :{required: true,email: true},
+			},
+     
+    
+			messages:{
+      formulario_pagina :{required: "" },
+      Operadora :{required: "" },
+      idCapitas:{required: "Seleccione una opción" },
+      edad_1 :{required: "El campo Edad es necesario"},
+      edad_2 :{required: "El campo Edad es necesario"},
+      hijos_Num :{required: "El campo Hijos es necesario"},
+      poseeOS:{required: "Seleccione una opción" },
+      sueldo :{required: "" },
+      Name :{required: "El campo Nombre es necesario" },
+      telefone :{required: "El campo Telefono es necesario"},
+      email :{required: "El campo EMAIL es necesario",email: "Informe u EMAIL válido"},
+		
+			},
+
+			submitHandler: function(form){
+				var form = jQuery('#contact-form');
+				var formErro = 0;
+				jQuery(form).find('.required').each(function(index, obj){
+					if(jQuery(obj).val()==''){
+						formErro  += 1;
+						jQuery(obj).addClass('ErrorFormIw');
+					}
+				});
+
+				if(formErro ==0){
+					
+                    finalizar('.form-cotacao')
+				}
+			}
+
+		}
+    );
+    	// MÁSCARAS
+		jQuery("#edad_1").mask("90");
+        jQuery("#edad_2").mask("90");
+        jQuery("#hijos_num").mask("9");
+		jQuery("#telefone").mask("9000000000");
+        jQuery("#sueldo").mask("9000000");
+        
+		
+    })
     </script>
     <script>
         function cambiarValor(valor) {
   var input = document.getElementById('Operadora');
   input.value = valor;
 }
-
+	
     </script>
 <script type='text/javascript'>
 	document.oncontextmenu = function(){return false}

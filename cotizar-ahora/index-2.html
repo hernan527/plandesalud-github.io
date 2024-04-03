@@ -267,7 +267,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
  <h2 class="passo-formulario"  >2º Completá el formulario</h2>
  <form id="contact-form"  class="form-cotacao" action="../includes/contact_form.php" method="post" >
 
-    <input class="campo-pagina" type="hidden" name="formulario-pagina" id="formulario-pagina" value="cotizar-ahora-formulario-completo">
+    <input class="campo-pagina" type="hidden" name="formulario_pagina" id="formulario_pagina" value="cotizar-ahora-formulario-completo">
 
      <input class="campo-operadora" type="hidden" name="Operadora" id="Operadora" value="Sin Selección">
  
@@ -348,7 +348,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 	</div> -->
 	<div>
 			<span><i>Teléfono</i>
-            <input  autocomplete="off" class="campo-telefone" type="tel" id="Telefone" name="Telefone" placeholder="Ej:11 65924325" oninput="limitarTelefono(event)" required="">
+            <input  autocomplete="off" class="campo-telefone" type="tel" id="telefone" name="telefone" placeholder="Ej:11 65924325" oninput="limitarTelefono(event)" required="">
 
     
 	</div></div>
@@ -415,13 +415,13 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             
                                            <form href='#2' id="contact-form-whats" class="form-whats" action="../includes/form-contacto.php" method="post">
                                             <h3><img src="../formularios/formulario-whatsapp/icone-whatsapp.svg">Cotice por WhatsApp</h3>
-                                            <input class="campo-ID-formulario" type="hidden" name="formulario-pagina" id="formulario-pagina" value="COTIZAR AHORA Whatsapp">
+                                            <input class="campo-ID-formulario" type="hidden" name="formulario_pagina" id="formulario_pagina" value="COTIZAR AHORA Whatsapp">
                                         
                                             <div><b>Nombre:</b><input type="text" id="Name" name="Name" placeholder="Su nombre"></div>
                                         
                                             <div>
                                                 <!-- <div><b>Prefijo:</b><input type="tel" id="prefijo" name="prefijo" placeholder="Pref."></div> -->
-                                                <div><b>Teléfono:</b><input type="tel" id="Telefone" name="Telefone" placeholder="Teléfono"></div>
+                                                <div><b>Teléfono:</b><input type="tel" id="telefone" name="telefone" placeholder="Teléfono"></div>
                             
                                             </div>
 

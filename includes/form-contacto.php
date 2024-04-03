@@ -15,9 +15,9 @@ require '../PHPMailer/Exception.php';
 require '../PHPMailer/PHPMailer.php';
 require '../PHPMailer/SMTP.php';
 
-$Pagina_y_Formulario = $_POST['formulario-pagina'];
+$Pagina_y_Formulario = $_POST['formulario_pagina'];
 $Nombre = $_POST['Name'];
-$Telefono = $_POST['Telefone'];
+$Telefono = $_POST['telefone'];
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     // No se ha enviado el formulario, devuelve una respuesta de error
@@ -47,9 +47,9 @@ try {
         // https://docs.google.com/forms/d/e/1FAIpQLSf4MN3ugd5iBpbCEPDTsZmoEu-3TkGCl1jbzRzLXYUjmh-d_Q/viewform?usp=sf_link
         $url = 'https://docs.google.com/forms/d/e/1FAIpQLSf4MN3ugd5iBpbCEPDTsZmoEu-3TkGCl1jbzRzLXYUjmh-d_Q/formResponse';
           // Obtener datos del formulario
-          $Pagina_y_Formulario = $_POST['formulario-pagina'];
+          $Pagina_y_Formulario = $_POST['formulario_pagina'];
           $Nombre = $_POST['Name'];
-          $Telefono = $_POST['Telefone'];
+          $Telefono = $_POST['telefone'];
        
       
           

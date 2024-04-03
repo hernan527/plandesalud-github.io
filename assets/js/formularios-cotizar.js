@@ -4,7 +4,7 @@
 jQuery(document).ready(function(){
 
  
-
+		
 
 // TIPO DO PLANO
 jQuery(".hijos_num").hide();
@@ -314,7 +314,7 @@ if(url.indexOf('btn-parejaehijo') > -1){
 jQuery("#edad_1").mask("90");
 jQuery("#edad_2").mask("90");
 jQuery("#hijos_num").mask("9");
-jQuery("#Telefone").mask("9000000000");
+jQuery("#telefone").mask("9000000000");
 // jQuery("#sueldo").mask("0.000.000");
 // jQuery("#cpf").mask("000.000.000-00");
 // jQuery("#cnpj").mask("00.000.000/0000-00");

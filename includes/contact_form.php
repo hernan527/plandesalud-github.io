@@ -14,7 +14,7 @@ require_once('../config.php');
 require '../PHPmailer/Exception.php';
 require '../PHPmailer/PHPMailer.php';
 require '../PHPmailer/SMTP.php';
-
+$Pagina_Origen= $_POST['formulario_pagina'] ?? '';
 $Operadora = $_POST['Operadora'] ?? '';
 $idCapitas = $_POST['idCapitas'] ?? '';
 $edad_1 = $_POST['edad_1'] ?? '';
@@ -23,13 +23,10 @@ $hijos_num = $_POST['hijos_num'] ?? '';
 $poseeOS = $_POST['poseeOS'] ?? '';
 $cualOS = $_POST['cualOS'] ?? '';
 $sueldo = $_POST['sueldo'] ?? '';
-$categoriaMono = $_POST['categoriaMono'] ?? '';
-$aportantesMono = $_POST['aportantesMono'] ?? '';
 $name = $_POST['Name'] ?? '';
-$prefijo = $_POST['Prefijo'] ?? '';
-$telefono = $_POST['Telefone'] ?? '';
-$email = $_POST['email'] ?? '';;
-
+$telefono = $_POST['telefone'] ?? '';
+$email = $_POST['email'] ?? '';
+$sheetRespuetas = $_POST['Respuestas Google'] ?? '';
 
 
 
@@ -92,12 +89,9 @@ try {
     $message .= "<tr><td><strong>|Teléfono|</strong></td><td>" . strip_tags($telefono) . "</td></tr>";
     $message .= "<tr><td><strong>|Email|</strong></td><td>" . strip_tags($email) . "</td></tr>";
     $message .= "<tr><td><strong>Tipo asociado</strong></td><td>" . strip_tags($poseeOS) . "</td></tr>";
-    $message .= "<tr><td><strong>Tipo NOGRAV</strong></td><td>" . strip_tags($cualOS) . "</td></tr>";
     $message .= "<tr><td><strong>Sueldo Bruto</strong></td><td>" . strip_tags($sueldo) . "</td></tr>";
-    $message .= "<tr><td><strong>Categoria Monotributo</strong></td><td>" . strip_tags($categoriaMono) . "</td></tr>";
-    $message .= "<tr><td><strong># aportantes Monotributo</strong></td><td>" . strip_tags($aportantesMono) . "</td></tr>";
-    $message .= "<tr><td><strong>Formulario Origen</strong></td><td>" . strip_tags($prefijo) . "</td></tr>";
-
+    $message .= "<tr><td><strong>Formulario Origen</strong></td><td>" . strip_tags($Pagina_Origen) . "</td></tr>";
+    $message .= "<tr><td><strong>Respuestas Forms </strong></td><td>" . strip_tags($sheetRespueta) . "</td></tr>";
     $message .= "</table>";
     $message .= "</body></html>";
 
@@ -115,7 +109,10 @@ try {
         'message' => 'Error al enviar el mensaje: ' . $mail->ErrorInfo
     );
 }
-
+echo 'Operadora: ' . $Operadora . '<br>';
+echo 'idCapitas: ' . $idCapitas . '<br>';
+echo 'edad_1: ' . $edad_1 . '<br>';
+echo 'edad_2: ' . $edad_2 . '<br>';
 
 echo json_encode($response);
 

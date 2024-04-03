@@ -15,7 +15,7 @@ require '../PHPMailer/Exception.php';
 require '../PHPMailer/PHPMailer.php';
 require '../PHPMailer/SMTP.php';
 
-$Pagina_y_Formulario = $_POST['formulario-pagina'] ?? '';
+$Pagina_y_Formulario = $_POST['formulario_pagina'] ?? '';
 $Prepaga_Elegida = $_POST['Operadora'] ?? '';
 $Grupo_Familiar = $_POST['idCapitas'] ?? '';
 $Edad_Titular = $_POST['edad_1'] ?? '';
@@ -24,7 +24,7 @@ $Edades_Hijos = $_POST['hijos_num'] ?? '';
 $Tipo_Asociado = $_POST['poseeOS'] ?? '';
 $Sueldo = $_POST['sueldo'] ?? '';
 $Nombre = $_POST['Name'] ?? '';
-$Telefono = $_POST['Telefone'] ?? '';
+$Telefono = $_POST['telefone'] ?? '';
 $email = $_POST['email'] ?? '';  
 
 // if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -55,7 +55,7 @@ try {
         // https://docs.google.com/forms/d/e/1FAIpQLSf4MN3ugd5iBpbCEPDTsZmoEu-3TkGCl1jbzRzLXYUjmh-d_Q/viewform?usp=sf_link
         $url = 'https://docs.google.com/forms/d/e/1FAIpQLSf4MN3ugd5iBpbCEPDTsZmoEu-3TkGCl1jbzRzLXYUjmh-d_Q/formResponse';
           // Obtener datos del formulario
-          $Pagina_y_Formulario = $_POST['formulario-pagina'] ?? '';
+          $Pagina_y_Formulario = $_POST['formulario_pagina'] ?? '';
 $Prepaga_Elegida = $_POST['Operadora'] ?? '';
 $Grupo_Familiar = $_POST['idCapitas'] ?? '';
 $Edad_Titular = $_POST['edad_1'] ?? '';
@@ -64,7 +64,7 @@ $Edades_Hijos = $_POST['hijos_num'] ?? '';
 $Tipo_Asociado = $_POST['poseeOS'] ?? '';
 $Sueldo = $_POST['sueldo'] ?? '';
 $Nombre = $_POST['Name'] ?? '';
-$Telefono = $_POST['Telefone'] ?? '';
+$Telefono = $_POST['telefone'] ?? '';
 $email = $_POST['email'] ?? ''; 
         
        

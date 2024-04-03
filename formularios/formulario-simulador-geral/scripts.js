@@ -7,7 +7,7 @@
 		// 	var numbersFiltered = value.substring(0,4);
 		// 	console.log(numbersFiltered)
 		// 	if ( numbersFiltered === '0000' ) { return false; } else { return true;	};
-		// }, "Telefone Inválido");
+		// }, "telefone Inválido");
 
 		// jQuery("#form").validate({
 // 
@@ -248,10 +248,10 @@
 		// 		jQuery('.Name').focus(function(){jQuery("html, body").animate({ scrollTop: jQuery(this).offset().top - 45 }, 1000);});
 		// 		jQuery('.email').focus(function(){jQuery("html, body").animate({ scrollTop: jQuery(this).offset().top - 45 }, 1000);});
 		// 		jQuery('.Prefijo').focus(function(){jQuery("html, body").animate({ scrollTop: jQuery(this).offset().top - 45 }, 1000);});
-		// 		jQuery('.Telefone').focus(function(){jQuery("html, body").animate({ scrollTop: jQuery(this).offset().top - 45 }, 1000);});
+		// 		jQuery('.telefone').focus(function(){jQuery("html, body").animate({ scrollTop: jQuery(this).offset().top - 45 }, 1000);});
 
 
-		// 		jQuery('.Name, .email, .Pefijo, .Telefone').focus(function(){
+		// 		jQuery('.Name, .email, .Pefijo, .telefone').focus(function(){
 		// 			jQuery(".margin-rodape").addClass("remove-altura-margin-rodape");
 		// 			jQuery(".telefones-rodape").addClass("remove-telefone-rodape");
 		// 		});

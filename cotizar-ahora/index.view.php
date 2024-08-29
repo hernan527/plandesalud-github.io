@@ -18,8 +18,9 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script defer type='text/javascript' src="../assets/js/jquery.validate.min.js"></script>
-    <script defer type='text/javascript' src='../assets/js/jquery.mask.min8a54.js?ver=1.0.0'></script>
-    <script type="text/javascript" src="../assets/js/formularios-cotizar.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/dist/jquery.maskedinput.min.js"></script>
+
+    <script type="text/javascript" src="../assets/js/formularios-cot.js"></script>
 
 <script src="../assets/js/funciones.js"></script>
 <script defer type='text/javascript' src='../assets/js/jquery.mask.min8a54.js?ver=1.0.0'></script>
@@ -130,17 +131,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
   gtag('config', 'AW-11164676710');
 </script>	
-<!-- Hotjar Tracking Code for plandesalud.ar -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:3925775,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+
 
 </head>   
 <body class="page-template page-template-page-simulador page-template-page-simulador-php page page-id-16">
@@ -594,11 +585,14 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
     }, 5000); // Ajusta el retraso según sea necesario
   });
 </script>
+    <script>
+        function cambiarValor(valor) {
+  var input = document.getElementById('Operadora');
+  input.value = valor;
+}
 
+    </script>
 
-<script type='text/javascript'>
-	document.oncontextmenu = function(){return false}
-</script>
 
 </body>
                             

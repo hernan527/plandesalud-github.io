@@ -53,66 +53,66 @@ $sheetRespueta = $_POST['Respuestas_Google'] ?? '';
 // Crear una instancia de PHPMailer
 $mail = new PHPMailer(true);
 
-try {
+// try {
   
-    // Configuración del servidor SMTP
-    $mail->SMTPDebug = 2;
-    $mail->isSMTP();
-    $mail->CharSet = 'UTF-8';
-    $mail->Host = $host;
-    $mail->SMTPAuth = true;
-    $mail->Username = $username;
-    $mail->Password = $password;
-    $mail->SMTPSecure = $encryption;
-    $mail->Port = $port;
-    $mail->SMTPOptions = array(
-        'ssl' => array('verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true)
-    );
+//     // Configuración del servidor SMTP
+//     $mail->SMTPDebug = 2;
+//     $mail->isSMTP();
+//     $mail->CharSet = 'UTF-8';
+//     $mail->Host = $host;
+//     $mail->SMTPAuth = true;
+//     $mail->Username = $username;
+//     $mail->Password = $password;
+//     $mail->SMTPSecure = $encryption;
+//     $mail->Port = $port;
+//     $mail->SMTPOptions = array(
+//         'ssl' => array('verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true)
+//     );
 
-    // Remitente y destinatario
-    $mail->setFrom($username, 'Cotizar Prepaga');
-    $mail->addAddress($email_receive, $name_receive);
-    $mail->addCC('hernan_pesce@hotmail.com');
-    $mail->addBCC('solicitudesdepresupuesto@gmail.com');
-    // Contenido del correo electrónicoñ
-    $mail->isHTML(true);
-    $mail->Subject = 'Nuevo Formulario';
+//     // Remitente y destinatario
+//     $mail->setFrom($username, 'Cotizar Prepaga');
+//     $mail->addAddress($email_receive, $name_receive);
+//     $mail->addCC('hernan_pesce@hotmail.com');
+//     $mail->addBCC('solicitudesdepresupuesto@gmail.com');
+//     // Contenido del correo electrónicoñ
+//     $mail->isHTML(true);
+//     $mail->Subject = 'Nuevo Formulario';
 
-    $message = '<html><body>';
-    $message .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
-    $message .= "<tr style='background: #eee;'><td><strong>|Nombre|</strong></td><td>" . (isset($name) ? strip_tags($name) : "") . "</td></tr>";
-    $message .= "<tr style='background: #eee;'><td><strong>Empresa Seleccionada:</strong></td><td>" . (isset($Operadora) ? strip_tags($Operadora) : "") . "</td></tr>";
-    $message .= "<tr><td><strong>Grupo Familiar</strong></td><td>" . (isset($idCapitas) ? strip_tags($idCapitas) : "") . "</td></tr>";
-    $message .= "<tr><td><strong>Edad Titular</strong></td><td>" . (isset($edad_1) ? strip_tags($edad_1) : "") . "</td></tr>";
-    $message .= "<tr><td><strong>Edad Pareja</strong></td><td>" . (isset($edad_2) ? strip_tags($edad_2) : "") . "</td></tr>";
-    $message .= "<tr><td><strong>Edad/es hijo/s</strong></td><td>" . (isset($hijos_num) ? strip_tags($hijos_num) : "") . "</td></tr>";
-    $message .= "<tr><td><strong>|Teléfono|</strong></td><td>" . (isset($telefono) ? strip_tags($telefono) : "") . "</td></tr>";
-    $message .= "<tr><td><strong>|Email|</strong></td><td>" . (isset($email) ? strip_tags($email) : "") . "</td></tr>";
-    $message .= "<tr><td><strong>Tipo asociado</strong></td><td>" . (isset($poseeOS) ? strip_tags($poseeOS) : "") . "</td></tr>";
-    $message .= "<tr><td><strong>Sueldo Bruto</strong></td><td>" . (isset($sueldo) ? strip_tags($sueldo) : "") . "</td></tr>";
-    $message .= "<tr><td><strong>Formulario Origen</strong></td><td>" . (isset($Pagina_Origen) ? strip_tags($Pagina_Origen) : "") . "</td></tr>";
-    $message .= "<tr><td><strong>Respuestas Forms </strong></td><td>" . (isset($sheetRespueta) ? strip_tags($sheetRespueta) : "") . "</td></tr>";
+//     $message = '<html><body>';
+//     $message .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
+//     $message .= "<tr style='background: #eee;'><td><strong>|Nombre|</strong></td><td>" . (isset($name) ? strip_tags($name) : "") . "</td></tr>";
+//     $message .= "<tr style='background: #eee;'><td><strong>Empresa Seleccionada:</strong></td><td>" . (isset($Operadora) ? strip_tags($Operadora) : "") . "</td></tr>";
+//     $message .= "<tr><td><strong>Grupo Familiar</strong></td><td>" . (isset($idCapitas) ? strip_tags($idCapitas) : "") . "</td></tr>";
+//     $message .= "<tr><td><strong>Edad Titular</strong></td><td>" . (isset($edad_1) ? strip_tags($edad_1) : "") . "</td></tr>";
+//     $message .= "<tr><td><strong>Edad Pareja</strong></td><td>" . (isset($edad_2) ? strip_tags($edad_2) : "") . "</td></tr>";
+//     $message .= "<tr><td><strong>Edad/es hijo/s</strong></td><td>" . (isset($hijos_num) ? strip_tags($hijos_num) : "") . "</td></tr>";
+//     $message .= "<tr><td><strong>|Teléfono|</strong></td><td>" . (isset($telefono) ? strip_tags($telefono) : "") . "</td></tr>";
+//     $message .= "<tr><td><strong>|Email|</strong></td><td>" . (isset($email) ? strip_tags($email) : "") . "</td></tr>";
+//     $message .= "<tr><td><strong>Tipo asociado</strong></td><td>" . (isset($poseeOS) ? strip_tags($poseeOS) : "") . "</td></tr>";
+//     $message .= "<tr><td><strong>Sueldo Bruto</strong></td><td>" . (isset($sueldo) ? strip_tags($sueldo) : "") . "</td></tr>";
+//     $message .= "<tr><td><strong>Formulario Origen</strong></td><td>" . (isset($Pagina_Origen) ? strip_tags($Pagina_Origen) : "") . "</td></tr>";
+//     $message .= "<tr><td><strong>Respuestas Forms </strong></td><td>" . (isset($sheetRespueta) ? strip_tags($sheetRespueta) : "") . "</td></tr>";
     
-    $message .= "</table>";
-    $message .= "</body></html>";
+//     $message .= "</table>";
+//     $message .= "</body></html>";
 
-    $mail->Body = $message;
+//     $mail->Body = $message;
 
-    // Enviar el correo electrónico
-    $mail->send();
+//     // Enviar el correo electrónico
+//     $mail->send();
 
-    $response = array(
-        'status' => 'success',
-        'message' => 'El mensaje ha sido enviado exitosamente: ');
-} catch (Exception $e) {
-    $response = array(
-        'status' => 'error',
-        'message' => 'Error al enviar el mensaje: ' . $mail->ErrorInfo
-    );
-}
+//     $response = array(
+//         'status' => 'success',
+//         'message' => 'El mensaje ha sido enviado exitosamente: ');
+// } catch (Exception $e) {
+//     $response = array(
+//         'status' => 'error',
+//         'message' => 'Error al enviar el mensaje: ' . $mail->ErrorInfo
+//     );
+// }
 
 
-echo json_encode($response);
+// echo json_encode($response);
 
 
 // ...

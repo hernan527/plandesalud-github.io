@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 
 // Crear una instancia de PHPMailer
-$mail = new PHPMailer(true);
+//$mail = new PHPMailer(true);
 
 try {
     function googleForm() {

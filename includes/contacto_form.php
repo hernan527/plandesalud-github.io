@@ -55,7 +55,7 @@ try {
         // https://docs.google.com/forms/d/e/1FAIpQLSf4MN3ugd5iBpbCEPDTsZmoEu-3TkGCl1jbzRzLXYUjmh-d_Q/viewform?usp=sf_link
         $url = 'https://docs.google.com/forms/d/e/1FAIpQLSf4MN3ugd5iBpbCEPDTsZmoEu-3TkGCl1jbzRzLXYUjmh-d_Q/formResponse';
           // Obtener datos del formulario
-          $Pagina_y_Formulario = $_POST['formulario_pagina'] ?? '';
+$Pagina_y_Formulario = $_POST['formulario_pagina'] ?? '';
 $Prepaga_Elegida = $_POST['Operadora'] ?? '';
 $Grupo_Familiar = $_POST['idCapitas'] ?? '';
 $Edad_Titular = $_POST['edad_1'] ?? '';

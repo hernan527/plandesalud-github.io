@@ -554,7 +554,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   // Initialize the Typebot bubble
   Typebot.initBubble({
     typebot: "sal-o-mybeleza-rp1qajo",
-    apiHost: "https://typeapi.plandesalud.ar",
+    apiHost: "https://typeapi.tuchat.com.ar",
     theme: {
       button: { backgroundColor: "#D27A7D" },
       chatWindow: {

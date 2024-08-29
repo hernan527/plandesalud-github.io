@@ -41,7 +41,7 @@ $contador_json = json_encode($contador_data);
 file_put_contents('contador.json', $contador_json);
 
 
-// // Continuar con el resto de tu código para almacenar los datos de los visitantes en datoscompletos.json
+// // Continuar con el resto de tu c贸digo para almacenar los datos de los visitantes en datoscompletos.json
 
 // // FUNCIONES
 function get_real_ip(){
@@ -83,7 +83,7 @@ $pagina     = obtenerpagina($_POST['web']);
 $usuario    = $_POST['usuario'];
 $type       = intval($_POST['type']); /*0 entrada, 1 salida*/
 
-// // Obtener información geográfica de la IP
+// // Obtener informaci贸n geogr谩fica de la IP
 $str_datos  = file_get_contents("http://api.ipinfodb.com/v3/ip-city/?key=45abd2951ee0a74973b579544185c02820ca02a4a692f615786a68d9e7e8903a&ip=".$ipadress."&format=json");
 // $str_datos  = file_get_contents("http://api.ipinfodb.com/v3/ip-city/?key=45abd2951ee0a74973b579544185c02820ca02a4a692f615786a68d9e7e8903a&ip=169.150.196.84&format=json");
 
@@ -140,7 +140,7 @@ $current_array = json_decode($current_data, true);
 
 // Verificar si $current_array es null
 if ($current_array === null) {
-    // Si $current_array es null, no hay registros, inicializar un nuevo array vacío
+    // Si $current_array es null, no hay registros, inicializar un nuevo array vac铆o
     $current_array = [];
 }
 

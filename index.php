@@ -9,6 +9,7 @@ if (!isset($_COOKIE['visitado'])) {
     echo '<script src="contador-de-visitas.js"></script>';
 
 }
+
 ?>
 
 
@@ -36,6 +37,35 @@ if (!isset($_COOKIE['visitado'])) {
 
 <script defer src="assets/js/prefixfree.min.js"></script>
 <script defer src="assets/js/modernizr-2.8.0.dev.js"></script>
+<script>
+    const images = [
+        "assets/prestadores/sanatorio-trinidad.webp",
+        "assets/prestadores/sanjuandedios.webp",
+        "assets/prestadores/centro-dim.webp",
+        "assets/prestadores/sanatorio_general_sarmiento.webp",
+        "assets/prestadores/sanatorio-las-lomas.webp",
+        "assets/prestadores/hospital-aleman.webp",
+        "assets/prestadores/bazterrica.webp",
+        "assets/prestadores/hospital-britanico.webp",
+        "assets/prestadores/clinica-del-sol.webp",
+        "assets/prestadores/sanatorio-del-oeste.webp",
+        "assets/prestadores/clinica-san-camilo.webp",
+        "assets/prestadores/sanatorio-finochietto.webp",
+        "assets/prestadores/centros-odontologicos.webp",
+        "assets/prestadores/farmacity.webp",
+        "assets/prestadores/emergencias-medicas.webp",
+        "assets/prestadores/adventista.png",
+        "assets/prestadores/sanjuandedios.webp",
+        "assets/prestadores/clinica-modelo-moron.webp",
+        "assets/prestadores/centro-dim.webp"
+    ];
+    
+    images.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+    });
+    </script>
+    
 
 <!-- IMPORTES DO WP_HEAD -->
 <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
@@ -66,39 +96,49 @@ if (!isset($_COOKIE['visitado'])) {
 
 
 <style>
-	.smooth-scroll {
-  transition: scroll-behavior 0.8s ease-in-out;
-}
-</style>
-<style>
-      .marquee-left {
-    direction: rtl; /* Dirección de desplazamiento hacia la derecha */
-  }
-
-  .marquee-right {
-    direction: ltr; /* Dirección de desplazamiento hacia la izquierda */
-  }
-
-    marquee img{max-width:100px;padding-left:6px;padding-right:6px;}
     .marquee-container {
-    overflow: hidden;
-    white-space: nowrap;
-}
+        width: 100%;
+        overflow: hidden;
+    }
 
-.marquee-container img {
-    display: inline-block;
-    animation: marquee 15 linear infinite;
-}
+    .marquee {
+        display: flex;
+        width: calc(100% * 2);
+    }
 
-@keyframes marquee {
-    0% {
-      transform: translate(0, 0);
-  }
-  100% {
-      transform: translate(-50%, 0);
-  }
-}
-  </style>
+    .marquee img {
+        max-width: 100px;
+        padding: 0 6px;
+    }
+
+    /* Animación hacia la izquierda */
+    .marquee-left .marquee {
+        animation: scroll-left 10s linear infinite;
+    }
+
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    /* Animación hacia la derecha */
+    .marquee-right .marquee {
+        animation: scroll-right 10s linear infinite;
+    }
+
+    @keyframes scroll-right {
+        0% {
+            transform: translateX(-50%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+</style>
 <style>
 	.row [class^="col-"] {
 	  display: inline-block;
@@ -222,7 +262,7 @@ Compará los Mejores para Vos y tu familia</p>
     <img src="assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" alt="Hominis" title="HominisAmil">
 <!-- </a> -->
 <!-- <a href="plan-de-salud-galeno/index.html"> -->
-    <img src="assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galenos">
+    <img src="assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-plan-de-salud.png" alt="Galeno" title="Galeno">
 <!-- </a> -->
 <!-- <a href="plan-de-salud-omint/index.html"> -->
     <img src="assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint">
@@ -246,122 +286,111 @@ Compará los Mejores para Vos y tu familia</p>
 </div></div>
 
 
-
 <div class="wp-container-6 wp-block-group camada-hospitais"><div class="wp-block-group__inner-container">
 <h2>Amplia red de prestadores</h2>
-
-<marquee class="marquee-right" behavior="alternate" scrollamount=8>
-    <img src="assets/prestadores/sanatorio-trinidad.webp" alt="Sanatorios de la Trinidad" title="Sanatorios de la Trinidad" >
+<div class="marquee-container  marquee-left">
+    <div class="marquee">
+        <img src="assets/prestadores/sanatorio-trinidad.webp" alt="Sanatorios de la Trinidad" title="Sanatorios de la Trinidad"  loading="lazy" >
        
        
-           <img src="assets/prestadores/sanjuandedios.webp"  alt="Hospital San Juan de Dios" title="Hospital San Juan de Dios"   >
+        <img src="assets/prestadores/sanjuandedios.webp"  alt="Hospital San Juan de Dios" title="Hospital San Juan de Dios"    loading="lazy" >
+    
        
-          
-           <img src="assets/prestadores/clinica-modelo-moron.webp"  alt="Clinica Modelo Moron" title="Clinica Modelo Moron"  >
-       
-       
-           <img src="assets/prestadores/centro-dim.webp"  alt="Centro Médico Dim" title="Centro Médico Dim"   >
-           
-           
-           
-            <img src="assets/prestadores/sanatorio_general_sarmiento.webp"  alt="Sanatorio General Sarmiento" title="Sanatorio General Sarmiento"   >
-           
-           <img src="assets/prestadores/sanatorio-las-lomas.webp"  alt="Sanatorio las Lomas" title="Sanatorio las Lomas"  >
-       
-           <img src="assets/prestadores/hospital-aleman.webp"  alt="Hospital Alemán" title="Hospital Alemán">
-       
-           <img src="assets/prestadores/bazterrica.webp"  alt="Clinica Bazterrica" title="Clinica Bazterrica"  >
-       
-       
-           <img src="assets/prestadores/hospital-britanico.webp"  alt="Hospital Británico" title="Hospital Británico"  >                                       <img src="assets/prestadores/premedic-medical-center.webp"  alt="Premedic Medical Center" title="Premedic Medical Center"   >
-      
-      <img src="assets/prestadores/clinica-del-sol.webp"  alt="Clinica del Sol" title="Clinica del Sol" >
-       
+        <img src="assets/prestadores/clinica-modelo-moron.webp"  alt="Clinica Modelo Moron" title="Clinica Modelo Moron"   loading="lazy" >
+    
+    
+        <img src="assets/prestadores/centro-dim.webp"  alt="Centro Médico Dim" title="Centro Médico Dim"    loading="lazy" >
         
-       
-           <img src="assets/prestadores/sanatorio-del-oeste.webp"  alt="" title="Sanatorio del Oeste"   >
-       
-           <img src="assets/prestadores/clinica-san-camilo.webp"  alt="Clinica San Camilo" title="Clinica San Camilo"  >
-            <img src="assets/prestadores/sanatorio-finochietto.webp"  alt="Sanatorio Finochietto" title="Sanatorio Finochietto"  >
-       <img src="assets/prestadores/centros-odontologicos.webp"  alt="Centros Odongológicos Propios" title="Centros Odongológicos Propios"   >
-       <img src="assets/prestadores/farmacity.webp"  alt="Farmacity" title="Farmacity"   >
-       
-       <img src="assets/prestadores/emergencias-medicas.webp"  alt="Emergencias Médicas" title="Emergencias Médicas"   >
-       <img src="assets/prestadores/adventista.png"  alt="Clínica Adventista de Belgrano" title="Clínica Adventista de Belgrano  "   >
-        <img src="assets/prestadores/sanatorio-trinidad.webp" alt="Sanatorios de la Trinidad" title="Sanatorios de la Trinidad" >
-       <img src="assets/prestadores/sanjuandedios.webp"  alt="Hospital San Juan de Dios" title="Hospital San Juan de Dios"   >
-       
-          
-           <img src="assets/prestadores/clinica-modelo-moron.webp"  alt="Clinica Modelo Moron" title="Clinica Modelo Moron"  >
-       
-       
-           <img src="assets/prestadores/centro-dim.webp"  alt="Centro Médico Dim" title="Centro Médico Dim"   >
-       
-   </marquee>
-   
-   
-   
-   <marquee behavior="alternate" scrollamount=8>
-   
-   <img src="assets/prestadores/centro-k41.webp"  alt="Centro Médico K41" title="Centro Médico K41"   >
-   
-   <img src="assets/prestadores/sanatorio-itoiz.webp"  alt="Sanatorio Itoiz" title="Sanatorio Itoiz"   >
-   
-                   <img src="assets/prestadores/sanatorio-san-lucas.webp"  alt="Sanatorio San Lucas" title="Sanatorio San Lucas"  >            
-                               
-           <img src="assets/prestadores/clinica-modelo-lanus.webp"  alt="Clínica Modelo Lanús" title="Clínica Modelo Lanús"  >
-                               
-           
-
-                               
-           <img src="assets/prestadores/sanatorio-12.png"  alt="Hospital Privado Modelo" title="Hospital Privado Modelo"  >
-       
-          <img src="assets/prestadores/sanatorio-san-pablo.webp"  alt="Sanatorio San Pablo" title="Sanatorio San Pablo"   >
-       
-           <img src="assets/prestadores/cemic.webp"  alt="Cemic" title="Cemic"   >
-                           
-           <img src="assets/prestadores/sanatorio-finochietto.webp"finalizar  alt="Sanatorio Finochietto" title="Sanatorio Finochietto"  >
-       
         
-       
-           <img src="assets/prestadores/centro-medico-genea.webp"  alt="Centro Médico Genea" title="Centro Médico Genea"   >
-       
-                <img src="assets/prestadores/sanatorio-anchorena.webp"  alt="Sanatorio Anchorena" title="Sanatorio Anchorena"   >
-       
-       
-       
-           <img src="assets/prestadores/sanatorio-icba.webp"  alt="ICBA" title="ICBA"   >
-       
-       
-       
-           <img src="assets/prestadores/sanatorio-la-torre.webp"  alt="Sanatorio La Torre Vicente Lopez" title="Sanatorio La Torre Vicente Lopez"   > 
-           
-
-       
-           <img src="assets/prestadores/centro-rossi.webp"  alt="Centro Médico Rossi" title="Centro Médico Rossi"   >
-       
-       
-           <img src="assets/prestadores/centro-deragopyan.png"  alt="Centro Médico Deragopyan" title="Centro Médico Deragopyan"   >
-       
-       
-       
-       
-           <img src="assets/prestadores/centro-diagnosticomaipu.webp"  alt="Centro diagnostico maipu" title="Centro diagnostico maipu"   >
-       
-       
-           <img src="assets/prestadores/centro-fcs.webp"  alt="Fundación Cientifica del Sur" title="Fundación Cientifica del Sur"   >
-       
-       
-           <img src="assets/prestadores/centro-diagnosticoparque.webp"  alt="Centro de Diagnóstico Parque" title="Centro de Diagnóstico Parque"   >
-       
-       <img src="assets/prestadores/centro-k41.webp"  alt="Centro Médico K41" title="Centro Médico K41"   >
+        
+         <img src="assets/prestadores/sanatorio_general_sarmiento.webp"  alt="Sanatorio General Sarmiento" title="Sanatorio General Sarmiento"    loading="lazy" >
+        
+        <img src="assets/prestadores/sanatorio-las-lomas.webp"  alt="Sanatorio las Lomas" title="Sanatorio las Lomas"   loading="lazy" >
+    
+        <img src="assets/prestadores/hospital-aleman.webp"  alt="Hospital Alemán" title="Hospital Alemán">
+    
+        <img src="assets/prestadores/bazterrica.webp"  alt="Clinica Bazterrica" title="Clinica Bazterrica"   loading="lazy" >
+    
+    
+        <img src="assets/prestadores/hospital-britanico.webp"  alt="Hospital Británico" title="Hospital Británico"   loading="lazy" >                                       <img src="assets/prestadores/premedic-medical-center.webp"  alt="Premedic Medical Center" title="Premedic Medical Center"    loading="lazy" >
    
-   <img src="assets/prestadores/sanatorio-itoiz.webp"  alt="Sanatorio Itoiz" title="Sanatorio Itoiz"   >
-   
-                   <img src="assets/prestadores/sanatorio-san-lucas.webp"  alt="Sanatorio San Lucas" title="Sanatorio San Lucas"  > 
+   <img src="assets/prestadores/clinica-del-sol.webp"  alt="Clinica del Sol" title="Clinica del Sol"  loading="lazy" >
+    
+     
+    
+        <img src="assets/prestadores/sanatorio-del-oeste.webp"  alt="" title="Sanatorio del Oeste"    loading="lazy" >
+    
+        <img src="assets/prestadores/clinica-san-camilo.webp"  alt="Clinica San Camilo" title="Clinica San Camilo"   loading="lazy" >
+         <img src="assets/prestadores/sanatorio-finochietto.webp"  alt="Sanatorio Finochietto" title="Sanatorio Finochietto"   loading="lazy" >
+    <img src="assets/prestadores/centros-odontologicos.webp"  alt="Centros Odongológicos Propios" title="Centros Odongológicos Propios"    loading="lazy" >
+    <img src="assets/prestadores/farmacity.webp"  alt="Farmacity" title="Farmacity"    loading="lazy" >
+    
+    <img src="assets/prestadores/emergencias-medicas.webp"  alt="Emergencias Médicas" title="Emergencias Médicas"    loading="lazy" >
+    <img src="assets/prestadores/adventista.png"  alt="Clínica Adventista de Belgrano" title="Clínica Adventista de Belgrano  "    loading="lazy" >
+     <img src="assets/prestadores/sanatorio-trinidad.webp" alt="Sanatorios de la Trinidad" title="Sanatorios de la Trinidad"  loading="lazy" >
+    <img src="assets/prestadores/sanjuandedios.webp"  alt="Hospital San Juan de Dios" title="Hospital San Juan de Dios"    loading="lazy" >
+    
        
-   </marquee>
+        <img src="assets/prestadores/clinica-modelo-moron.webp"  alt="Clinica Modelo Moron" title="Clinica Modelo Moron"   loading="lazy" >
+    
+    
+        <img src="assets/prestadores/centro-dim.webp"  alt="Centro Médico Dim" title="Centro Médico Dim"    loading="lazy" >
+       
+   
+    </div>
+</div>
 
+<div class="marquee-container  marquee-right">
+    <div class="marquee">
+        <img src="assets/prestadores/sanatorio-trinidad.webp" alt="Sanatorios de la Trinidad" title="Sanatorios de la Trinidad"  loading="lazy" >
+       
+       
+        <img src="assets/prestadores/sanjuandedios.webp"  alt="Hospital San Juan de Dios" title="Hospital San Juan de Dios"    loading="lazy" >
+    
+       
+        <img src="assets/prestadores/clinica-modelo-moron.webp"  alt="Clinica Modelo Moron" title="Clinica Modelo Moron"   loading="lazy" >
+    
+    
+        <img src="assets/prestadores/centro-dim.webp"  alt="Centro Médico Dim" title="Centro Médico Dim"    loading="lazy" >
+        
+        
+        
+         <img src="assets/prestadores/sanatorio_general_sarmiento.webp"  alt="Sanatorio General Sarmiento" title="Sanatorio General Sarmiento"    loading="lazy" >
+        
+        <img src="assets/prestadores/sanatorio-las-lomas.webp"  alt="Sanatorio las Lomas" title="Sanatorio las Lomas"   loading="lazy" >
+    
+        <img src="assets/prestadores/hospital-aleman.webp"  alt="Hospital Alemán" title="Hospital Alemán">
+    
+        <img src="assets/prestadores/bazterrica.webp"  alt="Clinica Bazterrica" title="Clinica Bazterrica"   loading="lazy" >
+    
+    
+        <img src="assets/prestadores/hospital-britanico.webp"  alt="Hospital Británico" title="Hospital Británico"   loading="lazy" >                                       <img src="assets/prestadores/premedic-medical-center.webp"  alt="Premedic Medical Center" title="Premedic Medical Center"    loading="lazy" >
+   
+   <img src="assets/prestadores/clinica-del-sol.webp"  alt="Clinica del Sol" title="Clinica del Sol"  loading="lazy" >
+    
+     
+    
+        <img src="assets/prestadores/sanatorio-del-oeste.webp"  alt="" title="Sanatorio del Oeste"    loading="lazy" >
+    
+        <img src="assets/prestadores/clinica-san-camilo.webp"  alt="Clinica San Camilo" title="Clinica San Camilo"   loading="lazy" >
+         <img src="assets/prestadores/sanatorio-finochietto.webp"  alt="Sanatorio Finochietto" title="Sanatorio Finochietto"   loading="lazy" >
+    <img src="assets/prestadores/centros-odontologicos.webp"  alt="Centros Odongológicos Propios" title="Centros Odongológicos Propios"    loading="lazy" >
+    <img src="assets/prestadores/farmacity.webp"  alt="Farmacity" title="Farmacity"    loading="lazy" >
+    
+    <img src="assets/prestadores/emergencias-medicas.webp"  alt="Emergencias Médicas" title="Emergencias Médicas"    loading="lazy" >
+    <img src="assets/prestadores/adventista.png"  alt="Clínica Adventista de Belgrano" title="Clínica Adventista de Belgrano  "    loading="lazy" >
+     <img src="assets/prestadores/sanatorio-trinidad.webp" alt="Sanatorios de la Trinidad" title="Sanatorios de la Trinidad"  loading="lazy" >
+    <img src="assets/prestadores/sanjuandedios.webp"  alt="Hospital San Juan de Dios" title="Hospital San Juan de Dios"    loading="lazy" >
+    
+       
+        <img src="assets/prestadores/clinica-modelo-moron.webp"  alt="Clinica Modelo Moron" title="Clinica Modelo Moron"   loading="lazy" >
+    
+    
+        <img src="assets/prestadores/centro-dim.webp"  alt="Centro Médico Dim" title="Centro Médico Dim"    loading="lazy" >
+       
+   
+    </div>
+</div>
 <div class="wp-container-5 wp-block-buttons">
 <div class="wp-block-button"><a class="wp-block-button__link" href="cotizar-ahora/#1">PEDIR COTIZACIÓN</a>
 </div>
@@ -388,7 +417,7 @@ Compará los Mejores para Vos y tu familia</p>
                 </div>
 
                 <div class="col">
-                    <a class='telefone' target='_blank' href='tel:01125608600'>(11) 2560-8600&nbsp;&nbsp;<txt style="font-size:12px">( 9 hs a 19 hs )</txt><br></a> 
+                    <a class='telefone' target='_blank' href='tel:01130708070'>(11) 3070-8070&nbsp;&nbsp;<txt style="font-size:12px">( 9 hs a 19 hs )</txt><br></a> 
                                                                <a class="numero-whatsapp" href="https://api.whatsapp.com/send?phone=5491130708070&amp;text=Hola,%20estoy%20en%20el%20site%20Plan%20de%20Salúd%20(https://www.plandesalud.ar/)%20e%20quisiera%20me%20que%20me%20brinde%20más%20información." target="_blank">Recíbalo por Whatsapp</a>
                 </div>
 
@@ -449,7 +478,32 @@ Main.boot( [] );
         </div>
         <script type='text/javascript'>
             document.oncontextmenu = function(){return false}
-        </script>   
+        </script> 
+      
+<script type="module">
+    import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.2.85/dist/web.js';
+
+    // Initialize the Typebot bubble
+    Typebot.initBubble({
+      typebot: "sal-o-mybeleza-rp1qajo",
+      apiHost: "https://typeapi.plandesalud.ar",
+      theme: {
+        button: { backgroundColor: "#D27A7D" },
+        chatWindow: {
+          backgroundColor:
+            "https://s3.fr-par.scw.cloud/typebot/public/typebots/hlmywyje0sbz1lfogu86pyks/blocks/ssmyt084oosa17cggqd8kfg9",
+        },
+      },
+    });
+
+    // Open the Typebot bubble automatically after a delay (e.g., 5 seconds)
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        Typebot.open();
+      }, 5000); // Ajusta el retraso según sea necesario
+    });
+  </script>
+
 
 </body>
 

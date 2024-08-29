@@ -53,7 +53,7 @@ loader.style.display = 'block';
         'entry.1779532345': Edad_Pareja,
         'entry.1112113610': Edades_Hijos,
         'entry.632598661': Tipo_Asociado,
-        'entry.1404611772': Sueldo, // ¿Este campo tiene la misma clave que Tipo_Desregulado?
+        'entry.1404611772': Sueldo, // 驴Este campo tiene la misma clave que Tipo_Desregulado?
         'entry.1508322728': Nombre,
         'entry.1813933214': Telefono,
         'entry.710988652': email
@@ -65,7 +65,8 @@ loader.style.display = 'block';
      
 	
         $.ajax({
-            url: "https://servidor-queplan.onrender.com/cotizacion/",
+            // url: "https://servidor-queplan.onrender.com/cotizacion/",
+            url: form.action,
             type: 'POST',
             data: formData,
             processData: false,
@@ -81,8 +82,9 @@ loader.style.display = 'block';
                boton.value = '  ENVIO EXITOSO!  ';
                loader.style.display = 'none';
                googleForm(data);
+               webhookMautic(formData);
                $('#contact-form')[0].reset();
-               senMail(formData,form,response)
+              //  senMail(formData,form,response)
     // salvaCookies();
 
     setTimeout(function() {
@@ -104,7 +106,7 @@ loader.style.display = 'block';
       data: data,
       dataType: 'xml',
       success: function (response) {
-        // La solicitud se realizó correctamente, los datos se han enviado al formulario de Google Forms
+        // La solicitud se realiz贸 correctamente, los datos se han enviado al formulario de Google Forms
       },
       error: function (error) {
         console.log('Enter on error');
@@ -199,6 +201,19 @@ function senMail(formClass,formData,response){
   console.log(form)
   $.ajax({
     url: form.action,
+    type: 'POST',
+    data: formData,
+    processData: false,
+    contentType: false,
+
+  });
+
+}
+
+function webhookMautic(formData){
+
+  $.ajax({
+    url: "https://n8nwebhook.plandesalud.ar/webhook/89174271-0718-461b-911c-585e2ae1c13e",
     type: 'POST',
     data: formData,
     processData: false,

@@ -4,7 +4,7 @@
  */
 
 //El servidor de email
-$host = "smtp-mail.outlook.com";
+$host = "smtp.zoho.com";
 
 //El servidor de email
 // $host = "vmi598549.contaboserver.net";
@@ -16,16 +16,10 @@ $encryption = 'tls';
 $port = 587;
 
 //El usuario de autentificación
-$username = "hernan_pesce@hotmail.com";
+$username = "soporte@plandesud.com";
 
 //La contraseña de autentificación
-$password = 'Dilema2570$';
-
-//El usuario de autentificación
-// $username = "formulario@queplan.ar";
-
-//La contraseña de autentificación
-// $password = 'claveformulario8083';
+$password = 'Sucundum2570';
 
 //El email que recibe los mensajes
 $email_receive = "hernan527@gmail.com";

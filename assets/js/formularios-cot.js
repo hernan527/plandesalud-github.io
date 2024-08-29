@@ -3,6 +3,15 @@
 
   jQuery(document).ready(function(){
   
+    jQuery(".bandeiras img").click(function(){
+          var srcImagem = jQuery(this).attr("src");
+          var idOperadpra = jQuery(this).attr("data-id-operadora");
+          jQuery('.recebe-img img').remove();
+          jQuery('.recebe-img').append('<img src="'+srcImagem+'">').attr('id', jQuery(this).data("data-classe-operadora"));
+          jQuery(".campo-operadora").val(idOperadpra);
+          jQuery(".plano-selecionado").fadeIn();
+        });
+        
    
       
   

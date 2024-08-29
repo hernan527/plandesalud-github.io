@@ -20,9 +20,10 @@
 <script defer type='text/javascript' src="../assets/js/jquery.validate.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/dist/jquery.maskedinput.min.js"></script>
 
-    <script type="text/javascript" src="../assets/js/formularios-cot.js"></script>
+    <script defer type='text/javascript' src='../assets/js/jquery.mask.min8a54.js?ver=1.0.0'></script>
+    <script defer type="text/javascript" src="../assets/js/formularios-cot.js"></script>
 
-<script src="../assets/js/funciones.js"></script>
+<script defer src="../assets/js/funciones.js"></script>
 <script defer type='text/javascript' src='../assets/js/jquery.mask.min8a54.js?ver=1.0.0'></script>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -110,7 +111,27 @@
 <style id='global-styles-inline-css' type='text/css'>
 body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
 </style>
+<style>
+        .plano-selecionado {
+            display: none; /* Oculta el contenedor al inicio */
+        }
 
+        .recebe-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;  /* Ajusta el ancho del contenedor según sea necesario */
+    height: 100px; /* Ajusta el alto del contenedor según sea necesario */
+    overflow: visible; /* Permite que la imagen se expanda más allá del contenedor */
+}
+.recebe-img img {
+    transform: scale(2); /* Escala la imagen al 150% de su tamaño original */
+    transform-origin: center; /* Escala desde el centro */
+    width: auto;  /* Permite que la imagen mantenga su tamaño original */
+    height: auto; /* Permite que la imagen mantenga su tamaño original */
+}
+
+    </style>
 <script type='text/javascript' src='../assets/js/jquery/jquery.minaf6c.js?ver=3.6.0' id='jquery-core-js'></script>
 <script type='text/javascript' src='../assets/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js'></script>
 <link rel="https://api.w.org/" href="../assets/json/index.html" /><link rel="alternate" type="application/json" href="../assets/json/wp/v2/pages/16.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
@@ -131,7 +152,17 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
   gtag('config', 'AW-11164676710');
 </script>	
-
+<!-- Hotjar Tracking Code for plandesalud.ar -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3925775,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
 
 </head>   
 <body class="page-template page-template-page-simulador page-template-page-simulador-php page page-id-16">
@@ -192,42 +223,43 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <div class='chamada-simulador '><p><strong>Elija</strong> a continuación su operadora y descubra el valor de <strong>su plan de salud</strong>.</p>
                                 <p>¡Es rápido y aún así garantizamos el precio más bajo! Haga clic y compruébelo, somos socios de las mejores operadoras de Argentina.</p></div>
                             <link href="../assets/css/style-formularioSimuladorGeneral.css" rel="stylesheet" type="text/css">
-                                <div class="contador" id="1">
+                                <div class="contador" id="1" >
         <h3>Hoy más de <span id="contador"><?php echo $numeroDeVisitas ?></span> personas solicitaron una cotización</h3>
     </div>
 
                             <h2 class="passo-bandeiras">1º Paso: Selecione una empresa</h2>
                             
                             <div class="bandeiras" >
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/todas-las-empresas.png" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('11')" data-classe-operadora="multimarcas"></a>
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude"></a>
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint"></a>
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora=""></a>
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao"></a>
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil"></a>
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.png" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medifé')" data-classe-operadora="notredame"></a>
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida"></a>
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed"></a>
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one"></a>
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint"></a>
-    <a  href="#3"><img src="../assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint"></a>
-
+                                
+    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/todas-las-empresas.png" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('11')" data-classe-operadora="multimarcas"></a>
+    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude"></a>
+    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint"></a>
+    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora=""></a>
+    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao"></a>
+    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil"></a>
+    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.png" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medifé')" data-classe-operadora="notredame"></a>
+    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida"></a>
+    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed"></a>
+    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one"></a>
+    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint"></a>
+    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint"></a>
  </div>
- <h2 class="passo-formulario"  >2º Completá el formulario</h2>
+ <h2 id="d"   class="passo-formulario"  >2º Completá el formulario</h2>
  <form id="contact-form"  class="form-cotacao">
 
     <input class="campo-pagina" type="hidden" name="formulario_pagina" id="formulario_pagina" value="cotizar-ahora-formulario-completo">
 
      <input class="campo-operadora" type="hidden" name="Operadora" id="Operadora" value="Sin Selección">
  
-     <div class="plano-selecionado"  >
-         <p id="3" >Plan Selecionado:</p>
-         <div class="recebe-img"></div>
-     </div>
-
-		<div class="tipo-de-plano" >
-        <br>
-			<p><strong>Quienes ingresan al plan?</strong></p>
+     <div  class="plano-selecionado"  >
+         <p  >Plan Selecionado:</p>
+         <div    class="recebe-img"></div>
+        
+     </div >
+     
+		<div   class="tipo-de-plano"  >
+      
+			<p><strong >Quienes ingresan al plan?</strong></p>
 			<input type="radio" id="individual" name="idCapitas" value="Individual"><b class="btn-vos"  >Vos </b>
 			<input type="radio" id="pareja" name="idCapitas" value="Pareja"><b class="btn-pareja">Pareja</b>
 			<input type="radio" id="indehijo" name="idCapitas" value="Individual Con Hijo/s"><b class="btn-vosehijo">Vos e hijo/s</b>
@@ -261,7 +293,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 		</div>
 
 	
-		<div class="possui-cnpj">
+		<div  class="possui-cnpj">
 			<p><strong>Cúal como empleado o monotributista?</strong></p>
 			<input type="radio" id="rel-os" name="cualOS" value="Emplado"><b class="btn-rel-os">Relacion de dependencia</b>
 			<input type="radio" id="mon-os" name="cualOS" value="MOnotributo"><b class="btn-mon-os">OS del Monotributo</b>
@@ -437,6 +469,16 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 <!-- Agrega tu script JavaScript aquí -->
 <script>
+jQuery(".bandeiras img").click(function(){
+			var srcImagem = jQuery(this).attr("src");
+			var idOperadpra = jQuery(this).attr("data-id-operadora");
+			jQuery('.recebe-img img').remove();
+			jQuery('.recebe-img').append('<img src="'+srcImagem+'">').attr('id', jQuery(this).data("data-classe-operadora"));
+			jQuery(".campo-operadora").val(idOperadpra);
+			jQuery(".plano-selecionado").fadeIn();
+		});
+        </script>
+<script>
 
         jQuery(document).ready(function(){
             jQuery.validator.addMethod("telefone", function (value) {
@@ -503,14 +545,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 		jQuery("#telefone").mask("9000000000");
         jQuery("#sueldo").mask("9000000");
         
-		jQuery(".bandeiras img").click(function(){
-			var srcImagem = jQuery(this).attr("src");
-			var idOperadpra = jQuery(this).attr("data-id-operadora");
-			jQuery('.recebe-img img').remove();
-			jQuery('.recebe-img').append('<img src="'+srcImagem+'">').attr('id', jQuery(this).data("classe-operadora"));
-			jQuery(".campo-operadora").val(idOperadpra);
-			jQuery(".plano-selecionado").fadeIn();
-		});
+	
 
 	
         
@@ -554,7 +589,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   // Initialize the Typebot bubble
   Typebot.initBubble({
     typebot: "sal-o-mybeleza-rp1qajo",
-    apiHost: "https://typeapi.tuchat.com.ar",
+    apiHost: "https://typeapi.plandesalud.ar",
     theme: {
       button: { backgroundColor: "#D27A7D" },
       chatWindow: {
@@ -585,15 +620,18 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
     }, 5000); // Ajusta el retraso según sea necesario
   });
 </script>
-    <script>
+
+
+<script type='text/javascript'>
+	document.oncontextmenu = function(){return false}
+</script>
+<script>
         function cambiarValor(valor) {
   var input = document.getElementById('Operadora');
   input.value = valor;
 }
 
     </script>
-
-
 </body>
                             
                             

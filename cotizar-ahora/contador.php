@@ -20,7 +20,7 @@ class contador {
 	public function ConnectDB()
 	{
 		try {		
-			return $conection = new PDO("mysql:host=localhost;dbname=hernan56_visitas;charset=utf8", 'hernan56_visitas', '$#!p@Y%?Ro4#');		
+			return $conection = new PDO("mysql:host=localhost;dbname=hernan56_visitas;charset=utf8", 'root', '');		
 		} catch (PDOException $e) {
 			echo "ERROR: ".$e->getMessage();
 			die();

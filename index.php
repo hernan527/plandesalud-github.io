@@ -488,29 +488,19 @@ Main.boot( [] );
             document.oncontextmenu = function(){return false}
         </script> 
       
-<script type="module">
-    import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.2.85/dist/web.js';
+      <script type="module">
+  import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3.4/dist/web.js'
 
-    // Initialize the Typebot bubble
-    Typebot.initBubble({
-      typebot: "agendar-citas-rwyx913",
-      apiHost: "https://typeapi.tuchat.com.ar",
-      theme: {
-        button: { backgroundColor: "#D27A7D" },
-        chatWindow: {
-          backgroundColor:
-            "https://s3.fr-par.scw.cloud/typebot/public/typebots/hlmywyje0sbz1lfogu86pyks/blocks/ssmyt084oosa17cggqd8kfg9",
-        },
-      },
-    });
+  Typebot.initBubble({
+    typebot: "agendar-citas-p2kzurw",
+    apiHost: "https://typeapi.tuchat.com.ar",
+    theme: {
+      button: { backgroundColor: "#0042DA" },
+      chatWindow: { backgroundColor: "#fff" },
+    },
+  });
+</script>
 
-    // Open the Typebot bubble automatically after a delay (e.g., 5 seconds)
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        Typebot.open();
-      }, 5000); // Ajusta el retraso según sea necesario
-    });
-  </script>
 
 
 </body>

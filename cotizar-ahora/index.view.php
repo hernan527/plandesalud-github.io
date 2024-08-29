@@ -584,54 +584,18 @@ jQuery(".bandeiras img").click(function(){
     });
 </script>
 <script type="module">
-  import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.2.85/dist/web.js';
+  import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3.4/dist/web.js'
 
-  // Initialize the Typebot bubble
   Typebot.initBubble({
-    typebot: "agendar-citas-rwyx913",
-    apiHost: "https://typeapi.tuchat.com.ar/",
+    typebot: "agendar-citas-p2kzurw",
+    apiHost: "https://typeapi.tuchat.com.ar",
     theme: {
-      button: { backgroundColor: "#D27A7D" },
-      chatWindow: {
-        backgroundColor:
-          "https://s3.fr-par.scw.cloud/typebot/public/typebots/hlmywyje0sbz1lfogu86pyks/blocks/ssmyt084oosa17cggqd8kfg9",
-      },
+      button: { backgroundColor: "#0042DA" },
+      chatWindow: { backgroundColor: "#fff" },
     },
   });
-
-  // Load the saved conversation if it exists
-  Typebot.on('init', function() {
-    const savedConversation = localStorage.getItem('typebotConversation');
-    if (savedConversation) {
-      Typebot.load(JSON.parse(savedConversation));
-    }
-  });
-
-  // Save the conversation whenever the user sends a message
-  Typebot.on('message', function() {
-    const conversation = Typebot.getConversation(); // Obtener la conversación actual
-    localStorage.setItem('typebotConversation', JSON.stringify(conversation));
-  });
-
-  // Open the Typebot bubble automatically after a delay (e.g., 5 seconds)
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      Typebot.open();
-    }, 5000); // Ajusta el retraso según sea necesario
-  });
 </script>
 
-
-<script type='text/javascript'>
-	document.oncontextmenu = function(){return false}
-</script>
-<script>
-        function cambiarValor(valor) {
-  var input = document.getElementById('Operadora');
-  input.value = valor;
-}
-
-    </script>
 </body>
                             
                             

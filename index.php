@@ -106,11 +106,18 @@ if (!isset($_COOKIE['visitado'])) {
         width: calc(100% * 2);
     }
 
-    .marquee img {
-        max-width: 100px;
+    /* .marquee img {
+        max-width: 100px;s
         padding: 0 6px;
-    }
-
+    } */
+/* Estilo para las imágenes dentro del marquee */
+.marquee img {
+    display: inline-block;
+    width:150px; /* Ajusta el ancho según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+  /*margin-right: 20px;  Espacio entre las imágenes */
+    padding: 0 6px;
+}
     /* Animación hacia la izquierda */
     .marquee-left .marquee {
         animation: scroll-left 10s linear infinite;
@@ -138,6 +145,7 @@ if (!isset($_COOKIE['visitado'])) {
             transform: translateX(0);
         }
     }
+
 </style>
 <style>
 	.row [class^="col-"] {
@@ -262,7 +270,7 @@ Compará los Mejores para Vos y tu familia</p>
     <img src="assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" alt="Hominis" title="HominisAmil">
 <!-- </a> -->
 <!-- <a href="plan-de-salud-galeno/index.html"> -->
-    <img src="assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-plan-de-salud.png" alt="Galeno" title="Galeno">
+    <img src="assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno">
 <!-- </a> -->
 <!-- <a href="plan-de-salud-omint/index.html"> -->
     <img src="assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint">
@@ -486,7 +494,7 @@ Main.boot( [] );
     // Initialize the Typebot bubble
     Typebot.initBubble({
       typebot: "sal-o-mybeleza-rp1qajo",
-      apiHost: "https://typeapi.plandesalud.ar",
+      apiHost: "https://typeapi.tuchat.com.ar",
       theme: {
         button: { backgroundColor: "#D27A7D" },
         chatWindow: {

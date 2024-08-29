@@ -335,7 +335,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
             
 	</div></div>
 	
-		<span><i>E-mail</i><input class="campo-email" type="email"  id="email" name="email" placeholder="Ej: cotizar@plandesalud.ar"></span>
+		<span><i>E-mail</i><input class="campo-email" type="email"  id="email" name="email" placeholder="Ej: info@plandesalud.ar"></span>
 		</div>
         <div class="alert"></div>
 
@@ -589,7 +589,7 @@ jQuery(".bandeiras img").click(function(){
   // Initialize the Typebot bubble
   Typebot.initBubble({
     typebot: "sal-o-mybeleza-rp1qajo",
-    apiHost: "https://typeapi.plandesalud.ar",
+    apiHost: "https://typeapi.tuchat.com.ar",
     theme: {
       button: { backgroundColor: "#D27A7D" },
       chatWindow: {

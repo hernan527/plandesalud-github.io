@@ -49,8 +49,48 @@ function finalizar(formClass) {
     }
   });
 }
+function finalizarWhats(formClass) {
+  var form = document.querySelector(formClass);
+  var boton = form.querySelector('#submit');
+  var loader = form.querySelector('.loader-whats');
 
+  // Deshabilitar el bot車n de env赤o y mostrar el loader
+  boton.disabled = true;
+  loader.style.display = 'block';
 
+  // Obtener los valores de los campos del formulario usando jQuery
+  var datawhook = {
+    'formulario_pagina': $('#formulario_pagina_whats').val(),
+    'Name': $('#Name_whats').val(),
+    'telefone': $('#telefone_whats').val(),
+  };
+
+  // Enviar los datos al webhook de n8n
+  $.ajax({
+    url: "https://n8nwebhook.tuchat.com.ar/webhook/89174271-0718-461b-911c-585e2ae1c13e",
+    type: 'POST',
+    data: JSON.stringify(datawhook), // Convertir datawh en una cadena JSON
+    processData: false, // No procesar los datos de la solicitud
+    contentType: 'application/json', // Especificar el tipo de contenido JSON
+    success: function(response) {
+      console.log(response);
+      boton.value = 'ENVIO EXITOSO!';
+      loader.style.display = 'none';
+      $('#contact-form-whats')[0].reset(); // Resetear el formulario
+
+      // Redirigir a la p芍gina de agradecimiento despu谷s de 3 segundos
+      setTimeout(function() {
+        window.location.href = 'https://plandesalud.ar/gracias/';
+      }, 3000);
+    },
+    error: function() {
+      console.log('Error al enviar los datos');
+      // Rehabilitar el bot車n y ocultar el loader en caso de error
+      boton.disabled = false;
+      loader.style.display = 'none';
+    }
+  });
+}
 // Funci車n para guardar las cookies
 function salvaCookies() {
   setCookie('data_lead_formulario_pagina', jQuery('.campo-pagina').val(), 3);

@@ -47,7 +47,7 @@
 	<!-- This site is optimized with the Yoast SEO plugin v20.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
 	<meta name="description" content="Cotizar Ahora - Ahorre hasta un 30% en un nuevo plan. Es rápido y tambien garantizamos el mejor precio! Le acercamos las principales opciones de planes de salud de Argentina." />
 	<link rel="canonical" href="/" />
-	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:locale" content="es" />
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="Cotizar Ahora - Cotamos seuPlan de Salud emmais de 50 operadoras" />
 	<meta property="og:description" content="Cotizar Ahora - Ahorre hasta un 30% en un nuevo plan. Es rápido y tambien garantizamos el mejor precio! Le acercamos las principales opciones de planes de salud de Argentina." />
@@ -246,11 +246,11 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
  </div>
  <div  id="3"></div>
  <h2 id="d"   class="passo-formulario"  >2º Completá el formulario</h2>
- 
+
  <form id="contact-form"  class="form-cotacao">
 
     <input class="campo-pagina" type="hidden" name="formulario_pagina" id="formulario_pagina" value="cotizar-ahora-formulario-completo">
- 
+   
      <input id="3" class="campo-operadora" type="hidden" name="Operadora" id="Operadora" value="Sin Selección">
  
      <div class="plano-selecionado"  >

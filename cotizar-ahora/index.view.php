@@ -125,7 +125,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
     overflow: visible; /* Permite que la imagen se expanda más allá del contenedor */
 }
 .recebe-img img {
-    transform: scale(2); /* Escala la imagen al 150% de su tamaño original */
+    transform: scale(1.6); /* Escala la imagen al 150% de su tamaño original */
     transform-origin: center; /* Escala desde el centro */
     width: auto;  /* Permite que la imagen mantenga su tamaño original */
     height: auto; /* Permite que la imagen mantenga su tamaño original */
@@ -230,32 +230,33 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                             <h2 class="passo-bandeiras">1º Paso: Selecione una empresa</h2>
                             
                             <div class="bandeiras" >
-                                
-    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/todas-las-empresas.png" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('11')" data-classe-operadora="multimarcas"></a>
-    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude"></a>
-    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint"></a>
-    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora=""></a>
-    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao"></a>
-    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil"></a>
-    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.png" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medifé')" data-classe-operadora="notredame"></a>
-    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida"></a>
-    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed"></a>
-    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one"></a>
-    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint"></a>
-    <a   href='#d'  class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/todas-las-empresas.png" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('11')" data-classe-operadora="multimarcas"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora=""></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.png" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medifé')" data-classe-operadora="notredame"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint"></a>
+    <a  href='#3' class="smooth-scroll"><img src="../assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint"></a>
+
  </div>
+ <div  id="3"></div>
  <h2 id="d"   class="passo-formulario"  >2º Completá el formulario</h2>
+ 
  <form id="contact-form"  class="form-cotacao">
 
     <input class="campo-pagina" type="hidden" name="formulario_pagina" id="formulario_pagina" value="cotizar-ahora-formulario-completo">
-
-     <input class="campo-operadora" type="hidden" name="Operadora" id="Operadora" value="Sin Selección">
  
-     <div  class="plano-selecionado"  >
-         <p  >Plan Selecionado:</p>
-         <div    class="recebe-img"></div>
-        
-     </div >
+     <input id="3" class="campo-operadora" type="hidden" name="Operadora" id="Operadora" value="Sin Selección">
+ 
+     <div class="plano-selecionado"  >
+         <p>Plan Selecionado:</p>
+         <div class="recebe-img"></div>
+     </div>
      
 		<div   class="tipo-de-plano"  >
       
@@ -536,7 +537,14 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 		jQuery("#telefone").mask("9000000000");
         jQuery("#sueldo").mask("9000000");
         
-	
+		jQuery(".bandeiras img").click(function(){
+			var srcImagem = jQuery(this).attr("src");
+			var idOperadpra = jQuery(this).attr("data-id-operadora");
+			jQuery('.recebe-img img').remove();
+			jQuery('.recebe-img').append('<img src="'+srcImagem+'">').attr('id', jQuery(this).data("classe-operadora"));
+			jQuery(".campo-operadora").val(idOperadpra);
+			jQuery(".plano-selecionado").fadeIn();
+		});
 
 	
         

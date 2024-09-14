@@ -1,4 +1,4 @@
-function finalizar1(formClass) {
+function finalizar(formClass) {
   var form = document.querySelector(formClass);
   var boton = form.querySelector('#submit');
   var loader = form.querySelector('.loader');
@@ -25,7 +25,7 @@ function finalizar1(formClass) {
 
   // Enviar los datos al webhook de n8n
   $.ajax({
-    url: "https://n8n.tuchat.com.ar/webhook/89174271-0718-461b-911c-585e2ae1c13e",
+    url: "https://n8n.tuchat.com.ar/webhook-test/89174271-0718-461b-911c-585e2ae1c13e",
     type: 'POST',
     data: JSON.stringify(datawh), // Convertir datawh en una cadena JSON
     processData: false, // No procesar los datos de la solicitud
@@ -67,7 +67,7 @@ function finalizarWhats(formClass) {
 
   // Enviar los datos al webhook de n8n
   $.ajax({
-    url: "https://n8nwebhook.tuchat.com.ar/webhook/89174271-0718-461b-911c-585e2ae1c13e",
+    url: "https://n8n.tuchat.com.ar/webhook-test/89174271-0718-461b-911c-585e2ae1c13e",
     type: 'POST',
     data: JSON.stringify(datawhook), // Convertir datawh en una cadena JSON
     processData: false, // No procesar los datos de la solicitud
@@ -91,7 +91,7 @@ function finalizarWhats(formClass) {
     }
   });
 }
-function finalizar(formClass) {
+function finalizar1(formClass) {
   alert('en ejecución 1');
 
   var form = document.querySelector(formClass);

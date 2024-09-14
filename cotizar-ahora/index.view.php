@@ -250,7 +250,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
     <input class="campo-pagina" type="hidden" name="formulario_pagina" id="formulario_pagina" value="cotizar-ahora-formulario-completo">
    
-     <input id="3" class="campo-operadora" type="hidden" name="Operadora" id="Operadora" value="Sin Selección">
+     <input class="campo-operadora" type="hidden" name="Operadora" id="Operadora" value="Sin Selección">
  
      <div class="plano-selecionado"  >
          <p>Plan Selecionado:</p>
@@ -522,7 +522,6 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 				});
 
 				if(formErro ==0){
-					alert("finalizar()");
                     finalizar('.form-cotacao');
 				}
 			}
@@ -583,7 +582,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 </script>
 <script>
 function cambiarValor(valor) {
-  var input = document.getElementById('Operadora');
+  let input = document.getElementById('Operadora');
   input.value = valor;
 }
 	

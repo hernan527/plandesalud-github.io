@@ -522,8 +522,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 				});
 
 				if(formErro ==0){
-					alert("finalizar()")
-                    finalizar('.form-cotacao')
+					alert("finalizar()");
+                    finalizar('.form-cotacao');
 				}
 			}
 
@@ -582,7 +582,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
     });
 </script>
 <script>
-        function cambiarValor(valor) {
+function cambiarValor(valor) {
   var input = document.getElementById('Operadora');
   input.value = valor;
 }

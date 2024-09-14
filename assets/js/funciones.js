@@ -92,10 +92,14 @@ function finalizarWhats(formClass) {
   });
 }
 function finalizar(formClass){
+  alert('enejecucion 1')
+    var form = document.querySelector(formClass);
+  var boton = form.querySelector('#submit');
+  var loader = form.querySelector('.loader');
 const xhr = new XMLHttpRequest();
 
 xhr.open('POST','https://n8nwebhook.tuchat.com.ar/webhook/89174271-0718-461b-911c-585e2ae1c13e');
-
+alert('enejecucion 1')
 xhr.onload = function () {
 if (xhr.status == 200) {
 alert('Enviou');

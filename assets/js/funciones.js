@@ -20,14 +20,13 @@ function finalizar(formClass) {
     'Name': $('#Name').val(),
     'telefone': $('#telefone').val(),
     'email': $('#email').val(),
-    'Respuestas Google': 'https://docs.google.com/spreadsheets/d/1M-XJiLh-G0VeExG5tQlOH6HfLJV2WNcdJiEKPUkqaSA/edit?resourcekey#gid=1797801513'
   };
 
   // Enviar los datos al webhook de n8n
   $.ajax({
-    url: "https://n8n.tuchat.com.ar/webhook-test/89174271-0718-461b-911c-585e2ae1c13e",
+    url: "https://n8n.tusitio.com/webhook-test/891-0718-461b-911c-585e2ae1c13e",
     type: 'POST',
-    body: JSON.stringify(datawh), // Convertir datawh en una cadena JSON
+    data: JSON.stringify(datawh), // Convertir datawh en una cadena JSON
     processData: false, // No procesar los datos de la solicitud
     // contentType: 'application/json', // Especificar el tipo de contenido JSON
     success: function(response) {
@@ -38,7 +37,7 @@ function finalizar(formClass) {
 
       // Redirigir a la p芍gina de agradecimiento despu谷s de 3 segundos
       setTimeout(function() {
-        window.location.href = 'https://plandesalud.ar/gracias/';
+        window.location.href = 'https://tusitio.com/gracias/';
       }, 3000);
     },
     error: function() {
@@ -91,10 +90,8 @@ function finalizarWhats(formClass) {
     }
   });
 }
-function finalizar1(formClass) {
-  alert('en ejecución 1');
-
-  var form = document.querySelector(formClass);
+function finalizar(formClass) {
+    var form = document.querySelector(formClass);
   var boton = form.querySelector('#submit');
   var loader = form.querySelector('.loader');
   
@@ -112,21 +109,18 @@ function finalizar1(formClass) {
       'hijos_num': $('#hijos_num').val(),
       'poseeOS': $('input[name="poseeOS"]:checked').val(),
       'sueldo': $('#sueldo').val(),
-      'Name': $('#Name').val(),
+      'name': $('#Name').val(),
       'telefone': $('#telefone').val(),
       'email': $('#email').val(),
       'Respuestas Google': 'https://docs.google.com/spreadsheets/d/1M-XJiLh-G0VeExG5tQlOH6HfLJV2WNcdJiEKPUkqaSA/edit?resourcekey#gid=1797801513'
     };
   
-
   const xhr = new XMLHttpRequest();
   
   xhr.open('POST', 'https://n8n.tuchat.com.ar/webhook-test/89174271-0718-461b-911c-585e2ae1c13e');
   
   xhr.onload = function () {
     if (xhr.status === 200) {
-      alert('Enviado');
-      console.log(response);
       boton.value = 'ENVIO EXITOSO!';
       loader.style.display = 'none';
       $('#contact-form')[0].reset(); // Resetear el formulario
@@ -136,26 +130,16 @@ function finalizar1(formClass) {
         window.location.href = 'https://plandesalud.ar/gracias/';
       }, 3000);
     } else {
-      alert('Error en la solicitud: ' + xhr.statusText);
-      console.log('Error al enviar los datos');
+      console.log('Error en la solicitud: ' + xhr.statusText);
       // Rehabilitar el bot車n y ocultar el loader en caso de error
       boton.disabled = false;
       loader.style.display = 'none';
     }
   };
-  
   xhr.onerror = function () {
     alert('Error en la conexión');
   };
-
-  alert('en ejecución 2');
-
- 
-  alert('en ejecución 3');
-
-  xhr.send(JSON.stringify(datawh));
-
-  alert('en ejecución 4');
+ xhr.send(JSON.stringify(datawh));
 }
 
 

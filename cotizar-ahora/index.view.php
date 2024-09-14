@@ -581,6 +581,13 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         jQuery("#telefone_whats").mask("9000000000");
     });
 </script>
+<script>
+        function cambiarValor(valor) {
+  var input = document.getElementById('Operadora');
+  input.value = valor;
+}
+	
+    </script>
 <script type="module">
   import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3.4/dist/web.js'
 

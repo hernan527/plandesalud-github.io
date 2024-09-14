@@ -105,7 +105,9 @@ alert('Error en la solicitud: ' + xhr.statusText);
 }
 
 let objeto = {
-  
+  name:"Juan Pedro Caballero",
+  edad:"23",
+email:"hernan.psc@gmil.com"
 }
 
 

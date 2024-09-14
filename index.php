@@ -266,30 +266,30 @@ Compará los Mejores para Vos y tu familia</p>
 
 
 <div class="logos">
-<!-- <a href="plan-de-salud-hominis/index.html"> -->
+<a href="planes-de-salud-precios/hominis-plan-de-salud/index.html">
     <img src="assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" alt="Hominis" title="HominisAmil">
-<!-- </a> -->
-<!-- <a href="plan-de-salud-galeno/index.html"> -->
+</a>
+<a href="planes-de-salud-precios/galeno-plan-de-salud/index.html">
     <img src="assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno">
-<!-- </a> -->
-<!-- <a href="plan-de-salud-omint/index.html"> -->
+</a>
+<a href="planes-de-salud-precios/omint-plan-de-salud/index.html">
     <img src="assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint">
-<!-- </a> -->
-<!-- <a href="plan-de-salud-sancorsalud/index.html"> -->
+</a>
+<a href="planes-de-salud-precios/sancorsalud-plan-de-salud/index.html">
     <img src="assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor Salud" title="SanCor Salud">
-<!-- </a> -->
-<!-- <a href="plan-de-salud-swiss-medical/index.html"> -->
+</a>
+<a href="planes-de-salud-precios/swissmedical-plan-de-salud/index.html">
     <img src="assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical">
-<!-- </a> -->
-<!-- <a href="plan-de-salud-salud-central/index.html"> -->
+</a>
+<a href="planes-de-salud-precios/salud-central-plan-de-salud/index.html">
     <img src="assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" alt="Salud Central" title="Salud Central">
-<!-- </a> -->
-<!-- <a href="plan-de-salud-premedic/index.html"> -->
+</a>
+<a href="planes-de-salud-precios/premedic-plan-de-salud/index.html">
     <img src="assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic">
-<!-- </a> -->
-<a href="plan-de-salud-doctored/index.html"><img src="assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" alt="Doctored" title="Doctored"></a>
-<a href="plan-de-salud-avalian/index.html"><img src="assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Avalian" title="Avalian"></a>
-<a href="plan-de-salud-prevencion-salud/index.html"><img src="assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" alt="Prevencion Salud" title="Prevencion Salud"></a>
+</a>
+<a href="planes-de-salud-precios/doctored-plan-de-salud/index.html"><img src="assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" alt="Doctored" title="Doctored"></a>
+<a href="planes-de-salud-precios/avalian-plan-de-salud/index.html"><img src="assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Avalian" title="Avalian"></a>
+<a href="planes-de-salud-precios/prevencion_salud-plan-de-salud/index.html"><img src="assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" alt="Prevencion Salud" title="Prevencion Salud"></a>
 </div>
 </div></div>
 

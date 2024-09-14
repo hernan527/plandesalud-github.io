@@ -91,34 +91,45 @@ function finalizarWhats(formClass) {
     }
   });
 }
-function finalizar(formClass){
-  alert('enejecucion 1')
-    var form = document.querySelector(formClass);
+function finalizar(formClass) {
+  alert('en ejecución 1');
+
+  var form = document.querySelector(formClass);
   var boton = form.querySelector('#submit');
   var loader = form.querySelector('.loader');
-const xhr = new XMLHttpRequest();
+  
+  const xhr = new XMLHttpRequest();
+  
+  xhr.open('POST', 'https://n8n.tuchat.com.ar/webhook-test/89174271-0718-461b-911c-585e2ae1c13e');
+  
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      alert('Enviado');
+    } else {
+      alert('Error en la solicitud: ' + xhr.statusText);
+    }
+  };
+  
+  xhr.onerror = function () {
+    alert('Error en la conexión');
+  };
 
-xhr.open('POST','https://n8n.tuchat.com.ar/webhook-test/89174271-0718-461b-911c-585e2ae1c13e');
-alert('enejecucion 2')
-xhr.onload = function () {
-if (xhr.status == 200) {
-alert('Enviou');
-}
-else {
-alert('Error en la solicitud: ' + xhr.statusText);
-}
-alert('enejecucion 3')
-let objeto = {
-  name:"Juan Pedro Caballero",
-  edad:"23",
-email:"hernan.psc@gmil.com"
-}
-alert('enejecucion 4')
+  alert('en ejecución 2');
 
-xhr.send( JSON.stringify(objeto));
-alert('enejecucion 5')
+  let objeto = {
+    name: "Juan Pedro Caballero",
+    edad: "23",
+    email: "hernan.psc@gamil.com"
+  };
+  
+  alert('en ejecución 3');
+
+  xhr.send(JSON.stringify(objeto));
+
+  alert('en ejecución 4');
 }
-};
+
+
 function finalizar2(formClass) {
   alert("ejecucion");
   var form = document.querySelector(formClass);

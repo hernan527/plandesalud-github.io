@@ -27,7 +27,7 @@ function finalizar(formClass) {
   $.ajax({
     url: "https://n8n.tuchat.com.ar/webhook-test/89174271-0718-461b-911c-585e2ae1c13e",
     type: 'POST',
-    data: JSON.stringify(datawh), // Convertir datawh en una cadena JSON
+    body: JSON.stringify(datawh), // Convertir datawh en una cadena JSON
     processData: false, // No procesar los datos de la solicitud
     // contentType: 'application/json', // Especificar el tipo de contenido JSON
     success: function(response) {

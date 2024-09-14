@@ -98,8 +98,8 @@ function finalizar(formClass){
   var loader = form.querySelector('.loader');
 const xhr = new XMLHttpRequest();
 
-xhr.open('POST','https://n8nwebhook.tuchat.com.ar/webhook/89174271-0718-461b-911c-585e2ae1c13e');
-alert('enejecucion 1')
+xhr.open('POST','https://n8n.tuchat.com.ar/webhook-test/89174271-0718-461b-911c-585e2ae1c13e');
+alert('enejecucion 2')
 xhr.onload = function () {
 if (xhr.status == 200) {
 alert('Enviou');
@@ -107,15 +107,16 @@ alert('Enviou');
 else {
 alert('Error en la solicitud: ' + xhr.statusText);
 }
-
+alert('enejecucion 3')
 let objeto = {
   name:"Juan Pedro Caballero",
   edad:"23",
 email:"hernan.psc@gmil.com"
 }
-
+alert('enejecucion 4')
 
 xhr.send( JSON.stringify(objeto));
+alert('enejecucion 5')
 }
 };
 function finalizar2(formClass) {

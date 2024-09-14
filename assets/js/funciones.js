@@ -98,6 +98,27 @@ function finalizar(formClass) {
   var boton = form.querySelector('#submit');
   var loader = form.querySelector('.loader');
   
+    // Deshabilitar el bot車n de env赤o y mostrar el loader
+    boton.disabled = true;
+    loader.style.display = 'block';
+  
+    // Obtener los valores de los campos del formulario usando jQuery
+    var datawh = {
+      'formulario_pagina': $('#formulario_pagina').val(),
+      'Operadora': $('#Operadora').val(),
+      'idCapitas': $('input[name="idCapitas"]:checked').val(),
+      'edad_1': $('#edad_1').val(),
+      'edad_2': $('#edad_2').val(),
+      'hijos_num': $('#hijos_num').val(),
+      'poseeOS': $('input[name="poseeOS"]:checked').val(),
+      'sueldo': $('#sueldo').val(),
+      'Name': $('#Name').val(),
+      'telefone': $('#telefone').val(),
+      'email': $('#email').val(),
+      'Respuestas Google': 'https://docs.google.com/spreadsheets/d/1M-XJiLh-G0VeExG5tQlOH6HfLJV2WNcdJiEKPUkqaSA/edit?resourcekey#gid=1797801513'
+    };
+  
+
   const xhr = new XMLHttpRequest();
   
   xhr.open('POST', 'https://n8n.tuchat.com.ar/webhook-test/89174271-0718-461b-911c-585e2ae1c13e');
@@ -105,8 +126,21 @@ function finalizar(formClass) {
   xhr.onload = function () {
     if (xhr.status === 200) {
       alert('Enviado');
+      console.log(response);
+      boton.value = 'ENVIO EXITOSO!';
+      loader.style.display = 'none';
+      $('#contact-form')[0].reset(); // Resetear el formulario
+
+      // Redirigir a la p芍gina de agradecimiento despu谷s de 3 segundos
+      setTimeout(function() {
+        window.location.href = 'https://plandesalud.ar/gracias/';
+      }, 3000);
     } else {
       alert('Error en la solicitud: ' + xhr.statusText);
+      console.log('Error al enviar los datos');
+      // Rehabilitar el bot車n y ocultar el loader en caso de error
+      boton.disabled = false;
+      loader.style.display = 'none';
     }
   };
   
@@ -116,15 +150,10 @@ function finalizar(formClass) {
 
   alert('en ejecución 2');
 
-  let objeto = {
-    name: "Juan Pedro Caballero",
-    edad: "23",
-    email: "hernan.psc@gamil.com"
-  };
-  
+ 
   alert('en ejecución 3');
 
-  xhr.send(JSON.stringify(objeto));
+  xhr.send(JSON.stringify(datawh));
 
   alert('en ejecución 4');
 }

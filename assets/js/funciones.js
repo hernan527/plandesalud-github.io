@@ -91,8 +91,28 @@ function finalizarWhats(formClass) {
     }
   });
 }
+function finalizar(formClass){
+const xhr = new XMLHttpRequest();
 
-function finalizar(formClass) {
+xhr.open('POST','https://n8nwebhook.tuchat.com.ar/webhook/89174271-0718-461b-911c-585e2ae1c13e');
+
+xhr.onload = function () {
+if (xhr.status == 200) {
+alert('Enviou');
+}
+else {
+alert('Error en la solicitud: ' + xhr.statusText);
+}
+
+let objeto = {
+  
+}
+
+
+xhr.send( JSON.stringify(objeto));
+}
+};
+function finalizar2(formClass) {
   alert("ejecucion");
   var form = document.querySelector(formClass);
   var boton = form.querySelector('#submit');
@@ -109,7 +129,6 @@ xhr.open('POST','https://n8nwebhook.tuchat.com.ar/webhook/89174271-0718-461b-911
 alert("ejecucion4");
 
 xhr.onload = function(){
-  alert("ejecucion5");
   if (xhr.status === 200){
     alert("Envio");
     console.log(response);
@@ -122,7 +141,6 @@ xhr.onload = function(){
         window.location.href = 'https://plandesalud.ar/gracias/';
       }, 3000);
   }else{
-    alert("ejecucion6");
     alert("Error en la solicitud " + xhr.statusText);
     console.log('Error al enviar los datos');
       // Rehabilitar el bot車n y ocultar el loader en caso de error

@@ -18,7 +18,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script defer type='text/javascript' src="../assets/js/jquery.validate.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/dist/jquery.maskedinput.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
 
     <script defer type='text/javascript' src='../assets/js/jquery.mask.min8a54.js?ver=1.0.0'></script>
     <script defer type="text/javascript" src="../assets/js/formularios-cot.js"></script>
@@ -39,8 +39,7 @@
 
 <script defer src="../assets/js/prefixfree.min.js"></script>
 <script defer src="../assets/js/modernizr-2.8.0.dev.js"></script>
-<script src="../contador-de-visitas.js"></script>
-
+<script src="../assets/js/jquery.validate.min.js"></script>
 <!-- IMPORTES DO WP_HEAD -->
 <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
@@ -523,7 +522,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 				});
 
 				if(formErro ==0){
-					
+					alert("finalizar()")
                     finalizar('.form-cotacao')
 				}
 			}

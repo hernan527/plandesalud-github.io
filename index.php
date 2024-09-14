@@ -1,19 +1,3 @@
-<?php
-// Verificar si la cookie 'visitado' ya está establecida
-if (!isset($_COOKIE['visitado'])) {
-    // Si la cookie no está establecida, significa que el usuario no ha visitado la página antes
-  // Luego, establecer la cookie 'visitado'
-  setcookie('visitado', 'si', time() + 86400); // La cookie expirará en 1 día (86400 segundos)
-
-    // Aquí puedes realizar cualquier tarea adicional que desees antes de establecer la cookie
-    echo '<script src="contador-de-visitas.js"></script>';
-
-}
-
-?>
-
-
-
 <!doctype html>
 
 <!--[if gt IE 9]><!--><html class="no-js" lang="es"><!--<![endif]-->

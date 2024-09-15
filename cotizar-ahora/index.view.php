@@ -581,10 +581,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
     });
 </script>
 <script>
-function cambiarValor(valor) {
-  let input = document.getElementById('Operadora');
-  input.value = valor;
-}
+
 	
     </script>
 <script type="module">
@@ -600,6 +597,28 @@ function cambiarValor(valor) {
   });
 </script>
 
+<script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío del formulario por defecto
+
+            const email = document.getElementById('email').value; // Obtén el valor del campo de correo electrónico
+
+            // Expresión regular para validar el formato de email
+            const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            // Elemento para mostrar mensajes
+            const mensaje = document.getElementById('mensaje');
+
+            // Validar el email
+            if (regex.test(email)) {
+                mensaje.textContent = 'El correo electrónico es válido.';
+                mensaje.className = 'mensaje-exito';
+            } else {
+                mensaje.textContent = 'El correo electrónico no es válido.';
+                mensaje.className = 'mensaje-error';
+            }
+        });
+    </script>
 </body>
                             
                             

@@ -232,7 +232,7 @@
 
 		// MÁSCARAS
 		jQuery("#ddd").mask("900");
-		jQuery("#telefone").mask("90000-0000", {reverse: true});
+		jQuery("#telefone").mask("9000000000")
 		jQuery("#cpf").mask("000.000.000-00");
 		jQuery("#cnpj").mask("00.000.000/0000-00");
 

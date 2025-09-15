@@ -1,0 +1,40 @@
+html {
+    min-height: 100%;
+    /*Do 'height' only (remove 'min-') and you'll see the gradient background repeat rather than extend. */
+}
+
+body {
+    /*Solution 1*/
+    /*If you want the gradient to extend the height of the CONTENT, use the syntax below: */
+    background: linear-gradient(#b5e48c, #457b9d);
+    
+    /*Solution 2*/
+    /*If you want the gradient to extend the height of the VIEWPORT, just add the value "fixed", see below: */
+    
+    /* background: linear-gradient(#b5e48c, #457b9d) fixed; */
+}
+
+
+
+
+
+
+
+
+
+
+/* Not needed for demo */
+body {
+    margin: 1em;
+    line-height: 1.5;
+    font: 400 21px/1.5 Barlow, sans-serif;
+}
+main {
+    max-width: 800px;
+    margin: auto;
+}
+h1 { line-height: 1.2; }
+hr {
+    border: none;
+    border-top: 1px dotted #000;
+}

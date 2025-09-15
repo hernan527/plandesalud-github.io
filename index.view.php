@@ -215,9 +215,9 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                     <div class="abre-menu-mobile"></div>
                     <nav id="nav" role="navigation" class="menu-lateral-logo">
                     <div class="menu-principal-container"><ul id="menu-principal" class="menu"><li id="menu-item-84" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-84"><a href="index.php">Inicio</a></li>
-<li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74"><a href="cotizar-ahora/index.php">COTIZAR AHORA</a></li>
-<li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83"><a href="planes-de-salud-precios/index.php">Mejores Planes</a></li>
-<li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222"><a href="blog/index.html">Blog</a></li>
+<li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74"><a href="cotizar-ahora">COTIZAR AHORA</a></li>
+<li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-83"><a href="planes-de-salud-precios">Mejores Planes</a></li>
+<!-- <li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222"><a href="blog/index.html">Blog</a></li> -->
 </ul></div>                </nav>
                     <div class="fundo-preto"></div>
                 </div>

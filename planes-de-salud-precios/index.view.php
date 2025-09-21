@@ -152,7 +152,7 @@ más de 10 empresas</em></p>
 <p>Es rápido y además garantizamos el mejor precio! Clickee y compruebe, somos parceira das melhores operadoras do Argentina.</p>
 </div>
 <div class="contador" id="1" >
-        <h3>Hoy más de <span id="contador"><?php echo $numeroDeVisitas ?></span> personas solicitaron una cotización</h3>
+        <h3>Hoy más de <span id="contador">0</span> personas solicitaron una cotización</h3>
     </div>          
             
 <div class="lista-tipo-4">
@@ -414,6 +414,31 @@ Main.boot( [] );
 
 
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const visitas = <?php echo (int)$numeroDeVisitas; ?>;
+    const contadorElement = document.getElementById('contador');
+    const duration = 2000; // milisegundos
+    const start = 0;
+    const end = visitas;
+    const startTime = performance.now();
+
+    function animateCounter(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const value = Math.floor(start + (end - start) * progress);
+        contadorElement.textContent = value;
+
+        if (progress < 1) {
+            requestAnimationFrame(animateCounter);
+        } else {
+            contadorElement.textContent = visitas; // Asegurar valor final
+        }
+    }
+
+    requestAnimationFrame(animateCounter);
+});
+</script>
 
 
 <script>

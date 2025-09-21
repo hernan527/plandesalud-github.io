@@ -1,7 +1,7 @@
 
 <?php 
 
-require 'contador.php';
+require './contador.php';
 
 $contador = new contador();
 
@@ -11,13 +11,13 @@ if (!($contador->ipaddress_exist())) {
 }
 
 $ip_user = $contador->getRealIP();
-// $numeroDeVisitas = $contador->numeroDeVisitas();
+$numeroDeVisitas = $contador->numeroDeVisitas();
 
-require 'index.view.php';
+require 'index.view1.php';
 
 ?>
 			 
-                 
+        
 
 						
             

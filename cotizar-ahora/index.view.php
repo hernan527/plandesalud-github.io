@@ -166,7 +166,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                                 <p>¡Es rápido y aún así garantizamos el precio más bajo! Haga clic y compruébelo, somos socios de las mejores operadoras de Argentina.</p></div>
                             <link href="../assets/css/style-formularioSimuladorGeneral.css" rel="stylesheet" type="text/css">
                                 <div class="contador" id="1" >
-        <h3>Hoy más de <span id="contador"><?php echo $numeroDeVisitas ?></span> personas solicitaron una cotización</h3>
+        <h3>Hoy más de <span id="contador">0</span> personas solicitaron una cotización</h3>
     </div>
 
                             <h2 class="passo-bandeiras">1º Paso: Selecione una empresa</h2>
@@ -552,6 +552,33 @@ theme: {
             mensaje.className = 'mensaje-error';
         }
     });
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const visitas = <?php echo (int)$numeroDeVisitas; ?>;
+    const contadorElement = document.getElementById('contador');
+    const duration = 2000; // milisegundos
+    const start = 0;
+    const end = visitas;
+    const startTime = performance.now();
+
+    function animateCounter(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const value = Math.floor(start + (end - start) * progress);
+        contadorElement.textContent = value;
+
+        if (progress < 1) {
+            requestAnimationFrame(animateCounter);
+        } else {
+            contadorElement.textContent = visitas; // Asegurar valor final
+        }
+    }
+
+    requestAnimationFrame(animateCounter);
+});
 </script>
 <script type='text/javascript'>
 document.oncontextmenu = function(){return false}

@@ -823,8 +823,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     <!-- Botón Flotante de WhatsApp -->
-    <a href="https://api.whatsapp.com/send?phone=5491130708070&text=Hola,%20necesito%20ayuda%20para%20elegir%20mi%20plan%20de%20salud." class="whatsapp-float" target="_blank">
+    <!-- <a href="https://api.whatsapp.com/send?phone=5491130708070&text=Hola,%20necesito%20ayuda%20para%20elegir%20mi%20plan%20de%20salud." class="whatsapp-float" target="_blank">
         <img src="./assets/formularios/formulario-whatsapp/icone-whatsapp.svg" style="width: 40px; filter: invert(1);">
-    </a>
+    </a> -->
 </body>
 </html>

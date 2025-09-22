@@ -23,9 +23,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
     <script defer src="./assets/js/prefixfree.min.js"></script>
     <script defer src="./assets/js/modernizr-2.8.0.dev.js"></script>
-
+<script>
+  (function(d,t) {
+    var BASE_URL="https://web.chatia.app";
+    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=BASE_URL+"/packs/js/sdk.js";
+    g.defer = true;
+    g.async = true;
+    s.parentNode.insertBefore(g,s);
+    g.onload=function(){
+      window.chatwootSDK.run({
+        websiteToken: 'YiYsEUH1o9apRfCDQn9PwMxX',
+        baseUrl: BASE_URL
+      })
+    }
+  })(document,"script");
+</script>
     <!-- Pre-carga de imágenes -->
-    <script>
+    <!-- <script>
         const images = [
             "assets/prestadores/sanatorio-trinidad.webp",
             "assets/prestadores/sanjuandedios.webp",
@@ -49,12 +64,10 @@
             const img = new Image();
             img.src = src;
         });
-    </script>
+    </script> -->
 
     <!-- Hojas de estilo -->
     <link rel="stylesheet" href="./assets/imagenes/stylea870.css?versao=5.0" />
-    <link rel="profile" href="http://gmpg.org/xfn/11" />
-    <link rel="pingback" href="./xmlrpc.php" />
 
     <!-- SEO Optimizado -->
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
@@ -194,15 +207,19 @@
     </header>
 
     <!-- Banner Principal -->
-    <div class='banner-desktop' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.png)'>
-        <div class='corpo-banner'>
+    <!-- <div class='banner-desktop' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.png)'> -->
+        <div class='banner-desktop' style='background-image: url()'>
+   
+    <div class='corpo-banner'>
             <p><strong>¡Encontrá el Mejor Plan de Salud para Vos y tu Familia!</strong><br />
             Compará +50 opciones y ahorrá hasta un 50%</p>
             <a href='#1' class="cta-principal">¡COTIZAR AHORA GRATIS!</a>
         </div>
     </div>
-    <div class='banner-mobile' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.png)'>
-        <div class='corpo-banner'>
+    <!-- <div class='banner-mobile' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.png)'> -->
+        <div class='banner-mobile' style='background-image: url()'>
+  
+    <div class='corpo-banner'>
             <p><strong>¡Encontrá el Mejor Plan de Salud!</strong><br />
             Compará +50 opciones y ahorrá hasta un 50%</p>
             <a href='#1' class="cta-principal">¡COTIZAR AHORA!</a>
@@ -272,16 +289,24 @@
                     <div class="wp-block-group__inner-container">
                         <h2>Accedé a los Mejores Hospitales y Clínicas</h2>
                         <div class="prestadores-grid">
-                            <img src="./assets/prestadores/hospital-aleman.webp" alt="Hospital Alemán" title="Hospital Alemán" loading="lazy">
-                            <img src="./assets/prestadores/hospital-britanico.webp" alt="Hospital Británico" title="Hospital Británico" loading="lazy">
-                            <img src="./assets/prestadores/sanatorio-trinidad.webp" alt="Sanatorios de la Trinidad" title="Sanatorios de la Trinidad" loading="lazy">
                             <img src="./assets/prestadores/sanatorio_general_sarmiento.webp" alt="Sanatorio General Sarmiento" title="Sanatorio General Sarmiento" loading="lazy">
-                            <img src="./assets/prestadores/bazterrica.webp" alt="Clínica Bazterrica" title="Clínica Bazterrica" loading="lazy">
-                            <img src="./assets/prestadores/clinica-del-sol.webp" alt="Clínica del Sol" title="Clínica del Sol" loading="lazy">
-                            <img src="./assets/prestadores/sanatorio-las-lomas.webp" alt="Sanatorio las Lomas" title="Sanatorio las Lomas" loading="lazy">
-                            <img src="./assets/prestadores/sanatorio-finochietto.webp" alt="Sanatorio Finochietto" title="Sanatorio Finochietto" loading="lazy">
-                            <img src="./assets/prestadores/clinica-san-camilo.webp" alt="Clínica San Camilo" title="Clínica San Camilo" loading="lazy">
-                            <img src="./assets/prestadores/clinica-modelo-moron.webp" alt="Clínica Modelo Morón" title="Clínica Modelo Morón" loading="lazy">
+                               <img src="./assets/prestadores/sanatorio-trinidad.webp" alt="Sanaotrio de la Trinidad" title="" loading="lazy">
+        <img src="./assets/prestadores/centro-dim.webp" alt="Centros DIM" title="Centros DIM" loading="lazy">
+        <img src="./assets/prestadores/sanatorio_general_sarmiento.webp" alt="Sanatorio General Sarmiento" title="Sanatorio General Sarmiento" loading="lazy">
+        <img src="./assets/prestadores/sanatorio-las-lomas.webp" alt="Sanatorio Las Lomas" title="Sanatorio Las Lomas" loading="lazy">
+        <img src="./assets/prestadores/hospital-aleman.webp" alt="Hospital Alemán" title="Hospital Alemán" loading="lazy">
+        <img src="./assets/prestadores/bazterrica.webp" alt="Clínica Bazterrica" title="Clínica Bazterrica" loading="lazy">
+        <img src="./assets/prestadores/hospital-britanico.webp" alt="Hospital Británico" title="Hospital Británico" loading="lazy">
+        <img src="./assets/prestadores/clinica-del-sol.webp" alt="Clínica del Sol" title="Clínica del Sol" loading="lazy">
+        <img src="./assets/prestadores/sanatorio-del-oeste.webp" alt="Sanatorio del Oeste" title="Sanatorio del Oeste" loading="lazy">
+        <img src="./assets/prestadores/clinica-san-camilo.webp" alt="Clínica San Camilo" title="Clínica San Camilo" loading="lazy">
+        <img src="./assets/prestadores/sanatorio-finochietto.webp" alt="Sanatorio Finochietto" title="Sanatorio Finochietto" loading="lazy">
+        <img src="./assets/prestadores/centros-odontologicos.webp" alt="Centros Odontológicos" title="Centros Odontológicos" loading="lazy">
+        <img src="./assets/prestadores/farmacity.webp" alt="Farmacity" title="Farmacity" loading="lazy">
+        <img src="./assets/prestadores/emergencias-medicas.webp" alt="Emergencias Médicas" title="Emergencias Médicas" loading="lazy">
+        <img src="./assets/prestadores/adventista.png" alt="Clínica Adventisata de Belgrano" title="Clínica Adventisata de Belgrano" loading="lazy">
+        <img src="./assets/prestadores/sanjuandedios.webp" alt="Casa Hospital San Juan de Dios" title="Casa Hospital San Juan de Dios" loading="lazy">
+        <img src="./assets/prestadores/clinica-modelo-moron.webp" alt="Clínica Modelo de Morón" title="Clínica Modelo de Morón" loading="lazy">
                         </div>
                         <div class="wp-container-5 wp-block-buttons">
                             <div class="wp-block-button">
@@ -306,7 +331,7 @@
                                 <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
                             </div>
                             <div class="botao">
-                                <a href="./planes-de-salud-precios/galeno-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a>
+                                <a href='#1'>COTIZAR AHORA</a>
                             </div>
                         </div>
 
@@ -320,9 +345,11 @@
                                 <h5 class="inv">Precio: ⭐⭐⭐⭐</h5>
                                 <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
                             </div>
-                            <div class="botao">
-                                <a href="./planes-de-salud-precios/omint-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a>
-                            </div>
+<div class="botao">
+    <a href="#" onclick="document.getElementById('logo-omint').click(); return false;" style="text-decoration: none; color: inherit;">
+        COTIZAR AHORA
+    </a>
+</div>
                         </div>
 
                         <!-- Item 3: Medife -->
@@ -335,9 +362,11 @@
                                 <h5 class="inv">Precio: ⭐⭐⭐</h5>
                                 <h5 class="cob">Cobertura: ⭐⭐⭐⭐</h5>
                             </div>
-                            <div class="botao">
-                                <a href="./planes-de-salud-precios/medife-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a>
-                            </div>
+<div class="botao">
+    <a href="#" onclick="document.getElementById('logo-Medife').click(); return false;" style="text-decoration: none; color: inherit;">
+        COTIZAR AHORA
+    </a>
+</div>
                         </div>
 
                         <!-- Item 4: Swiss Medical -->
@@ -350,9 +379,11 @@
                                 <h5 class="inv">Precio: ⭐⭐⭐⭐</h5>
                                 <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
                             </div>
-                            <div class="botao">
-                                <a href="./planes-de-salud-precios/swissmedical-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a>
-                            </div>
+<div class="botao">
+    <a href="#" onclick="document.getElementById('logo-Swiss').click(); return false;" style="text-decoration: none; color: inherit;">
+        COTIZAR AHORA
+    </a>
+</div>
                         </div>
 
                         <!-- Item 5: SanCor Salud -->
@@ -365,12 +396,14 @@
                                 <h5 class="inv">Precio: ⭐⭐⭐</h5>
                                 <h5 class="cob">Cobertura: ⭐⭐⭐⭐</h5>
                             </div>
-                            <div class="botao">
-                                <a href="./planes-de-salud-precios/sancorsalud-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a>
-                            </div>
+<div class="botao">
+    <a href="#" onclick="document.getElementById('logo-SanCorSalud').click(); return false;" style="text-decoration: none; color: inherit;">
+        COTIZAR AHORA
+    </a>
+</div>
                         </div>
                     </div>
-                    <a class="cotar-todas" href="./cotizar-ahora/index.php" style="background-color: #0042DA; color: white; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px;">¡QUIERO COMPARAR TODAS LAS OPCIONES!</a>
+                    <a class="cotar-todas" href="#1" style="background-color: #0042DA; color: white; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px;">¡QUIERO COMPARAR TODAS LAS OPCIONES!</a>
                 </div>
 
                 <!-- Formulario y Contacto -->
@@ -442,17 +475,17 @@
                             
                             <div class="bandeiras" >
     <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/todas-las-empresas.png" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('11')" data-classe-operadora="multimarcas"></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude"></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint"></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora=""></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao"></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil"></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.png" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medifé')" data-classe-operadora="notredame"></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida"></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed"></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one"></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint"></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude" id="logo-galeno"></a>
+    <a  href='#3' class="smooth-scroll" ><img src="./assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint" id="logo-omint"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora="" id="logo-Hominis"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao" id="logo-Premedic"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil" id="logo-SanCorSalud"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.png" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medife')" data-classe-operadora="notredame" id="logo-Medife"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida" id="logo-Swiss"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed" id="logo-Avalian"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one" id="logo-Prevención"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint" id="logo-Doctored"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint" id="logo-SaludCentral"></a>
 
  </div>
  <div  id="3"></div>
@@ -783,9 +816,9 @@ document.addEventListener('DOMContentLoaded', function() {
     </script>
 
     <!-- Deshabilitar click derecho (opcional) -->
-    <script type='text/javascript'>
+    <!-- <script type='text/javascript'>
         document.oncontextmenu = function(){return false}
-    </script>
+    </script> -->
 
 
 

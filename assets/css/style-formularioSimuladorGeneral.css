@@ -314,9 +314,13 @@
 }
 
 @media(max-width:767px){
-    #wrapper .titulo-pagina-cotacao{font-size: 18px; padding: 5px; margin: 10px auto 0; margin: 0 auto 0; text-align: center;}
-
-	.form-cotacao{width: 95%; padding: 20px 15px 20px 15px; margin: 10px auto 40px;}
+#wrapper .titulo-pagina-cotacao {
+    font-size: 18px;
+    padding: 5px;
+    margin: 0 auto 0; /* Esto es suficiente */
+    text-align: center;
+}
+	.form-cotacao{padding: 20px 15px 20px 15px; margin: 10px auto 40px;}
 	.form-cotacao h2{font-size: 24px !important;}
 	
 	#wrapper .passo-bandeiras{font-size: 14px !important; line-height: 24px !important; margin: 5px 0 15px 0 !important;}

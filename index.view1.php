@@ -552,7 +552,7 @@
                     <img src="./assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo-movil.png" alt="Plan de Salud" title="Plan de Salud">
                 </a>
                 <p>Somos asesores independientes de las mayores prepagas de Argentina. Cotizá con nosotros y podés ahorrar hasta un 50% en tu Plan de Salud. ¡Todo online, simple y sin burocracias!</p>
-                <p><strong>Asociados a:</strong> <img src="./assets/imagenes/logos-web/sello-confianza.png" alt="Sello de Confianza" style="height: 30px; margin-top: 10px;"></p>
+                <!-- <p><strong>Asociados a:</strong> <img src="./assets/imagenes/logos-web/sello-confianza.png" alt="Sello de Confianza" style="height: 30px; margin-top: 10px;"></p> -->
             </div>
             <div class="col">
                 <a class='telefone' target='_blank' href='tel:01130708070' style="font-size: 20px; font-weight: bold;">

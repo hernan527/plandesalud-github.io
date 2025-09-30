@@ -46,7 +46,7 @@ function finalizarWhats(formClass) {
   // Enviar los datos al webhook de n8n
   const xhr = new XMLHttpRequest();
   
-  xhr.open('POST', 'https://n8nwebhook.tuchat.com.ar/webhook/89174271-0718-461b-911c-585e2ae1c13e');
+  xhr.open('POST', 'https://webhook.avalianonline.com.ar/webhook/9eb08e35-97b3-49fa-8706-865151ac2d20');
 
   xhr.onload = function () {
     if (xhr.status === 200) {
@@ -99,7 +99,7 @@ function finalizar(formClass) {
   
   const xhr = new XMLHttpRequest();
   
-  xhr.open('POST', 'https://n8nwebhook.tuchat.com.ar/webhook/89174271-0718-461b-911c-585e2ae1c13e');
+  xhr.open('POST', 'https://webhook.avalianonline.com.ar/webhook/9eb08e35-97b3-49fa-8706-865151ac2d20');
   
   xhr.onload = function () {
     if (xhr.status === 200) {

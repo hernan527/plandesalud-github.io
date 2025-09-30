@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 version: "3.9"
 services:
    nginx:
@@ -30,5 +29,4 @@ services:
      expose:
        - 9000
      volumes:
->>>>>>> 5d2bac25e882952b91f8dd1c15d75e4eacbf839e
         - ./php_code/:/var/www/html/

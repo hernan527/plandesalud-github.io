@@ -23,22 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
     <script defer src="./assets/js/prefixfree.min.js"></script>
     <script defer src="./assets/js/modernizr-2.8.0.dev.js"></script>
-<script>
-  (function(d,t) {
-    var BASE_URL="https://web.chatia.app";
-    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=BASE_URL+"/packs/js/sdk.js";
-    g.defer = true;
-    g.async = true;
-    s.parentNode.insertBefore(g,s);
-    g.onload=function(){
-      window.chatwootSDK.run({
-        websiteToken: 'YiYsEUH1o9apRfCDQn9PwMxX',
-        baseUrl: BASE_URL
-      })
-    }
-  })(document,"script");
-</script>
+
     <!-- Pre-carga de imágenes -->
     <!-- <script>
         const images = [

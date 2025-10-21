@@ -588,7 +588,7 @@
                         </div>
 
                         <div class="alert"></div>
-                       <input id="submit-completo" type="submit" value="RECIBIR COTIZACIÓN DETALLADA" style="width:100%">                        
+                       <input id="submit-completo" type="submit" value="RECIBIR COTIZACIÓN" style="width:100%">                        
                        <div class="loader" id="loader" style="display: none; margin-top: 20px;"></div>
                     </form>
                 </div>

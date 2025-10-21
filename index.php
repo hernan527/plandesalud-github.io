@@ -1,7 +1,7 @@
 
 <?php 
 
-require '../contador.php';
+require './contador.php';
 
 $contador = new contador();
 

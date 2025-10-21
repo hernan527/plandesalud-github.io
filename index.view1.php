@@ -18,7 +18,6 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
     <script defer type='text/javascript' src='./assets/js/jquery.mask.min8a54.js?ver=1.0.0'></script>
     <script defer type="text/javascript" src="/assets/js/formularios-cot.js"></script>
-    <script defer src="/assets/js/funciones.js"></script>
     <!-- Fuentes y librerías modernas -->
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
     <script defer src="/assets/js/prefixfree.min.js"></script>
@@ -806,7 +805,7 @@ document.addEventListener('DOMContentLoaded', function() {
             jQuery("#telefone_whats").mask("9999999999");
         });
     </script>
-<script>
+<!-- <script>
 // Funci車n para guardar las cookies
 function salvaCookies() {
   setCookie('data_lead_formulario_pagina', jQuery('.campo-pagina').val(), 3);
@@ -939,7 +938,7 @@ function finalizarCompleto(formClass) {
  xhr.send(JSON.stringify(datawh));
 }
 
-</script>
+</script> -->
     <!-- Deshabilitar click derecho (opcional) -->
     <!-- <script type='text/javascript'>
         document.oncontextmenu = function(){return false}
@@ -951,5 +950,7 @@ function finalizarCompleto(formClass) {
     <a href="https://api.whatsapp.com/send?phone=5491124985882&text=Hola,%20necesito%20ayuda%20para%20elegir%20mi%20plan%20de%20salud." class="whatsapp-float" target="_blank">
         <img src="/assets/formularios/formulario-whatsapp/icone-whatsapp.svg" style="width: 40px; filter: invert(1);">
     </a>
+        <script src="/assets/js/funciones.js"></script>
+
 </body>
 </html>

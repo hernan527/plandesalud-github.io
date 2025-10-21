@@ -108,7 +108,7 @@
             justify-content: center;
         }
         .whatsapp-float:hover {
-            background-color: #128C7E;
+            background-color: #128c20ff;
         }
 
         /* Estilo para la sección de empresas */
@@ -175,6 +175,25 @@
             background-color: #E55A00 !important;
             transform: scale(1.05) !important;
         }
+        .titulo-principal {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 32px;
+    color: #0042DA;
+    font-weight: 800;
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.passo-formulario {
+    font-size: 28px;
+    color: #f7941e;
+    font-weight: 700;
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    margin-top: 40px;
+    text-align: center;
+}
     </style>
 
     <!-- Estilos globales de WordPress -->
@@ -188,21 +207,21 @@
     <!-- Header -->
     <header id="header" class="com-banner">
 
-        <script defer src="./assets/js/functions.js"></script>
+        <!-- <script defer src="./assets/js/functions.js"></script> -->
     </header>
 
     <!-- Banner Principal -->
-    <!-- <div class='banner-desktop' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.png)'> -->
-        <div class='banner-desktop' style='background-image: url(assets/imagenes/banners/front-view-d21.png)'>
+    <div class='banner-desktop' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.png)'>
+        <!-- <div class='banner-desktop' style='background-image: url(assets/imagenes/banners/front-view-d21.png)'> -->
    
     <div class='corpo-banner'>
             <p><strong>¡Encontrá el Mejor Plan de Salud para Vos y tu Familia!</strong><br />
             Compará +50 opciones y ahorrá hasta un 50%</p>
-            <a href='#1' class="cta-principal">¡COTIZAR AHORA GRATIS!</a>
+            <a href='#3' class="cta-principal">¡COTIZAR AHORA GRATIS!</a>
         </div>
     </div>
-    <!-- <div class='banner-mobile' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.png)'> -->
-        <div class='banner-mobile' style='background-image: url(assets/imagenes/banners/front-view-d1.png)'>
+    <div class='banner-mobile' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.png)'>
+        <!-- <div class='banner-mobile' style='background-image: url(assets/imagenes/banners/front-view-d1.png)'> -->
   
     <div class='corpo-banner'>
             <p><strong>¡Encontrá el Mejor Plan de Salud!</strong><br />
@@ -234,18 +253,18 @@
                             
 
                                                         <div class="bandeiras" >
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/todas-las-empresas.png" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('11')" data-classe-operadora="multimarcas"></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude" id="logo-galeno"></a>
-    <a  href='#3' class="smooth-scroll" ><img src="./assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint" id="logo-omint"></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora="" id="logo-Hominis"></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao" id="logo-Premedic"></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil" id="logo-SanCorSalud"></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.png" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medife')" data-classe-operadora="notredame" id="logo-Medife"></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida" id="logo-Swiss"></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed" id="logo-Avalian"></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one" id="logo-Prevención"></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint" id="logo-Doctored"></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint" id="logo-SaludCentral"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/todas-las-empresas-logo-medicina-prepaga-planes-de-salud.png" value="todas-las-empresas" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('11')" data-classe-operadora="multimarcas" id="todas-las-empresas"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" value="galeno" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude" id="logo-galeno"></a>
+    <a  href='#3' class="smooth-scroll" ><img src="./assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" value="omint" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint" id="logo-omint"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" value="hominis" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora="" id="logo-Hominis"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" value="premedic" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao" id="logo-Premedic"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" value="sancorsalud" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil" id="logo-SanCorSalud"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.png" value="medife" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medife')" data-classe-operadora="notredame" id="logo-Medife"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" value="swiss-medical" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida" id="logo-Swiss"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" value="avalian" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed" id="logo-Avalian"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" value="prevencion-salud"  alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one" id="logo-Prevención"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" value="doctored"  alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint" id="logo-Doctored"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" value="salud-central" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint" id="logo-SaludCentral"></a>
 
  </div>
                         </div>
@@ -258,7 +277,7 @@
                         Somos asesores independientes y te mostramos <strong>las mejores ofertas del mercado</strong> sin costo ni compromiso.</p>
                         <div class="wp-container-1 wp-block-buttons">
                             <div class="wp-block-button">
-                                <a class="wp-block-button__link cta-principal" href="#1">¡QUIERO MI COTIZACIÓN GRATIS!</a>
+                                <a class="wp-block-button__link cta-principal" href="#3" onclick="document.getElementById('todas-las-empresas').click(); return false;">¡QUIERO MI COTIZACIÓN GRATIS!</a>
                             </div>
                         </div>
                     </div>
@@ -289,7 +308,7 @@
                         </div>
                         <div class="wp-container-5 wp-block-buttons">
                             <div class="wp-block-button">
-                                <a class="wp-block-button__link cta-principal" href="#1">¡PEDIR MI COTIZACIÓN!</a>
+                                <a class="wp-block-button__link cta-principal" href="#3" onclick="document.getElementById('todas-las-empresas').click(); return false;">¡PEDIR MI COTIZACIÓN!</a>
                             </div>
                         </div>
                     </div>
@@ -298,10 +317,10 @@
                 <!-- Sección de Empresas (Rediseñada) -->
                 <div class="lista-tipo-4">
                     <h4>¿Ya tenés en mente una prepaga? ¡Cotizá directamente aquí!</h4>
-                    <div class="items">
+                    <div class="items"></div>
                         <!-- Item 1: Galeno -->
                         <div class="item">
-                            <a class="logo" href="./planes-de-salud-precios/galeno-plan-de-salud/cotizar/index.php">
+                            <a class="logo"  onclick="document.getElementById('logo-galeno').click(); return false;">
                                 <img src="./assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno" loading="lazy">
                             </a>
                             <p><strong>Galeno:</strong> Red de hospitales propios como el Sanatorio Anchorena y atención médica 24hs. Ideal para familias que buscan tranquilidad y calidad.</p>
@@ -310,14 +329,41 @@
                                 <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
                             </div>
                             <div class="botao">
-                                <a href='#1'>COTIZAR AHORA</a>
+                                <a href='#1'  onclick="document.getElementById('logo-galeno').click(); return false;">COTIZAR AHORA</a>
                             </div>
                         </div>
-
-                        <!-- Item 2: Omint -->
+                                                <!-- Item 2: Premedic -->
                         <div class="item">
-                            <a class="logo" href="./planes-de-salud-precios/omint-plan-de-salud/cotizar/index.php">
-                                <img src="./assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint" loading="lazy">
+                            <a class="logo"  onclick="document.getElementById('logo-Premedic').click(); return false;">
+                                <img src="./assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic" loading="lazy">
+                            </a>
+                            <p><strong>Premedic:</strong> Red de hospitales propios como el Sanatorio Anchorena y atención médica 24hs. Ideal para familias que buscan tranquilidad y calidad.</p>
+                            <div class="inv-cob">
+                                <h5 class="inv">Precio: ⭐⭐⭐</h5>
+                                <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
+                            </div>
+                            <div class="botao">
+                                <a href='#3'  onclick="document.getElementById('logo-Premedic').click(); return false;">COTIZAR AHORA</a>
+                            </div>
+                        </div>
+                                                <!-- Item 3: Avalian -->
+                                                <div class="item">
+                            <a class="logo"  onclick="document.getElementById('logo-Avalian').click(); return false;">
+                                <img src="./assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno" loading="lazy">
+                            </a>
+                            <p><strong>Avalian:</strong> Red de hospitales propios como el Sanatorio Anchorena y atención médica 24hs. Ideal para familias que buscan tranquilidad y calidad.</p>
+                            <div class="inv-cob">
+                                <h5 class="inv">Precio: ⭐⭐⭐</h5>
+                                <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
+                            </div>
+                            <div class="botao">
+                                <a href='#'  onclick="document.getElementById('logo-Avalian').click(); return false;">COTIZAR AHORA</a>
+                            </div>
+                        </div>
+                        <!-- Item 4: Omint -->
+                        <div class="item">
+                            <a class="logo" onclick="document.getElementById('logo-omint').click(); return false;">
+                                <img src="./assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint"  value="omint"  loading="lazy">
                             </a>
                             <p><strong>OMINT:</strong> Excelencia en tecnología y servicio. Atención personalizada y acceso a los mejores especialistas del país.</p>
                             <div class="inv-cob">
@@ -325,15 +371,15 @@
                                 <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
                             </div>
 <div class="botao">
-    <a href="#" onclick="document.getElementById('logo-omint').click(); return false;" style="text-decoration: none; color: inherit;">
+    <a href="#" onclick="document.getElementById('logo-omint').click(); return false;" value="omint" style="text-decoration: none; color: inherit;">
         COTIZAR AHORA
     </a>
 </div>
                         </div>
 
-                        <!-- Item 3: Medife -->
+                        <!-- Item 5: Medife -->
                         <div class="item">
-                            <a class="logo" href="./planes-de-salud-precios/medife-plan-de-salud/cotizar/index.php">
+                            <a class="logo" onclick="document.getElementById('logo-Medife').click(); return false;">
                                 <img src="./assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.png" alt="Medife" title="Medife" loading="lazy">
                             </a>
                             <p><strong>Medife:</strong> Calidad de servicio y amplia red de reembolsos. Incluye cobertura odontológica y planes nacionales.</p>
@@ -348,9 +394,9 @@
 </div>
                         </div>
 
-                        <!-- Item 4: Swiss Medical -->
+                        <!-- Item 6: Swiss Medical -->
                         <div class="item">
-                            <a class="logo" href="./planes-de-salud-precios/swissmedical-plan-de-salud/cotizar/index.php">
+                            <a class="logo" onclick="document.getElementById('logo-Swiss').click(); return false;">
                                 <img src="./assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical" loading="lazy">
                             </a>
                             <p><strong>Swiss Medical:</strong> Cobertura nacional y atención online 24/7. Perfecto para personas que viajan frecuentemente.</p>
@@ -367,7 +413,7 @@
 
                         <!-- Item 5: SanCor Salud -->
                         <div class="item">
-                            <a class="logo" href="./planes-de-salud-precios/sancorsalud-plan-de-salud/cotizar/index.php">
+                            <a class="logo" onclick="document.getElementById('logo-SanCorSalud').click(); return false;">
                                 <img src="./assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor Salud" title="SanCor Salud" loading="lazy">
                             </a>
                             <p><strong>SanCor Salud:</strong> Amplia red en todo el país con atención personalizada. Ideal para quienes buscan una relación precio-calidad equilibrada.</p>
@@ -382,8 +428,9 @@
 </div>
                         </div>
                     </div>
-                    <a class="cotar-todas" href="#1" style="background-color: #0042DA; color: white; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px;">¡QUIERO COMPARAR TODAS LAS OPCIONES!</a>
-                </div>
+<div class="lista-tipo-4">
+  <a class="cotar-todas" href="#3" >¡QUIERO COMPARAR TODAS LAS OPCIONES!</a>
+</div>                </div>
 
                 <!-- Formulario y Contacto -->
                 <div class="camada-plantao-e-whats">
@@ -397,10 +444,10 @@
                             <div class="plantao">
                                 <h3>¿Preferís hablar por teléfono?</h3>
                                 <h4>Atención de Lunes a Viernes de 9 a 19 hs</h4>
-                                <a href="tel:01130708070" style="font-size: 24px; font-weight: bold; color: #0042DA;">
-                                    <img src="./assets/formularios/formulario-whatsapp/icone-telefone.svg" style="margin-right: 10px;">
-                                    (11) 3070-8070
-                                </a>
+                              <a href="tel:+541124985882" class="link-telefone">
+                               <img src="./assets/formularios/formulario-whatsapp/icone-telefone.svg" alt="Teléfono" loading="lazy">
+                             (11) 2498-5882
+                            </a>
                                 <div class="lista-vantagens">
                                     <h5>Beneficios de cotizar con nosotros:</h5>
                                     <ul>
@@ -424,7 +471,7 @@
                                     <b>Teléfono (10 dígitos):</b>
                                     <input type="tel" id="telefone_whats" name="telefone_whats" placeholder="1122334455" required>
                                 </div>
-                                <input id="submit" type="submit" value="¡QUIERO MI COTIZACIÓN GRATIS!" style="background-color: #25D366; color: white; padding: 12px 24px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; margin-top: 15px;">
+                                <input id="submit" type="submit" href="#3" onclick="document.getElementById('todas-las-empresas').click(); return false;" value="¡QUIERO MI COTIZACIÓN GRATIS!">
                                 <div class="loader-whats" id="loader-whats"></div>
                             </form>
                         </div>
@@ -440,11 +487,13 @@
 
                 <!-- Formulario Completo (Movido DENTRO del flujo de contenido) -->
                 <div class="formulario-completo-seccion" style="margin-top: 40px; padding: 30px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-                    <h2 style="text-align: center; margin-bottom: 25px;">Completa tu Cotización Detallada</h2>
-                                      
+<h2 class="titulo-principal">Completa tu Cotización Detallada</h2>
 
- <div  id="3"></div>
- <h2 id="d"   class="passo-formulario"  >2º Completá el formulario</h2>
+<div id="paso-1"></div>
+
+<h2 id="3" class="passo-formulario">2º Completá el formulario</h2>
+
+
                     <form id="contact-form" class="form-cotacao">
                         <input class="campo-pagina" type="hidden" name="formulario_pagina" id="formulario_pagina" value="cotizar-ahora-formulario-completo">
                         <input class="campo-operadora" type="hidden" name="Operadora" id="Operadora" value="Sin Selección">
@@ -539,8 +588,7 @@
                         </div>
 
                         <div class="alert"></div>
-                        <input id="submit-completo" type="submit" value="RECIBIR COTIZACIÓN DETALLADA" style="background-color: #0042DA; color: white; padding: 12px 24px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; margin-top: 20px; width: 100%;">
-                        <div class="loader" id="loader" style="display: none; margin-top: 20px;"></div>
+                       <input id="submit-completo" type="submit" value="RECIBIR COTIZACIÓN DETALLADA">                        <div class="loader" id="loader" style="display: none; margin-top: 20px;"></div>
                     </form>
                 </div>
 
@@ -554,22 +602,22 @@
                 <p>Somos asesores independientes de las mayores prepagas de Argentina. Cotizá con nosotros y podés ahorrar hasta un 50% en tu Plan de Salud. ¡Todo online, simple y sin burocracias!</p>
                 <!-- <p><strong>Asociados a:</strong> <img src="./assets/imagenes/logos-web/sello-confianza.png" alt="Sello de Confianza" style="height: 30px; margin-top: 10px;"></p> -->
             </div>
-            <div class="col">
-                <a class='telefone' target='_blank' href='tel:01130708070' style="font-size: 20px; font-weight: bold;">
-                    (11) 3070-8070
-                    <txt style="font-size:12px; display: block;">(Lunes a Viernes, 9 hs a 19 hs)</txt>
-                </a>
-                <a class="numero-whatsapp" href="https://api.whatsapp.com/send?phone=5491130708070&amp;text=Hola,%20estoy%20en%20el%20site%20Plan%20de%20Salud%20y%20quisiera%20más%20información." target="_blank" style="display: block; margin-top: 15px; background-color: #25D366; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; font-weight: bold; text-align: center;">
-                    Recibir info por WhatsApp
-                </a>
-            </div>
+ <div class="col">
+  <!-- <a class="telefone" href="tel:01124985882" target="_blank" style="margin:10px">
+    (11) 2498-5882&nbsp;&nbsp;
+    <span class="horario"> (Lunes a Viernes, 9 hs a 19 hs)</span>
+  </a> -->
+  <a class="numero-whatsapp" href="https://api.whatsapp.com/send?phone=5491124985882&amp;text=Hola,%20estoy%20en%20el%20site%20Plan%20de%20Salud%20y%20quisiera%20más%20información." target="_blank">
+    Recibir info por WhatsApp
+  </a>
+</div>
         </div>
     </div>
 
     <footer id="footer">
         <div id="corpo-rodape"></div>
         <div class="copy">
-            <p>&copy;2023 Mejor Plan de Salud. Todos los derechos reservados.</p>
+            <p>&copy;2025 Mejor Plan de Salud. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -631,6 +679,7 @@
             });
 
             if(formErro ==0){
+                console.log('.form-cotacao');
                 finalizar('.form-cotacao');
             }
         }
@@ -653,8 +702,32 @@
         jQuery(".plano-selecionado").fadeIn();
     });
 
+        jQuery(".lista-tipo-4 img").click(function(){
+        var srcImagem = jQuery(this).attr("src");
+        var idOperadpra = jQuery(this).attr("data-id-operadora");
+        jQuery('.recebe-img img').remove();
+        jQuery('.recebe-img').append('<img src="'+srcImagem+'">').attr('id', jQuery(this).data("classe-operadora"));
+        jQuery(".campo-operadora").val(idOperadpra);
+        jQuery(".plano-selecionado").fadeIn();
+    });
+    		jQuery(".items img").click(function(){
+			var srcImagem = jQuery(this).attr("value");
+			var idOperadpra = jQuery(this).attr("data-id-operadora");
+			jQuery('.recebe-img img').remove();
+			jQuery('.recebe-img').append('<img src="./assets/imagenes/logos-prepagas-190x110/'+srcImagem+'-logo-medicina-prepaga-planes-de-salud.png">').attr('id', jQuery(this).data("classe-operadora"));
+			jQuery(".campo-operadora").val(idOperadpra);
+			jQuery(".plano-selecionado").fadeIn();
+		});
+        
 
-    
+
+            		jQuery(".wp-container-5 img").click(function(){
+			var srcImagem = jQuery(this).attr("value");
+			var idOperadpra = jQuery(this).attr("data-id-operadora");
+			jQuery('.recebe-img img').remove();
+			jQuery('.recebe-img').append('<img src="./assets/imagenes/logos-prepagas-190x110/'+srcImagem+'-logo-medicina-prepaga-planes-de-salud.png">').attr('id', jQuery(this).data("classe-operadora"));
+			jQuery(".campo-operadora").val(idOperadpra);
+			jQuery(".plano-selecionado").fadeIn();
 })
 </script>
 <script>
@@ -682,7 +755,7 @@ jQuery(document).ready(function(){
             });
             console.log("5");
             if(formErro == 0){
-                finalizarWhats('.form-whats')
+                finalizarWhats('.form-whats');
             }
         }
     });
@@ -778,8 +851,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     <!-- Botón Flotante de WhatsApp -->
-    <!-- <a href="https://api.whatsapp.com/send?phone=5491130708070&text=Hola,%20necesito%20ayuda%20para%20elegir%20mi%20plan%20de%20salud." class="whatsapp-float" target="_blank">
+    <a href="https://api.whatsapp.com/send?phone=5491124985882&text=Hola,%20necesito%20ayuda%20para%20elegir%20mi%20plan%20de%20salud." class="whatsapp-float" target="_blank">
         <img src="./assets/formularios/formulario-whatsapp/icone-whatsapp.svg" style="width: 40px; filter: invert(1);">
-    </a> -->
+    </a>
 </body>
 </html>

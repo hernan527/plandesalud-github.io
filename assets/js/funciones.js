@@ -29,6 +29,9 @@ function cambiarValor(valor) {
 
 function finalizarWhats(formClass) {
   var form = document.querySelector(formClass);
+  console.log(form);
+    console.log(formClass);
+
   var boton = form.querySelector('#submit');
   var loader = form.querySelector('.loader-whats');
 
@@ -56,7 +59,7 @@ function finalizarWhats(formClass) {
 
       // Redirigir a la p芍gina de agradecimiento despu谷s de 3 segundos
       setTimeout(function() {
-        window.location.href = 'http://localhost/plandesalud-github.io/gracias';
+        window.location.href = 'http://localhost/broker1/plandesalud-github.io/gracias';
         // window.location.href = 'https://plandesalud/gracias';
       }, 3000);
     }
@@ -75,7 +78,10 @@ function finalizarWhats(formClass) {
 
 function finalizar(formClass) {
     var form = document.querySelector(formClass);
-  var boton = form.querySelector('#submit');
+      console.log(form);
+  var boton = form.querySelector('#submit-completo');
+        console.log(boton);
+
   var loader = form.querySelector('.loader');
   
     // Deshabilitar el bot車n de env赤o y mostrar el loader
@@ -109,7 +115,7 @@ function finalizar(formClass) {
 
       // Redirigir a la p芍gina de agradecimiento despu谷s de 3 segundos
       setTimeout(function() {
-        window.location.href = 'http://localhost/plandesalud-github.io/gracias';
+        window.location.href = 'http://localhost/broker1/plandesalud-github.io/gracias';
         // window.location.href = 'https://plandesalud/gracias';
       }, 3000);
     } else {

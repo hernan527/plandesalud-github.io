@@ -719,7 +719,7 @@ jQuery(document).ready(function(){
             });
             console.log("5");
             if(formErro == 0){
-                finalizarWhatsapp('.form-whats');
+                finalizarWhats('.form-whats');
             }
         }
     });

@@ -867,7 +867,7 @@ function finalizarWhatsapp(formClass) {
 
       // Redirigir a la p芍gina de agradecimiento despu谷s de 3 segundos
       setTimeout(function() {
-        window.location.href = 'http://localhost/broker1/plandesalud-github.io/gracias';
+        window.location.href = 'https://broker.avalianonline.com.ar/gracias';
         // window.location.href = 'https://plandesalud/gracias';
       }, 3000);
     }
@@ -923,7 +923,7 @@ function finalizarCompleto(formClass) {
 
       // Redirigir a la p芍gina de agradecimiento despu谷s de 3 segundos
       setTimeout(function() {
-        window.location.href = 'http://localhost/broker1/plandesalud-github.io/gracias';
+        window.location.href = 'https://broker.avalianonline.com.ar/gracias';
         // window.location.href = 'https://plandesalud/gracias';
       }, 3000);
     } else {

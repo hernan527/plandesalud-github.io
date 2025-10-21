@@ -702,32 +702,9 @@
         jQuery(".plano-selecionado").fadeIn();
     });
 
-        jQuery(".lista-tipo-4 img").click(function(){
-        var srcImagem = jQuery(this).attr("src");
-        var idOperadpra = jQuery(this).attr("data-id-operadora");
-        jQuery('.recebe-img img').remove();
-        jQuery('.recebe-img').append('<img src="'+srcImagem+'">').attr('id', jQuery(this).data("classe-operadora"));
-        jQuery(".campo-operadora").val(idOperadpra);
-        jQuery(".plano-selecionado").fadeIn();
-    });
-    		jQuery(".items img").click(function(){
-			var srcImagem = jQuery(this).attr("value");
-			var idOperadpra = jQuery(this).attr("data-id-operadora");
-			jQuery('.recebe-img img').remove();
-			jQuery('.recebe-img').append('<img src="./assets/imagenes/logos-prepagas-190x110/'+srcImagem+'-logo-medicina-prepaga-planes-de-salud.png">').attr('id', jQuery(this).data("classe-operadora"));
-			jQuery(".campo-operadora").val(idOperadpra);
-			jQuery(".plano-selecionado").fadeIn();
-		});
-        
 
 
-            		jQuery(".wp-container-5 img").click(function(){
-			var srcImagem = jQuery(this).attr("value");
-			var idOperadpra = jQuery(this).attr("data-id-operadora");
-			jQuery('.recebe-img img').remove();
-			jQuery('.recebe-img').append('<img src="./assets/imagenes/logos-prepagas-190x110/'+srcImagem+'-logo-medicina-prepaga-planes-de-salud.png">').attr('id', jQuery(this).data("classe-operadora"));
-			jQuery(".campo-operadora").val(idOperadpra);
-			jQuery(".plano-selecionado").fadeIn();
+			
 })
 </script>
 <script>

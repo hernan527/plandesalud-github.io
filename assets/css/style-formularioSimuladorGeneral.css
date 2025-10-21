@@ -330,8 +330,7 @@ background-color: #0042DA;
     display: none;
 }
 
-/* Estilo del botón de envío del formulario completo */
-#submit-completo {
+/* #submit-completo {
   background-color: #0042DA;
   color: white;
   padding: 12px 24px;
@@ -341,18 +340,18 @@ background-color: #0042DA;
   cursor: pointer;
   margin-top: 20px;
   width: 100%;
-  font-size: 18px; /* Tamaño base */
-  font-family: 'Barlow', sans-serif; /* Opcional: para coherencia tipográfica */
+  font-size: 18px; 
+  font-family: 'Barlow', sans-serif;
 }
 
 
-/* Estado hover/focus para accesibilidad */
+
 #submit-completo:hover,
 #submit-completo:focus {
-  background-color: #0033a0; /* Un azul ligeramente más oscuro */
+  background-color: #0033a0;
   outline: 2px solid #002a80;
   outline-offset: 2px;
-}
+} */
 
 /* Botón de WhatsApp (formulario corto) */
 #submit {
@@ -461,14 +460,15 @@ background-color: #0042DA;
     font-size: 16px;
     padding: 14px;
   }
+  .form-cotacao input[type="submit"]{
+    font-size: 16px; /* O incluso 15px si necesitas más espacio */
+    padding: 14px 20px; /* Opcional: ajuste vertical para mejor tacto */}
       #submit {
     font-size: 16px;
     padding: 14px 20px;
   }
-      #submit-completo {
-    font-size: 16px; /* O incluso 15px si necesitas más espacio */
-    padding: 14px 20px; /* Opcional: ajuste vertical para mejor tacto */
-  }
+
+
       .formulario-completo-seccion {
     padding-left: 0 !important;
     padding-right: 0 !important;

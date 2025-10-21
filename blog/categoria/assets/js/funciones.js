@@ -75,7 +75,7 @@ function finalizarWhats(formClass) {
 
 function finalizar(formClass) {
     var form = document.querySelector(formClass);
-  var boton = form.querySelector('#submit');
+  var boton = form.querySelector('#submit-completo');
   var loader = form.querySelector('.loader');
   
     // Deshabilitar el bot車n de env赤o y mostrar el loader

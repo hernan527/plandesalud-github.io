@@ -14,15 +14,15 @@
     <!-- jQuery (solo una versión) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Scripts esenciales -->
-    <script defer type='text/javascript' src="./assets/js/jquery.validate.min.js"></script>
+    <script type='text/javascript' src="./assets/js/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
-    <script defer type='text/javascript' src='./assets/js/jquery.mask.min8a54.js?ver=1.0.0'></script>
-    <script defer type="text/javascript" src="./assets/js/formularios-cot.js"></script>
-    <script defer src="./assets/js/funciones.js"></script>
+    <script type='text/javascript' src='./assets/js/jquery.mask.min8a54.js?ver=1.0.0'></script>
+    <script type="text/javascript" src="./assets/js/formularios-cot.js"></script>
+    <script type src="./assets/js/funciones.js"></script>
     <!-- Fuentes y librerías modernas -->
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
-    <script defer src="./assets/js/prefixfree.min.js"></script>
-    <script defer src="./assets/js/modernizr-2.8.0.dev.js"></script>
+    <script type src="./assets/js/prefixfree.min.js"></script>
+    <script type src="./assets/js/modernizr-2.8.0.dev.js"></script>
 
     <!-- Pre-carga de imágenes -->
     <!-- <script>
@@ -207,7 +207,7 @@
     <!-- Header -->
     <header id="header" class="com-banner">
 
-        <!-- <script defer src="./assets/js/functions.js"></script> -->
+        <!-- <script type src="./assets/js/functions.js"></script> -->
     </header>
 
     <!-- Banner Principal -->

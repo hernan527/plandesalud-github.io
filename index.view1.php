@@ -429,7 +429,7 @@
                         </div>
                     </div>
 <div class="lista-tipo-4">
-  <a class="cotar-todas" href="#3" >¡QUIERO COMPARAR TODAS LAS OPCIONES!</a>
+  <a class="cotar-todas" href="#3" onclick="document.getElementById('todas-las-empresas').click(); return false;">¡QUIERO COMPARAR TODAS LAS OPCIONES!</a>
 </div>                </div>
 
                 <!-- Formulario y Contacto -->

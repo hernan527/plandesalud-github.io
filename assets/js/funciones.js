@@ -27,7 +27,7 @@ function cambiarValor(valor) {
 }
 
 
-function finalizarWhats(formClass) {
+function finalizarWhatsapp(formClass) {
   var form = document.querySelector(formClass);
   console.log(form);
     console.log(formClass);

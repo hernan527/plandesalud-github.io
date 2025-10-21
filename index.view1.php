@@ -471,7 +471,7 @@
                                     <b>Teléfono (10 dígitos):</b>
                                     <input type="tel" id="telefone_whats" name="telefone_whats" placeholder="1122334455" required>
                                 </div>
-                                <input id="submit" type="submit" href="#3" onclick="document.getElementById('todas-las-empresas').click(); return false;" value="¡QUIERO MI COTIZACIÓN GRATIS!">
+                                <input id="submit" type="submit" value="¡QUIERO MI COTIZACIÓN GRATIS!">
                                 <div class="loader-whats" id="loader-whats"></div>
                             </form>
                         </div>
@@ -654,20 +654,6 @@
         },
  
 
-        messages:{
-  formulario_pagina :{required: "" },
-  Operadora :{required: "" },
-  idCapitas:{required: "Seleccione una opción" },
-  edad_1 :{required: "El campo Edad es necesario"},
-  edad_2 :{required: "El campo Edad es necesario"},
-  hijos_Num :{required: "El campo Hijos es necesario"},
-  poseeOS:{required: "Seleccione una opción" },
-  sueldo :{required: "" },
-  Name :{required: "El campo Nombre es necesario" },
-  telefone :{required: "El campo Telefono es necesario"},
-  email :{required: "El campo EMAIL es necesario",email: "Informe u EMAIL válido"},
-    
-        },
 
         submitHandler: function(form){
             var form = jQuery('#contact-form');
@@ -710,7 +696,7 @@
 </script>
 <script>
 jQuery(document).ready(function(){
-    console.log("1");
+    console.log("linea 699 index.view1.php1");
     jQuery("#contact-form-whats").validate({
         rules:{
             formulario_pagina_whats : { required: false },
@@ -733,7 +719,7 @@ jQuery(document).ready(function(){
             });
             console.log("5");
             if(formErro == 0){
-                finalizarWhats('.form-whats');
+                finalizarWhatsapp('.form-whats');
             }
         }
     });

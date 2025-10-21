@@ -76,7 +76,7 @@ function finalizarWhats(formClass) {
  xhr.send(JSON.stringify(datawhook));
 }
 
-function finalizar(formClass) {
+function finalizarCompleto(formClass) {
     var form = document.querySelector(formClass);
       console.log(form);
   var boton = form.querySelector('#submit-completo');

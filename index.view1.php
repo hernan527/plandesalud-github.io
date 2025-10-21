@@ -681,7 +681,7 @@
 
             if(formErro ==0){
                 console.log('.form-cotacao');
-                finalizar('.form-cotacao');
+                finalizarCompleto('.form-cotacao');
             }
         }
 
@@ -755,13 +755,13 @@ jQuery(document).ready(function(){
         const mensaje = document.getElementById('mensaje');
 
         // Validar el email
-        if (regex.test(email)) {
-            mensaje.textContent = 'El correo electrónico es válido.';
-            mensaje.className = 'mensaje-exito';
-        } else {
-            mensaje.textContent = 'El correo electrónico no es válido.';
-            mensaje.className = 'mensaje-error';
-        }
+        // if (regex.test(email)) {
+        //     mensaje.textContent = 'El correo electrónico es válido.';
+        //     mensaje.className = 'mensaje-exito';
+        // } else {
+        //     mensaje.textContent = 'El correo electrónico no es válido.';
+        //     mensaje.className = 'mensaje-error';
+        // }
     });
 </script>
 

@@ -59,8 +59,8 @@ function finalizarWhatsapp(formClass) {
 
       // Redirigir a la p芍gina de agradecimiento despu谷s de 3 segundos
       setTimeout(function() {
-        window.location.href = 'http://localhost/broker1/plandesalud-github.io/gracias';
-        // window.location.href = 'https://plandesalud/gracias';
+        window.location.href = '/gracias';
+        // window.location.href = '/gracias';
       }, 3000);
     }
     else {
@@ -115,8 +115,8 @@ function finalizarCompleto(formClass) {
 
       // Redirigir a la p芍gina de agradecimiento despu谷s de 3 segundos
       setTimeout(function() {
-        window.location.href = 'http://localhost/broker1/plandesalud-github.io/gracias';
-        // window.location.href = 'https://plandesalud/gracias';
+        window.location.href = '/gracias';
+        // window.location.href = '/gracias';
       }, 3000);
     } else {
       console.log('Error en la solicitud: ' + xhr.statusText);

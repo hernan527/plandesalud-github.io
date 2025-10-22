@@ -8,15 +8,15 @@
     <meta name="Copyright" content="Copyright Mejor Plan de Salud 2023. Todos los derechos reservados.">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="shortcut icon" sizes="1024x1024" href="./assets/imagenes/logos-web/plan-de-salud-favicon.ico" />
-    <link rel="apple-touch-icon" href="./assets/imagenes/logos-web/plan-de-salud-favicon.ico">
-<link href="./assets/css/style-formularioSimuladorGeneral.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" sizes="1024x1024" href="/assets/imagenes/logos-web/plan-de-salud-favicon.ico" />
+    <link rel="apple-touch-icon" href="/assets/imagenes/logos-web/plan-de-salud-favicon.ico">
+<link href="/assets/css/style-formularioSimuladorGeneral.css" rel="stylesheet" type="text/css">
     <!-- jQuery (solo una versión) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Scripts esenciales -->
     <script defer type='text/javascript' src="/assets/js/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
-    <script defer type='text/javascript' src='./assets/js/jquery.mask.min8a54.js?ver=1.0.0'></script>
+    <script defer type='text/javascript' src='/assets/js/jquery.mask.min8a54.js?ver=1.0.0'></script>
     <script defer type="text/javascript" src="/assets/js/formularios-cot.js"></script>
     <!-- Fuentes y librerías modernas -->
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
@@ -41,7 +41,7 @@
             "assets/prestadores/centros-odontologicos.webp",
             "assets/prestadores/farmacity.webp",
             "assets/prestadores/emergencias-medicas.webp",
-            "assets/prestadores/adventista.png",
+            "assets/prestadores/adventista.webp",
             "assets/prestadores/clinica-modelo-moron.webp"
         ];
         images.forEach((src) => {
@@ -51,7 +51,7 @@
     </script> -->
 
     <!-- Hojas de estilo -->
-    <link rel="stylesheet" href="./assets/imagenes/stylea870.css?versao=5.0" />
+    <link rel="stylesheet" href="/assets/imagenes/stylea870.css?versao=5.0" />
 
     <!-- SEO Optimizado -->
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
@@ -61,14 +61,14 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Cotizar Plan de Salud - Compará +50 Prepagas y Obras Sociales | Ahorrá hasta 50%" />
     <meta property="og:description" content="¿Buscas el mejor plan de salud? Cotizá GRATIS en minutos y compará precios y coberturas de +50 prepagas y obras sociales. ¡Ahorro garantizado! Sin compromiso." />
-    <meta property="og:url" content="https://www.plandesalud.ar/cotizar-ahora/" />
+    <meta property="og:url" content="/cotizar-ahora/" />
     <meta property="og:site_name" content="Plan de Salud" />
-    <meta property="og:image" content="https://www.plandesalud.ar/assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.png" />
+    <meta property="og:image" content="/assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.webp" />
     <meta property="og:image:width" content="960" />
     <meta property="og:image:height" content="540" />
 
     <!-- Estilos personalizados -->
-    <link rel="stylesheet"  href="./assets/css/style-whats.css" type="text/css">
+    <link rel="stylesheet"  href="/assets/css/style-whats.css" type="text/css">
     <style>
         /* Estilo para la galería de prestadores (reemplazo del marquee) */
         .prestadores-grid {
@@ -148,7 +148,7 @@
             width: 52px;
             height: 52px;
             background-color: white;
-            background-image: url(./assets/css/gif-enviando.gif);
+            background-image: url(/assets/css/gif-enviando.gif);
             background-position: center;
             background-repeat: no-repeat;
             background-size: 40px;
@@ -196,7 +196,7 @@
     </style>
 
     <!-- Estilos globales de WordPress -->
-    <!-- <link rel='stylesheet' id='wp-block-library-css'  href='./assets/css/style.min1eb7.css?ver=6.0.3' type='text/css' media='all' /> -->
+    <!-- <link rel='stylesheet' id='wp-block-library-css'  href='/assets/css/style.min1eb7.css?ver=6.0.3' type='text/css' media='all' /> -->
     <style id='global-styles-inline-css' type='text/css'>
         body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
     </style>
@@ -210,8 +210,8 @@
     </header>
 
     <!-- Banner Principal -->
-    <div class='banner-desktop' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.png)'>
-        <!-- <div class='banner-desktop' style='background-image: url(assets/imagenes/banners/front-view-d21.png)'> -->
+    <div class='banner-desktop' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.webp)'>
+        <!-- <div class='banner-desktop' style='background-image: url(assets/imagenes/banners/front-view-d21.webp)'> -->
    
     <div class='corpo-banner'>
             <p><strong>¡Encontrá el Mejor Plan de Salud para Vos y tu Familia!</strong><br />
@@ -219,8 +219,8 @@
             <a href='#3' class="cta-principal">¡COTIZAR AHORA GRATIS!</a>
         </div>
     </div>
-    <div class='banner-mobile' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.png)'>
-        <!-- <div class='banner-mobile' style='background-image: url(assets/imagenes/banners/front-view-d1.png)'> -->
+    <div class='banner-mobile' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.webp)'>
+        <!-- <div class='banner-mobile' style='background-image: url(assets/imagenes/banners/front-view-d1.webp)'> -->
   
     <div class='corpo-banner'>
             <p><strong>¡Encontrá el Mejor Plan de Salud!</strong><br />
@@ -243,7 +243,7 @@
                             
                             <div class='chamada-simulador '><p><strong>Elija</strong> a continuación su operadora y descubra el valor de <strong>su plan de salud</strong>.</p>
                                 <p>¡Es rápido y aún así garantizamos el precio más bajo! Haga clic y compruébelo, somos socios de las mejores operadoras de Argentina.</p></div>
-                            <link href="./assets/css/style-formularioSimuladorGeneral.css" rel="stylesheet" type="text/css">
+                            <link href="/assets/css/style-formularioSimuladorGeneral.css" rel="stylesheet" type="text/css">
                                 <div class="contador" id="1" >
         <h3  id="4">Hoy más de <span id="contador">0</span> personas solicitaron una cotización</h3>
     </div>
@@ -252,18 +252,18 @@
                             
 
                                                         <div class="bandeiras" >
-    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/todas-las-empresas-logo-medicina-prepaga-planes-de-salud.png" value="todas-las-empresas" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('11')" data-classe-operadora="multimarcas" id="todas-las-empresas"></a>
-    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" value="galeno" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude" id="logo-galeno"></a>
-    <a  href='#3' class="smooth-scroll" ><img src="/assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" value="omint" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint" id="logo-omint"></a>
-    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" value="hominis" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora="" id="logo-Hominis"></a>
-    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" value="premedic" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao" id="logo-Premedic"></a>
-    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" value="sancorsalud" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil" id="logo-SanCorSalud"></a>
-    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.png" value="medife" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medife')" data-classe-operadora="notredame" id="logo-Medife"></a>
-    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" value="swiss-medical" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida" id="logo-Swiss"></a>
-    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" value="avalian" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed" id="logo-Avalian"></a>
-    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" value="prevencion-salud"  alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one" id="logo-Prevención"></a>
-    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" value="doctored"  alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint" id="logo-Doctored"></a>
-    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" value="salud-central" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint" id="logo-SaludCentral"></a>
+    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/todas-las-empresas-logo-medicina-prepaga-planes-de-salud.webp" value="todas-las-empresas" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('11')" data-classe-operadora="multimarcas" id="todas-las-empresas"></a>
+    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.webp" value="galeno" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude" id="logo-galeno"></a>
+    <a  href='#3' class="smooth-scroll" ><img src="/assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.webp" value="omint" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint" id="logo-omint"></a>
+    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.webp" value="hominis" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora="" id="logo-Hominis"></a>
+    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.webp" value="premedic" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao" id="logo-Premedic"></a>
+    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.webp" value="sancorsalud" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil" id="logo-SanCorSalud"></a>
+    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.webp" value="medife" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medife')" data-classe-operadora="notredame" id="logo-Medife"></a>
+    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.webp" value="swiss-medical" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida" id="logo-Swiss"></a>
+    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.webp" value="avalian" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed" id="logo-Avalian"></a>
+    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.webp" value="prevencion-salud"  alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one" id="logo-Prevención"></a>
+    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.webp" value="doctored"  alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint" id="logo-Doctored"></a>
+    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.webp" value="salud-central" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint" id="logo-SaludCentral"></a>
 
  </div>
                         </div>
@@ -301,7 +301,7 @@
         <img src="/assets/prestadores/centros-odontologicos.webp" alt="Centros Odontológicos" title="Centros Odontológicos" loading="lazy">
         <img src="/assets/prestadores/farmacity.webp" alt="Farmacity" title="Farmacity" loading="lazy">
         <img src="/assets/prestadores/emergencias-medicas.webp" alt="Emergencias Médicas" title="Emergencias Médicas" loading="lazy">
-        <img src="/assets/prestadores/adventista.png" alt="Clínica Adventisata de Belgrano" title="Clínica Adventisata de Belgrano" loading="lazy">
+        <img src="/assets/prestadores/adventista.webp" alt="Clínica Adventisata de Belgrano" title="Clínica Adventisata de Belgrano" loading="lazy">
         <img src="/assets/prestadores/sanjuandedios.webp" alt="Casa Hospital San Juan de Dios" title="Casa Hospital San Juan de Dios" loading="lazy">
         <img src="/assets/prestadores/clinica-modelo-moron.webp" alt="Clínica Modelo de Morón" title="Clínica Modelo de Morón" loading="lazy">
                         </div>
@@ -320,7 +320,7 @@
                         <!-- Item 1: Galeno -->
                         <div class="item">
                             <a class="logo"  onclick="document.getElementById('logo-galeno').click(); return false;">
-                                <img src="/assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno" loading="lazy">
+                                <img src="/assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.webp" alt="Galeno" title="Galeno" loading="lazy">
                             </a>
                             <p><strong>Galeno:</strong> Red de hospitales propios como el Sanatorio Anchorena y atención médica 24hs. Ideal para familias que buscan tranquilidad y calidad.</p>
                             <div class="inv-cob">
@@ -334,7 +334,7 @@
                                                 <!-- Item 2: Premedic -->
                         <div class="item">
                             <a class="logo"  onclick="document.getElementById('logo-Premedic').click(); return false;">
-                                <img src="/assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic" loading="lazy">
+                                <img src="/assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.webp" alt="Premedic" title="Premedic" loading="lazy">
                             </a>
                             <p><strong>Premedic:</strong> Red de hospitales propios como el Sanatorio Anchorena y atención médica 24hs. Ideal para familias que buscan tranquilidad y calidad.</p>
                             <div class="inv-cob">
@@ -348,7 +348,7 @@
                                                 <!-- Item 3: Avalian -->
                                                 <div class="item">
                             <a class="logo"  onclick="document.getElementById('logo-Avalian').click(); return false;">
-                                <img src="/assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno" loading="lazy">
+                                <img src="/assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.webp" alt="Galeno" title="Galeno" loading="lazy">
                             </a>
                             <p><strong>Avalian:</strong> Red de hospitales propios como el Sanatorio Anchorena y atención médica 24hs. Ideal para familias que buscan tranquilidad y calidad.</p>
                             <div class="inv-cob">
@@ -362,7 +362,7 @@
                         <!-- Item 4: Omint -->
                         <div class="item">
                             <a class="logo" onclick="document.getElementById('logo-omint').click(); return false;">
-                                <img src="/assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint"  value="omint"  loading="lazy">
+                                <img src="/assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.webp" alt="Omint" title="Omint"  value="omint"  loading="lazy">
                             </a>
                             <p><strong>OMINT:</strong> Excelencia en tecnología y servicio. Atención personalizada y acceso a los mejores especialistas del país.</p>
                             <div class="inv-cob">
@@ -379,7 +379,7 @@
                         <!-- Item 5: Medife -->
                         <div class="item">
                             <a class="logo" onclick="document.getElementById('logo-Medife').click(); return false;">
-                                <img src="/assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.png" alt="Medife" title="Medife" loading="lazy">
+                                <img src="/assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.webp" alt="Medife" title="Medife" loading="lazy">
                             </a>
                             <p><strong>Medife:</strong> Calidad de servicio y amplia red de reembolsos. Incluye cobertura odontológica y planes nacionales.</p>
                             <div class="inv-cob">
@@ -396,7 +396,7 @@
                         <!-- Item 6: Swiss Medical -->
                         <div class="item">
                             <a class="logo" onclick="document.getElementById('logo-Swiss').click(); return false;">
-                                <img src="/assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical" loading="lazy">
+                                <img src="/assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.webp" alt="Swiss Medical" title="Swiss Medical" loading="lazy">
                             </a>
                             <p><strong>Swiss Medical:</strong> Cobertura nacional y atención online 24/7. Perfecto para personas que viajan frecuentemente.</p>
                             <div class="inv-cob">
@@ -413,7 +413,7 @@
                         <!-- Item 5: SanCor Salud -->
                         <div class="item">
                             <a class="logo" onclick="document.getElementById('logo-SanCorSalud').click(); return false;">
-                                <img src="/assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor Salud" title="SanCor Salud" loading="lazy">
+                                <img src="/assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.webp" alt="SanCor Salud" title="SanCor Salud" loading="lazy">
                             </a>
                             <p><strong>SanCor Salud:</strong> Amplia red en todo el país con atención personalizada. Ideal para quienes buscan una relación precio-calidad equilibrada.</p>
                             <div class="inv-cob">
@@ -597,7 +597,7 @@
         <div>
             <div class="col">
                 <a class="logo" href="index.php">
-                    <img src="/assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo-movil.png" alt="Plan de Salud" title="Plan de Salud">
+                    <img src="/assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo-movil.webp" alt="Plan de Salud" title="Plan de Salud">
                 </a>
                 <p>Somos asesores independientes de las mayores prepagas de Argentina. Cotizá con nosotros y podés ahorrar hasta un 50% en tu Plan de Salud. ¡Todo online, simple y sin burocracias!</p>
                 <!-- <p><strong>Asociados a:</strong> <img src="/assets/imagenes/logos-web/sello-confianza.png" alt="Sello de Confianza" style="height: 30px; margin-top: 10px;"></p> -->

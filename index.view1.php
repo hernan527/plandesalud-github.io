@@ -234,8 +234,67 @@ body {
     margin-top: 40px;
     text-align: center;
 }
-    </style>
 
+    </style>
+<style>
+  /* Forzar que solo uno se muestre */
+  .banner-desktop { display: block !important; }
+  .banner-mobile  { display: none !important; }
+
+  @media (max-width: 768px) {
+    .banner-desktop { display: none !important; }
+    .banner-mobile  { display: block !important; }
+  }
+
+  /* Estilos esenciales para que funcione el overlay */
+  .banner-desktop, .banner-mobile {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
+  }
+
+  .corpo-banner {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .corpo-banner p {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  }
+
+  .corpo-banner strong {
+    font-weight: 800;
+    display: block;
+    font-size: 2.1rem;
+  }
+
+  .cta-principal {
+    display: inline-block;
+    background: #e63946;
+    color: white !important;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 12px;
+  }
+</style>
     <!-- Estilos globales de WordPress -->
     <!-- <link rel='stylesheet' id='wp-block-library-css'  href='./assets/css/style.min1eb7.css?ver=6.0.3' type='text/css' media='all' /> -->
     <style id='global-styles-inline-css' type='text/css'>
@@ -257,25 +316,23 @@ body {
     </header>
 
     <!-- Banner Principal -->
-    <div class='banner-desktop' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.webp)'>
-        <!-- <div class='banner-desktop' style='background-image: url(assets/imagenes/banners/front-view-d21.webp)'> -->
-   
+<div class='banner-desktop' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.webp)'>
+    <div class="overlay"></div>
     <div class='corpo-banner'>
-            <p><strong>¡Encontrá el Mejor Plan de Salud para Vos y tu Familia!</strong><br />
-            Compará +50 opciones y ahorrá hasta un 50%</p>
-            <a href='#3' class="cta-principal">¡COTIZAR AHORA GRATIS!</a>
-        </div>
+        <p><strong>¡Encontrá el Mejor Plan de Salud para Vos y tu Familia!</strong><br />
+        Compará +50 opciones y ahorrá hasta un 50%</p>
+        <a href='#3' class="cta-principal">¡COTIZAR AHORA GRATIS!</a>
     </div>
-    <div class='banner-mobile' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.webp)'>
-        <!-- <div class='banner-mobile' style='background-image: url(assets/imagenes/banners/front-view-d1.webp)'> -->
-  
-    <div class='corpo-banner'>
-            <p><strong>¡Encontrá el Mejor Plan de Salud!</strong><br />
-            Compará +50 opciones y ahorrá hasta un 50%</p>
-            <a href='#1' class="cta-principal">¡COTIZAR AHORA!</a>
-        </div>
-    </div>
+</div>
 
+<div class='banner-mobile' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.webp)'>
+    <div class="overlay"></div>
+    <div class='corpo-banner'>
+        <p><strong>¡Encontrá el Mejor Plan de Salud!</strong><br />
+        Compará +50 opciones y ahorrá hasta un 50%</p>
+        <a href='#1' class="cta-principal">¡COTIZAR AHORA!</a>
+    </div>
+</div>
     <!-- Contenido Principal -->
     <div id="wrapper">
         <article class="post" id="post-16">

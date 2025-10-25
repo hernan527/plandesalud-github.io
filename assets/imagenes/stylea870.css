@@ -1652,9 +1652,9 @@ body{margin:0;padding:0; font-family: 'Noto Sans', sans-serif; background-color:
     .lista-tipo-3 h2{font-size: 16px; margin: 0 0 5px 0;}
     .lista-tipo-3 b{width: 100%; font-size: 13px; padding: 5px 0 7px 0; display: inline-block;}
 
-    .lista-tipo-4 .item{grid-template-columns: 190px 1fr;} */
+    /* .lista-tipo-4 .item{grid-template-columns: 190px 1fr;}
     .lista-tipo-4 .item p{padding: 0 0 0 20px;}
-    .lista-tipo-4 .item .botao{padding: 0 0 0 20px;}
+    .lista-tipo-4 .item .botao{padding: 0 0 0 20px;} */
 
     .grupo-chamada-planos-de-saude h2 em{font-size: 30px;}
     #wrapper .grupo-chamada-planos-de-saude p{text-align: center; font-size: 14px; line-height: 18px; margin: 0 0 5px 0;}

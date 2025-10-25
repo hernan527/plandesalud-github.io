@@ -422,6 +422,7 @@ body{margin:0;padding:0; font-family: 'Noto Sans', sans-serif; background-color:
 .lista-tipo-4 .item .botao a:hover{background-color: #4caf50; background-image: linear-gradient(180deg, #43A047 0%, #4DCF52 100%);} */
 
 /**/
+/**/
 .lista-tipo-4 {
   max-width: 1200px  !important;
   margin: 0 auto  !important;
@@ -557,6 +558,7 @@ body{margin:0;padding:0; font-family: 'Noto Sans', sans-serif; background-color:
 .botao {
   margin-top: auto  !important;
   text-align: center  !important;
+  cursor: pointer;
 }
 
 .botao a {
@@ -573,6 +575,7 @@ body{margin:0;padding:0; font-family: 'Noto Sans', sans-serif; background-color:
   letter-spacing: 0.4px  !important;
   width: 100%  !important;
   max-width: 220px  !important;
+
 }
 
 .botao a:hover {
@@ -581,7 +584,8 @@ body{margin:0;padding:0; font-family: 'Noto Sans', sans-serif; background-color:
   transform: translateY(-2px)  !important;
 }
 
-
+.lista-tipo-4 .cotar-todas{width: 360px;cursor: pointer; background-color: #f7941e; color: #fff; text-decoration: none; display: block; text-align: center; padding: 20px 0; font-size: 24px; font-weight: 700; border-radius: 8px; margin: 0 auto 50px;}
+.lista-tipo-4 .cotar-todas:hover{background-color: #4caf50;}
 /* Responsive: 2 por fila en tablet, 1 en móvil */
 @media (max-width: 900px) {
   .item {

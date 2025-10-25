@@ -8,20 +8,20 @@
     <meta name="Copyright" content="Copyright Mejor Plan de Salud 2023. Todos los derechos reservados.">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="shortcut icon" sizes="1024x1024" href="https://broker.avalianonline.com.ar/assets/imagenes/logos-web/plan-de-salud-favicon.ico" />
-    <link rel="apple-touch-icon" href="https://broker.avalianonline.com.ar/assets/imagenes/logos-web/plan-de-salud-favicon.ico">
-<link href="https://broker.avalianonline.com.ar/assets/css/style-formularioSimuladorGeneral.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" sizes="1024x1024" href="/assets/imagenes/logos-web/plan-de-salud-favicon.ico" />
+    <link rel="apple-touch-icon" href="/assets/imagenes/logos-web/plan-de-salud-favicon.ico">
+<link href="/assets/css/style-formularioSimuladorGeneral.css" rel="stylesheet" type="text/css">
     <!-- jQuery (solo una versión) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Scripts esenciales -->
-    <script defer type='text/javascript' src="https://broker.avalianonline.com.ar/assets/js/jquery.validate.min.js"></script>
+    <script defer type='text/javascript' src="/assets/js/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
-    <script defer type="text/javascript" src="https://broker.avalianonline.com.ar/assets/js/jquery.mask.min8a54.js?ver=1.0.0"></script>
-    <script defer type="text/javascript" src="https://broker.avalianonline.com.ar/assets/js/formularios-cot.js"></script>
+    <script defer type="text/javascript" src="/assets/js/jquery.mask.min8a54.js?ver=1.0.0"></script>
+    <script defer type="text/javascript" src="/assets/js/formularios-cot.js"></script>
     <!-- Fuentes y librerías modernas -->
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
-    <script defer src="https://broker.avalianonline.com.ar/assets/js/prefixfree.min.js"></script>
-    <script defer src="https://broker.avalianonline.com.ar/assets/js/modernizr-2.8.0.dev.js"></script>
+    <script defer src="/assets/js/prefixfree.min.js"></script>
+    <script defer src="/assets/js/modernizr-2.8.0.dev.js"></script>
 
     <!-- Pre-carga de imágenes -->
     <!-- <script>
@@ -51,8 +51,8 @@
     </script> -->
 
     <!-- Hojas de estilo -->
-    <link rel="stylesheet" href="https://broker.avalianonline.com.ar/assets/imagenes/stylea870.css?versao=5.0" />
-    <link rel="stylesheet" href="https://broker.avalianonline.com.ar/assets/imagenes/styles871.css" />
+    <link rel="stylesheet" href="/assets/imagenes/stylea870.css?versao=5.0" />
+    <link rel="stylesheet" href="/assets/imagenes/styles871.css" />
 
     <!-- SEO Optimizado -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -64,15 +64,342 @@
     <meta property="og:description" content="¿Buscas el mejor plan de salud? Cotizá GRATIS en minutos y compará precios y coberturas de +50 prepagas y obras sociales. ¡Ahorro garantizado! Sin compromiso." />
     <meta property="og:url" content="/cotizar-ahora/" />
     <meta property="og:site_name" content="Plan de Salud" />
-    <meta property="og:image" content="https://broker.avalianonline.com.ar/assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.webp" />
+    <meta property="og:image" content="/assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.webp" />
     <meta property="og:image:width" content="960" />
     <meta property="og:image:height" content="540" />
 
     <!-- Estilos personalizados -->
-    <link rel="stylesheet"  href="https://broker.avalianonline.com.ar/assets/css/style-whats.css" type="text/css">
+    <link rel="stylesheet"  href="/assets/css/style-whats.css" type="text/css">
+   
+        /* Estilos generales */
+            <style>
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Loader */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Contenido principal */
+#contenido {
+  text-align: center;
+  padding: 0px;
+}
+        /* Estilo para la galería de prestadores (reemplazo del marquee) */
+        .prestadores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+            justify-items: center;
+        }
+        .prestadores-grid img {
+            width: 100px;
+            height: auto;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+        .prestadores-grid img:hover {
+            filter: grayscale(0%);
+        }
+
+        /* Estilo para el botón flotante de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .whatsapp-float:hover {
+            background-color: #128c20ff;
+        }
+
+        /* Estilo para la sección de empresas */
+        .lista-tipo-4 .item {
+            border: 1px solid #eee;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+        .lista-tipo-4 .item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .inv-cob {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+        .botao a {
+            background-color: #0042DA;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        .botao a:hover {
+            background-color: #0033a0;
+        }
+
+        /* Loader del formulario */
+        .loader-whats {
+            display: none;
+            width: 52px;
+            height: 52px;
+            background-color: white;
+            background-image: url(./assets/css/gif-enviando.gif);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 40px;
+            border-radius: 100%;
+            position: relative;
+            left: 50%;
+            bottom: 20px;
+            margin: 0 0 0 -26px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        /* Botón principal destacado */
+        .cta-principal {
+            background-color: #FF6B00 !important;
+            color: white !important;
+            padding: 15px 30px !important;
+            font-size: 18px !important;
+            border-radius: 50px !important;
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3) !important;
+            transition: all 0.3s ease !important;
+        }
+        .cta-principal:hover {
+            background-color: #E55A00 !important;
+            transform: scale(1.05) !important;
+        }
+        .titulo-principal {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 32px;
+    color: #0042DA;
+    font-weight: 800;
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.passo-formulario {
+    font-size: 28px;
+    color: #f7941e;
+    font-weight: 700;
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    margin-top: 40px;
+    text-align: center;
+}
+
+    
+     
+
+
+
+
+    .testimonials-section {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+
+  .section-title {color: #66a9d8 !important; text-align: center !important; font-size: 38px !important; font-weight: 700 !important; margin: 0 0 50px  !important;}
+.section-title:after{width: 100px !important; height: 5px !important; background-color: #66a9d8 !important; content: "" !important; display: block !important; margin: 10px auto 0 !important; border-radius: 10px !important;}
+  
+
+    /* Grid de testimonios */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+
+    .testimonial-card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-text {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #4b5563;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #6b7280;
+      margin-right: 14px;
+      font-size: 1.2rem;
+    }
+
+    .author-info h4 {
+      font-size: 1.1rem;
+      color: #1f2937;
+      margin-bottom: 4px;
+    }
+
+    .author-info p {
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    /* Estrellas (opcional) */
+    .rating {
+      color: #fbbf24;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+  
+
+
+
+
+ .banner-mobile {
+    position: relative;
+    /* background-size: cover; */
+    /* background-position: center; */
+  }
+  .banner-mobile .corpo-banner {
+    position: relative;
+    z-index: 2;
+    /* padding: 20px; */
+  }
+  .banner-mobile .corpo-banner p span{color: #f7941e; font-weight: 700;}
+
+  
+  .banner-mobile .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
+  }
+
+  /* Estilos esenciales para que funcione el overlay */
+  .banner-desktop {
+    position: relative;
+
+  }
+
+ .banner-desktop .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
+  }
+
+  .banner-desktop .corpo-banner {
+    z-index: 2;
+    color: white;
+    /* text-align: center; */
+    /* padding: 20px; */
+  }
+
+  .corpo-banner p {
+    /* font-size: 1.8rem; */
+    line-height: 2.3;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  }
+
+  .banner-desktop .corpo-banner p span{color: #f7941e; font-weight: 700;}
+  .corpo-banner strong {
+    /* font-weight: 800; */
+    line-height: 1.3;
+    /* display: block; */
+    font-size: 3.5rem;
+    
+  }
+
+  .cta-principal {
+    display: inline-block;
+    background: #e63946;
+    color: white !important;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 12px;
+  }
+    </style>
 
     <!-- Estilos globales de WordPress -->
-    <!-- <link rel="stylesheet" id="wp-block-library-css"  href="https://broker.avalianonline.com.ar/assets/css/style.min1eb7.css?ver=6.0.3" type="text/css" media="all" /> -->
+    <!-- <link rel="stylesheet" id="wp-block-library-css"  href="/assets/css/style.min1eb7.css?ver=6.0.3" type="text/css" media="all" /> -->
     <style id="global-styles-inline-css" type="text/css">
         body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
     </style>
@@ -88,7 +415,7 @@
 <!-- Header -->
     <header id="header" class="com-banner">
 
-        <!-- <script defer src="https://broker.avalianonline.com.ar/assets/js/functions.js"></script> -->
+        <!-- <script defer src="/assets/js/functions.js"></script> -->
     </header>
 
     <!-- Banner Principal -->
@@ -143,21 +470,21 @@
                      <div class="wp-block-group__inner-container"  id="4"> 
                       
                         <div class="logos">
-    <a  href='#3' class="smooth-scroll"><img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.webp" value="galeno" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude" id="logo-galeno"></a>
-    <a  href='#3' class="smooth-scroll" ><img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.webp" value="omint" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint" id="logo-omint"></a>
-    <!-- <a  href='#3' class="smooth-scroll"><img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.webp" value="hominis" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora="" id="logo-Hominis"></a> -->
-    <a  href='#3' class="smooth-scroll"><img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.webp" value="premedic" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao" id="logo-Premedic"></a>
-    <a  href='#3' class="smooth-scroll"><img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.webp" value="sancorsalud" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil" id="logo-SanCorSalud"></a>
-    <a  href='#3' class="smooth-scroll"><img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.webp" value="medife" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medife')" data-classe-operadora="notredame" id="logo-Medife"></a>
-    <a  href='#3' class="smooth-scroll"><img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.webp" value="swiss-medical" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida" id="logo-Swiss"></a>
-    <a  href='#3' class="smooth-scroll"><img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.webp" value="avalian" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed" id="logo-Avalian"></a>
-    <a  href='#3' class="smooth-scroll"><img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.webp" value="prevencion-salud"  alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one" id="logo-Prevención"></a>
-    <a  href='#3' class="smooth-scroll"><img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.webp" value="doctored"  alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint" id="logo-Doctored"></a>
-    <a  href='#3' class="smooth-scroll"><img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.webp" value="salud-central" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint" id="logo-SaludCentral"></a>
+    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.webp" value="galeno" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude" id="logo-galeno"></a>
+    <a  href='#3' class="smooth-scroll" ><img src="/assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.webp" value="omint" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint" id="logo-omint"></a>
+    <!-- <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.webp" value="hominis" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora="" id="logo-Hominis"></a> -->
+    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.webp" value="premedic" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao" id="logo-Premedic"></a>
+    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.webp" value="sancorsalud" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil" id="logo-SanCorSalud"></a>
+    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.webp" value="medife" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medife')" data-classe-operadora="notredame" id="logo-Medife"></a>
+    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.webp" value="swiss-medical" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida" id="logo-Swiss"></a>
+    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.webp" value="avalian" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed" id="logo-Avalian"></a>
+    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.webp" value="prevencion-salud"  alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one" id="logo-Prevención"></a>
+    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.webp" value="doctored"  alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint" id="logo-Doctored"></a>
+    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.webp" value="salud-central" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint" id="logo-SaludCentral"></a>
                       
 </div>
                      </div>  <div class="logos-2">
-                         <a  href='#3' class="smooth-scroll"><img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-prepagas-190x110/todas-las-empresas-logo-medicina-prepaga-planes-de-salud.webp" value="todas-las-empresas" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('11')" data-classe-operadora="multimarcas" id="todas-las-empresas"></a>
+                         <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/todas-las-empresas-logo-medicina-prepaga-planes-de-salud.webp" value="todas-las-empresas" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('11')" data-classe-operadora="multimarcas" id="todas-las-empresas"></a>
   </div>
                   </div>
                
@@ -171,24 +498,24 @@
                         </div>
                    
                         <div class="prestadores-grid">
-                            <img src="https://broker.avalianonline.com.ar/assets/prestadores/sanatorio_general_sarmiento.webp" alt="Sanatorio General Sarmiento" title="Sanatorio General Sarmiento" loading="lazy">
-                               <img src="https://broker.avalianonline.com.ar/assets/prestadores/sanatorio-trinidad.webp" alt="Sanaotrio de la Trinidad" title="" loading="lazy">
-        <img src="https://broker.avalianonline.com.ar/assets/prestadores/centro-dim.webp" alt="Centros DIM" title="Centros DIM" loading="lazy">
-        <img src="https://broker.avalianonline.com.ar/assets/prestadores/sanatorio_general_sarmiento.webp" alt="Sanatorio General Sarmiento" title="Sanatorio General Sarmiento" loading="lazy">
-        <img src="https://broker.avalianonline.com.ar/assets/prestadores/sanatorio-las-lomas.webp" alt="Sanatorio Las Lomas" title="Sanatorio Las Lomas" loading="lazy">
-        <img src="https://broker.avalianonline.com.ar/assets/prestadores/hospital-aleman.webp" alt="Hospital Alemán" title="Hospital Alemán" loading="lazy">
-        <img src="https://broker.avalianonline.com.ar/assets/prestadores/bazterrica.webp" alt="Clínica Bazterrica" title="Clínica Bazterrica" loading="lazy">
-        <img src="https://broker.avalianonline.com.ar/assets/prestadores/hospital-britanico.webp" alt="Hospital Británico" title="Hospital Británico" loading="lazy">
-        <img src="https://broker.avalianonline.com.ar/assets/prestadores/clinica-del-sol.webp" alt="Clínica del Sol" title="Clínica del Sol" loading="lazy">
-        <img src="https://broker.avalianonline.com.ar/assets/prestadores/sanatorio-del-oeste.webp" alt="Sanatorio del Oeste" title="Sanatorio del Oeste" loading="lazy">
-        <img src="https://broker.avalianonline.com.ar/assets/prestadores/clinica-san-camilo.webp" alt="Clínica San Camilo" title="Clínica San Camilo" loading="lazy">
-        <img src="https://broker.avalianonline.com.ar/assets/prestadores/sanatorio-finochietto.webp" alt="Sanatorio Finochietto" title="Sanatorio Finochietto" loading="lazy">
-        <img src="https://broker.avalianonline.com.ar/assets/prestadores/centros-odontologicos.webp" alt="Centros Odontológicos" title="Centros Odontológicos" loading="lazy">
-        <img src="https://broker.avalianonline.com.ar/assets/prestadores/farmacity.webp" alt="Farmacity" title="Farmacity" loading="lazy">
-        <img src="https://broker.avalianonline.com.ar/assets/prestadores/emergencias-medicas.webp" alt="Emergencias Médicas" title="Emergencias Médicas" loading="lazy">
-        <img src="https://broker.avalianonline.com.ar/assets/prestadores/adventista.webp" alt="Clínica Adventisata de Belgrano" title="Clínica Adventisata de Belgrano" loading="lazy">
-        <img src="https://broker.avalianonline.com.ar/assets/prestadores/sanjuandedios.webp" alt="Casa Hospital San Juan de Dios" title="Casa Hospital San Juan de Dios" loading="lazy">
-        <img src="https://broker.avalianonline.com.ar/assets/prestadores/clinica-modelo-moron.webp" alt="Clínica Modelo de Morón" title="Clínica Modelo de Morón" loading="lazy">
+                            <img src="/assets/prestadores/sanatorio_general_sarmiento.webp" alt="Sanatorio General Sarmiento" title="Sanatorio General Sarmiento" loading="lazy">
+                               <img src="/assets/prestadores/sanatorio-trinidad.webp" alt="Sanaotrio de la Trinidad" title="" loading="lazy">
+        <img src="/assets/prestadores/centro-dim.webp" alt="Centros DIM" title="Centros DIM" loading="lazy">
+        <img src="/assets/prestadores/sanatorio_general_sarmiento.webp" alt="Sanatorio General Sarmiento" title="Sanatorio General Sarmiento" loading="lazy">
+        <img src="/assets/prestadores/sanatorio-las-lomas.webp" alt="Sanatorio Las Lomas" title="Sanatorio Las Lomas" loading="lazy">
+        <img src="/assets/prestadores/hospital-aleman.webp" alt="Hospital Alemán" title="Hospital Alemán" loading="lazy">
+        <img src="/assets/prestadores/bazterrica.webp" alt="Clínica Bazterrica" title="Clínica Bazterrica" loading="lazy">
+        <img src="/assets/prestadores/hospital-britanico.webp" alt="Hospital Británico" title="Hospital Británico" loading="lazy">
+        <img src="/assets/prestadores/clinica-del-sol.webp" alt="Clínica del Sol" title="Clínica del Sol" loading="lazy">
+        <img src="/assets/prestadores/sanatorio-del-oeste.webp" alt="Sanatorio del Oeste" title="Sanatorio del Oeste" loading="lazy">
+        <img src="/assets/prestadores/clinica-san-camilo.webp" alt="Clínica San Camilo" title="Clínica San Camilo" loading="lazy">
+        <img src="/assets/prestadores/sanatorio-finochietto.webp" alt="Sanatorio Finochietto" title="Sanatorio Finochietto" loading="lazy">
+        <img src="/assets/prestadores/centros-odontologicos.webp" alt="Centros Odontológicos" title="Centros Odontológicos" loading="lazy">
+        <img src="/assets/prestadores/farmacity.webp" alt="Farmacity" title="Farmacity" loading="lazy">
+        <img src="/assets/prestadores/emergencias-medicas.webp" alt="Emergencias Médicas" title="Emergencias Médicas" loading="lazy">
+        <img src="/assets/prestadores/adventista.webp" alt="Clínica Adventisata de Belgrano" title="Clínica Adventisata de Belgrano" loading="lazy">
+        <img src="/assets/prestadores/sanjuandedios.webp" alt="Casa Hospital San Juan de Dios" title="Casa Hospital San Juan de Dios" loading="lazy">
+        <img src="/assets/prestadores/clinica-modelo-moron.webp" alt="Clínica Modelo de Morón" title="Clínica Modelo de Morón" loading="lazy">
                         </div></div>
                         <div class="wp-container-5 wp-block-buttons">
                             <div class="wp-block-button">
@@ -206,7 +533,7 @@
                         <!-- Item 1: Galeno -->
                                              <div class="item">
                             <a class="logo"  onclick="document.getElementById('logo-galeno').click(); return false;">
-                                <img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.webp" alt="Galeno" title="Galeno" loading="lazy">
+                                <img src="/assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.webp" alt="Galeno" title="Galeno" loading="lazy">
                             </a>
   <ul class="features">
     <li>Red de hospitales propios (Sanatorio Anchorena)</li>
@@ -225,7 +552,7 @@
                                                 <!-- Item 2: Premedic -->
                         <div class="item">
                             <a class="logo"  onclick="document.getElementById('logo-Premedic').click(); return false;">
-                                <img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.webp" alt="Premedic" title="Premedic" loading="lazy">
+                                <img src="/assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.webp" alt="Premedic" title="Premedic" loading="lazy">
                             </a>
   <ul class="features">
     <li>Red de hospitales propios (Sanatorio Anchorena)</li>
@@ -244,7 +571,7 @@
                                                 <!-- Item 3: Avalian -->
                                                 <div class="item">
                             <a class="logo"  onclick="document.getElementById('logo-Avalian').click(); return false;">
-                                <img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.webp" alt="Galeno" title="Galeno" loading="lazy">
+                                <img src="/assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.webp" alt="Galeno" title="Galeno" loading="lazy">
                             </a>
                             <ul class="features">
     <li>Red de hospitales propios (Sanatorio Anchorena)</li>
@@ -263,7 +590,7 @@
                         <!-- Item 4: Omint -->
                         <div class="item">
                             <a class="logo" onclick="document.getElementById('logo-omint').click(); return false;">
-                                <img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.webp" alt="Omint" title="Omint"  value="omint"  loading="lazy">
+                                <img src="/assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.webp" alt="Omint" title="Omint"  value="omint"  loading="lazy">
                             </a>
                              <ul class="features">
     <li>Red de hospitales propios (Sanatorio Anchorena)</li>
@@ -285,7 +612,7 @@
                         <!-- Item 5: Medife -->
                         <div class="item">
                             <a class="logo" onclick="document.getElementById('logo-Medife').click(); return false;">
-                                <img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.webp" alt="Medife" title="Medife" loading="lazy">
+                                <img src="/assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.webp" alt="Medife" title="Medife" loading="lazy">
                             </a>
                              <ul class="features">
     <li>Red de hospitales propios (Sanatorio Anchorena)</li>
@@ -307,7 +634,7 @@
                         <!-- Item 6: Swiss Medical -->
                         <div class="item">
                             <a class="logo" onclick="document.getElementById('logo-Swiss').click(); return false;">
-                                <img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.webp" alt="Swiss Medical" title="Swiss Medical" loading="lazy">
+                                <img src="/assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.webp" alt="Swiss Medical" title="Swiss Medical" loading="lazy">
                             </a>
                              <ul class="features">
     <li>Red de hospitales propios (Sanatorio Anchorena)</li>
@@ -329,7 +656,7 @@
                         <!-- Item 5: SanCor Salud -->
                         <div class="item">
                             <a class="logo" onclick="document.getElementById('logo-SanCorSalud').click(); return false;">
-                                <img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.webp" alt="SanCor Salud" title="SanCor Salud" loading="lazy">
+                                <img src="/assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.webp" alt="SanCor Salud" title="SanCor Salud" loading="lazy">
                             </a>
                               <ul class="features">
     <li>Red de hospitales propios (Sanatorio Anchorena)</li>
@@ -350,7 +677,7 @@
                    
                                 <div class="item">
                             <a class="logo" onclick="document.getElementById('logo-Doctored').click(); return false;">
-                                <img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.webp" alt="Doctored" title="Doctored" loading="lazy">
+                                <img src="/assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.webp" alt="Doctored" title="Doctored" loading="lazy">
                             </a>
                               <ul class="features">
     <li>Red de hospitales propios (Sanatorio Anchorena)</li>
@@ -370,7 +697,7 @@
                         </div>
                                                 <div class="item">
                             <a class="logo" onclick="document.getElementById('logo-SaludCentral').click(); return false;">
-                                <img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.webp" alt="Salud Central" title="Salud Central" loading="lazy">
+                                <img src="/assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.webp" alt="Salud Central" title="Salud Central" loading="lazy">
                             </a>
                               <ul class="features">
     <li>Red de hospitales propios (Sanatorio Anchorena)</li>
@@ -521,7 +848,7 @@
                                 <h3>¿Preferís hablar por teléfono?</h3>
                                 <h4>Atención de Lunes a Viernes de 9 a 19 hs</h4>
                               <a href="tel:+541124985882" class="link-telefone">
-                               <img src="https://broker.avalianonline.com.ar/assets/formularios/formulario-whatsapp/icone-telefone.svg" alt="Teléfono" loading="lazy">
+                               <img src="/assets/formularios/formulario-whatsapp/icone-telefone.svg" alt="Teléfono" loading="lazy">
                              (11) 2498-5882
                             </a>
                                 <div class="lista-vantagens">
@@ -537,7 +864,7 @@
 
                             <!-- Formulario de WhatsApp (Optimizado) -->
                             <form id="contact-form-whats" class="form-whats">
-                                <h3><img src="https://broker.avalianonline.com.ar/assets/formularios/formulario-whatsapp/icone-whatsapp.svg" style="margin-right: 10px;"> Cotizá por WhatsApp</h3>
+                                <h3><img src="/assets/formularios/formulario-whatsapp/icone-whatsapp.svg" style="margin-right: 10px;"> Cotizá por WhatsApp</h3>
                                 <input class="campo-ID-formulario" type="hidden" name="formulario_pagina_whats" id="formulario_pagina_whats" value="COTIZAR AHORA Whatsapp">
                                 <div>
                                     <b>Nombre Completo:</b>
@@ -611,10 +938,10 @@
         <div>
             <div class="col">
                 <a class="logo" href="index.php">
-                    <img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo-movil.webp" alt="Plan de Salud" title="Plan de Salud">
+                    <img src="/assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo-movil.webp" alt="Plan de Salud" title="Plan de Salud">
                 </a>
                 <p>Somos asesores independientes de las mayores prepagas de Argentina. Cotizá con nosotros y podés ahorrar hasta un 50% en tu Plan de Salud. ¡Todo online, simple y sin burocracias!</p>
-                <!-- <p><strong>Asociados a:</strong> <img src="https://broker.avalianonline.com.ar/assets/imagenes/logos-web/sello-confianza.png" alt="Sello de Confianza" style="height: 30px; margin-top: 10px;"></p> -->
+                <!-- <p><strong>Asociados a:</strong> <img src="/assets/imagenes/logos-web/sello-confianza.png" alt="Sello de Confianza" style="height: 30px; margin-top: 10px;"></p> -->
             </div>
  <div class="col">
   <!-- <a class="telefone" href="tel:01124985882" target="_blank" style="margin:10px">
@@ -853,9 +1180,9 @@ window.addEventListener('load', function() {
 
     <!-- Botón Flotante de WhatsApp -->
     <a href="https://api.whatsapp.com/send?phone=5491124985882&text=Hola,%20necesito%20ayuda%20para%20elegir%20mi%20plan%20de%20salud." class="whatsapp-float" target="_blank">
-        <img src="https://broker.avalianonline.com.ar/assets/formularios/formulario-whatsapp/icone-whatsapp.svg" style="width: 40px; filter: invert(0);">
+        <img src="/assets/formularios/formulario-whatsapp/icone-whatsapp.svg" style="width: 40px; filter: invert(0);">
     </a>
-        <script src="https://broker.avalianonline.com.ar/assets/js/funciones.php"></script>
+        <script src="/assets/js/funciones.php"></script>
 
 </body>
 </html>

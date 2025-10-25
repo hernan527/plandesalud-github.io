@@ -136,6 +136,8 @@
 
 .tipo-de-plano p, .possui-plano p, .possui-cnpj p{position: relative;}
 
+.tipo-de-plano p strong{color: #f7941e; font-weight: 700;font-size:1.8rem}
+
 .tipo-de-plano p.ok::after, .possui-plano p.ok::after, .possui-cnpj p.ok::after{width: 20px; height: 20px; content: ""; background-image: url(imagens/icone-check.svg); background-position: center; background-repeat: no-repeat; background-size: 100%; position: absolute; bottom: 2px; display: inline-block; margin: 0 0 0 5px;}
 
 .tipo-de-plano b, .possui-plano b, .possui-cnpj b{min-width: 100px;text-align: center; background-color: #fff; padding: 10px; display: inline-block; border: 1px solid #66a9d8; box-shadow: 0 5px 5px rgba(0,0,0,0.2); margin: 0 20px 0 0; font-family: 'Noto Sans', sans-serif; font-weight: 400; color: #4e636d; cursor: pointer;}

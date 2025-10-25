@@ -333,6 +333,7 @@ body {
     z-index: 2;
     /* padding: 20px; */
   }
+  .banner-mobile .corpo-banner p span{color: #f7941e; font-weight: 700;}
 
   
   .banner-mobile .overlay {
@@ -362,21 +363,24 @@ body {
   .banner-desktop .corpo-banner {
     z-index: 2;
     color: white;
-    text-align: left;
+    /* text-align: center; */
     /* padding: 20px; */
   }
 
   .corpo-banner p {
     /* font-size: 1.8rem; */
-    /* line-height: 1.3; */
+    line-height: 2.3;
     margin: 0;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
   }
 
+  .banner-desktop .corpo-banner p span{color: #f7941e; font-weight: 700;}
   .corpo-banner strong {
     /* font-weight: 800; */
+    line-height: 1.3;
     /* display: block; */
-    /* font-size: 2.1rem; */
+    font-size: 3.5rem;
+    
   }
 
   .cta-principal {
@@ -415,18 +419,23 @@ body {
       <div class='banner-desktop' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.png)'>
        <div class="overlay"></div>   
      <div class='corpo-banner'>
-            <p><strong>Ahorre hasta un 50% en un nuevo plan.</strong><br />
-<em>Cotizamos tu plan de salud en<br />
-más de 10 empresas</em></p>
+            <p><strong>Encuentra tu Plan Médico ideal y</strong><br />
+            <strong>contratalo 100% online</strong>
+                
+                     <em><p><span>Todas estas Coberturas</span> en un solo lugar! <span>PLANES DE SALUD</span> CON OPTIMO <span>COSTO BENEFICIO</span>.</em></p>
+    
+
             <a href='#1'>COTIZAR AHORA</a>
          </div>
       </div>
       <div class='banner-mobile' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.png)'>
        <div class="overlay"></div>   
       <div class='corpo-banner'>
-            <p><strong>Ahorre hasta un 50% en un nuevo plan.</strong><br />
-<em>Cotizamos tu plan de salud en<br />
-más de 10 empresas</em></p>
+        <p><strong>Encuentra tu Plan Médico ideal y</strong><br />
+            <strong>contratalo 100% online</strong>
+                
+                     <em><p><span>Todas estas Coberturas</span> en un solo lugar! <span>PLANES DE SALUD</span> CON OPTIMO <span>COSTO BENEFICIO</span>.</em></p>
+    
 
             <a href='#1'>COTIZAR AHORA</a>
 
@@ -440,22 +449,22 @@ más de 10 empresas</em></p>
 
                 
               
-                   <div class="chamada-pos-banner">
+                   <div class="chamada-pos-banner" >
                 
                      <h2>AHORRÁ HASTA 50% EN UN NUEVO PLAN</h2>
-                     <p><strong>Todas estas Coberturas</strong> en un solo lugar! <strong>PLANES DE SALUD</strong> CON OPTIMO <strong>COSTO BENEFICIO</strong>.<br>Nuestro sitio propone tanto opciones de <strong>Medicina Prepaga </strong>como planes <strong>Sólo por aportes</strong> a obra social.<br><strong>Mejorá</strong> tu cobertura y <strong> Beneficiate!</strong></p>
+                     <p>Nuestro sitio propone tanto opciones de <strong>Medicina Prepaga </strong>como planes <strong>Sólo por aportes</strong> a obra social.<br><strong>Mejorá</strong> tu cobertura y <strong> Beneficiate!</strong></p>
     
                
-               </div>
+            
   <div class="contador" id="1" >
         <h3>Hoy más de <span id="contador">0</span> personas solicitaron una cotización</h3>
-    </div> 
+    </div>   <div class="conteudo-da-pagina"> </div>
 
                             
-               <div class="conteudo-da-pagina">
-                  <div class="wp-container-3 wp-block-group camada-operadoras-home">
-                     <div class="wp-block-group__inner-container">
-                        <h2>1º Paso: Selecione una empresa</h2>
+              <h2>1º Paso: Selecione una empresa</h2>
+                  <div class="camada-operadoras-home">  
+                     <div class="wp-block-group__inner-container"  id="4"> 
+                      
                         <div class="logos">
     <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.webp" value="galeno" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude" id="logo-galeno"></a>
     <a  href='#3' class="smooth-scroll" ><img src="./assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.webp" value="omint" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint" id="logo-omint"></a>
@@ -474,12 +483,12 @@ más de 10 empresas</em></p>
                          <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/todas-las-empresas-logo-medicina-prepaga-planes-de-salud.webp" value="todas-las-empresas" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('11')" data-classe-operadora="multimarcas" id="todas-las-empresas"></a>
   </div>
                   </div>
-               </div>
+               
                 <!-- Sección de Prestadores (Reemplazo del Marquee) -->
-                <div class="wp-container-6 wp-block-group camada-hospitais">
-                    <div class="wp-block-group__inner-container ">
+                <div class="camada-hospitais">
+                    <div >
                                            
-                        <div class="chamada-principal">
+                   <div class="chamada-principal">
                             <h2>Accedé a los Mejores Hospitales y Clínicas</h2>
                          
                         </div>
@@ -503,7 +512,7 @@ más de 10 empresas</em></p>
         <img src="./assets/prestadores/adventista.webp" alt="Clínica Adventisata de Belgrano" title="Clínica Adventisata de Belgrano" loading="lazy">
         <img src="./assets/prestadores/sanjuandedios.webp" alt="Casa Hospital San Juan de Dios" title="Casa Hospital San Juan de Dios" loading="lazy">
         <img src="./assets/prestadores/clinica-modelo-moron.webp" alt="Clínica Modelo de Morón" title="Clínica Modelo de Morón" loading="lazy">
-                        </div>
+                        </div></div>
                         <div class="wp-container-5 wp-block-buttons">
                             <div class="wp-block-button">
                                 <a class="wp-block-button__link cta-principal" href="#3" onclick="document.getElementById('todas-las-empresas').click(); return false;">¡PEDIR MI COTIZACIÓN!</a>
@@ -516,17 +525,22 @@ más de 10 empresas</em></p>
                 <div class="lista-tipo-4">
                    
                     <h2>¿Ya tenés en mente una prepaga? ¡Cotizá directamente aquí!</h2>
-                    <div class="items"></div>
+                    <div class="items">
                         <!-- Item 1: Galeno -->
-                        <div class="item">
+                                             <div class="item">
                             <a class="logo"  onclick="document.getElementById('logo-galeno').click(); return false;">
                                 <img src="./assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.webp" alt="Galeno" title="Galeno" loading="lazy">
                             </a>
-                            <p><strong>Galeno:</strong> Red de hospitales propios como el Sanatorio Anchorena y atención médica 24hs. Ideal para familias que buscan tranquilidad y calidad.</p>
-                            <div class="inv-cob">
-                                <h5 class="inv">Precio: ⭐⭐⭐</h5>
-                                <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
-                            </div>
+  <ul class="features">
+    <li>Red de hospitales propios (Sanatorio Anchorena)</li>
+    <li>Atención médica 24/7</li>
+    <li>Ideal para familias</li>
+    <li>Calidad y tranquilidad garantizadas</li>
+  </ul>
+  <div class="inv-cob">
+    <h5 class="inv">Precio: ⭐⭐⭐</h5>
+    <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
+  </div>
                             <div class="botao">
                                 <a  onclick="document.getElementById('logo-galeno').click(); return false;">COTIZAR AHORA</a>
                             </div>
@@ -536,11 +550,16 @@ más de 10 empresas</em></p>
                             <a class="logo"  onclick="document.getElementById('logo-Premedic').click(); return false;">
                                 <img src="./assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.webp" alt="Premedic" title="Premedic" loading="lazy">
                             </a>
-                            <p><strong>Premedic:</strong> Red de hospitales propios como el Sanatorio Anchorena y atención médica 24hs. Ideal para familias que buscan tranquilidad y calidad.</p>
-                            <div class="inv-cob">
-                                <h5 class="inv">Precio: ⭐⭐⭐</h5>
-                                <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
-                            </div>
+  <ul class="features">
+    <li>Red de hospitales propios (Sanatorio Anchorena)</li>
+    <li>Atención médica 24/7</li>
+    <li>Ideal para familias</li>
+    <li>Calidad y tranquilidad garantizadas</li>
+  </ul>
+  <div class="inv-cob">
+    <h5 class="inv">Precio: ⭐⭐⭐</h5>
+    <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
+  </div>
                             <div class="botao">
                                 <a onclick="document.getElementById('logo-Premedic').click(); return false;">COTIZAR AHORA</a>
                             </div>
@@ -550,11 +569,16 @@ más de 10 empresas</em></p>
                             <a class="logo"  onclick="document.getElementById('logo-Avalian').click(); return false;">
                                 <img src="./assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.webp" alt="Galeno" title="Galeno" loading="lazy">
                             </a>
-                            <p><strong>Avalian:</strong> Red de hospitales propios como el Sanatorio Anchorena y atención médica 24hs. Ideal para familias que buscan tranquilidad y calidad.</p>
-                            <div class="inv-cob">
-                                <h5 class="inv">Precio: ⭐⭐⭐</h5>
-                                <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
-                            </div>
+                            <ul class="features">
+    <li>Red de hospitales propios (Sanatorio Anchorena)</li>
+    <li>Atención médica 24/7</li>
+    <li>Ideal para familias</li>
+    <li>Calidad y tranquilidad garantizadas</li>
+  </ul>
+  <div class="inv-cob">
+    <h5 class="inv">Precio: ⭐⭐⭐</h5>
+    <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
+  </div>
                             <div class="botao">
                                 <a onclick="document.getElementById('logo-Avalian').click(); return false;">COTIZAR AHORA</a>
                             </div>
@@ -564,13 +588,18 @@ más de 10 empresas</em></p>
                             <a class="logo" onclick="document.getElementById('logo-omint').click(); return false;">
                                 <img src="./assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.webp" alt="Omint" title="Omint"  value="omint"  loading="lazy">
                             </a>
-                            <p><strong>OMINT:</strong> Excelencia en tecnología y servicio. Atención personalizada y acceso a los mejores especialistas del país.</p>
-                            <div class="inv-cob">
-                                <h5 class="inv">Precio: ⭐⭐⭐⭐</h5>
-                                <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
-                            </div>
+                             <ul class="features">
+    <li>Red de hospitales propios (Sanatorio Anchorena)</li>
+    <li>Atención médica 24/7</li>
+    <li>Ideal para familias</li>
+    <li>Calidad y tranquilidad garantizadas</li>
+  </ul>
+  <div class="inv-cob">
+    <h5 class="inv">Precio: ⭐⭐⭐</h5>
+    <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
+  </div>
 <div class="botao">
-    <a onclick="document.getElementById('logo-omint').click(); return false;" value="omint" >
+    <a onclick="document.getElementById('logo-omint').click(); return false;" value="omint" style="text-decoration: none; color: inherit;">
         COTIZAR AHORA
     </a>
 </div>
@@ -581,13 +610,18 @@ más de 10 empresas</em></p>
                             <a class="logo" onclick="document.getElementById('logo-Medife').click(); return false;">
                                 <img src="./assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.webp" alt="Medife" title="Medife" loading="lazy">
                             </a>
-                            <p><strong>Medife:</strong> Calidad de servicio y amplia red de reembolsos. Incluye cobertura odontológica y planes nacionales.</p>
-                            <div class="inv-cob">
-                                <h5 class="inv">Precio: ⭐⭐⭐</h5>
-                                <h5 class="cob">Cobertura: ⭐⭐⭐⭐</h5>
-                            </div>
+                             <ul class="features">
+    <li>Red de hospitales propios (Sanatorio Anchorena)</li>
+    <li>Atención médica 24/7</li>
+    <li>Ideal para familias</li>
+    <li>Calidad y tranquilidad garantizadas</li>
+  </ul>
+  <div class="inv-cob">
+    <h5 class="inv">Precio: ⭐⭐⭐</h5>
+    <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
+  </div>
 <div class="botao">
-    <a onclick="document.getElementById('logo-Medife').click(); return false;" >
+    <a onclick="document.getElementById('logo-Medife').click(); return false;" style="text-decoration: none; color: inherit;">
         COTIZAR AHORA
     </a>
 </div>
@@ -598,13 +632,18 @@ más de 10 empresas</em></p>
                             <a class="logo" onclick="document.getElementById('logo-Swiss').click(); return false;">
                                 <img src="./assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.webp" alt="Swiss Medical" title="Swiss Medical" loading="lazy">
                             </a>
-                            <p><strong>Swiss Medical:</strong> Cobertura nacional y atención online 24/7. Perfecto para personas que viajan frecuentemente.</p>
-                            <div class="inv-cob">
-                                <h5 class="inv">Precio: ⭐⭐⭐⭐</h5>
-                                <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
-                            </div>
+                             <ul class="features">
+    <li>Red de hospitales propios (Sanatorio Anchorena)</li>
+    <li>Atención médica 24/7</li>
+    <li>Ideal para familias</li>
+    <li>Calidad y tranquilidad garantizadas</li>
+  </ul>
+  <div class="inv-cob">
+    <h5 class="inv">Precio: ⭐⭐⭐</h5>
+    <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
+  </div>
 <div class="botao">
-    <a  onclick="document.getElementById('logo-Swiss').click(); return false;" >
+    <a  onclick="document.getElementById('logo-Swiss').click(); return false;" style="text-decoration: none; color: inherit;">
         COTIZAR AHORA
     </a>
 </div>
@@ -615,22 +654,65 @@ más de 10 empresas</em></p>
                             <a class="logo" onclick="document.getElementById('logo-SanCorSalud').click(); return false;">
                                 <img src="./assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.webp" alt="SanCor Salud" title="SanCor Salud" loading="lazy">
                             </a>
-                            <p><strong>SanCor Salud:</strong> Amplia red en todo el país con atención personalizada. Ideal para quienes buscan una relación precio-calidad equilibrada.</p>
-                            <div class="inv-cob">
-                                <h5 class="inv">Precio: ⭐⭐⭐</h5>
-                                <h5 class="cob">Cobertura: ⭐⭐⭐⭐</h5>
-                            </div>
+                              <ul class="features">
+    <li>Red de hospitales propios (Sanatorio Anchorena)</li>
+    <li>Atención médica 24/7</li>
+    <li>Ideal para familias</li>
+    <li>Calidad y tranquilidad garantizadas</li>
+  </ul>
+  <div class="inv-cob">
+    <h5 class="inv">Precio: ⭐⭐⭐</h5>
+    <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
+  </div>
 <div class="botao">
-    <a onclick="document.getElementById('logo-SanCorSalud').click(); return false;" >
+    <a onclick="document.getElementById('logo-SanCorSalud').click(); return false;" style="text-decoration: none; color: inherit;">
         COTIZAR AHORA
     </a>
 </div>
                         </div>
-                    </div>
-<div class="lista-tipo-4">
+                   
+                                <div class="item">
+                            <a class="logo" onclick="document.getElementById('logo-Doctored').click(); return false;">
+                                <img src="./assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.webp" alt="Doctored" title="Doctored" loading="lazy">
+                            </a>
+                              <ul class="features">
+    <li>Red de hospitales propios (Sanatorio Anchorena)</li>
+    <li>Atención médica 24/7</li>
+    <li>Ideal para familias</li>
+    <li>Calidad y tranquilidad garantizadas</li>
+  </ul>
+  <div class="inv-cob">
+    <h5 class="inv">Precio: ⭐⭐⭐</h5>
+    <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
+  </div>
+<div class="botao">
+    <a onclick="document.getElementById('logo-Doctored').click(); return false;" style="text-decoration: none; color: inherit;">
+        COTIZAR AHORA
+    </a>
+</div>
+                        </div>
+                                                <div class="item">
+                            <a class="logo" onclick="document.getElementById('logo-SaludCentral').click(); return false;">
+                                <img src="./assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.webp" alt="Salud Central" title="Salud Central" loading="lazy">
+                            </a>
+                              <ul class="features">
+    <li>Red de hospitales propios (Sanatorio Anchorena)</li>
+    <li>Atención médica 24/7</li>
+    <li>Ideal para familias</li>
+    <li>Calidad y tranquilidad garantizadas</li>
+  </ul>
+  <div class="inv-cob">
+    <h5 class="inv">Precio: ⭐⭐⭐</h5>
+    <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
+  </div>
+<div class="botao">
+    <a onclick="document.getElementById('logo-SaludCentral').click(); return false;" style="text-decoration: none; color: inherit;">
+        COTIZAR AHORA
+    </a>
+</div>
+                        </div>
+        </div>
   <a class="cotar-todas"  onclick="document.getElementById('todas-las-empresas').click(); return false;">¡QUIERO COMPARAR TODAS LAS OPCIONES!</a>
-</div>                </div>
-
 
 
       <!-- Llamado Final -->
@@ -638,7 +720,7 @@ más de 10 empresas</em></p>
                     <h3>¡No esperes más! El mejor plan te está esperando.</h3>
                     <p>Disponible en CABA y todo el territorio argentino.</p>
                     <p>¡Aprovechá esta oportunidad y empezá a ahorrar hoy mismo!</p>
-                </div>
+                </div></div>
      <div class="camada-plantao-e-whats">
                     <div class="corpo">
                         <div class="chamada-principal">
@@ -730,7 +812,7 @@ más de 10 empresas</em></p>
                         </div>
 
                         <div class="datos-contacto" id="datos-contacto">
-                            <p><strong>Necesitamos tus datos de contacto para enviar la cotización:</strong></p>
+                            <p><strong style="color: #f7941e; font-weight: 700;font-size:1.1rem">Necesitamos tus datos de contacto para enviar la cotización:</strong></p>
                             <span>
                                 <i>Nombre Completo</i>
                                 <input class="campo-nome" type="text" name="Name" id="Name" placeholder="Tu nombre completo" required>

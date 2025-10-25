@@ -71,7 +71,7 @@
     <!-- Estilos personalizados -->
     <link rel="stylesheet"  href="/assets/css/style-whats.css" type="text/css">
    
-        /* Estilos generales */
+      
             <style>
 
 body {
@@ -108,7 +108,8 @@ body {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-
+     </style>
+          <style>
 /* Contenido principal */
 #contenido {
   text-align: center;
@@ -185,7 +186,7 @@ body {
         .botao a:hover {
             background-color: #0033a0;
         }
-
+e
         /* Loader del formulario */
         .loader-whats {
             display: none;

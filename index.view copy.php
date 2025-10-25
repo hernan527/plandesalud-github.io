@@ -8,24 +8,24 @@
 <meta name="Copyright" content="Copyright Mejor Plan de Salud 2023. Todos los derechos reservados.">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<meta name="mobile-web-app-capable" content="yes"><link rel="shortcut icon" sizes="1024x1024" href="./assets/imagenes/logos-web/plan-de-salud-favicon.ico" /><link rel="apple-touch-icon" href="./assets/imagenes/logos-web/plan-de-salud-favicon.ico">
+<meta name="mobile-web-app-capable" content="yes"><link rel="shortcut icon" sizes="1024x1024" href="/assets/imagenes/logos-web/plan-de-salud-favicon.ico" /><link rel="apple-touch-icon" href="/assets/imagenes/logos-web/plan-de-salud-favicon.ico">
    
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<script defer type='text/javascript' src="./assets/js/jquery.validate.min.js"></script>
+<script defer type='text/javascript' src="/assets/js/jquery.validate.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
 <script defer type='text/javascript' src='./assets/js/jquery.mask.min8a54.js?ver=1.0.0'></script>
-<script defer type="text/javascript" src="./assets/js/formularios-cot.js"></script>
-<script defer src="./assets/js/funciones.js"></script>
+<script defer type="text/javascript" src="/assets/js/formularios-cot.js"></script>
+<script defer src="/assets/js/funciones.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<!-- <script async src="./assets/js/jquery-2.2.4.min.js"></script> -->
+<!-- <script async src="/assets/js/jquery-2.2.4.min.js"></script> -->
  <!-- FIM - IMPORTES DO WP_HEAD -->
 
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
 
 	
-<script defer src="./assets/js/prefixfree.min.js"></script>
-<script defer src="./assets/js/modernizr-2.8.0.dev.js"></script>
+<script defer src="/assets/js/prefixfree.min.js"></script>
+<script defer src="/assets/js/modernizr-2.8.0.dev.js"></script>
 <script>
     const images = [
         "assets/prestadores/sanatorio-trinidad.webp",
@@ -54,9 +54,9 @@
         img.src = src;
     });
     </script>
-<link rel="stylesheet" href="./assets/imagenes/stylea870.css?versao=5.0" />
+<link rel="stylesheet" href="/assets/imagenes/stylea870.css?versao=5.0" />
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="pingback" href="./xmlrpc.php" />
+<link rel="pingback" href="/xmlrpc.php" />
 
 <!-- IMPORTES DO WP_HEAD -->
 <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
@@ -80,7 +80,7 @@
 
 <link rel='dns-prefetch' href='http://ws.sharethis.com/' />
 <link rel='dns-prefetch' href='http://s.w.org/' />
-<link rel="stylesheet"  href="./assets/css/style-whats.css" type="text/css">
+<link rel="stylesheet"  href="/assets/css/style-whats.css" type="text/css">
 
 
 <style>
@@ -209,7 +209,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 		<div id="corpo-topo">
 
 				<!-- LOGO -->
-                <a class="logo" href="."><img class="logo-desktop" src="./assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo.png" alt="Plan de Salud" title="Plan de Salud"><img class="logo-mobile" src="./assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo-movil.png" alt="Plan de Salud" title="Plan de Salud"></a>
+                <a class="logo" href="."><img class="logo-desktop" src="/assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo.png" alt="Plan de Salud" title="Plan de Salud"><img class="logo-mobile" src="/assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo-movil.png" alt="Plan de Salud" title="Plan de Salud"></a>
                 <!-- MENU -->
                 <div>
                     <div class="abre-menu-mobile"></div>
@@ -230,7 +230,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                 <!-- <div class="abre-busca-mobile"></div> -->
     
             </div>
-            <script defer src="./assets/js/functions.js"></script>
+            <script defer src="/assets/js/functions.js"></script>
 
 	</header>
     <!-- <div class='banner-desktop' style='background-image: url(assets/imagenes/banners/banner.png)'><div class='corpo-banner'><p><strong> Planes de Salud</strong><br /> -->
@@ -270,29 +270,29 @@ Compará los Mejores para Vos y tu familia</p>
 
 <div class="logos">
 <a href="planes-de-salud-precios/hominis-plan-de-salud/index.html">
-    <img src="./assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" alt="Hominis" title="HominisAmil">
+    <img src="/assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.png" alt="Hominis" title="HominisAmil">
 </a>
 <a href="planes-de-salud-precios/galeno-plan-de-salud/index.html">
-    <img src="./assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno">
+    <img src="/assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno">
 </a>
 <a href="planes-de-salud-precios/omint-plan-de-salud/index.html">
-    <img src="./assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint">
+    <img src="/assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint">
 </a>
 <a href="planes-de-salud-precios/sancorsalud-plan-de-salud/index.html">
-    <img src="./assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor Salud" title="SanCor Salud">
+    <img src="/assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor Salud" title="SanCor Salud">
 </a>
 <a href="planes-de-salud-precios/swissmedical-plan-de-salud/index.html">
-    <img src="./assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical">
+    <img src="/assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical">
 </a>
 <a href="planes-de-salud-precios/salud-central-plan-de-salud/index.html">
-    <img src="./assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" alt="Salud Central" title="Salud Central">
+    <img src="/assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" alt="Salud Central" title="Salud Central">
 </a>
 <a href="planes-de-salud-precios/premedic-plan-de-salud/index.html">
-    <img src="./assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic">
+    <img src="/assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic">
 </a>
-<a href="planes-de-salud-precios/doctored-plan-de-salud/index.html"><img src="./assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" alt="Doctored" title="Doctored"></a>
-<a href="planes-de-salud-precios/avalian-plan-de-salud/index.html"><img src="./assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Avalian" title="Avalian"></a>
-<a href="planes-de-salud-precios/prevencion_salud-plan-de-salud/index.html"><img src="./assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" alt="Prevencion Salud" title="Prevencion Salud"></a>
+<a href="planes-de-salud-precios/doctored-plan-de-salud/index.html"><img src="/assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" alt="Doctored" title="Doctored"></a>
+<a href="planes-de-salud-precios/avalian-plan-de-salud/index.html"><img src="/assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Avalian" title="Avalian"></a>
+<a href="planes-de-salud-precios/prevencion_salud-plan-de-salud/index.html"><img src="/assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" alt="Prevencion Salud" title="Prevencion Salud"></a>
 </div>
 </div></div>
 
@@ -304,51 +304,51 @@ Compará los Mejores para Vos y tu familia</p>
 <h2>Amplia red de prestadores</h2>
 <div class="marquee-container  marquee-left">
     <div class="marquee">
-        <img src="./assets/prestadores/sanatorio-trinidad.webp" alt="Sanatorios de la Trinidad" title="Sanatorios de la Trinidad"  loading="lazy" >
+        <img src="/assets/prestadores/sanatorio-trinidad.webp" alt="Sanatorios de la Trinidad" title="Sanatorios de la Trinidad"  loading="lazy" >
        
        
-        <img src="./assets/prestadores/sanjuandedios.webp"  alt="Hospital San Juan de Dios" title="Hospital San Juan de Dios"    loading="lazy" >
+        <img src="/assets/prestadores/sanjuandedios.webp"  alt="Hospital San Juan de Dios" title="Hospital San Juan de Dios"    loading="lazy" >
     
        
-        <img src="./assets/prestadores/clinica-modelo-moron.webp"  alt="Clinica Modelo Moron" title="Clinica Modelo Moron"   loading="lazy" >
+        <img src="/assets/prestadores/clinica-modelo-moron.webp"  alt="Clinica Modelo Moron" title="Clinica Modelo Moron"   loading="lazy" >
     
     
-        <img src="./assets/prestadores/centro-dim.webp"  alt="Centro Médico Dim" title="Centro Médico Dim"    loading="lazy" >
+        <img src="/assets/prestadores/centro-dim.webp"  alt="Centro Médico Dim" title="Centro Médico Dim"    loading="lazy" >
         
         
         
-         <img src="./assets/prestadores/sanatorio_general_sarmiento.webp"  alt="Sanatorio General Sarmiento" title="Sanatorio General Sarmiento"    loading="lazy" >
+         <img src="/assets/prestadores/sanatorio_general_sarmiento.webp"  alt="Sanatorio General Sarmiento" title="Sanatorio General Sarmiento"    loading="lazy" >
         
-        <img src="./assets/prestadores/sanatorio-las-lomas.webp"  alt="Sanatorio las Lomas" title="Sanatorio las Lomas"   loading="lazy" >
+        <img src="/assets/prestadores/sanatorio-las-lomas.webp"  alt="Sanatorio las Lomas" title="Sanatorio las Lomas"   loading="lazy" >
     
-        <img src="./assets/prestadores/hospital-aleman.webp"  alt="Hospital Alemán" title="Hospital Alemán">
+        <img src="/assets/prestadores/hospital-aleman.webp"  alt="Hospital Alemán" title="Hospital Alemán">
     
-        <img src="./assets/prestadores/bazterrica.webp"  alt="Clinica Bazterrica" title="Clinica Bazterrica"   loading="lazy" >
+        <img src="/assets/prestadores/bazterrica.webp"  alt="Clinica Bazterrica" title="Clinica Bazterrica"   loading="lazy" >
     
     
-        <img src="./assets/prestadores/hospital-britanico.webp"  alt="Hospital Británico" title="Hospital Británico"   loading="lazy" >                                       <img src="./assets/prestadores/premedic-medical-center.webp"  alt="Premedic Medical Center" title="Premedic Medical Center"    loading="lazy" >
+        <img src="/assets/prestadores/hospital-britanico.webp"  alt="Hospital Británico" title="Hospital Británico"   loading="lazy" >                                       <img src="/assets/prestadores/premedic-medical-center.webp"  alt="Premedic Medical Center" title="Premedic Medical Center"    loading="lazy" >
    
-   <img src="./assets/prestadores/clinica-del-sol.webp"  alt="Clinica del Sol" title="Clinica del Sol"  loading="lazy" >
+   <img src="/assets/prestadores/clinica-del-sol.webp"  alt="Clinica del Sol" title="Clinica del Sol"  loading="lazy" >
     
      
     
-        <img src="./assets/prestadores/sanatorio-del-oeste.webp"  alt="" title="Sanatorio del Oeste"    loading="lazy" >
+        <img src="/assets/prestadores/sanatorio-del-oeste.webp"  alt="" title="Sanatorio del Oeste"    loading="lazy" >
     
-        <img src="./assets/prestadores/clinica-san-camilo.webp"  alt="Clinica San Camilo" title="Clinica San Camilo"   loading="lazy" >
-         <img src="./assets/prestadores/sanatorio-finochietto.webp"  alt="Sanatorio Finochietto" title="Sanatorio Finochietto"   loading="lazy" >
-    <img src="./assets/prestadores/centros-odontologicos.webp"  alt="Centros Odongológicos Propios" title="Centros Odongológicos Propios"    loading="lazy" >
-    <img src="./assets/prestadores/farmacity.webp"  alt="Farmacity" title="Farmacity"    loading="lazy" >
+        <img src="/assets/prestadores/clinica-san-camilo.webp"  alt="Clinica San Camilo" title="Clinica San Camilo"   loading="lazy" >
+         <img src="/assets/prestadores/sanatorio-finochietto.webp"  alt="Sanatorio Finochietto" title="Sanatorio Finochietto"   loading="lazy" >
+    <img src="/assets/prestadores/centros-odontologicos.webp"  alt="Centros Odongológicos Propios" title="Centros Odongológicos Propios"    loading="lazy" >
+    <img src="/assets/prestadores/farmacity.webp"  alt="Farmacity" title="Farmacity"    loading="lazy" >
     
-    <img src="./assets/prestadores/emergencias-medicas.webp"  alt="Emergencias Médicas" title="Emergencias Médicas"    loading="lazy" >
-    <img src="./assets/prestadores/adventista.png"  alt="Clínica Adventista de Belgrano" title="Clínica Adventista de Belgrano  "    loading="lazy" >
-     <img src="./assets/prestadores/sanatorio-trinidad.webp" alt="Sanatorios de la Trinidad" title="Sanatorios de la Trinidad"  loading="lazy" >
-    <img src="./assets/prestadores/sanjuandedios.webp"  alt="Hospital San Juan de Dios" title="Hospital San Juan de Dios"    loading="lazy" >
+    <img src="/assets/prestadores/emergencias-medicas.webp"  alt="Emergencias Médicas" title="Emergencias Médicas"    loading="lazy" >
+    <img src="/assets/prestadores/adventista.png"  alt="Clínica Adventista de Belgrano" title="Clínica Adventista de Belgrano  "    loading="lazy" >
+     <img src="/assets/prestadores/sanatorio-trinidad.webp" alt="Sanatorios de la Trinidad" title="Sanatorios de la Trinidad"  loading="lazy" >
+    <img src="/assets/prestadores/sanjuandedios.webp"  alt="Hospital San Juan de Dios" title="Hospital San Juan de Dios"    loading="lazy" >
     
        
-        <img src="./assets/prestadores/clinica-modelo-moron.webp"  alt="Clinica Modelo Moron" title="Clinica Modelo Moron"   loading="lazy" >
+        <img src="/assets/prestadores/clinica-modelo-moron.webp"  alt="Clinica Modelo Moron" title="Clinica Modelo Moron"   loading="lazy" >
     
     
-        <img src="./assets/prestadores/centro-dim.webp"  alt="Centro Médico Dim" title="Centro Médico Dim"    loading="lazy" >
+        <img src="/assets/prestadores/centro-dim.webp"  alt="Centro Médico Dim" title="Centro Médico Dim"    loading="lazy" >
        
    
     </div>
@@ -356,51 +356,51 @@ Compará los Mejores para Vos y tu familia</p>
 
 <div class="marquee-container  marquee-right">
     <div class="marquee">
-        <img src="./assets/prestadores/sanatorio-trinidad.webp" alt="Sanatorios de la Trinidad" title="Sanatorios de la Trinidad"  loading="lazy" >
+        <img src="/assets/prestadores/sanatorio-trinidad.webp" alt="Sanatorios de la Trinidad" title="Sanatorios de la Trinidad"  loading="lazy" >
        
        
-        <img src="./assets/prestadores/sanjuandedios.webp"  alt="Hospital San Juan de Dios" title="Hospital San Juan de Dios"    loading="lazy" >
+        <img src="/assets/prestadores/sanjuandedios.webp"  alt="Hospital San Juan de Dios" title="Hospital San Juan de Dios"    loading="lazy" >
     
        
-        <img src="./assets/prestadores/clinica-modelo-moron.webp"  alt="Clinica Modelo Moron" title="Clinica Modelo Moron"   loading="lazy" >
+        <img src="/assets/prestadores/clinica-modelo-moron.webp"  alt="Clinica Modelo Moron" title="Clinica Modelo Moron"   loading="lazy" >
     
     
-        <img src="./assets/prestadores/centro-dim.webp"  alt="Centro Médico Dim" title="Centro Médico Dim"    loading="lazy" >
+        <img src="/assets/prestadores/centro-dim.webp"  alt="Centro Médico Dim" title="Centro Médico Dim"    loading="lazy" >
         
         
         
-         <img src="./assets/prestadores/sanatorio_general_sarmiento.webp"  alt="Sanatorio General Sarmiento" title="Sanatorio General Sarmiento"    loading="lazy" >
+         <img src="/assets/prestadores/sanatorio_general_sarmiento.webp"  alt="Sanatorio General Sarmiento" title="Sanatorio General Sarmiento"    loading="lazy" >
         
-        <img src="./assets/prestadores/sanatorio-las-lomas.webp"  alt="Sanatorio las Lomas" title="Sanatorio las Lomas"   loading="lazy" >
+        <img src="/assets/prestadores/sanatorio-las-lomas.webp"  alt="Sanatorio las Lomas" title="Sanatorio las Lomas"   loading="lazy" >
     
-        <img src="./assets/prestadores/hospital-aleman.webp"  alt="Hospital Alemán" title="Hospital Alemán">
+        <img src="/assets/prestadores/hospital-aleman.webp"  alt="Hospital Alemán" title="Hospital Alemán">
     
-        <img src="./assets/prestadores/bazterrica.webp"  alt="Clinica Bazterrica" title="Clinica Bazterrica"   loading="lazy" >
+        <img src="/assets/prestadores/bazterrica.webp"  alt="Clinica Bazterrica" title="Clinica Bazterrica"   loading="lazy" >
     
     
-        <img src="./assets/prestadores/hospital-britanico.webp"  alt="Hospital Británico" title="Hospital Británico"   loading="lazy" >                                       <img src="./assets/prestadores/premedic-medical-center.webp"  alt="Premedic Medical Center" title="Premedic Medical Center"    loading="lazy" >
+        <img src="/assets/prestadores/hospital-britanico.webp"  alt="Hospital Británico" title="Hospital Británico"   loading="lazy" >                                       <img src="/assets/prestadores/premedic-medical-center.webp"  alt="Premedic Medical Center" title="Premedic Medical Center"    loading="lazy" >
    
-   <img src="./assets/prestadores/clinica-del-sol.webp"  alt="Clinica del Sol" title="Clinica del Sol"  loading="lazy" >
+   <img src="/assets/prestadores/clinica-del-sol.webp"  alt="Clinica del Sol" title="Clinica del Sol"  loading="lazy" >
     
      
     
-        <img src="./assets/prestadores/sanatorio-del-oeste.webp"  alt="" title="Sanatorio del Oeste"    loading="lazy" >
+        <img src="/assets/prestadores/sanatorio-del-oeste.webp"  alt="" title="Sanatorio del Oeste"    loading="lazy" >
     
-        <img src="./assets/prestadores/clinica-san-camilo.webp"  alt="Clinica San Camilo" title="Clinica San Camilo"   loading="lazy" >
-         <img src="./assets/prestadores/sanatorio-finochietto.webp"  alt="Sanatorio Finochietto" title="Sanatorio Finochietto"   loading="lazy" >
-    <img src="./assets/prestadores/centros-odontologicos.webp"  alt="Centros Odongológicos Propios" title="Centros Odongológicos Propios"    loading="lazy" >
-    <img src="./assets/prestadores/farmacity.webp"  alt="Farmacity" title="Farmacity"    loading="lazy" >
+        <img src="/assets/prestadores/clinica-san-camilo.webp"  alt="Clinica San Camilo" title="Clinica San Camilo"   loading="lazy" >
+         <img src="/assets/prestadores/sanatorio-finochietto.webp"  alt="Sanatorio Finochietto" title="Sanatorio Finochietto"   loading="lazy" >
+    <img src="/assets/prestadores/centros-odontologicos.webp"  alt="Centros Odongológicos Propios" title="Centros Odongológicos Propios"    loading="lazy" >
+    <img src="/assets/prestadores/farmacity.webp"  alt="Farmacity" title="Farmacity"    loading="lazy" >
     
-    <img src="./assets/prestadores/emergencias-medicas.webp"  alt="Emergencias Médicas" title="Emergencias Médicas"    loading="lazy" >
-    <img src="./assets/prestadores/adventista.png"  alt="Clínica Adventista de Belgrano" title="Clínica Adventista de Belgrano  "    loading="lazy" >
-     <img src="./assets/prestadores/sanatorio-trinidad.webp" alt="Sanatorios de la Trinidad" title="Sanatorios de la Trinidad"  loading="lazy" >
-    <img src="./assets/prestadores/sanjuandedios.webp"  alt="Hospital San Juan de Dios" title="Hospital San Juan de Dios"    loading="lazy" >
+    <img src="/assets/prestadores/emergencias-medicas.webp"  alt="Emergencias Médicas" title="Emergencias Médicas"    loading="lazy" >
+    <img src="/assets/prestadores/adventista.png"  alt="Clínica Adventista de Belgrano" title="Clínica Adventista de Belgrano  "    loading="lazy" >
+     <img src="/assets/prestadores/sanatorio-trinidad.webp" alt="Sanatorios de la Trinidad" title="Sanatorios de la Trinidad"  loading="lazy" >
+    <img src="/assets/prestadores/sanjuandedios.webp"  alt="Hospital San Juan de Dios" title="Hospital San Juan de Dios"    loading="lazy" >
     
        
-        <img src="./assets/prestadores/clinica-modelo-moron.webp"  alt="Clinica Modelo Moron" title="Clinica Modelo Moron"   loading="lazy" >
+        <img src="/assets/prestadores/clinica-modelo-moron.webp"  alt="Clinica Modelo Moron" title="Clinica Modelo Moron"   loading="lazy" >
     
     
-        <img src="./assets/prestadores/centro-dim.webp"  alt="Centro Médico Dim" title="Centro Médico Dim"    loading="lazy" >
+        <img src="/assets/prestadores/centro-dim.webp"  alt="Centro Médico Dim" title="Centro Médico Dim"    loading="lazy" >
        
    
     </div>
@@ -434,14 +434,14 @@ Compará los Mejores para Vos y tu familia</p>
     <div class="col-xl-3 col-lg-2 px-0" style="width:25%;padding:10px">
     <!-- <div style="z-index:1;height:30px;padding-top:0.2em;padding-bottom:0.2em;padding-right :10px;color:white;text-indent:10px;font-size:14px;border-top-left-radius: 10px;position:absolute;border-style:none;background-color:' + colorPlan +  ';margin-top: 7px;margin-left: -5px;"><strong> PLAN 1500</strong></div> -->
     <!-- <div style="z-index:1;height:8px;;width:5px;border-bottom-left-radius: 5px;position:absolute;bborder-bottom-left-radius: 5px;border-left-style:solid;border-bottom-style:solid;border-width:2px;border-color:' + colorPlan +  ';background-color:gray;margin-top: 37px;margin-left: -5px;"></div>         -->
-    <img style="margin:0px auto;margin-top:60px;margin-left:10px" class="card-img-top" src="./assets/imagenes/logo/coberturas/sancorsalud.png" alt="Card image cap">
+    <img style="margin:0px auto;margin-top:60px;margin-left:10px" class="card-img-top" src="/assets/imagenes/logo/coberturas/sancorsalud.png" alt="Card image cap">
     </div>
                 <p>Solicite su citización online para su cobertura médica, complete el formulario y reciba las mejores opciones que se ajusten a su presupuesto.</p><br>                <div class="inv-cob"><h5 class="inv">Investimento: </h5><h5 class="cob">Cobertura: </h5></div>
-                <div class="botao"><a href="./cotizar-ahora/index.php">COTIZAR AHORA</a>
+                <div class="botao"><a href="/cotizar-ahora/index.php">COTIZAR AHORA</a>
                 </div>            
             </div>
                     <div class="item">
-                        <a class="logo" href="./planes-de-salud-precios/galeno-plan-de-salud/cotizar/index.php"><img src="./assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno"></a>
+                        <a class="logo" href="/planes-de-salud-precios/galeno-plan-de-salud/cotizar/index.php"><img src="/assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.png" alt="Galeno" title="Galeno"></a>
                         <p>Com o Plano Caixa Seguro Saúde, seus sócios, colaboradores e dependentes contam com hospitales, clínicas e profissionais em todo o Argentina, além de canais de atendimento online 24h por dia.</p>
 
 
@@ -449,79 +449,79 @@ Compará los Mejores para Vos y tu familia</p>
 
                         <div class="inv-cob"><h5 class="inv">Inversión: <img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'></h5><h5 class="cob">Cobertura: <img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'></h5></div>
                         <div class="botao">
-                            <a href="./planes-de-salud-precios/galeno-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a>
+                            <a href="/planes-de-salud-precios/galeno-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a>
                         </div>
             </div>
                     <div class="item">
-                <a class="logo" href="./planes-de-salud-precios/omint-plan-de-salud/cotizar/index.php"><img src="./assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint"></a>
+                <a class="logo" href="/planes-de-salud-precios/omint-plan-de-salud/cotizar/index.php"><img src="/assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.png" alt="Omint" title="Omint"></a>
                 <p>A <b>OMINT</b> promove excelência em nível de tecnologia. Possui um atendimento diferenciado e garantia de qualidade e segurança no serviço.</p>
                 <div class="inv-cob"><h5 class="inv">Investimento: <img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'></h5><h5 class="cob">Cobertura: <img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'></h5></div>
                 <div class="botao">
-                    <a href="./planes-de-salud-precios/omint-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a>
+                    <a href="/planes-de-salud-precios/omint-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a>
                 </div>
             </div>
                     <div class="item">
-                <a class="logo" href="./planes-de-salud-precios/medife-plan-de-salud/cotizar/index.php"><img src="./assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.png" alt="Medife" title="Medife"></a>
+                <a class="logo" href="/planes-de-salud-precios/medife-plan-de-salud/cotizar/index.php"><img src="/assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.png" alt="Medife" title="Medife"></a>
                 <p>Plano para pessoas que exigem boa qualidade de serviços. Ampla rede credenciada com serviços de Reembolsos, atendimento odontológico, reemissão, planos nacionais.</p>
                 <div class="inv-cob"><h5 class="inv">Investimento: <img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'></h5><h5 class="cob">Cobertura: <img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'></h5></div>
                 <div class="botao">
-                    <a href="./planes-de-salud-precios/medife-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a></div>
+                    <a href="/planes-de-salud-precios/medife-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a></div>
             </div>
                     <div class="item">
-                <a class="logo" href="./planes-de-salud-precios/swissmedical-plan-de-salud/cotizar/index.php"><img src="./assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical"></a>
+                <a class="logo" href="/planes-de-salud-precios/swissmedical-plan-de-salud/cotizar/index.php"><img src="/assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.gif" alt="Swiss Medical" title="Swiss Medical"></a>
                 <p>Com o Plano Caixa Seguro Saúde, seus sócios, colaboradores e dependentes contam com hospitales, clínicas e profissionais em todo o Argentina, além de canais de atendimento online 24h por dia.</p>
                 <div class="inv-cob"><h5 class="inv">Investimento: <img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'></h5><h5 class="cob">Cobertura: <img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'></h5></div>
                 <div class="botao">
-                    <a href="./planes-de-salud-precios/swissmedical-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a></div>
+                    <a href="/planes-de-salud-precios/swissmedical-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a></div>
             </div>
                     <div class="item">
-                <a class="logo" href="./planes-de-salud-precios/sancorsalud-plan-de-salud/cotizar/index.php"><img src="./assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor Salud" title="SanCor Salud"></a>
+                <a class="logo" href="/planes-de-salud-precios/sancorsalud-plan-de-salud/cotizar/index.php"><img src="/assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.png" alt="SanCor Salud" title="SanCor Salud"></a>
                 <p>O Grupo Notredame Intermédica conta com uma rede própria de atendimento com 57 centros clínicos, 6 Maternidades, 10 prontos-socorros, 8 hospitales. Aproveite muito mais o que a vida tem a oferecer.</p>
                 <div class="inv-cob"><h5 class="inv">Investimento: <img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'></h5><h5 class="cob">Cobertura: <img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'></h5></div>
                 <div class="botao">
-                    <a href="./planes-de-salud-precios/sancorsalud-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a></div>
+                    <a href="/planes-de-salud-precios/sancorsalud-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a></div>
             </div>
                     <div class="item">
-                <a class="logo" href="./planes-de-salud-precios/premedic-plan-de-salud/cotizar/index.php"><img src="./assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic"></a>
+                <a class="logo" href="/planes-de-salud-precios/premedic-plan-de-salud/cotizar/index.php"><img src="/assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.png" alt="Premedic" title="Premedic"></a>
                 <p>OPlan de Salud SulAmérica pertence ao maior grupo segurador que existe no Argentina! Atendimento de qualidade, com credenciamento amplo e ao nível nacional. Promoções nas carências para grupos a partir de 10 vidas.</p>
                 <div class="inv-cob"><h5 class="inv">Investimento: <img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'></h5><h5 class="cob">Cobertura: <img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'></h5></div>
                 <div class="botao">
-                    <a href="./planes-de-salud-precios/premedic-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a></div>
+                    <a href="/planes-de-salud-precios/premedic-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a></div>
             </div>
                     <div class="item">
-                <a class="logo" href="./planes-de-salud-precios/doctored-plan-de-salud/cotizar/index.php"><img src="./assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" alt="Doctored" title="Doctored"></a>
+                <a class="logo" href="/planes-de-salud-precios/doctored-plan-de-salud/cotizar/index.php"><img src="/assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.gif" alt="Doctored" title="Doctored"></a>
                 <p>OPlan de Salud Porto Seguro trabalha com uma ampla cobertura e oferece o suporte necessário de acordo com suas necessidades, saiba mais.</p>
                 <div class="inv-cob"><h5 class="inv">Investimento: <img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'></h5><h5 class="cob">Cobertura: <img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'></h5></div>
                 <div class="botao">
-                    <a href="./planes-de-salud-precios/doctored-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a></div>
+                    <a href="/planes-de-salud-precios/doctored-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a></div>
             </div>
                     <div class="item">
-                <a class="logo" href="./planes-de-salud-precios/salud-central-plan-de-salud/cotizar/index.php"><img src="./assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" alt="Salud Central" title="Salud Central"></a>
+                <a class="logo" href="/planes-de-salud-precios/salud-central-plan-de-salud/cotizar/index.php"><img src="/assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.png" alt="Salud Central" title="Salud Central"></a>
                 <p>A Golden Gross é pioneira no setor de saúde e estás pronta para te atender. Entre em contato, encontre os melhores preços e escolha a melhor opção de plano.</p>
                 <div class="inv-cob"><h5 class="inv">Investimento: <img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'></h5><h5 class="cob">Cobertura: <img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'></h5></div>
                 <div class="botao">
-                    <a href="./planes-de-salud-precios/salud-central-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a>
+                    <a href="/planes-de-salud-precios/salud-central-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a>
                 </div>
             </div>
                     <div class="item">
-                <a class="logo" href="./planes-de-salud-precios/prevencion_salud-plan-de-salud/cotizar/index.php"><img src="./assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" alt="Prevencion Salud" title="Prevencion Saliud"></a>
+                <a class="logo" href="/planes-de-salud-precios/prevencion_salud-plan-de-salud/cotizar/index.php"><img src="/assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.png" alt="Prevencion Salud" title="Prevencion Saliud"></a>
                 <p>OPlan de Salud Trasmontano garante segurança e qualidade com a sua saúde. Possuem atendimento médico 24 horas para emergências y Hosppitais próprios planejados para a realização de cirurgias.</p>
                 <div class="inv-cob"><h5 class="inv">Investimento: <img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'></h5><h5 class="cob">Cobertura: <img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'></h5></div>
                 <div class="botao">
-                    <a href="./planes-de-salud-precios/prevencion_salud-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a></div>
+                    <a href="/planes-de-salud-precios/prevencion_salud-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a></div>
             </div>
                     <div class="item">
-                <a class="logo" href="./planes-de-salud-precios/avalian-plan-de-salud/cotizar/index.php"><img src="./assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Avalian" title="Avalian"></a>
+                <a class="logo" href="/planes-de-salud-precios/avalian-plan-de-salud/cotizar/index.php"><img src="/assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.png" alt="Avalian" title="Avalian"></a>
                 <p>A Sompo Seguros tem a melhor rede referenciada de planos de saúde para você e sua empresa. Os melhores hospitales, clínicas e laboratorios a sua disposição. Entre em contato e confira todos os planos!</p>
                 <div class="inv-cob"><h5 class="inv">Investimento: <img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'><img src='./assets/imagenes/imagens/icone-cifrao.svg'></h5><h5 class="cob">Cobertura: <img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'><img src='./assets/imagenes/imagens/icone-cobertura.svg'></h5></div>
                 <div class="botao">
-                    <a href="./planes-de-salud-precios/avalian-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a>
+                    <a href="/planes-de-salud-precios/avalian-plan-de-salud/cotizar/index.php">COTIZAR AHORA</a>
                 </div>
             </div>
                 
             </div>
 
-    <a class="cotar-todas" href="./cotizar-ahora/index.php">QUIERO COTIZAR TODAS</a>
+    <a class="cotar-todas" href="/cotizar-ahora/index.php">QUIERO COTIZAR TODAS</a>
 
 </div>                           
                     
@@ -542,7 +542,7 @@ Compará los Mejores para Vos y tu familia</p>
                                             <h3 >Horario de ventas</h3>
                                             <h4>Consulte los precios de los planes de salud por teléfono:</h4>
                             
-                                            <a href="tel:01130708070"><img src="./assets/formularios/formulario-whatsapp/icone-telefone.svg"> (11) 3070-8070</a>
+                                            <a href="tel:01130708070"><img src="/assets/formularios/formulario-whatsapp/icone-telefone.svg"> (11) 3070-8070</a>
                             
                                             <div class="lista-vantagens">
                                                 <h5>Conoce nuestras ventajas:</h5>
@@ -608,7 +608,7 @@ Compará los Mejores para Vos y tu familia</p>
                                         
 
                                             <div class="col">
-                                                <a class="logo" href="index.php"><img src="./assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo-movil.png" alt="Plan de Salud" title="Plan de Salud"></a> <p>Somos asesores comerciales de las mayores prepagas de Argentina, Cotiza con nosotros y puede economizar hasta un 30% en su Plan de Salúd con la contratación de un nuevo plan. Todo online, simple sin burocracias!</p>                </div>
+                                                <a class="logo" href="index.php"><img src="/assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo-movil.png" alt="Plan de Salud" title="Plan de Salud"></a> <p>Somos asesores comerciales de las mayores prepagas de Argentina, Cotiza con nosotros y puede economizar hasta un 30% en su Plan de Salúd con la contratación de un nuevo plan. Todo online, simple sin burocracias!</p>                </div>
                             
                                             <div class="col">
                                                 <a class='telefone' target='_blank' href='tel:01130708070'>(11) 3070-8070&nbsp;&nbsp;<txt style="font-size:12px">( 9 hs a 19 hs )</txt><br></a> 

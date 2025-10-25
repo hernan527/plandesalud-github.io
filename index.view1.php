@@ -156,14 +156,14 @@ body {
         }
 
         /* Estilo para la sección de empresas */
-        .lista-tipo-x .item {
+        .lista-tipo-4 .item {
             border: 1px solid #eee !important;
             padding: 20px  !important;
             margin-bottom: 20px !important;
             border-radius: 8px !important;
             transition: transform 0.2s ease !important;
         }
-        .lista-tipo-x .item:hover {
+        .lista-tipo-4 .item:hover {
             transform: translateY(-5px) !important;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
         }
@@ -527,7 +527,7 @@ e
                 </div>
 
                 <!-- Sección de Empresas (Rediseñada) -->
-                <div class="lista-tipo-x">
+                <div class="lista-tipo-4">
                    
                     <h2>¿Ya tenés en mente una prepaga? ¡Cotizá directamente aquí!</h2>
                     <div class="items">

@@ -10,7 +10,6 @@
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="shortcut icon" sizes="1024x1024" href="./assets/imagenes/logos-web/plan-de-salud-favicon.ico" />
     <link rel="apple-touch-icon" href="./assets/imagenes/logos-web/plan-de-salud-favicon.ico">
-<link href="./assets/css/style-formularioSimuladorGeneral.css" rel="stylesheet" type="text/css">
     <!-- jQuery (solo una versión) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Scripts esenciales -->
@@ -52,7 +51,9 @@
 
     <!-- Hojas de estilo -->
     <link rel="stylesheet" href="./assets/imagenes/stylea870.css?versao=5.0" />
-    <link rel="stylesheet" href="./assets/imagenes/styles871.css" />
+    <link href="./assets/css/style-formularioSimuladorGeneral.css" rel="stylesheet" type="text/css">
+
+    <!-- <link rel="stylesheet" href="./assets/imagenes/styles871.css" /> -->
 
     <!-- SEO Optimizado -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />

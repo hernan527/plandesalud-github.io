@@ -183,7 +183,7 @@ body {
 }
 
 /* ✅ FLEXBOX: controlado, no grid */
-.items {
+.itens {
   display: flex  !important;
   flex-wrap: wrap  !important;
   gap: 32px  !important;
@@ -191,8 +191,8 @@ body {
   margin-top: 20px  !important;
 }
 
-/* Cada item: tarjeta con fondo blanco sobre fondo gris claro */
-.item {
+/* Cada iten: tarjeta con fondo blanco sobre fondo gris claro */
+.iten {
   background: white  !important;
   border-radius: 18px  !important;
   padding: 32px  !important;
@@ -206,19 +206,19 @@ body {
 }
 
 /* Hover suave */
-.item:hover {
+.iten:hover {
   transform: translateY(-5px)  !important;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1)  !important;
 }
 
 /* Logo */
-.item .logo {
+.iten .logo {
   display: block  !important;
   text-align: center  !important;
   margin-bottom: 22px  !important;
 }
 
-.item .logo img {
+.iten .logo img {
   max-width: 160px  !important;
   height: auto  !important;
   border-radius: 10px  !important;
@@ -227,19 +227,19 @@ body {
   transition: transform 0.3s ease  !important;
 }
 
-.item:hover .logo img {
+.iten:hover .logo img {
   transform: scale(1.04)  !important;
 }
 
 /* Viñetas */
-.item ul.features {
+.iten ul.features {
   list-style: none  !important;
   padding: 0  !important;
   margin: 0 0 24px  !important;
   flex: 1  !important;
 }
 
-.item ul.features li {
+.iten ul.features li {
   position: relative  !important;
   padding-left: 30px  !important;
   margin-bottom: 12px  !important;
@@ -248,7 +248,7 @@ body {
   line-height: 1.5  !important;
 }
 
-.item ul.features li:before {
+.iten ul.features li:before {
   content: "✓"  !important;
   position: absolute  !important;
   left: 0  !important;
@@ -274,7 +274,7 @@ body {
   flex-wrap: wrap  !important;
 }
 
-.item h5 {
+.iten h5 {
   font-size: 14px  !important;
   font-weight: 700  !important;
   color: #2c3e50  !important;
@@ -320,18 +320,18 @@ body {
 .lista-tipo-4 .cotar-todas:hover{background-color: #4caf50;}
 /* Responsive: 2 por fila en tablet, 1 en móvil */
 @media (max-width: 900px) {
-  .item {
+  .iten {
     flex: 1 1 calc(50% - 32px)  !important;
     min-width: 280px  !important;
   }
 }
 
 @media (max-width: 600px) {
-  .items {
+  .itens {
     gap: 24px  !important;
   }
 
-  .item {
+  .iten {
     flex: 1 1 100%  !important;
     min-width: 100%  !important;
     max-width: none  !important;
@@ -343,14 +343,14 @@ body {
   }
 }
         /* Estilo para la sección de empresas */
-        .lista-tipo-4 .item {
+        .lista-tipo-4 .iten {
             border: 1px solid #eee ;
             padding: 20px  ;
             margin-bottom: 20px ;
             border-radius: 8px ;
             transition: transform 0.2s ease ;
         }
-        .lista-tipo-4 .item:hover {
+        .lista-tipo-4 .iten:hover {
             transform: translateY(-5px) ;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1) ;
         }
@@ -717,9 +717,9 @@ e
                 <div class="lista-tipo-4">
                    
                     <h2>¿Ya tenés en mente una prepaga? ¡Cotizá directamente aquí!</h2>
-                    <div class="items">
+                    <div class="itens">
                         <!-- Item 1: Galeno -->
-                                             <div class="item">
+                                             <div class="iten">
                             <a class="logo"  onclick="document.getElementById('logo-galeno').click(); return false;">
                                 <img src="./assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.webp" alt="Galeno" title="Galeno" loading="lazy">
                             </a>
@@ -738,7 +738,7 @@ e
                             </div>
                         </div>
                                                 <!-- Item 2: Premedic -->
-                        <div class="item">
+                        <div class="iten">
                             <a class="logo"  onclick="document.getElementById('logo-Premedic').click(); return false;">
                                 <img src="./assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.webp" alt="Premedic" title="Premedic" loading="lazy">
                             </a>
@@ -757,7 +757,7 @@ e
                             </div>
                         </div>
                                                 <!-- Item 3: Avalian -->
-                                                <div class="item">
+                                                <div class="iten">
                             <a class="logo"  onclick="document.getElementById('logo-Avalian').click(); return false;">
                                 <img src="./assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.webp" alt="Galeno" title="Galeno" loading="lazy">
                             </a>
@@ -776,7 +776,7 @@ e
                             </div>
                         </div>
                         <!-- Item 4: Omint -->
-                        <div class="item">
+                        <div class="iten">
                             <a class="logo" onclick="document.getElementById('logo-omint').click(); return false;">
                                 <img src="./assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.webp" alt="Omint" title="Omint"  value="omint"  loading="lazy">
                             </a>
@@ -798,7 +798,7 @@ e
                         </div>
 
                         <!-- Item 5: Medife -->
-                        <div class="item">
+                        <div class="iten">
                             <a class="logo" onclick="document.getElementById('logo-Medife').click(); return false;">
                                 <img src="./assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.webp" alt="Medife" title="Medife" loading="lazy">
                             </a>
@@ -820,7 +820,7 @@ e
                         </div>
 
                         <!-- Item 6: Swiss Medical -->
-                        <div class="item">
+                        <div class="iten">
                             <a class="logo" onclick="document.getElementById('logo-Swiss').click(); return false;">
                                 <img src="./assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.webp" alt="Swiss Medical" title="Swiss Medical" loading="lazy">
                             </a>
@@ -842,7 +842,7 @@ e
                         </div>
 
                         <!-- Item 5: SanCor Salud -->
-                        <div class="item">
+                        <div class="iten">
                             <a class="logo" onclick="document.getElementById('logo-SanCorSalud').click(); return false;">
                                 <img src="./assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.webp" alt="SanCor Salud" title="SanCor Salud" loading="lazy">
                             </a>
@@ -863,7 +863,7 @@ e
 </div>
                         </div>
                    
-                                <div class="item">
+                                <div class="iten">
                             <a class="logo" onclick="document.getElementById('logo-Doctored').click(); return false;">
                                 <img src="./assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.webp" alt="Doctored" title="Doctored" loading="lazy">
                             </a>
@@ -883,7 +883,7 @@ e
     </a>
 </div>
                         </div>
-                                                <div class="item">
+                                                <div class="iten">
                             <a class="logo" onclick="document.getElementById('logo-SaludCentral').click(); return false;">
                                 <img src="./assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.webp" alt="Salud Central" title="Salud Central" loading="lazy">
                             </a>

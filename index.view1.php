@@ -157,34 +157,34 @@ body {
 
         /* Estilo para la sección de empresas */
         .lista-tipo-4 .item {
-            border: 1px solid #eee;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            transition: transform 0.2s ease;
+            border: 1px solid #eee !important;
+            padding: 20px  !important;
+            margin-bottom: 20px !important;
+            border-radius: 8px !important;
+            transition: transform 0.2s ease !important;
         }
         .lista-tipo-4 .item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-5px) !important;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
         }
         .inv-cob {
-            display: flex;
-            justify-content: space-between;
-            margin: 15px 0;
-            font-weight: bold;
+            display: flex !important;
+            justify-content: space-between !important;
+            margin: 15px 0 !important;
+            font-weight: bold !important;
         }
         .botao a {
-            background-color: #0042DA;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            transition: background-color 0.3s ease;
+            background-color: #0042DA !important;
+            color: white !important;
+            padding: 10px 20px !important;
+            border-radius: 5px !important;
+            text-decoration: none !important;
+            font-weight: bold !important;
+            display: inline-block !important;
+            transition: background-color 0.3s ease !important;
         }
         .botao a:hover {
-            background-color: #0033a0;
+            background-color: #0033a0 !important;
         }
 e
         /* Loader del formulario */

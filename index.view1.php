@@ -236,52 +236,147 @@ body {
 }
 
     </style>
+     <style>
+
+
+
+
+    .testimonials-section {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+
+  .section-title {color: #66a9d8 !important; text-align: center !important; font-size: 38px !important; font-weight: 700 !important; margin: 0 0 50px  !important;}
+.section-title:after{width: 100px !important; height: 5px !important; background-color: #66a9d8 !important; content: "" !important; display: block !important; margin: 10px auto 0 !important; border-radius: 10px !important;}
+  
+
+    /* Grid de testimonios */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+
+    .testimonial-card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-text {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #4b5563;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #6b7280;
+      margin-right: 14px;
+      font-size: 1.2rem;
+    }
+
+    .author-info h4 {
+      font-size: 1.1rem;
+      color: #1f2937;
+      margin-bottom: 4px;
+    }
+
+    .author-info p {
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    /* Estrellas (opcional) */
+    .rating {
+      color: #fbbf24;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+  </style>
+
 <style>
-  /* Forzar que solo uno se muestre */
-  .banner-desktop { display: block !important; }
-  .banner-mobile  { display: none !important; }
 
-  @media (max-width: 768px) {
-    .banner-desktop { display: none !important; }
-    .banner-mobile  { display: block !important; }
-  }
 
-  /* Estilos esenciales para que funcione el overlay */
-  .banner-desktop, .banner-mobile {
+ .banner-mobile {
     position: relative;
-    width: 100%;
-    min-height: 400px;
-    background-size: cover;
-    background-position: center;
+    /* background-size: cover; */
+    /* background-position: center; */
+  }
+  .banner-mobile .corpo-banner {
+    position: relative;
+    z-index: 2;
+    /* padding: 20px; */
   }
 
-  .overlay {
+  
+  .banner-mobile .overlay {
     position: absolute;
     top: 0; left: 0;
-    width: 100%; height: 100%;
+    width: 100%;
+    height: 100%;
     background: rgba(0,0,0,0.55);
     z-index: 1;
   }
 
-  .corpo-banner {
+  /* Estilos esenciales para que funcione el overlay */
+  .banner-desktop {
     position: relative;
+
+  }
+
+ .banner-desktop .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
+  }
+
+  .banner-desktop .corpo-banner {
     z-index: 2;
     color: white;
-    text-align: center;
-    padding: 20px;
+    text-align: left;
+    /* padding: 20px; */
   }
 
   .corpo-banner p {
-    font-size: 1.8rem;
-    line-height: 1.3;
+    /* font-size: 1.8rem; */
+    /* line-height: 1.3; */
     margin: 0;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
   }
 
   .corpo-banner strong {
-    font-weight: 800;
-    display: block;
-    font-size: 2.1rem;
+    /* font-weight: 800; */
+    /* display: block; */
+    /* font-size: 2.1rem; */
   }
 
   .cta-principal {
@@ -316,50 +411,55 @@ body {
     </header>
 
     <!-- Banner Principal -->
-<div class='banner-desktop' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.webp)'>
-    <div class="overlay"></div>
-    <div class='corpo-banner'>
-        <p><strong>¡Encontrá el Mejor Plan de Salud para Vos y tu Familia!</strong><br />
-        Compará +50 opciones y ahorrá hasta un 50%</p>
-        <a href='#3' class="cta-principal">¡COTIZAR AHORA GRATIS!</a>
-    </div>
-</div>
+     <!-- <div class='banner-desktop' style='background-image: url(assets/imagenes/banners/banner.png)'><div class='corpo-banner'><p><strong> Planes de Salud</strong><br /> -->
+      <div class='banner-desktop' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.png)'>
+       <div class="overlay"></div>   
+     <div class='corpo-banner'>
+            <p><strong>Ahorre hasta un 50% en un nuevo plan.</strong><br />
+<em>Cotizamos tu plan de salud en<br />
+más de 10 empresas</em></p>
+            <a href='#1'>COTIZAR AHORA</a>
+         </div>
+      </div>
+      <div class='banner-mobile' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.png)'>
+       <div class="overlay"></div>   
+      <div class='corpo-banner'>
+            <p><strong>Ahorre hasta un 50% en un nuevo plan.</strong><br />
+<em>Cotizamos tu plan de salud en<br />
+más de 10 empresas</em></p>
 
-<div class='banner-mobile' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.webp)'>
-    <div class="overlay"></div>
-    <div class='corpo-banner'>
-        <p><strong>¡Encontrá el Mejor Plan de Salud!</strong><br />
-        Compará +50 opciones y ahorrá hasta un 50%</p>
-        <a href='#1' class="cta-principal">¡COTIZAR AHORA!</a>
-    </div>
-</div>
+            <a href='#1'>COTIZAR AHORA</a>
+
+         </div>
+      </div>
     <!-- Contenido Principal -->
     <div id="wrapper">
         <article class="post" id="post-16">
             <div class="entry">
      
 
-                <!-- Logos de Prepagas -->
-                <div class="conteudo-da-pagina">
-                    <div class="wp-container-3">
-                        <div class="wp-block-group__inner-container">
-                            <!-- <h2>Trabajamos con las Mejores Prepagas</h2> -->
-                            
-                            <div class='chamada-simulador '><p><strong>Elija</strong> a continuación su operadora y descubra el valor de <strong>su plan de salud</strong>.</p>
-                                <p>¡Es rápido y aún así garantizamos el precio más bajo! Haga clic y compruébelo, somos socios de las mejores operadoras de Argentina.</p></div>
-                            <link href="./assets/css/style-formularioSimuladorGeneral.css" rel="stylesheet" type="text/css">
-                                <div class="contador" id="1" >
-        <h3  id="4">Hoy más de <span id="contador">0</span> personas solicitaron una cotización</h3>
-    </div>
+                
+              
+                   <div class="chamada-pos-banner">
+                
+                     <h2>AHORRÁ HASTA 50% EN UN NUEVO PLAN</h2>
+                     <p><strong>Todas estas Coberturas</strong> en un solo lugar! <strong>PLANES DE SALUD</strong> CON OPTIMO <strong>COSTO BENEFICIO</strong>.<br>Nuestro sitio propone tanto opciones de <strong>Medicina Prepaga </strong>como planes <strong>Sólo por aportes</strong> a obra social.<br><strong>Mejorá</strong> tu cobertura y <strong> Beneficiate!</strong></p>
+    
+               
+               </div>
+  <div class="contador" id="1" >
+        <h3>Hoy más de <span id="contador">0</span> personas solicitaron una cotización</h3>
+    </div> 
 
-                            <h2 class="passo-bandeiras">1º Paso: Selecione una empresa</h2>
                             
-
-                                                        <div class="bandeiras" >
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/todas-las-empresas-logo-medicina-prepaga-planes-de-salud.webp" value="todas-las-empresas" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('11')" data-classe-operadora="multimarcas" id="todas-las-empresas"></a>
+               <div class="conteudo-da-pagina">
+                  <div class="wp-container-3 wp-block-group camada-operadoras-home">
+                     <div class="wp-block-group__inner-container">
+                        <h2>1º Paso: Selecione una empresa</h2>
+                        <div class="logos">
     <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.webp" value="galeno" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude" id="logo-galeno"></a>
     <a  href='#3' class="smooth-scroll" ><img src="./assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.webp" value="omint" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint" id="logo-omint"></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.webp" value="hominis" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora="" id="logo-Hominis"></a>
+    <!-- <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.webp" value="hominis" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora="" id="logo-Hominis"></a> -->
     <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.webp" value="premedic" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao" id="logo-Premedic"></a>
     <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.webp" value="sancorsalud" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil" id="logo-SanCorSalud"></a>
     <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.webp" value="medife" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medife')" data-classe-operadora="notredame" id="logo-Medife"></a>
@@ -368,27 +468,22 @@ body {
     <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.webp" value="prevencion-salud"  alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one" id="logo-Prevención"></a>
     <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.webp" value="doctored"  alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint" id="logo-Doctored"></a>
     <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.webp" value="salud-central" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint" id="logo-SaludCentral"></a>
-
- </div>
-                        </div>
-                    </div>
-                </div>
-           <div class="wp-container-2 wp-block-group chamada-pos-banner">
-                    <div class="wp-block-group__inner-container">
-                        <h2>¿POR QUÉ ELEGIRNOS?</h2>
-                        <p><strong>Ahorrá hasta un 50%</strong> en tu nuevo plan de salud. <br>
-                        Somos asesores independientes y te mostramos <strong>las mejores ofertas del mercado</strong> sin costo ni compromiso.</p>
-                        <div class="wp-container-1 wp-block-buttons">
-                            <div class="wp-block-button">
-                                <a class="wp-block-button__link cta-principal" href="#3" onclick="document.getElementById('todas-las-empresas').click(); return false;">¡QUIERO MI COTIZACIÓN GRATIS!</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                      
+</div>
+                     </div>  <div class="logos-2">
+                         <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/todas-las-empresas-logo-medicina-prepaga-planes-de-salud.webp" value="todas-las-empresas" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('11')" data-classe-operadora="multimarcas" id="todas-las-empresas"></a>
+  </div>
+                  </div>
+               </div>
                 <!-- Sección de Prestadores (Reemplazo del Marquee) -->
                 <div class="wp-container-6 wp-block-group camada-hospitais">
-                    <div class="wp-block-group__inner-container">
-                        <h2>Accedé a los Mejores Hospitales y Clínicas</h2>
+                    <div class="wp-block-group__inner-container ">
+                                           
+                        <div class="chamada-principal">
+                            <h2>Accedé a los Mejores Hospitales y Clínicas</h2>
+                         
+                        </div>
+                   
                         <div class="prestadores-grid">
                             <img src="./assets/prestadores/sanatorio_general_sarmiento.webp" alt="Sanatorio General Sarmiento" title="Sanatorio General Sarmiento" loading="lazy">
                                <img src="./assets/prestadores/sanatorio-trinidad.webp" alt="Sanaotrio de la Trinidad" title="" loading="lazy">
@@ -419,7 +514,8 @@ body {
 
                 <!-- Sección de Empresas (Rediseñada) -->
                 <div class="lista-tipo-4">
-                    <h4>¿Ya tenés en mente una prepaga? ¡Cotizá directamente aquí!</h4>
+                   
+                    <h2>¿Ya tenés en mente una prepaga? ¡Cotizá directamente aquí!</h2>
                     <div class="items"></div>
                         <!-- Item 1: Galeno -->
                         <div class="item">
@@ -474,7 +570,7 @@ body {
                                 <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
                             </div>
 <div class="botao">
-    <a onclick="document.getElementById('logo-omint').click(); return false;" value="omint" style="text-decoration: none; color: inherit;">
+    <a onclick="document.getElementById('logo-omint').click(); return false;" value="omint" >
         COTIZAR AHORA
     </a>
 </div>
@@ -491,7 +587,7 @@ body {
                                 <h5 class="cob">Cobertura: ⭐⭐⭐⭐</h5>
                             </div>
 <div class="botao">
-    <a onclick="document.getElementById('logo-Medife').click(); return false;" style="text-decoration: none; color: inherit;">
+    <a onclick="document.getElementById('logo-Medife').click(); return false;" >
         COTIZAR AHORA
     </a>
 </div>
@@ -508,7 +604,7 @@ body {
                                 <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
                             </div>
 <div class="botao">
-    <a  onclick="document.getElementById('logo-Swiss').click(); return false;" style="text-decoration: none; color: inherit;">
+    <a  onclick="document.getElementById('logo-Swiss').click(); return false;" >
         COTIZAR AHORA
     </a>
 </div>
@@ -525,7 +621,7 @@ body {
                                 <h5 class="cob">Cobertura: ⭐⭐⭐⭐</h5>
                             </div>
 <div class="botao">
-    <a onclick="document.getElementById('logo-SanCorSalud').click(); return false;" style="text-decoration: none; color: inherit;">
+    <a onclick="document.getElementById('logo-SanCorSalud').click(); return false;" >
         COTIZAR AHORA
     </a>
 </div>
@@ -535,51 +631,7 @@ body {
   <a class="cotar-todas"  onclick="document.getElementById('todas-las-empresas').click(); return false;">¡QUIERO COMPARAR TODAS LAS OPCIONES!</a>
 </div>                </div>
 
-                <!-- Formulario y Contacto -->
-                <div class="camada-plantao-e-whats">
-                    <div class="corpo">
-                        <div class="chamada-principal">
-                            <h2>¡Obtené tu Cotización Personalizada en 1 Minuto!</h2>
-                            <p>Rápido, fácil y 100% gratis. Sin compromiso.</p>
-                        </div>
-                        <div class="elementos" id="2">
-                            <!-- Contacto Telefónico -->
-                            <div class="plantao">
-                                <h3>¿Preferís hablar por teléfono?</h3>
-                                <h4>Atención de Lunes a Viernes de 9 a 19 hs</h4>
-                              <a href="tel:+541124985882" class="link-telefone">
-                               <img src="./assets/formularios/formulario-whatsapp/icone-telefone.svg" alt="Teléfono" loading="lazy">
-                             (11) 2498-5882
-                            </a>
-                                <div class="lista-vantagens">
-                                    <h5>Beneficios de cotizar con nosotros:</h5>
-                                    <ul>
-                                        <li>✅ Ahorro garantizado hasta 50%</li>
-                                        <li>✅ Asesoramiento personalizado y gratuito</li>
-                                        <li>✅ Mínimas carencias y trámites rápidos</li>
-                                        <li>✅ Red de prestadores de primer nivel</li>
-                                    </ul>
-                                </div>
-                            </div>
 
-                            <!-- Formulario de WhatsApp (Optimizado) -->
-                            <form id="contact-form-whats" class="form-whats">
-                                <h3><img src="./assets/formularios/formulario-whatsapp/icone-whatsapp.svg" style="margin-right: 10px;"> Cotizá por WhatsApp</h3>
-                                <input class="campo-ID-formulario" type="hidden" name="formulario_pagina_whats" id="formulario_pagina_whats" value="COTIZAR AHORA Whatsapp">
-                                <div>
-                                    <b>Nombre Completo:</b>
-                                    <input type="text" id="Name_whats" name="Name_whats" placeholder="Ej: Juan Pérez" required>
-                                </div>
-                                <div>
-                                    <b>Teléfono (10 dígitos):</b>
-                                    <input type="tel" id="telefone_whats" name="telefone_whats" placeholder="1122334455" required>
-                                </div>
-                                <input id="submit" type="submit" value="¡QUIERO MI COTIZACIÓN GRATIS!">
-                                <div class="loader-whats" id="loader-whats"></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
 
       <!-- Llamado Final -->
                 <div class="chamada-final-operadoras">
@@ -587,7 +639,12 @@ body {
                     <p>Disponible en CABA y todo el territorio argentino.</p>
                     <p>¡Aprovechá esta oportunidad y empezá a ahorrar hoy mismo!</p>
                 </div>
-
+     <div class="camada-plantao-e-whats">
+                    <div class="corpo">
+                        <div class="chamada-principal">
+                            <h2>¡Obtené tu Cotización Personalizada en 1 Minuto!</h2>
+                            <p>Rápido, fácil y 100% gratis. Sin compromiso.</p>
+                        </div> </div> </div>
                 <!-- Formulario Completo (Movido DENTRO del flujo de contenido) -->
                 <div class="formulario-completo-seccion" style="margin-top: 40px; padding: 30px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
 <h2 class="titulo-principal">Completa tu Cotización Detallada</h2>
@@ -602,7 +659,7 @@ body {
                         <input class="campo-operadora" type="hidden" name="Operadora" id="Operadora" value="Sin Selección">
 
                         <div class="plano-selecionado">
-                            <p><strong>Plan Seleccionado:</strong></p>
+                            <p><strong>Plan Sugerido:</strong></p>
                             <a href='#4'><div class="recebe-img"></div></a>
                         </div>  
 
@@ -695,7 +752,101 @@ body {
                        <div class="loader" id="loader" style="display: none; margin-top: 20px;"></div>
                     </form>
                 </div>
+                <!-- Formulario y Contacto -->
+                <div class="camada-plantao-e-whats">
+                    <div class="corpo">
+   
+                        <div class="elementos" id="2">
+                            <!-- Contacto Telefónico -->
+                            <div class="plantao">
+                                <h3>¿Preferís hablar por teléfono?</h3>
+                                <h4>Atención de Lunes a Viernes de 9 a 19 hs</h4>
+                              <a href="tel:+541124985882" class="link-telefone">
+                               <img src="./assets/formularios/formulario-whatsapp/icone-telefone.svg" alt="Teléfono" loading="lazy">
+                             (11) 2498-5882
+                            </a>
+                                <div class="lista-vantagens">
+                                    <h5>Beneficios de cotizar con nosotros:</h5>
+                                    <ul>
+                                        <li>✅ Ahorro garantizado hasta 50%</li>
+                                        <li>✅ Asesoramiento personalizado y gratuito</li>
+                                        <li>✅ Mínimas carencias y trámites rápidos</li>
+                                        <li>✅ Red de prestadores de primer nivel</li>
+                                    </ul>
+                                </div>
+                            </div>
 
+                            <!-- Formulario de WhatsApp (Optimizado) -->
+                            <form id="contact-form-whats" class="form-whats">
+                                <h3><img src="./assets/formularios/formulario-whatsapp/icone-whatsapp.svg" style="margin-right: 10px;"> Cotizá por WhatsApp</h3>
+                                <input class="campo-ID-formulario" type="hidden" name="formulario_pagina_whats" id="formulario_pagina_whats" value="COTIZAR AHORA Whatsapp">
+                                <div>
+                                    <b>Nombre Completo:</b>
+                                    <input type="text" id="Name_whats" name="Name_whats" placeholder="Ej: Juan Pérez" required>
+                                </div>
+                                <div>
+                                    <b>Teléfono (10 dígitos):</b>
+                                    <input type="tel" id="telefone_whats" name="telefone_whats" placeholder="1122334455" required>
+                                </div>
+                                <input id="submit" type="submit" value="¡QUIERO MI COTIZACIÓN GRATIS!">
+                                <div class="loader-whats" id="loader-whats"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+ <section class="testimonials-section">
+    <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+
+    <div class="testimonials-grid">
+      <!-- Testimonio 1 -->
+      <div class="testimonial-card">
+        <div class="rating">★★★★★</div>
+        <p class="testimonial-text">
+          Este servicio cambió completamente la forma en que gestionamos nuestros proyectos. 
+          ¡Altamente recomendado!
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AM</div>
+          <div class="author-info">
+            <h4>Ana Martínez</h4>
+            <p>CEO, TechSolutions</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonio 2 -->
+      <div class="testimonial-card">
+        <div class="rating">★★★★★</div>
+        <p class="testimonial-text">
+          La atención al cliente es excepcional. Siempre están dispuestos a ayudar 
+          y resolver cualquier duda en minutos.
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">CR</div>
+          <div class="author-info">
+            <h4>Carlos Ruiz</h4>
+            <p>Freelancer</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonio 3 -->
+      <div class="testimonial-card">
+        <div class="rating">★★★★☆</div>
+        <p class="testimonial-text">
+          Desde que uso esta plataforma, mi productividad ha aumentado un 40%. 
+          Es intuitiva y muy eficiente.
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">LS</div>
+          <div class="author-info">
+            <h4>Laura Sánchez</h4>
+            <p>Directora de Marketing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
     <!-- Footer -->
     <div class="footer-new">
         <div>
@@ -717,6 +868,8 @@ body {
 </div>
         </div>
     </div>
+
+
 
     <footer id="footer">
         <div id="corpo-rodape"></div>
@@ -783,7 +936,7 @@ body {
     jQuery("#telefone").mask("9000000000");
     jQuery("#sueldo").mask("9000000");
     
-    jQuery(".bandeiras img").click(function(){
+    jQuery(".logos-2 img").click(function(){
         var srcImagem = jQuery(this).attr("src");
         var idOperadpra = jQuery(this).attr("data-id-operadora");
         jQuery('.recebe-img img').remove();
@@ -791,7 +944,14 @@ body {
         jQuery(".campo-operadora").val(idOperadpra);
         jQuery(".plano-selecionado").fadeIn();
     });
-
+    jQuery(".logos img").click(function(){
+        var srcImagem = jQuery(this).attr("src");
+        var idOperadpra = jQuery(this).attr("data-id-operadora");
+        jQuery('.recebe-img img').remove();
+        jQuery('.recebe-img').append('<img src="'+srcImagem+'">').attr('id', jQuery(this).data("classe-operadora"));
+        jQuery(".campo-operadora").val(idOperadpra);
+        jQuery(".plano-selecionado").fadeIn();
+    });
 
 
 			

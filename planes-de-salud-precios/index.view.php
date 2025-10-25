@@ -129,7 +129,9 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 	</header>
 
-    <div class='banner-desktop' style='background-image: url(../assets/imagenes/banners/banner-operadoras.png)'><div class='corpo-banner'><p><strong>Ahorre hasta un 30% en un nuevo plan.</strong><br />
+    <div class='banner-desktop' style='background-image: url(../assets/imagenes/banners/banner-operadoras.png)'>
+        <div class='corpo-banner'>
+            <p><strong>Ahorre hasta un 30% en un nuevo plan.</strong><br />
 <em>Cotizamos tu plan de salud en<br />
 más de 10 empresas</em></p>
 <a href='#'>COTIZAR AHORA</a></div></div><div class='banner-mobile' style='background-image: url()'><div class='corpo-banner'><p><strong>Ahorre hasta un 30% en un nuevo plan.</strong><br />

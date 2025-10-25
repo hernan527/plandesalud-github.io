@@ -416,7 +416,7 @@ body {
 
     <!-- Banner Principal -->
      <!-- <div class='banner-desktop' style='background-image: url(assets/imagenes/banners/banner.png)'><div class='corpo-banner'><p><strong> Planes de Salud</strong><br /> -->
-      <div class='banner-desktop' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.png)'>
+      <div class='banner-desktop' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.webp)'>
        <div class="overlay"></div>   
      <div class='corpo-banner'>
             <p><strong>Encuentra tu Plan Médico ideal y</strong><br />
@@ -428,7 +428,7 @@ body {
             <a href='#1'>COTIZAR AHORA</a>
          </div>
       </div>
-      <div class='banner-mobile' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.png)'>
+      <div class='banner-mobile' style='background-image: url(assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.webp)'>
        <div class="overlay"></div>   
       <div class='corpo-banner'>
         <p><strong>Encuentra tu Plan Médico ideal y</strong><br />

@@ -316,8 +316,7 @@ body {
   transform: translateY(-2px)  !important;
 }
 
-.lista-tipo-4 .cotar-todas{width: 360px;cursor: pointer; background-color: #f7941e; color: #fff; text-decoration: none; display: block; text-align: center; padding: 20px 0; font-size: 24px; font-weight: 700; border-radius: 8px; margin: 0 auto 50px;}
-.lista-tipo-4 .cotar-todas:hover{background-color: #4caf50;}
+
 /* Responsive: 2 por fila en tablet, 1 en móvil */
 @media (max-width: 900px) {
   .item {
@@ -585,7 +584,210 @@ e
     margin-top: 12px;
   }
     </style>
+<style>
 
+.boxesContainer h2 {
+  color: #1f2937  !important;
+  text-align: center  !important;
+  font-size: 2.4rem  !important;
+  font-weight: 800  !important;
+  margin: 0 0 50px  !important;
+  line-height: 1.3  !important;
+}
+
+.boxesContainer h2:after {
+  content: ''  !important;
+  display: block  !important;
+  width: 80px  !important;
+  height: 4px  !important;
+  background: linear-gradient(to right, #f7941e, #ff6b35)  !important;
+  margin: 16px auto 0  !important;
+  border-radius: 2px  !important;
+}
+
+.boxesContainer .cotar-todas{width: 360px;cursor: pointer; background-color: #f7941e; color: #fff; text-decoration: none; display: block; text-align: center; padding: 20px 0; font-size: 24px; font-weight: 700; border-radius: 8px; margin: 0 auto 50px;}
+.boxesContainer .cotar-todas:hover{background-color: #4caf50;}
+.cardBox {
+  float: left;
+  font-size: 1.2em;
+  margin: 1% 0 0 1%;
+  perspective: 800px;
+  transition: all 0.3s ease 0s;
+  width: 23.7%;
+}
+
+.cardBox:hover .card {
+  transform: rotateY( 180deg);
+}
+
+.card {
+    border-radius: 18px  !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06)  !important;
+
+  background: #fff;
+  cursor: default;
+  height: 350px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease 0s;
+  width: 100%;
+  -webkit-animation: giro 1s 1;
+  animation: giro 1s 1;
+}
+
+.card p {
+  margin-bottom: 1.8em;
+}
+
+.card .front,
+.card .back {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  font-size: 1.2em;
+  height: 100%;
+  padding: 0.8em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+
+/* Viñetas */
+.card .front ul.features {
+  list-style: none  !important;
+  padding: 0  !important;
+  margin: 0 0 24px  !important;
+  flex: 1  !important;
+}
+
+.card .front ul.features li {
+  position: relative  !important;
+  padding-left: 30px  !important;
+  margin-bottom: 12px  !important;
+  font-size: 15px  !important;
+  color: #374151  !important;
+  line-height: 1.5  !important;
+}
+
+.card .front ul.features li:before {
+  content: "✓"  !important;
+  position: absolute  !important;
+  left: 0  !important;
+  top: 2px  !important;
+  width: 22px  !important;
+  height: 22px  !important;
+  background: #e8f5f0  !important;
+  color: #2e7d32  !important;
+  border-radius: 50%  !important;
+  display: flex  !important;
+  align-items: center  !important;
+  justify-content: center  !important;
+  font-weight: bold  !important;
+  font-size: 12px  !important;
+}
+
+.card .front strong {
+  background: #fff;
+  border-radius: 100%;
+  color: #222;
+  font-size: 1.5em;
+  line-height: 30px;
+  padding: 0 7px 4px 6px;
+}
+
+.card .back {
+  transform: rotateY( 180deg);
+}
+
+.card .back a {
+  padding: 0.3em 0.5em;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 1px;
+  font-size: 0.9em;
+  transition: all 0.2s ease 0s;
+}
+
+.card .back a:hover {
+  background: #fff;
+  color: #333;
+  text-shadow: 0 0 1px #333;
+}
+
+.cardBox:nth-child(1) .card .back {
+  background: cornflowerblue;
+}
+
+.cardBox:nth-child(2) .card .back {
+  background: orange;
+}
+
+.cardBox:nth-child(3) .card .back {
+  background: yellowgreen;
+}
+
+.cardBox:nth-child(4) .card .back {
+  background: tomato;
+}
+
+.cardBox:nth-child(2) .card {
+  -webkit-animation: giro 1.5s 1;
+  animation: giro 1.5s 1;
+}
+
+.cardBox:nth-child(3) .card {
+  -webkit-animation: giro 2s 1;
+  animation: giro 2s 1;
+}
+
+.cardBox:nth-child(4) .card {
+  -webkit-animation: giro 2.5s 1;
+  animation: giro 2.5s 1;
+}
+
+@-webkit-keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+@keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cardBox {
+    margin-left: 2.8%;
+    margin-top: 3%;
+    width: 46%;
+  }
+  .card {
+    height: 285px;
+  }
+  .cardBox:last-child {
+    margin-bottom: 3%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cardBox {
+    width: 94.5%;
+  }
+  .card {
+    height: 260px;
+  }
+}
+</style>
     <!-- Estilos globales de WordPress -->
     <!-- <link rel="stylesheet" id="wp-block-library-css"  href="./assets/css/style.min1eb7.css?ver=6.0.3" type="text/css" media="all" /> -->
     <style id="global-styles-inline-css" type="text/css">
@@ -666,7 +868,7 @@ e
     <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.webp" value="medife" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medife')" data-classe-operadora="notredame" id="logo-Medife"></a>
     <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.webp" value="swiss-medical" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida" id="logo-Swiss"></a>
     <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.webp" value="avalian" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed" id="logo-Avalian"></a>
-    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.webp" value="prevencion-salud"  alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one" id="logo-Prevención"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.webp" value="prevencion-salud"  alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one" id="logo-Prevencion"></a>
     <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.webp" value="doctored"  alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint" id="logo-Doctored"></a>
     <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.webp" value="salud-central" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint" id="logo-SaludCentral"></a>
                       
@@ -713,197 +915,375 @@ e
                     </div>
                 </div>
 
+<div class="boxesContainer">
+<h2>¿Ya tenés en mente una prepaga?<br>¡Cotizá directamente aquí!</h2>
+
+  <div class="cardBox">
+    <div class="card">
+      <div class="front">
+   <a class="logo" onclick="document.getElementById('logo-Swiss').click(); return false;">    
+   <img src="./assets/imagenes/cards_header/swiss-medical-logo-medicina-prepaga-planes-de-salud.webp" alt="Swiss Medical" title="Swiss Medical" title="Swiss Medical" loading="lazy">   
+   </a> <p>Hover to flip</p>
+           <ul class="features">
+      <li> Beneficio Descuento 50% </li>
+      <li> Plan joven 18-25 </li>
+      <li> Servicios Médicos Propios </li>
+      <li> 0 </li>
+   </ul>
+        <strong>&#x21bb;</strong>
+      </div>
+      <div class="back">
+        <h3>Back Side One</h3>
+        <p>Content in card one</p>
+        <a href="#">Button 1</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cardBox">
+    <div class="card">
+      <div class="front">
+   <a class="logo" onclick="document.getElementById('logo-SanCorSalud').click(); return false;">    
+   <img src="./assets/imagenes/cards_header/sancorsalud-logo-medicina-prepaga-planes-de-salud.webp" alt="SanCor Salud" title="SanCor Salud" title="SanCor Salud" loading="lazy">   
+   </a> <p>Hover to flip</p>
+           <ul class="features">
+      <li> Beneficio Descuento 50% </li>
+      <li> Plan joven 18-25 </li>
+      <li> Servicios Médicos Propios </li>
+      <li> 0 </li>
+   </ul>
+        <strong>&#x21bb;</strong>
+      </div>
+      <div class="back">
+        <h3>Back Side Two</h3>
+        <p>Content in card two</p>
+        <a href="#">Button 2</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cardBox">
+    <div class="card">
+      <div class="front">
+   <a class="logo" onclick="document.getElementById('logo-Medife').click(); return false;">    
+   <img src="./assets/imagenes/cards_header/medife-logo-medicina-prepaga-planes-de-salud.webp" alt="Medife" title="Medife" title="Medife" loading="lazy">   
+   </a> 
+   <p>Hover to flip</p>
+           <ul class="features">
+      <li> Beneficio Descuento 50% </li>
+      <li> Plan joven 18-25 </li>
+      <li> Servicios Médicos Propios </li>
+      <li> 0 </li>
+   </ul>
+        <strong>&#x21bb;</strong>
+      </div>
+      <div class="back">
+        <h3>Back Side Three</h3>
+        <p>Content in card three</p>
+        <a href="#">Button 3</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cardBox">
+    <div class="card">
+      <div class="front">
+   <a class="logo" onclick="document.getElementById('logo-galeno').click(); return false;">    
+   <img src="./assets/imagenes/cards_header/galeno-logo-medicina-prepaga-planes-de-salud.webp" alt="Galeno" title="Galeno" title="Galeno" loading="lazy">   
+   </a> 
+        
+   <ul class="features">
+      <li> Beneficio Descuento 50% </li>
+      <li> Plan joven 18-25 </li>
+      <li> Servicios Médicos Propios </li>
+      <li> 0 </li>
+   </ul>
+        <strong>&#x21bb;</strong>
+      </div>
+      <div class="back">
+        <h3>Back Side Four</h3>
+        <p>Content in card four</p>
+        <a href="#">Button 4</a>
+      </div>
+    </div>
+  </div>
+  <div class="cardBox">
+    <div class="card">
+      <div class="front">
+   <a class="logo" onclick="document.getElementById('logo-Omint').click(); return false;">    
+   <img src="./assets/imagenes/cards_header/omint-logo-medicina-prepaga-planes-de-salud.webp" alt="Omint" title="Omint" title="Omint" loading="lazy">   
+   </a> <p>Hover to flip</p>
+           <ul class="features">
+      <li> Beneficio Descuento 50% </li>
+      <li> Plan joven 18-25 </li>
+      <li> Servicios Médicos Propios </li>
+      <li> 0 </li>
+   </ul>
+        <strong>&#x21bb;</strong>
+      </div>
+      <div class="back">
+        <h3>Back Side One</h3>
+        <p>Content in card one</p>
+        <a href="#">Button 1</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cardBox">
+    <div class="card">
+      <div class="front">
+   <a class="logo" onclick="document.getElementById('logo-Prevencion').click(); return false;">    
+   <img src="./assets/imagenes/cards_header/prevencion-logo-medicina-prepaga-planes-de-salud.webp" alt="Prevencion Salud" title="Prevencion Salud" title="Prevencion Salud" loading="lazy">   
+   </a> <p>Hover to flip</p>
+           <ul class="features">
+      <li> Beneficio Descuento 50% </li>
+      <li> Plan joven 18-25 </li>
+      <li> Servicios Médicos Propios </li>
+      <li> 0 </li>
+   </ul>
+        <strong>&#x21bb;</strong>
+      </div>
+      <div class="back">
+        <h3>Back Side Two</h3>
+        <p>Content in card two</p>
+        <a href="#">Button 2</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cardBox">
+    <div class="card">
+      <div class="front">
+   <a class="logo" onclick="document.getElementById('logo-Medife').click(); return false;">    
+   <img src="./assets/imagenes/cards_header/medife-logo-medicina-prepaga-planes-de-salud.webp" alt="Medife" title="Medife" title="Medife" loading="lazy">   
+   </a> 
+   <p>Hover to flip</p>
+           <ul class="features">
+      <li> Beneficio Descuento 50% </li>
+      <li> Plan joven 18-25 </li>
+      <li> Servicios Médicos Propios </li>
+      <li> 0 </li>
+   </ul>
+        <strong>&#x21bb;</strong>
+      </div>
+      <div class="back">
+        <h3>Back Side Three</h3>
+        <p>Content in card three</p>
+        <a href="#">Button 3</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cardBox">
+    <div class="card">
+      <div class="front">
+   <a class="logo" onclick="document.getElementById('logo-galeno').click(); return false;">    
+   <img src="./assets/imagenes/cards_header/galeno-logo-medicina-prepaga-planes-de-salud.webp" alt="Galeno" title="Galeno" title="Galeno" loading="lazy">   
+   </a> 
+        
+   <ul class="features">
+      <li> Beneficio Descuento 50% </li>
+      <li> Plan joven 18-25 </li>
+      <li> Servicios Médicos Propios </li>
+      <li> 0 </li>
+   </ul>
+        <strong>&#x21bb;</strong>
+      </div>
+      <div class="back">
+        <h3>Back Side Four</h3>
+        <p>Content in card four</p>
+        <a href="#">Button 4</a>
+      </div>
+    </div>
+  </div>
+  <div class="cardBox">
+    <div class="card">
+      <div class="front">
+   <a class="logo" onclick="document.getElementById('logo-Premedic').click(); return false;">    
+   <img src="./assets/imagenes/cards_header/premedic-logo-medicina-prepaga-planes-de-salud.webp" alt="Premedic" title="Premedic" title="Premedic" loading="lazy">   
+   </a> <p>Hover to flip</p>
+           <ul class="features">
+      <li> Beneficio Descuento 50% </li>
+      <li> Plan joven 18-25 </li>
+      <li> Servicios Médicos Propios </li>
+      <li> 0 </li>
+   </ul>
+        <strong>&#x21bb;</strong>
+      </div>
+      <div class="back">
+        <h3>Back Side One</h3>
+        <p>Content in card one</p>
+        <a href="#">Button 1</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cardBox">
+    <div class="card">
+      <div class="front">
+   <a class="logo" onclick="document.getElementById('logo-Prvencion').click(); return false;">    
+   <img src="./assets/imagenes/cards_header/sancorsalud-logo-medicina-prepaga-planes-de-salud.webp" alt="SanCor Salud" title="SanCor Salud" title="SanCor Salud" loading="lazy">   
+   </a> <p>Hover to flip</p>
+           <ul class="features">
+      <li> Beneficio Descuento 50% </li>
+      <li> Plan joven 18-25 </li>
+      <li> Servicios Médicos Propios </li>
+      <li> 0 </li>
+   </ul>
+        <strong>&#x21bb;</strong>
+      </div>
+      <div class="back">
+        <h3>Back Side Two</h3>
+        <p>Content in card two</p>
+        <a href="#">Button 2</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cardBox">
+    <div class="card">
+      <div class="front">
+   <a class="logo" onclick="document.getElementById('logo-Medife').click(); return false;">    
+   <img src="./assets/imagenes/cards_header/medife-logo-medicina-prepaga-planes-de-salud.webp" alt="Medife" title="Medife" title="Medife" loading="lazy">   
+   </a> 
+   <p>Hover to flip</p>
+           <ul class="features">
+      <li> Beneficio Descuento 50% </li>
+      <li> Plan joven 18-25 </li>
+      <li> Servicios Médicos Propios </li>
+      <li> 0 </li>
+   </ul>
+        <strong>&#x21bb;</strong>
+      </div>
+      <div class="back">
+        <h3>Back Side Three</h3>
+        <p>Content in card three</p>
+        <a href="#">Button 3</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cardBox">
+    <div class="card">
+      <div class="front">
+   <a class="logo" onclick="document.getElementById('logo-galeno').click(); return false;">    
+   <img src="./assets/imagenes/cards_header/galeno-logo-medicina-prepaga-planes-de-salud.webp" alt="Galeno" title="Galeno" title="Galeno" loading="lazy">   
+   </a> 
+        
+   <ul class="features">
+      <li> Beneficio Descuento 50% </li>
+      <li> Plan joven 18-25 </li>
+      <li> Servicios Médicos Propios </li>
+      <li> 0 </li>
+   </ul>
+        <strong>&#x21bb;</strong>
+      </div>
+      <div class="back">
+        <h3>Back Side Four</h3>
+        <p>Content in card four</p>
+        <a href="#">Button 4</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+  <div class="cardBox">
+    <div class="card">
+      <div class="front">
+   <a class="logo" onclick="document.getElementById('logo-Swiss').click(); return false;">    
+   <img src="./assets/imagenes/cards_header/swiss-medical-logo-medicina-prepaga-planes-de-salud.webp" alt="Swiss Medical" title="Swiss Medical" title="Swiss Medical" loading="lazy">   
+   </a> <p>Hover to flip</p>
+           <ul class="features">
+      <li> Beneficio Descuento 50% </li>
+      <li> Plan joven 18-25 </li>
+      <li> Servicios Médicos Propios </li>
+      <li> 0 </li>
+   </ul>
+        <strong>&#x21bb;</strong>
+      </div>
+      <div class="back">
+        <h3>Back Side One</h3>
+        <p>Content in card one</p>
+        <a href="#">Button 1</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cardBox">
+    <div class="card">
+      <div class="front">
+   <a class="logo" onclick="document.getElementById('logo-SanCorSalud').click(); return false;">    
+   <img src="./assets/imagenes/cards_header/sancorsalud-logo-medicina-prepaga-planes-de-salud.webp" alt="SanCor Salud" title="SanCor Salud" title="SanCor Salud" loading="lazy">   
+   </a> <p>Hover to flip</p>
+           <ul class="features">
+      <li> Beneficio Descuento 50% </li>
+      <li> Plan joven 18-25 </li>
+      <li> Servicios Médicos Propios </li>
+      <li> 0 </li>
+   </ul>
+        <strong>&#x21bb;</strong>
+      </div>
+      <div class="back">
+        <h3>Back Side Two</h3>
+        <p>Content in card two</p>
+        <a href="#">Button 2</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cardBox">
+    <div class="card">
+      <div class="front">
+   <a class="logo" onclick="document.getElementById('logo-Medife').click(); return false;">    
+   <img src="./assets/imagenes/cards_header/medife-logo-medicina-prepaga-planes-de-salud.webp" alt="Medife" title="Medife" title="Medife" loading="lazy">   
+   </a> 
+   <p>Hover to flip</p>
+           <ul class="features">
+      <li> Beneficio Descuento 50% </li>
+      <li> Plan joven 18-25 </li>
+      <li> Servicios Médicos Propios </li>
+      <li> 0 </li>
+   </ul>
+        <strong>&#x21bb;</strong>
+      </div>
+      <div class="back">
+        <h3>Back Side Three</h3>
+        <p>Content in card three</p>
+        <a href="#">Button 3</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cardBox">
+    <div class="card">
+      <div class="front">
+   <a class="logo" onclick="document.getElementById('logo-galeno').click(); return false;">    
+   <img src="./assets/imagenes/cards_header/galeno-logo-medicina-prepaga-planes-de-salud.webp" alt="Galeno" title="Galeno" title="Galeno" loading="lazy">   
+   </a> 
+        
+   <ul class="features">
+      <li> Beneficio Descuento 50% </li>
+      <li> Plan joven 18-25 </li>
+      <li> Servicios Médicos Propios </li>
+      <li> 0 </li>
+   </ul>
+        <strong>&#x21bb;</strong>
+      </div>
+      <div class="back">
+        <h3>Back Side Four</h3>
+        <p>Content in card four</p>
+        <a href="#">Button 4</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!--.boxesContainer-->
                 <!-- Sección de Empresas (Rediseñada) -->
-                <div class="lista-tipo-4">
+                <div class="boxesContainer">
                    
                     <h2>¿Ya tenés en mente una prepaga? ¡Cotizá directamente aquí!</h2>
-                    <div class="items">
-                        <!-- Item 1: Galeno -->
-                                             <div class="item">
-                            <a class="logo"  onclick="document.getElementById('logo-galeno').click(); return false;">
-                                <img src="./assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.webp" alt="Galeno" title="Galeno" loading="lazy">
-                            </a>
-  <ul class="features">
-    <li>Red de hospitales propios (Sanatorio Anchorena)</li>
-    <li>Atención médica 24/7</li>
-    <li>Ideal para familias</li>
-    <li>Calidad y tranquilidad garantizadas</li>
-  </ul>
-  <div class="inv-cob">
-    <h5 class="inv">Precio: ⭐⭐⭐</h5>
-    <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
-  </div>
-                            <div class="botao">
-                                <a  onclick="document.getElementById('logo-galeno').click(); return false;">COTIZAR AHORA</a>
-                            </div>
-                        </div>
-                                                <!-- Item 2: Premedic -->
-                        <div class="item">
-                            <a class="logo"  onclick="document.getElementById('logo-Premedic').click(); return false;">
-                                <img src="./assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.webp" alt="Premedic" title="Premedic" loading="lazy">
-                            </a>
-  <ul class="features">
-    <li>Red de hospitales propios (Sanatorio Anchorena)</li>
-    <li>Atención médica 24/7</li>
-    <li>Ideal para familias</li>
-    <li>Calidad y tranquilidad garantizadas</li>
-  </ul>
-  <div class="inv-cob">
-    <h5 class="inv">Precio: ⭐⭐⭐</h5>
-    <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
-  </div>
-                            <div class="botao">
-                                <a onclick="document.getElementById('logo-Premedic').click(); return false;">COTIZAR AHORA</a>
-                            </div>
-                        </div>
-                                                <!-- Item 3: Avalian -->
-                                                <div class="item">
-                            <a class="logo"  onclick="document.getElementById('logo-Avalian').click(); return false;">
-                                <img src="./assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.webp" alt="Galeno" title="Galeno" loading="lazy">
-                            </a>
-                            <ul class="features">
-    <li>Red de hospitales propios (Sanatorio Anchorena)</li>
-    <li>Atención médica 24/7</li>
-    <li>Ideal para familias</li>
-    <li>Calidad y tranquilidad garantizadas</li>
-  </ul>
-  <div class="inv-cob">
-    <h5 class="inv">Precio: ⭐⭐⭐</h5>
-    <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
-  </div>
-                            <div class="botao">
-                                <a onclick="document.getElementById('logo-Avalian').click(); return false;">COTIZAR AHORA</a>
-                            </div>
-                        </div>
-                        <!-- Item 4: Omint -->
-                        <div class="item">
-                            <a class="logo" onclick="document.getElementById('logo-omint').click(); return false;">
-                                <img src="./assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.webp" alt="Omint" title="Omint"  value="omint"  loading="lazy">
-                            </a>
-                             <ul class="features">
-    <li>Red de hospitales propios (Sanatorio Anchorena)</li>
-    <li>Atención médica 24/7</li>
-    <li>Ideal para familias</li>
-    <li>Calidad y tranquilidad garantizadas</li>
-  </ul>
-  <div class="inv-cob">
-    <h5 class="inv">Precio: ⭐⭐⭐</h5>
-    <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
-  </div>
-<div class="botao">
-    <a onclick="document.getElementById('logo-omint').click(); return false;" value="omint" style="text-decoration: none; color: inherit;">
-        COTIZAR AHORA
-    </a>
-</div>
-                        </div>
-
-                        <!-- Item 5: Medife -->
-                        <div class="item">
-                            <a class="logo" onclick="document.getElementById('logo-Medife').click(); return false;">
-                                <img src="./assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.webp" alt="Medife" title="Medife" loading="lazy">
-                            </a>
-                             <ul class="features">
-    <li>Red de hospitales propios (Sanatorio Anchorena)</li>
-    <li>Atención médica 24/7</li>
-    <li>Ideal para familias</li>
-    <li>Calidad y tranquilidad garantizadas</li>
-  </ul>
-  <div class="inv-cob">
-    <h5 class="inv">Precio: ⭐⭐⭐</h5>
-    <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
-  </div>
-<div class="botao">
-    <a onclick="document.getElementById('logo-Medife').click(); return false;" style="text-decoration: none; color: inherit;">
-        COTIZAR AHORA
-    </a>
-</div>
-                        </div>
-
-                        <!-- Item 6: Swiss Medical -->
-                        <div class="item">
-                            <a class="logo" onclick="document.getElementById('logo-Swiss').click(); return false;">
-                                <img src="./assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.webp" alt="Swiss Medical" title="Swiss Medical" loading="lazy">
-                            </a>
-                             <ul class="features">
-    <li>Red de hospitales propios (Sanatorio Anchorena)</li>
-    <li>Atención médica 24/7</li>
-    <li>Ideal para familias</li>
-    <li>Calidad y tranquilidad garantizadas</li>
-  </ul>
-  <div class="inv-cob">
-    <h5 class="inv">Precio: ⭐⭐⭐</h5>
-    <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
-  </div>
-<div class="botao">
-    <a  onclick="document.getElementById('logo-Swiss').click(); return false;" style="text-decoration: none; color: inherit;">
-        COTIZAR AHORA
-    </a>
-</div>
-                        </div>
-
-                        <!-- Item 5: SanCor Salud -->
-                        <div class="item">
-                            <a class="logo" onclick="document.getElementById('logo-SanCorSalud').click(); return false;">
-                                <img src="./assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.webp" alt="SanCor Salud" title="SanCor Salud" loading="lazy">
-                            </a>
-                              <ul class="features">
-    <li>Red de hospitales propios (Sanatorio Anchorena)</li>
-    <li>Atención médica 24/7</li>
-    <li>Ideal para familias</li>
-    <li>Calidad y tranquilidad garantizadas</li>
-  </ul>
-  <div class="inv-cob">
-    <h5 class="inv">Precio: ⭐⭐⭐</h5>
-    <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
-  </div>
-<div class="botao">
-    <a onclick="document.getElementById('logo-SanCorSalud').click(); return false;" style="text-decoration: none; color: inherit;">
-        COTIZAR AHORA
-    </a>
-</div>
-                        </div>
-                   
-                                <div class="item">
-                            <a class="logo" onclick="document.getElementById('logo-Doctored').click(); return false;">
-                                <img src="./assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.webp" alt="Doctored" title="Doctored" loading="lazy">
-                            </a>
-                              <ul class="features">
-    <li>Red de hospitales propios (Sanatorio Anchorena)</li>
-    <li>Atención médica 24/7</li>
-    <li>Ideal para familias</li>
-    <li>Calidad y tranquilidad garantizadas</li>
-  </ul>
-  <div class="inv-cob">
-    <h5 class="inv">Precio: ⭐⭐⭐</h5>
-    <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
-  </div>
-<div class="botao">
-    <a onclick="document.getElementById('logo-Doctored').click(); return false;" style="text-decoration: none; color: inherit;">
-        COTIZAR AHORA
-    </a>
-</div>
-                        </div>
-                                                <div class="item">
-                            <a class="logo" onclick="document.getElementById('logo-SaludCentral').click(); return false;">
-                                <img src="./assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.webp" alt="Salud Central" title="Salud Central" loading="lazy">
-                            </a>
-                              <ul class="features">
-    <li>Red de hospitales propios (Sanatorio Anchorena)</li>
-    <li>Atención médica 24/7</li>
-    <li>Ideal para familias</li>
-    <li>Calidad y tranquilidad garantizadas</li>
-  </ul>
-  <div class="inv-cob">
-    <h5 class="inv">Precio: ⭐⭐⭐</h5>
-    <h5 class="cob">Cobertura: ⭐⭐⭐⭐⭐</h5>
-  </div>
-<div class="botao">
-    <a onclick="document.getElementById('logo-SaludCentral').click(); return false;" style="text-decoration: none; color: inherit;">
-        COTIZAR AHORA
-    </a>
-</div>
-                        </div>
-        </div>
+   
         
   <a class="cotar-todas"  onclick="document.getElementById('todas-las-empresas').click(); return false;">¡QUIERO COMPARAR TODAS LAS OPCIONES!</a>
 

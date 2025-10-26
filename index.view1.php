@@ -786,7 +786,7 @@ e
     width: 94.5%;
   }
   .card {
-    height: 260px;
+    height: 360px;
   }
 }
 </style>

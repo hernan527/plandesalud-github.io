@@ -1,0 +1,26 @@
+ 
+
+
+[
+  {
+    "rating": "★★★★★",
+    "texto": "Este servicio cambió completamente la forma en que gestionamos nuestros proyectos. ¡Altamente recomendado!",
+    "avatar": "AM",
+    "nombre": "Ana Martínez",
+    "cargo": "CEO, TechSolutions"
+  },
+  {
+    "rating": "★★★★★",
+    "texto": "La atención al cliente es excepcional. Siempre están dispuestos a ayudar y resolver cualquier duda en minutos.",
+    "avatar": "CR",
+    "nombre": "Carlos Ruiz",
+    "cargo": "Freelancer"
+  },
+  {
+    "rating": "★★★★☆",
+    "texto": "Desde que uso esta plataforma, mi productividad ha aumentado un 40%. Es intuitiva y muy eficiente.",
+    "avatar": "LS",
+    "nombre": "Laura Sánchez",
+    "cargo": "Directora de Marketing"
+  }
+]

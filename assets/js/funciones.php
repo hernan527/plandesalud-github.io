@@ -130,20 +130,21 @@ function finalizarCompleto(formClass) {
   };
  xhr.send(JSON.stringify(datawh));
 }
-// Variable para almacenar todo el HTML
 let allCardsHTML = "";
 
 // Iteramos con un for...in sobre el array de cards
 for (let index in cardsData) {
   const data = cardsData[index];
-
-  // Usamos template literals para armar cada card
+  
   allCardsHTML += `
     <div class="cardBox" data-bg="${data.bg}">
       <div class="card">
         <div class="front">
-          <a class="logo" onclick="document.getElementById('logo-${data.logoAlt.replace(/\s+/g, '')}').click(); return false;">
-            <img src="/assets/imagenes/cards_header/${data.logoSrc}-logo-medicina-prepaga-planes-de-salud.webp" alt="${data.logoAlt}" title="${data.logoAlt}" loading="lazy">
+          <a class="logo">
+            <img src="./assets/imagenes/cards_header/${data.logoSrc}-logo-medicina-prepaga-planes-de-salud.webp" 
+                 alt="${data.logoAlt}" 
+                 title="${data.logoAlt}" 
+                 loading="lazy">
           </a>
           <p>Hover to flip</p>
           <ul class="features">
@@ -152,31 +153,219 @@ for (let index in cardsData) {
           <strong>&#x21bb;</strong>
         </div>
         <div class="back">
-          <!-- <h3>${data.backTitle}</h3> -->
-      <!-- 🔹 BOTÓN DE LLAMADA A LA ACCIÓN -->
-      <div class="card-cta-container">
-        <a class="card-cta" href="#3" onclick="document.getElementById('logo-${data.logoAlt.replace(/\s+/g, '')}').click(); return false;">
-          ¡PEDIR MI COTIZACIÓN!
-        </a>
-      </div>
-          
+          <!-- 🔹 BOTÓN DE LLAMADA A LA ACCIÓN -->
+          <div class="card-cta-container">
+            <a class="card-cta" 
+               href="#3" 
+               onclick="document.getElementById('logo-${data.logoAlt.replace(/\s+/g, '')}').click(); return false;">
+              ¡PEDIR MI COTIZACIÓN!
+            </a>
+            <button class="card-cta1 open-modal" 
+                    data-index="${index}">
+              MAS DETALLES
+            </button>
+          </div>
         </div>
       </div>
     </div>
   `;
 }
+
+
 window.addEventListener("load", () => {
   const contenedor = document.getElementById("contenedor-cards");
   contenedor.innerHTML = allCardsHTML;
-
-  // 🔹 Aplicamos el fondo en cada .back (no en .cardBox)
+  
+  // 🔹 Aplicamos el fondo en cada .back
   const backs = contenedor.querySelectorAll(".back");
   backs.forEach(back => {
     const bgImage = back.closest(".cardBox").dataset.bg;
     back.style.backgroundImage = `url('./assets/imagenes/flyers/${bgImage}.webp')`;
   });
+  
+  // 🔹 INICIALIZAR EL MODAL
+  initModal();
 });
 
+// 🔹 FUNCIÓN PARA MANEJAR EL MODAL
+function initModal() {
+  const modal = document.getElementById("myModal");
+  const modalContent = document.getElementById("modal-content");
+  const closeBtn = document.querySelector(".close");
+  
+  const buttons = document.querySelectorAll(".open-modal");
+  
+  buttons.forEach(button => {
+    button.addEventListener("click", function(e) {
+      e.preventDefault();
+      
+      const index = this.getAttribute("data-index");
+      const data = cardsData[index];
+      
+      // 🔹 CONSTRUIR EL MODAL CON TABS
+      const modalHTML = `
+        <div class="modal-header-custom">
+          <img src="./assets/imagenes/cards_header/${data.logoSrc}-logo-medicina-prepaga-planes-de-salud.webp" 
+               alt="${data.logoAlt}" 
+               class="modal-logo">
+          <div class="modal-title-section">
+            <h2>${data.logoAlt}</h2>
+            <p class="modal-subtitle">${data.descripcion}</p>
+          </div>
+        </div>
+
+        <!-- TABS -->
+        <div class="modal-tabs">
+          <button class="tab-button active" data-tab="planes">
+            <span class="tab-icon">📋</span>
+            Planes
+          </button>
+          <button class="tab-button" data-tab="clinicas">
+            <span class="tab-icon">🏥</span>
+            Clínicas
+          </button>
+          <button class="tab-button" data-tab="beneficios">
+            <span class="tab-icon">⭐</span>
+            Beneficios
+          </button>
+          <button class="tab-button" data-tab="info">
+            <span class="tab-icon">ℹ️</span>
+            Info
+          </button>
+        </div>
+
+        <!-- CONTENIDO DE TABS -->
+        <div class="modal-tabs-content">
+          
+          <!-- TAB: PLANES -->
+          <div class="tab-content active" id="tab-planes">
+            <div class="planes-grid">
+              ${data.planes ? data.planes.map(plan => `
+                <div class="plan-card">
+                  <div class="plan-header">
+                    <h3>${plan.nombre}</h3>
+                    <div class="plan-precio">${plan.precio}<span>/mes</span></div>
+                  </div>
+                  <ul class="plan-features">
+                    ${plan.caracteristicas.map(c => `<li>✓ ${c}</li>`).join("")}
+                  </ul>
+                  <button class="btn-cotizar" onclick="document.getElementById('logo-${data.logoAlt.replace(/\s+/g, '')}').click();">
+                    Cotizar este plan
+                  </button>
+                </div>
+              `).join("") : '<p>Consulta por planes disponibles</p>'}
+            </div>
+          </div>
+
+          <!-- TAB: CLÍNICAS -->
+          <div class="tab-content" id="tab-clinicas">
+            <div class="clinicas-list">
+              ${data.clinicas ? data.clinicas.map(clinica => `
+                <div class="clinica-item">
+                  <div class="clinica-icon">🏥</div>
+                  <div class="clinica-info">
+                    <h4>${clinica.nombre}</h4>
+                    <p class="clinica-zona">📍 ${clinica.zona}</p>
+                    <p class="clinica-especialidades">${clinica.especialidades}</p>
+                  </div>
+                </div>
+              `).join("") : '<p>Consulta por centros médicos disponibles</p>'}
+            </div>
+            <div class="clinicas-footer">
+              <p>💡 <strong>Tip:</strong> Esta es solo una muestra. Hay cientos de prestadores disponibles según tu zona.</p>
+            </div>
+          </div>
+
+          <!-- TAB: BENEFICIOS -->
+          <div class="tab-content" id="tab-beneficios">
+            <div class="beneficios-grid">
+              ${data.beneficiosDetallados ? data.beneficiosDetallados.map(beneficio => `
+                <div class="beneficio-card">
+                  <div class="beneficio-icon">${beneficio.icono}</div>
+                  <h4>${beneficio.titulo}</h4>
+                  <p>${beneficio.descripcion}</p>
+                </div>
+              `).join("") : data.beneficios.map(b => `
+                <div class="beneficio-card">
+                  <div class="beneficio-icon">✓</div>
+                  <h4>${b}</h4>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+
+          <!-- TAB: INFO -->
+          <div class="tab-content" id="tab-info">
+            <div class="info-section">
+              <div class="info-item">
+                <h4>🌎 Cobertura</h4>
+                <p>${data.cobertura || 'Consultar cobertura disponible'}</p>
+              </div>
+              <div class="info-item">
+                <h4>📄 Requisitos</h4>
+                <p>${data.requisitos || 'Consultar requisitos necesarios'}</p>
+              </div>
+              <div class="info-item">
+                <h4>📞 Contacto</h4>
+                <p>Para más información, solicita tu cotización personalizada</p>
+                <button class="btn-contacto" onclick="document.getElementById('logo-${data.logoAlt.replace(/\s+/g, '')}').click();">
+                  Solicitar información
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      `;
+      
+      modalContent.innerHTML = modalHTML;
+      modal.style.display = "block";
+      document.body.style.overflow = "hidden";
+      
+      // 🔹 FUNCIONALIDAD DE TABS
+      initTabs();
+    });
+  });
+  
+  // Cerrar modal
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+  });
+  
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  });
+  
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && modal.style.display === "block") {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  });
+}
+
+// 🔹 FUNCIÓN PARA LOS TABS
+function initTabs() {
+  const tabButtons = document.querySelectorAll(".tab-button");
+  const tabContents = document.querySelectorAll(".tab-content");
+  
+  tabButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      // Remover active de todos
+      tabButtons.forEach(btn => btn.classList.remove("active"));
+      tabContents.forEach(content => content.classList.remove("active"));
+      
+      // Agregar active al clickeado
+      button.classList.add("active");
+      const tabId = button.getAttribute("data-tab");
+      document.getElementById(`tab-${tabId}`).classList.add("active");
+    });
+  });
+}
 
 // 2. Esperamos a que el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
@@ -211,3 +400,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // 6. Inyectamos el HTML
   grid.innerHTML = allTestimonialHTML;
 });
+
+
+function moveCarousel(button, direction) {
+  const track = button.closest('.carousel').querySelector('.carousel-track');
+  const slides = track.querySelectorAll('.carousel-slide');
+  const totalSlides = slides.length;
+  
+  let currentIndex = parseInt(track.getAttribute('data-index')) || 0;
+  let newIndex = currentIndex + direction;
+
+  // Ciclo infinito (opcional): si quieres que no se pueda salir del rango, quita esto
+  if (newIndex < 0) newIndex = totalSlides - 1;
+  if (newIndex >= totalSlides) newIndex = 0;
+
+  track.style.transform = `translateX(-${newIndex * 100}%)`;
+  track.setAttribute('data-index', newIndex);
+}
+

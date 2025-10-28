@@ -8,20 +8,20 @@
     <meta name="Copyright" content="Copyright Mejor Plan de Salud 2023. Todos los derechos reservados.">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="shortcut icon" sizes="1024x1024" href="/assets/imagenes/logos-web/plan-de-salud-favicon.ico" />
-    <link rel="apple-touch-icon" href="/assets/imagenes/logos-web/plan-de-salud-favicon.ico">
+    <link rel="shortcut icon" sizes="1024x1024" href="./assets/imagenes/logos-web/plan-de-salud-favicon.ico" />
+    <link rel="apple-touch-icon" href="./assets/imagenes/logos-web/plan-de-salud-favicon.ico">
     <!-- jQuery (solo una versión) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Scripts esenciales -->
-    <script defer type='text/javascript' src="/assets/js/jquery.validate.min.js"></script>
+    <script defer type='text/javascript' src="./assets/js/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
-    <script defer type="text/javascript" src="/assets/js/jquery.mask.min8a54.js?ver=1.0.0"></script>
-    <script defer type="text/javascript" src="/assets/js/formularios-cot.js"></script>
+    <script defer type="text/javascript" src="./assets/js/jquery.mask.min8a54.js?ver=1.0.0"></script>
+    <script defer type="text/javascript" src="./assets/js/formularios-cot.js"></script>
     <!-- Fuentes y librerías modernas -->
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
-    <script defer src="/assets/js/prefixfree.min.js"></script>
-    <script defer src="/assets/js/modernizr-2.8.0.dev.js"></script>
-  <script src="/assets/js/renderCards.js"></script>
+    <script defer src="./assets/js/prefixfree.min.js"></script>
+    <script defer src="./assets/js/modernizr-2.8.0.dev.js"></script>
+  <script src="./assets/js/renderCards.js"></script>
     <!-- Pre-carga de imágenes -->
     <!-- <script>
         const images = [
@@ -48,12 +48,27 @@
             img.src = src;
         });
     </script> -->
+    <script>
+function moveCarousel(button, direction) {
+  const track = button.closest('.carousel').querySelector('.carousel-track');
+  const slides = track.querySelectorAll('.carousel-slide');
+  const totalSlides = slides.length;
+  let currentIndex = parseInt(track.getAttribute('data-index')) || 0;
+  let newIndex = currentIndex + direction;
 
+  // Evitar salirse de los límites (sin bucle infinito)
+  if (newIndex < 0) newIndex = 0;
+  if (newIndex >= totalSlides) newIndex = totalSlides - 1;
+
+  track.style.transform = `translateX(-${newIndex * 100}%)`;
+  track.setAttribute('data-index', newIndex);
+}
+</script>
     <!-- Hojas de estilo -->
-    <link rel="stylesheet" href="/assets/imagenes/stylea870.css?versao=5.0" />
-    <link href="/assets/css/style-formularioSimuladorGeneral.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./assets/imagenes/stylea870.css?versao=5.0" />
+    <link href="./assets/css/style-formularioSimuladorGeneral.css" rel="stylesheet" type="text/css">
 
-    <!-- <link rel="stylesheet" href="/assets/imagenes/styles871.css" /> -->
+    <!-- <link rel="stylesheet" href="./assets/imagenes/styles871.css" /> -->
 
     <!-- SEO Optimizado -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -65,12 +80,12 @@
     <meta property="og:description" content="¿Buscas el mejor plan de salud? Cotizá GRATIS en minutos y compará precios y coberturas de +50 prepagas y obras sociales. ¡Ahorro garantizado! Sin compromiso." />
     <meta property="og:url" content="/cotizar-ahora/" />
     <meta property="og:site_name" content="Plan de Salud" />
-    <meta property="og:image" content="/assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.webp" />
+    <meta property="og:image" content="./assets/imagenes/banners/happy-parents-with-two-children-summer-1920-520.webp" />
     <meta property="og:image:width" content="960" />
     <meta property="og:image:height" content="540" />
 
     <!-- Estilos personalizados -->
-    <link rel="stylesheet"  href="/assets/css/style-whats.css" type="text/css">
+    <link rel="stylesheet"  href="./assets/css/style-whats.css" type="text/css">
    
       
             <style>
@@ -649,6 +664,9 @@ e
   position: absolute;
   text-align: center;
   width: 100%;
+  padding-left:30px;
+  padding-right:30px;
+
 }
 .card .back {
   backface-visibility: hidden;
@@ -860,9 +878,9 @@ e
   display: inline-block !important;
   background-color: #0077ff !important; /* color principal */
   color: #fff !important;
-  font-weight: 600 !important;
+  font-weight: 200 !important;
   text-transform: uppercase !important;
-  padding: 0.75rem 1.5rem !important;
+  padding: 0.25rem 0.5rem !important;
   border-radius: 50px !important; /* 🔹 extremos redondeados */
   text-decoration: none !important;
   transition: background-color 0.3s ease, transform 0.2s ease !important;
@@ -872,10 +890,541 @@ e
   background-color: #005ecc !important;
   transform: scale(1.05) !important;
 }
+.card-cta1 {
+  display: inline-block !important;
+  background-color: #b54717ff !important; /* color principal */
+  color: #fff !important;
+  font-weight: 50 !important;
+  text-transform: uppercase !important;
+  padding: 0.25rem 0.5rem !important;
+  border-radius: 50px !important; /* 🔹 extremos redondeados */
+  text-decoration: none !important;
+  transition: background-color 0.3s ease, transform 0.2s ease !important;
+  margin-top:5px;
+  
+}
 
+.card-cta1:hover {
+  background-color: #b8572dff !important;
+  transform: scale(1.05) !important;
+}
+.cardBox .card .front .logo img {
+  height: 50px;
+  width: auto; /* mantiene la proporción original */
+  object-fit: contain; /* asegura que no se recorte la imagen */
+  display: block;
+  margin: 0 auto; /* centra la imagen horizontalmente */
+  margin-bottom: 15px; /* centra la imagen horizontalmente */
+}
+.carousel {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 60px); /* deja espacio para el botón CTA */
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover; /* o "cover", según el diseño */
+  background: white; /* opcional: fondo blanco si el flyer tiene transparencia */
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-btn.prev { left: 8px; }
+.carousel-btn.next { right: 8px; }
+/* MODAL BASE */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  margin: 2% auto;
+  padding: 0;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#modal-content {
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 0;
+}
+
+/* Scrollbar personalizado */
+#modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+#modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+#modal-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+#modal-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* CERRAR */
+.close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #666;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.close:hover {
+  background: #ff4757;
+  color: white;
+  transform: rotate(90deg);
+}
+
+/* HEADER DEL MODAL */
+.modal-header-custom {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  color: white;
+  position: relative;
+}
+
+.modal-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-title-section h2 {
+  margin: 0 0 10px 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.modal-subtitle {
+  margin: 0;
+  opacity: 0.95;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* TABS */
+.modal-tabs {
+  display: flex;
+  background: #f8f9fa;
+  border-bottom: 2px solid #e1e8ed;
+  overflow-x: auto;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 18px 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: #666;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+}
+
+.tab-icon {
+  font-size: 20px;
+}
+
+.tab-button:hover {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+}
+
+.tab-button.active {
+  color: #667eea;
+  background: white;
+}
+
+.tab-button.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+/* CONTENIDO DE TABS */
+.modal-tabs-content {
+  padding: 30px;
+}
+
+.tab-content {
+  display: none;
+  animation: fadeInContent 0.4s ease;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* PLANES */
+.planes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.plan-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+  border-color: #667eea;
+}
+
+.plan-header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+  margin-bottom: 20px;
+}
+
+.plan-header h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 22px;
+}
+
+.plan-precio {
+  font-size: 32px;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.plan-precio span {
+  font-size: 16px;
+  color: #999;
+  font-weight: 400;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.plan-features li {
+  padding: 10px 0;
+  color: #555;
+  font-size: 14px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.btn-cotizar {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-cotizar:hover {
+  transform: scale(1.05);
+}
+
+/* CLÍNICAS */
+.clinicas-list {
+  display: grid;
+  gap: 15px;
+}
+
+.clinica-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.clinica-item:hover {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transform: translateX(5px);
+}
+
+.clinica-icon {
+  font-size: 40px;
+  flex-shrink: 0;
+}
+
+.clinica-info h4 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.clinica-zona {
+  color: #667eea;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.clinica-especialidades {
+  color: #777;
+  font-size: 13px;
+  margin: 5px 0 0 0;
+}
+
+.clinicas-footer {
+  margin-top: 20px;
+  padding: 15px;
+  background: #fff3cd;
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+}
+
+.clinicas-footer p {
+  margin: 0;
+  color: #856404;
+}
+
+/* BENEFICIOS */
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.beneficio-card {
+  text-align: center;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.beneficio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+}
+
+.beneficio-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.beneficio-card h4 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.beneficio-card p {
+  margin: 0;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* INFO */
+.info-section {
+  display: grid;
+  gap: 25px;
+}
+
+.info-item {
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-item h4 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-item p {
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+.btn-contacto {
+  margin-top: 15px;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-contacto:hover {
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    margin: 5% auto;
+    border-radius: 15px;
+  }
+  
+  .modal-header-custom {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .modal-logo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .modal-title-section h2 {
+    font-size: 24px;
+  }
+  
+  .tab-button {
+    font-size: 13px;
+    padding: 15px 10px;
+  }
+  
+  .tab-icon {
+    font-size: 18px;
+  }
+  
+  .planes-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .beneficios-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
 </style>
     <!-- Estilos globales de WordPress -->
-    <!-- <link rel="stylesheet" id="wp-block-library-css"  href="/assets/css/style.min1eb7.css?ver=6.0.3" type="text/css" media="all" /> -->
+    <!-- <link rel="stylesheet" id="wp-block-library-css"  href="./assets/css/style.min1eb7.css?ver=6.0.3" type="text/css" media="all" /> -->
     <style id="global-styles-inline-css" type="text/css">
         body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) ;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) ;}.has-white-color{color: var(--wp--preset--color--white) ;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) ;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) ;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) ;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) ;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) ;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) ;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) ;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) ;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) ;}.has-black-background-color{background-color: var(--wp--preset--color--black) ;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) ;}.has-white-background-color{background-color: var(--wp--preset--color--white) ;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) ;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) ;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) ;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) ;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) ;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) ;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) ;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) ;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) ;}.has-black-border-color{border-color: var(--wp--preset--color--black) ;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) ;}.has-white-border-color{border-color: var(--wp--preset--color--white) ;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) ;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) ;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) ;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) ;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) ;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) ;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) ;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) ;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) ;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) ;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) ;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) ;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) ;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) ;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) ;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) ;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) ;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) ;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) ;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) ;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) ;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) ;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) ;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) ;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) ;}
     </style>
@@ -891,7 +1440,7 @@ e
 <!-- Header -->
     <header id="header" class="com-banner">
 
-        <!-- <script defer src="/assets/js/functions.js"></script> -->
+        <!-- <script defer src="./assets/js/functions.js"></script> -->
     </header>
 
     <!-- Banner Principal -->
@@ -946,21 +1495,21 @@ e
                      <div class="wp-block-group__inner-container"  id="4"> 
                       
                         <div class="logos">
-    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.webp" value="galeno" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude" id="logo-Galeno"></a>
-    <a  href='#3' class="smooth-scroll" ><img src="/assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.webp" value="omint" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint" id="logo-Omint"></a>
-    <!-- <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.webp" value="hominis" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora="" id="logo-Hominis"></a> -->
-    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.webp" value="premedic" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao" id="logo-Premedic"></a>
-    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.webp" value="sancorsalud" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil" id="logo-SanCorSalud"></a>
-    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.webp" value="medife" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medife')" data-classe-operadora="notredame" id="logo-Medife"></a>
-    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.webp" value="swiss-medical" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida" id="logo-SwissMedical"></a>
-    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.webp" value="avalian" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed" id="logo-Avalian"></a>
-    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.webp" value="prevencion-salud"  alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one" id="logo-Prevencion"></a>
-    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.webp" value="doctored"  alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint" id="logo-Doctored"></a>
-    <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.webp" value="salud-central" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint" id="logo-SaludCentral"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/galeno-logo-medicina-prepaga-planes-de-salud.webp" value="galeno" alt="Galeno" title="Galeno" data-id-operadora="Galeno" onclick="cambiarValor('Galeno')" data-classe-operadora="caixa-saude" id="logo-Galeno"></a>
+    <a  href='#3' class="smooth-scroll" ><img src="./assets/imagenes/logos-prepagas-190x110/omint-logo-medicina-prepaga-planes-de-salud.webp" value="omint" alt="Omint" title="Omint" data-id-operadora="Omint" onclick="cambiarValor('Omint')" data-classe-operadora="omint" id="logo-Omint"></a>
+    <!-- <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/hominis-logo-medicina-prepaga-planes-de-salud.webp" value="hominis" alt="Hominis" title="Hominis" data-id-operadora="Hominis" onclick="cambiarValor('Hominis')" data-classe-operadora="" id="logo-Hominis"></a> -->
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/premedic-logo-medicina-prepaga-planes-de-salud.webp" value="premedic" alt="Premedic" title="Premedic" data-id-operadora="Premedic" onclick="cambiarValor('Premedic')" data-classe-operadora="sao-cristovao" id="logo-Premedic"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/sancorsalud-logo-medicina-prepaga-planes-de-salud.webp" value="sancorsalud" alt="SanCor salud" title="SanCor Salud" data-id-operadora="SanCor Salud" onclick="cambiarValor('SanCor Salud')"  data-classe-operadora="amil" id="logo-SanCorSalud"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/medife-logo-medicina-prepaga-planes-de-salud.webp" value="medife" alt="Medife" title="Medifé" data-id-operadora="Medifé" onclick="cambiarValor('Medife')" data-classe-operadora="notredame" id="logo-Medife"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/swiss-medical-logo-medicina-prepaga-planes-de-salud.webp" value="swiss-medical" alt="Swiss Medical" title="Swiss Medical" data-id-operadora="Swiss Medical" onclick="cambiarValor('6')" data-classe-operadora="biovida" id="logo-SwissMedical"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/avalian-logo-medicina-prepaga-planes-de-salud.webp" value="avalian" alt="Avalian" title="Avalian" data-id-operadora="Avalian" onclick="cambiarValor('Avalian')"data-classe-operadora="unimed" id="logo-Avalian"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/prevencion-salud-logo-medicina-prepaga-planes-de-salud.webp" value="prevencion-salud"  alt="Prevencion Salud" title="Prevencion Salud" data-id-operadora="Prevención Salud" onclick="cambiarValor('18')" data-classe-operadora="amil-one" id="logo-Prevencion"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/doctored-logo-medicina-prepaga-planes-de-salud.webp" value="doctored"  alt="Doctored" title="Doctored" data-id-operadora="Doctored" onclick="cambiarValor('Doctored')" data-classe-operadora="omint" id="logo-Doctored"></a>
+    <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/salud-central-logo-medicina-prepaga-planes-de-salud.webp" value="salud-central" alt="Salud Central" title="Salud Central" data-id-operadora="Salud Central" onclick="cambiarValor('Salud Central')" data-classe-operadora="omint" id="logo-SaludCentral"></a>
                       
 </div>
                      </div>  <div class="logos-2">
-                         <a  href='#3' class="smooth-scroll"><img src="/assets/imagenes/logos-prepagas-190x110/todas-las-empresas-logo-medicina-prepaga-planes-de-salud.webp" value="todas-las-empresas" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('11')" data-classe-operadora="multimarcas" id="todas-las-empresas"></a>
+                         <a  href='#3' class="smooth-scroll"><img src="./assets/imagenes/logos-prepagas-190x110/todas-las-empresas-logo-medicina-prepaga-planes-de-salud.webp" value="todas-las-empresas" alt="Todos los Planes de Salud" title="Todos los Planes de Salud" data-id-operadora="Todos Los Planes" onclick="cambiarValor('11')" data-classe-operadora="multimarcas" id="todas-las-empresas"></a>
   </div>
                   </div>
                
@@ -974,24 +1523,24 @@ e
                         </div>
                    
                         <div class="prestadores-grid">
-                            <img src="/assets/prestadores/sanatorio_general_sarmiento.webp" alt="Sanatorio General Sarmiento" title="Sanatorio General Sarmiento" loading="lazy">
-                               <img src="/assets/prestadores/sanatorio-trinidad.webp" alt="Sanaotrio de la Trinidad" title="" loading="lazy">
-        <img src="/assets/prestadores/centro-dim.webp" alt="Centros DIM" title="Centros DIM" loading="lazy">
-        <img src="/assets/prestadores/sanatorio_general_sarmiento.webp" alt="Sanatorio General Sarmiento" title="Sanatorio General Sarmiento" loading="lazy">
-        <img src="/assets/prestadores/sanatorio-las-lomas.webp" alt="Sanatorio Las Lomas" title="Sanatorio Las Lomas" loading="lazy">
-        <img src="/assets/prestadores/hospital-aleman.webp" alt="Hospital Alemán" title="Hospital Alemán" loading="lazy">
-        <img src="/assets/prestadores/bazterrica.webp" alt="Clínica Bazterrica" title="Clínica Bazterrica" loading="lazy">
-        <img src="/assets/prestadores/hospital-britanico.webp" alt="Hospital Británico" title="Hospital Británico" loading="lazy">
-        <img src="/assets/prestadores/clinica-del-sol.webp" alt="Clínica del Sol" title="Clínica del Sol" loading="lazy">
-        <img src="/assets/prestadores/sanatorio-del-oeste.webp" alt="Sanatorio del Oeste" title="Sanatorio del Oeste" loading="lazy">
-        <img src="/assets/prestadores/clinica-san-camilo.webp" alt="Clínica San Camilo" title="Clínica San Camilo" loading="lazy">
-        <img src="/assets/prestadores/sanatorio-finochietto.webp" alt="Sanatorio Finochietto" title="Sanatorio Finochietto" loading="lazy">
-        <img src="/assets/prestadores/centros-odontologicos.webp" alt="Centros Odontológicos" title="Centros Odontológicos" loading="lazy">
-        <img src="/assets/prestadores/farmacity.webp" alt="Farmacity" title="Farmacity" loading="lazy">
-        <img src="/assets/prestadores/emergencias-medicas.webp" alt="Emergencias Médicas" title="Emergencias Médicas" loading="lazy">
-        <img src="/assets/prestadores/adventista.webp" alt="Clínica Adventisata de Belgrano" title="Clínica Adventisata de Belgrano" loading="lazy">
-        <img src="/assets/prestadores/sanjuandedios.webp" alt="Casa Hospital San Juan de Dios" title="Casa Hospital San Juan de Dios" loading="lazy">
-        <img src="/assets/prestadores/clinica-modelo-moron.webp" alt="Clínica Modelo de Morón" title="Clínica Modelo de Morón" loading="lazy">
+                            <img src="./assets/prestadores/sanatorio_general_sarmiento.webp" alt="Sanatorio General Sarmiento" title="Sanatorio General Sarmiento" loading="lazy">
+                               <img src="./assets/prestadores/sanatorio-trinidad.webp" alt="Sanaotrio de la Trinidad" title="" loading="lazy">
+        <img src="./assets/prestadores/centro-dim.webp" alt="Centros DIM" title="Centros DIM" loading="lazy">
+        <img src="./assets/prestadores/sanatorio_general_sarmiento.webp" alt="Sanatorio General Sarmiento" title="Sanatorio General Sarmiento" loading="lazy">
+        <img src="./assets/prestadores/sanatorio-las-lomas.webp" alt="Sanatorio Las Lomas" title="Sanatorio Las Lomas" loading="lazy">
+        <img src="./assets/prestadores/hospital-aleman.webp" alt="Hospital Alemán" title="Hospital Alemán" loading="lazy">
+        <img src="./assets/prestadores/bazterrica.webp" alt="Clínica Bazterrica" title="Clínica Bazterrica" loading="lazy">
+        <img src="./assets/prestadores/hospital-britanico.webp" alt="Hospital Británico" title="Hospital Británico" loading="lazy">
+        <img src="./assets/prestadores/clinica-del-sol.webp" alt="Clínica del Sol" title="Clínica del Sol" loading="lazy">
+        <img src="./assets/prestadores/sanatorio-del-oeste.webp" alt="Sanatorio del Oeste" title="Sanatorio del Oeste" loading="lazy">
+        <img src="./assets/prestadores/clinica-san-camilo.webp" alt="Clínica San Camilo" title="Clínica San Camilo" loading="lazy">
+        <img src="./assets/prestadores/sanatorio-finochietto.webp" alt="Sanatorio Finochietto" title="Sanatorio Finochietto" loading="lazy">
+        <img src="./assets/prestadores/centros-odontologicos.webp" alt="Centros Odontológicos" title="Centros Odontológicos" loading="lazy">
+        <img src="./assets/prestadores/farmacity.webp" alt="Farmacity" title="Farmacity" loading="lazy">
+        <img src="./assets/prestadores/emergencias-medicas.webp" alt="Emergencias Médicas" title="Emergencias Médicas" loading="lazy">
+        <img src="./assets/prestadores/adventista.webp" alt="Clínica Adventisata de Belgrano" title="Clínica Adventisata de Belgrano" loading="lazy">
+        <img src="./assets/prestadores/sanjuandedios.webp" alt="Casa Hospital San Juan de Dios" title="Casa Hospital San Juan de Dios" loading="lazy">
+        <img src="./assets/prestadores/clinica-modelo-moron.webp" alt="Clínica Modelo de Morón" title="Clínica Modelo de Morón" loading="lazy">
                         </div></div>
                         <div class="wp-container-5 wp-block-buttons">
                             <div class="wp-block-button">
@@ -1148,7 +1697,7 @@ e
                                 <h3>¿Preferís hablar por teléfono?</h3>
                                 <h4>Atención de Lunes a Viernes de 9 a 19 hs</h4>
                               <a href="tel:+541124985882" class="link-telefone">
-                               <img src="/assets/formularios/formulario-whatsapp/icone-telefone.svg" alt="Teléfono" loading="lazy">
+                               <img src="./assets/formularios/formulario-whatsapp/icone-telefone.svg" alt="Teléfono" loading="lazy">
                              (11) 2498-5882
                             </a>
                                 <div class="lista-vantagens">
@@ -1164,7 +1713,7 @@ e
 
                             <!-- Formulario de WhatsApp (Optimizado) -->
                             <form id="contact-form-whats" class="form-whats">
-                                <h3><img src="/assets/formularios/formulario-whatsapp/icone-whatsapp.svg" style="margin-right: 10px;"> Cotizá por WhatsApp</h3>
+                                <h3><img src="./assets/formularios/formulario-whatsapp/icone-whatsapp.svg" style="margin-right: 10px;"> Cotizá por WhatsApp</h3>
                                 <input class="campo-ID-formulario" type="hidden" name="formulario_pagina_whats" id="formulario_pagina_whats" value="COTIZAR AHORA Whatsapp">
                                 <div>
                                     <b>Nombre Completo:</b>
@@ -1189,10 +1738,10 @@ e
         <div>
             <div class="col">
                 <a class="logo" href="index.php">
-                    <img src="/assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo-movil.webp" alt="Plan de Salud" title="Plan de Salud">
+                    <img src="./assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo-movil.webp" alt="Plan de Salud" title="Plan de Salud">
                 </a>
                 <p>Somos asesores independientes de las mayores prepagas de Argentina. Cotizá con nosotros y podés ahorrar hasta un 50% en tu Plan de Salud. ¡Todo online, simple y sin burocracias!</p>
-                <!-- <p><strong>Asociados a:</strong> <img src="/assets/imagenes/logos-web/sello-confianza.png" alt="Sello de Confianza" style="height: 30px; margin-top: 10px;"></p> -->
+                <!-- <p><strong>Asociados a:</strong> <img src="./assets/imagenes/logos-web/sello-confianza.png" alt="Sello de Confianza" style="height: 30px; margin-top: 10px;"></p> -->
             </div>
  <div class="col">
   <!-- <a class="telefone" href="tel:01124985882" target="_blank" style="margin:10px">
@@ -1205,7 +1754,7 @@ e
 </div>
         </div>
     </div>
-
+ <button id="myBtn">Open Modal</button>
 
 
     <footer id="footer">
@@ -1214,6 +1763,17 @@ e
             <p>&copy;2025 Mejor Plan de Salud. Todos los derechos reservados.</p>
         </div>
     </footer>
+</div>
+<!-- The Modal -->
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="modal-content">
+      <!-- Aquí se insertará el contenido dinámico -->
+    </div>
+  </div>
 </div>
     <!-- Scripts -->
     <script type='text/javascript' src='assets/plugins/simple-share-buttons-adder/js/ssba1037.js?ver=1677985089' id='simple-share-buttons-adder-ssba-js'></script>
@@ -1429,7 +1989,7 @@ window.addEventListener('load', function() {
 
 <script>
 document.querySelectorAll('.cardBox').forEach(cardBox => {
-  const bg = "/assets/imagenes/flyers/"+cardBox.getAttribute('data-bg');
+  const bg = "./assets/imagenes/flyers/"+cardBox.getAttribute('data-bg');
   if (bg) {
     const back = cardBox.querySelector('.back');
     back.style.backgroundImage = `url(${bg})`;
@@ -1439,12 +1999,38 @@ document.querySelectorAll('.cardBox').forEach(cardBox => {
   }
 });
 </script>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
 
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
     <!-- Botón Flotante de WhatsApp -->
     <a href="https://api.whatsapp.com/send?phone=5491124985882&text=Hola,%20necesito%20ayuda%20para%20elegir%20mi%20plan%20de%20salud." class="whatsapp-float" target="_blank">
-        <img src="/assets/formularios/formulario-whatsapp/icone-whatsapp.svg" style="width: 40px; filter: invert(0);">
+        <img src="./assets/formularios/formulario-whatsapp/icone-whatsapp.svg" style="width: 40px; filter: invert(0);">
     </a>
-        <script src="/assets/js/funciones.php"></script>
+        <script src="./assets/js/funciones.php"></script>
 
 </body>
 </html>

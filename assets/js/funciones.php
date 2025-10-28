@@ -130,4 +130,84 @@ function finalizarCompleto(formClass) {
   };
  xhr.send(JSON.stringify(datawh));
 }
+// Variable para almacenar todo el HTML
+let allCardsHTML = "";
 
+// Iteramos con un for...in sobre el array de cards
+for (let index in cardsData) {
+  const data = cardsData[index];
+
+  // Usamos template literals para armar cada card
+  allCardsHTML += `
+    <div class="cardBox" data-bg="${data.bg}">
+      <div class="card">
+        <div class="front">
+          <a class="logo" onclick="document.getElementById('logo-${data.logoAlt.replace(/\s+/g, '')}').click(); return false;">
+            <img src="./assets/imagenes/cards_header/${data.logoSrc}-logo-medicina-prepaga-planes-de-salud.webp" alt="${data.logoAlt}" title="${data.logoAlt}" loading="lazy">
+          </a>
+          <p>Hover to flip</p>
+          <ul class="features">
+            ${data.beneficios.map(b => `<li>${b}</li>`).join("")}
+          </ul>
+          <strong>&#x21bb;</strong>
+        </div>
+        <div class="back">
+          <!-- <h3>${data.backTitle}</h3> -->
+      <!-- 🔹 BOTÓN DE LLAMADA A LA ACCIÓN -->
+      <div class="card-cta-container">
+        <a class="card-cta" href="#3" onclick="document.getElementById('logo-${data.logoAlt.replace(/\s+/g, '')}').click(); return false;">
+          ¡PEDIR MI COTIZACIÓN!
+        </a>
+      </div>
+          
+        </div>
+      </div>
+    </div>
+  `;
+}
+window.addEventListener("load", () => {
+  const contenedor = document.getElementById("contenedor-cards");
+  contenedor.innerHTML = allCardsHTML;
+
+  // 🔹 Aplicamos el fondo en cada .back (no en .cardBox)
+  const backs = contenedor.querySelectorAll(".back");
+  backs.forEach(back => {
+    const bgImage = back.closest(".cardBox").dataset.bg;
+    back.style.backgroundImage = `url('./assets/imagenes/flyers/${bgImage}.webp')`;
+  });
+});
+
+
+// 2. Esperamos a que el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+  // 3. Seleccionamos el contenedor
+  const grid = document.querySelector('.testimonials-grid');
+  
+  // 4. Validamos que el contenedor exista
+  if (!grid) {
+    console.error('No se encontró el contenedor .testimonials-grid');
+    return;
+  }
+
+  // 5. Construimos el HTML
+  let allTestimonialHTML = '';
+  
+  for (const testimonio of testimonios) {
+    allTestimonialHTML += `
+      <div class="testimonial-card">
+        <div class="rating">${testimonio.rating}</div>
+        <p class="testimonial-text">${testimonio.texto}</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">${testimonio.avatar}</div>
+          <div class="author-info">
+            <h4>${testimonio.nombre}</h4>
+            <p>${testimonio.cargo}</p>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // 6. Inyectamos el HTML
+  grid.innerHTML = allTestimonialHTML;
+});

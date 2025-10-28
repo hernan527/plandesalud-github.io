@@ -143,7 +143,7 @@ for (let index in cardsData) {
       <div class="card">
         <div class="front">
           <a class="logo" onclick="document.getElementById('logo-${data.logoAlt.replace(/\s+/g, '')}').click(); return false;">
-            <img src="/assets/imagenes/cards_header/${data.logoSrc}-logo-medicina-prepaga-planes-de-salud.webp" alt="${data.logoAlt}" title="${data.logoAlt}" loading="lazy">
+            <img src="./assets/imagenes/cards_header/${data.logoSrc}-logo-medicina-prepaga-planes-de-salud.webp" alt="${data.logoAlt}" title="${data.logoAlt}" loading="lazy">
           </a>
           <p>Hover to flip</p>
           <ul class="features">

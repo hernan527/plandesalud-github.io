@@ -16,7 +16,7 @@ backButton: "#"
 {
 empresa:"SanCor Salud",
 bg:"sancorsalud",
-logoSrc:"sanCorsalud",
+logoSrc:"sancorsalud",
 logoAlt:"SanCor Salud",
 beneficios: [
 "Beneficio Descuento 50%",

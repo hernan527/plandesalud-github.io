@@ -188,6 +188,11 @@ window.addEventListener("load", () => {
 });
 
 // 🔹 FUNCIÓN PARA MANEJAR EL MODAL
+// Close the modal
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
 function initModal() {
   const modal = document.getElementById("myModal");
   const modalContent = document.getElementById("modal-content");
@@ -195,6 +200,8 @@ function initModal() {
   
   const buttons = document.querySelectorAll(".open-modal");
   
+
+
   buttons.forEach(button => {
     button.addEventListener("click", function(e) {
       e.preventDefault();
@@ -249,7 +256,7 @@ function initModal() {
                   <ul class="plan-features">
                     ${plan.caracteristicas.map(c => `<li>✓ ${c}</li>`).join("")}
                   </ul>
-                  <button class="btn-cotizar" onclick="document.getElementById('logo-${data.logoAlt.replace(/\s+/g, '')}').click();">
+                  <button class="btn-cotizar" onclick="document.getElementById('logo-${data.logoAlt.replace(/\s+/g, '')}').click();closeModal();">
                     Cotizar este plan
                   </button>
                 </div>
@@ -308,7 +315,7 @@ function initModal() {
               <div class="info-item">
                 <h4>📞 Contacto</h4>
                 <p>Para más información, solicita tu cotización personalizada</p>
-                <button class="btn-contacto" onclick="document.getElementById('logo-${data.logoAlt.replace(/\s+/g, '')}').click();">
+                <button class="btn-contacto" onclick="document.getElementById('logo-${data.logoAlt.replace(/\s+/g, '')}').click();closeModal();">
                   Solicitar información
                 </button>
               </div>
@@ -417,4 +424,5 @@ function moveCarousel(button, direction) {
   track.style.transform = `translateX(-${newIndex * 100}%)`;
   track.setAttribute('data-index', newIndex);
 }
+
 

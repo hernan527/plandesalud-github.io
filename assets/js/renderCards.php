@@ -1,456 +1,82 @@
-const cardsData = [
-{
-empresa:"Swiss Medical",
-bg:"swissmedical",
-logoSrc:"swissmedical",
-logoAlt:"Swiss Medical",
-beneficios: [
-"Beneficio Descuento 50%",
-"Plan joven 18-25",
-"Servicios Médicos Propios",
-"0"
-],
-backTitle:"Back Title" ,
-backButton: "#",
-backImages: ["swissmedical.webp", "swissmedical.webp", "swissmedical.webp"],
 
-    descripcion: "OSDE es una de las obras sociales más reconocidas de Argentina, ofreciendo cobertura integral de salud con acceso a la mejor red de prestadores del país.",
-    planes: [
-      { nombre: "OSDE 210", precio: "$45.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación compartida"] },
-      { nombre: "OSDE 310", precio: "$65.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación privada"] },
-      { nombre: "OSDE 410", precio: "$95.000", caracteristicas: ["Plus de reintegros", "Cobertura internacional"] }
-    ],
-    clinicas: [
-      { nombre: "Hospital Italiano", zona: "Almagro, CABA", especialidades: "Todas las especialidades" },
-      { nombre: "Sanatorio Güemes", zona: "Palermo, CABA", especialidades: "Cirugía, Maternidad" },
-      { nombre: "Clínica Bazterrica", zona: "Recoleta, CABA", especialidades: "Cardiología, Traumatología" },
-      { nombre: "Swiss Medical Center", zona: "Barrio Norte, CABA", especialidades: "Diagnóstico por imágenes" }
-    ],
-    beneficiosDetallados: [
-      { icono: "🏥", titulo: "Red de Prestadores", descripcion: "Acceso a más de 500 centros médicos en todo el país" },
-      { icono: "🚑", titulo: "Emergencias", descripcion: "Servicio de urgencias las 24 horas con móviles propios" },
-      { icono: "💊", titulo: "Farmacia", descripcion: "Descuentos del 40% al 70% en medicamentos" },
-      { icono: "🔬", titulo: "Estudios", descripcion: "Laboratorio y diagnóstico por imágenes sin cargo" },
-      { icono: "👶", titulo: "Maternidad", descripcion: "Cobertura integral desde el embarazo hasta el parto" },
-      { icono: "🦷", titulo: "Odontología", descripcion: "Atención odontológica básica incluida" }
-    ],
-    cobertura: "Nacional e internacional según el plan",
-    requisitos: "DNI argentino, validación de preexistencias"
-},
-{
-empresa:"SanCor Salud",
-bg:"sancorsalud",
-logoSrc:"sancorsalud",
-logoAlt:"SanCor Salud",
-beneficios: [
-"Beneficio Descuento 50%",
-"Plan joven 18-25",
-"Servicios Médicos Propios",
-"0"
-],
-backTitle:"Back Title" ,
-backButton: "#",
-backImages: ["sancorsalud.webp", "sancorsalud.webp", "sancorsalud.webp"],
-    descripcion: "OSDE es una de las obras sociales más reconocidas de Argentina, ofreciendo cobertura integral de salud con acceso a la mejor red de prestadores del país.",
-    planes: [
-      { nombre: "OSDE 210", precio: "$45.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación compartida"] },
-      { nombre: "OSDE 310", precio: "$65.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación privada"] },
-      { nombre: "OSDE 410", precio: "$95.000", caracteristicas: ["Plus de reintegros", "Cobertura internacional"] }
-    ],
-    clinicas: [
-      { nombre: "Hospital Italiano", zona: "Almagro, CABA", especialidades: "Todas las especialidades" },
-      { nombre: "Sanatorio Güemes", zona: "Palermo, CABA", especialidades: "Cirugía, Maternidad" },
-      { nombre: "Clínica Bazterrica", zona: "Recoleta, CABA", especialidades: "Cardiología, Traumatología" },
-      { nombre: "Swiss Medical Center", zona: "Barrio Norte, CABA", especialidades: "Diagnóstico por imágenes" }
-    ],
-    beneficiosDetallados: [
-      { icono: "🏥", titulo: "Red de Prestadores", descripcion: "Acceso a más de 500 centros médicos en todo el país" },
-      { icono: "🚑", titulo: "Emergencias", descripcion: "Servicio de urgencias las 24 horas con móviles propios" },
-      { icono: "💊", titulo: "Farmacia", descripcion: "Descuentos del 40% al 70% en medicamentos" },
-      { icono: "🔬", titulo: "Estudios", descripcion: "Laboratorio y diagnóstico por imágenes sin cargo" },
-      { icono: "👶", titulo: "Maternidad", descripcion: "Cobertura integral desde el embarazo hasta el parto" },
-      { icono: "🦷", titulo: "Odontología", descripcion: "Atención odontológica básica incluida" }
-    ],
-    cobertura: "Nacional e internacional según el plan",
-    requisitos: "DNI argentino, validación de preexistencias"
-},
-{
-empresa:"Medife",
-bg:"medife",
-logoSrc:"medife",
-logoAlt:"Medife",
-beneficios: [
-"Beneficio Descuento 50%",
-"Plan joven 18-25",
-"Servicios Médicos Propios",
-"0"
-],
-backTitle:"Back Title" ,
-backButton: "#",
-backImages: ["medife.webp", "medife.webp", "medife.webp"],
-    descripcion: "OSDE es una de las obras sociales más reconocidas de Argentina, ofreciendo cobertura integral de salud con acceso a la mejor red de prestadores del país.",
-    planes: [
-      { nombre: "OSDE 210", precio: "$45.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación compartida"] },
-      { nombre: "OSDE 310", precio: "$65.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación privada"] },
-      { nombre: "OSDE 410", precio: "$95.000", caracteristicas: ["Plus de reintegros", "Cobertura internacional"] }
-    ],
-    clinicas: [
-      { nombre: "Hospital Italiano", zona: "Almagro, CABA", especialidades: "Todas las especialidades" },
-      { nombre: "Sanatorio Güemes", zona: "Palermo, CABA", especialidades: "Cirugía, Maternidad" },
-      { nombre: "Clínica Bazterrica", zona: "Recoleta, CABA", especialidades: "Cardiología, Traumatología" },
-      { nombre: "Swiss Medical Center", zona: "Barrio Norte, CABA", especialidades: "Diagnóstico por imágenes" }
-    ],
-    beneficiosDetallados: [
-      { icono: "🏥", titulo: "Red de Prestadores", descripcion: "Acceso a más de 500 centros médicos en todo el país" },
-      { icono: "🚑", titulo: "Emergencias", descripcion: "Servicio de urgencias las 24 horas con móviles propios" },
-      { icono: "💊", titulo: "Farmacia", descripcion: "Descuentos del 40% al 70% en medicamentos" },
-      { icono: "🔬", titulo: "Estudios", descripcion: "Laboratorio y diagnóstico por imágenes sin cargo" },
-      { icono: "👶", titulo: "Maternidad", descripcion: "Cobertura integral desde el embarazo hasta el parto" },
-      { icono: "🦷", titulo: "Odontología", descripcion: "Atención odontológica básica incluida" }
-    ],
-    cobertura: "Nacional e internacional según el plan",
-    requisitos: "DNI argentino, validación de preexistencias"
-},
-{
-empresa:"Omint",
-bg:"omint",
-logoSrc:"omint",
-logoAlt:"Omint",
-beneficios: [
-"Beneficio Descuento 50%",
-"Plan joven 18-25",
-"Servicios Médicos Propios",
-"0"
-],
-backTitle:"Back Title" ,
-backButton: "#",
-backImages: ["omint.webp", "omint.webp", "omint.webp"],
-    descripcion: "OSDE es una de las obras sociales más reconocidas de Argentina, ofreciendo cobertura integral de salud con acceso a la mejor red de prestadores del país.",
-    planes: [
-      { nombre: "OSDE 210", precio: "$45.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación compartida"] },
-      { nombre: "OSDE 310", precio: "$65.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación privada"] },
-      { nombre: "OSDE 410", precio: "$95.000", caracteristicas: ["Plus de reintegros", "Cobertura internacional"] }
-    ],
-    clinicas: [
-      { nombre: "Hospital Italiano", zona: "Almagro, CABA", especialidades: "Todas las especialidades" },
-      { nombre: "Sanatorio Güemes", zona: "Palermo, CABA", especialidades: "Cirugía, Maternidad" },
-      { nombre: "Clínica Bazterrica", zona: "Recoleta, CABA", especialidades: "Cardiología, Traumatología" },
-      { nombre: "Swiss Medical Center", zona: "Barrio Norte, CABA", especialidades: "Diagnóstico por imágenes" }
-    ],
-    beneficiosDetallados: [
-      { icono: "🏥", titulo: "Red de Prestadores", descripcion: "Acceso a más de 500 centros médicos en todo el país" },
-      { icono: "🚑", titulo: "Emergencias", descripcion: "Servicio de urgencias las 24 horas con móviles propios" },
-      { icono: "💊", titulo: "Farmacia", descripcion: "Descuentos del 40% al 70% en medicamentos" },
-      { icono: "🔬", titulo: "Estudios", descripcion: "Laboratorio y diagnóstico por imágenes sin cargo" },
-      { icono: "👶", titulo: "Maternidad", descripcion: "Cobertura integral desde el embarazo hasta el parto" },
-      { icono: "🦷", titulo: "Odontología", descripcion: "Atención odontológica básica incluida" }
-    ],
-    cobertura: "Nacional e internacional según el plan",
-    requisitos: "DNI argentino, validación de preexistencias"
-},
-{
-empresa:"Prevencion Salud",
-bg:"prevencion",
-logoSrc:"prevencionsalud",
-logoAlt:"Prevencion Salud",
-beneficios: [
-"Beneficio Descuento 50%",
-"Plan joven 18-25",
-"Servicios Médicos Propios",
-"0"
-],
-backTitle:"Back Title" ,
-backButton: "#",
-backImages: ["prevencion.webp", "prevencion.webp", "prevencion.webp"],
-    descripcion: "OSDE es una de las obras sociales más reconocidas de Argentina, ofreciendo cobertura integral de salud con acceso a la mejor red de prestadores del país.",
-    planes: [
-      { nombre: "OSDE 210", precio: "$45.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación compartida"] },
-      { nombre: "OSDE 310", precio: "$65.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación privada"] },
-      { nombre: "OSDE 410", precio: "$95.000", caracteristicas: ["Plus de reintegros", "Cobertura internacional"] }
-    ],
-    clinicas: [
-      { nombre: "Hospital Italiano", zona: "Almagro, CABA", especialidades: "Todas las especialidades" },
-      { nombre: "Sanatorio Güemes", zona: "Palermo, CABA", especialidades: "Cirugía, Maternidad" },
-      { nombre: "Clínica Bazterrica", zona: "Recoleta, CABA", especialidades: "Cardiología, Traumatología" },
-      { nombre: "Swiss Medical Center", zona: "Barrio Norte, CABA", especialidades: "Diagnóstico por imágenes" }
-    ],
-    beneficiosDetallados: [
-      { icono: "🏥", titulo: "Red de Prestadores", descripcion: "Acceso a más de 500 centros médicos en todo el país" },
-      { icono: "🚑", titulo: "Emergencias", descripcion: "Servicio de urgencias las 24 horas con móviles propios" },
-      { icono: "💊", titulo: "Farmacia", descripcion: "Descuentos del 40% al 70% en medicamentos" },
-      { icono: "🔬", titulo: "Estudios", descripcion: "Laboratorio y diagnóstico por imágenes sin cargo" },
-      { icono: "👶", titulo: "Maternidad", descripcion: "Cobertura integral desde el embarazo hasta el parto" },
-      { icono: "🦷", titulo: "Odontología", descripcion: "Atención odontológica básica incluida" }
-    ],
-    cobertura: "Nacional e internacional según el plan",
-    requisitos: "DNI argentino, validación de preexistencias"
-},
-{
-empresa:"Avalian",
-bg:"avalian",
-logoSrc:"avalian",
-logoAlt:"Avalian",
-beneficios: [
-"Beneficio Descuento 50%",
-"Plan joven 18-25",
-"Servicios Médicos Propios",
-"0"
-],
-backTitle:"Back Title" ,
-backButton: "#",
-backImages: ["avalian.webp", "avalian.webp", "avalian.webp"],
-    descripcion: "OSDE es una de las obras sociales más reconocidas de Argentina, ofreciendo cobertura integral de salud con acceso a la mejor red de prestadores del país.",
-    planes: [
-      { nombre: "OSDE 210", precio: "$45.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación compartida"] },
-      { nombre: "OSDE 310", precio: "$65.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación privada"] },
-      { nombre: "OSDE 410", precio: "$95.000", caracteristicas: ["Plus de reintegros", "Cobertura internacional"] }
-    ],
-    clinicas: [
-      { nombre: "Hospital Italiano", zona: "Almagro, CABA", especialidades: "Todas las especialidades" },
-      { nombre: "Sanatorio Güemes", zona: "Palermo, CABA", especialidades: "Cirugía, Maternidad" },
-      { nombre: "Clínica Bazterrica", zona: "Recoleta, CABA", especialidades: "Cardiología, Traumatología" },
-      { nombre: "Swiss Medical Center", zona: "Barrio Norte, CABA", especialidades: "Diagnóstico por imágenes" }
-    ],
-    beneficiosDetallados: [
-      { icono: "🏥", titulo: "Red de Prestadores", descripcion: "Acceso a más de 500 centros médicos en todo el país" },
-      { icono: "🚑", titulo: "Emergencias", descripcion: "Servicio de urgencias las 24 horas con móviles propios" },
-      { icono: "💊", titulo: "Farmacia", descripcion: "Descuentos del 40% al 70% en medicamentos" },
-      { icono: "🔬", titulo: "Estudios", descripcion: "Laboratorio y diagnóstico por imágenes sin cargo" },
-      { icono: "👶", titulo: "Maternidad", descripcion: "Cobertura integral desde el embarazo hasta el parto" },
-      { icono: "🦷", titulo: "Odontología", descripcion: "Atención odontológica básica incluida" }
-    ],
-    cobertura: "Nacional e internacional según el plan",
-    requisitos: "DNI argentino, validación de preexistencias"
-},
-{
-empresa:"Galeno",
-bg:"galeno",
-logoSrc:"galeno",
-logoAlt:"Galeno",
-beneficios: [
-"Beneficio Descuento 50%",
-"Plan joven 18-25",
-"Servicios Médicos Propios",
-"0"
-],
-backTitle:"Back Title" ,
-backButton: "#",
-backImages: ["galeno.webp", "galeno.webp", "galeno.webp"],
-    descripcion: "OSDE es una de las obras sociales más reconocidas de Argentina, ofreciendo cobertura integral de salud con acceso a la mejor red de prestadores del país.",
-    planes: [
-      { nombre: "OSDE 210", precio: "$45.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación compartida"] },
-      { nombre: "OSDE 310", precio: "$65.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación privada"] },
-      { nombre: "OSDE 410", precio: "$95.000", caracteristicas: ["Plus de reintegros", "Cobertura internacional"] }
-    ],
-    clinicas: [
-      { nombre: "Hospital Italiano", zona: "Almagro, CABA", especialidades: "Todas las especialidades" },
-      { nombre: "Sanatorio Güemes", zona: "Palermo, CABA", especialidades: "Cirugía, Maternidad" },
-      { nombre: "Clínica Bazterrica", zona: "Recoleta, CABA", especialidades: "Cardiología, Traumatología" },
-      { nombre: "Swiss Medical Center", zona: "Barrio Norte, CABA", especialidades: "Diagnóstico por imágenes" }
-    ],
-    beneficiosDetallados: [
-      { icono: "🏥", titulo: "Red de Prestadores", descripcion: "Acceso a más de 500 centros médicos en todo el país" },
-      { icono: "🚑", titulo: "Emergencias", descripcion: "Servicio de urgencias las 24 horas con móviles propios" },
-      { icono: "💊", titulo: "Farmacia", descripcion: "Descuentos del 40% al 70% en medicamentos" },
-      { icono: "🔬", titulo: "Estudios", descripcion: "Laboratorio y diagnóstico por imágenes sin cargo" },
-      { icono: "👶", titulo: "Maternidad", descripcion: "Cobertura integral desde el embarazo hasta el parto" },
-      { icono: "🦷", titulo: "Odontología", descripcion: "Atención odontológica básica incluida" }
-    ],
-    cobertura: "Nacional e internacional según el plan",
-    requisitos: "DNI argentino, validación de preexistencias"
-},
-{
-empresa:"Premedic",
-bg:"premedic",
-logoSrc:"premedic",
-logoAlt:"Premedic",
-beneficios: [
-"Beneficio Descuento 50%",
-"Plan joven 18-25",
-"Servicios Médicos Propios",
-"0"
-],
-backTitle:"Back Title" ,
-backButton: "#",
-backImages: ["premedic.webp", "premedic.webp", "premedic.webp"],
-    descripcion: "OSDE es una de las obras sociales más reconocidas de Argentina, ofreciendo cobertura integral de salud con acceso a la mejor red de prestadores del país.",
-    planes: [
-      { nombre: "OSDE 210", precio: "$45.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación compartida"] },
-      { nombre: "OSDE 310", precio: "$65.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación privada"] },
-      { nombre: "OSDE 410", precio: "$95.000", caracteristicas: ["Plus de reintegros", "Cobertura internacional"] }
-    ],
-    clinicas: [
-      { nombre: "Hospital Italiano", zona: "Almagro, CABA", especialidades: "Todas las especialidades" },
-      { nombre: "Sanatorio Güemes", zona: "Palermo, CABA", especialidades: "Cirugía, Maternidad" },
-      { nombre: "Clínica Bazterrica", zona: "Recoleta, CABA", especialidades: "Cardiología, Traumatología" },
-      { nombre: "Swiss Medical Center", zona: "Barrio Norte, CABA", especialidades: "Diagnóstico por imágenes" }
-    ],
-    beneficiosDetallados: [
-      { icono: "🏥", titulo: "Red de Prestadores", descripcion: "Acceso a más de 500 centros médicos en todo el país" },
-      { icono: "🚑", titulo: "Emergencias", descripcion: "Servicio de urgencias las 24 horas con móviles propios" },
-      { icono: "💊", titulo: "Farmacia", descripcion: "Descuentos del 40% al 70% en medicamentos" },
-      { icono: "🔬", titulo: "Estudios", descripcion: "Laboratorio y diagnóstico por imágenes sin cargo" },
-      { icono: "👶", titulo: "Maternidad", descripcion: "Cobertura integral desde el embarazo hasta el parto" },
-      { icono: "🦷", titulo: "Odontología", descripcion: "Atención odontológica básica incluida" }
-    ],
-    cobertura: "Nacional e internacional según el plan",
-    requisitos: "DNI argentino, validación de preexistencias"
-},
-{
-empresa:"Doctored",
-bg:"doctored",
-logoSrc:"doctored",
-logoAlt:"Doctored",
-beneficios: [
-"Beneficio Descuento 50%",
-"Plan joven 18-25",
-"Servicios Médicos Propios",
-"0"
-],
-backTitle:"Back Title" ,
-backButton: "#",
-backImages: ["doctored.webp", "doctored.webp", "doctored.webp"],
-    descripcion: "OSDE es una de las obras sociales más reconocidas de Argentina, ofreciendo cobertura integral de salud con acceso a la mejor red de prestadores del país.",
-    planes: [
-      { nombre: "OSDE 210", precio: "$45.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación compartida"] },
-      { nombre: "OSDE 310", precio: "$65.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación privada"] },
-      { nombre: "OSDE 410", precio: "$95.000", caracteristicas: ["Plus de reintegros", "Cobertura internacional"] }
-    ],
-    clinicas: [
-      { nombre: "Hospital Italiano", zona: "Almagro, CABA", especialidades: "Todas las especialidades" },
-      { nombre: "Sanatorio Güemes", zona: "Palermo, CABA", especialidades: "Cirugía, Maternidad" },
-      { nombre: "Clínica Bazterrica", zona: "Recoleta, CABA", especialidades: "Cardiología, Traumatología" },
-      { nombre: "Swiss Medical Center", zona: "Barrio Norte, CABA", especialidades: "Diagnóstico por imágenes" }
-    ],
-    beneficiosDetallados: [
-      { icono: "🏥", titulo: "Red de Prestadores", descripcion: "Acceso a más de 500 centros médicos en todo el país" },
-      { icono: "🚑", titulo: "Emergencias", descripcion: "Servicio de urgencias las 24 horas con móviles propios" },
-      { icono: "💊", titulo: "Farmacia", descripcion: "Descuentos del 40% al 70% en medicamentos" },
-      { icono: "🔬", titulo: "Estudios", descripcion: "Laboratorio y diagnóstico por imágenes sin cargo" },
-      { icono: "👶", titulo: "Maternidad", descripcion: "Cobertura integral desde el embarazo hasta el parto" },
-      { icono: "🦷", titulo: "Odontología", descripcion: "Atención odontológica básica incluida" }
-    ],
-    cobertura: "Nacional e internacional según el plan",
-    requisitos: "DNI argentino, validación de preexistencias"
-},
-{
-empresa:"Salud Central",
-bg:"saludcentral",
-logoSrc:"saludcentral",
-logoAlt:"Salud Central",
-beneficios: [
-"Beneficio Descuento 50%",
-"Plan joven 18-25",
-"Servicios Médicos Propios",
-"0"
-],
-backTitle:"Back Title" ,
-backButton: "#",
-backImages: ["saludcentral.webp", "saludcentral.webp", "saludcentral.webp"],
-    descripcion: "OSDE es una de las obras sociales más reconocidas de Argentina, ofreciendo cobertura integral de salud con acceso a la mejor red de prestadores del país.",
-    planes: [
-      { nombre: "OSDE 210", precio: "$45.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación compartida"] },
-      { nombre: "OSDE 310", precio: "$65.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación privada"] },
-      { nombre: "OSDE 410", precio: "$95.000", caracteristicas: ["Plus de reintegros", "Cobertura internacional"] }
-    ],
-    clinicas: [
-      { nombre: "Hospital Italiano", zona: "Almagro, CABA", especialidades: "Todas las especialidades" },
-      { nombre: "Sanatorio Güemes", zona: "Palermo, CABA", especialidades: "Cirugía, Maternidad" },
-      { nombre: "Clínica Bazterrica", zona: "Recoleta, CABA", especialidades: "Cardiología, Traumatología" },
-      { nombre: "Swiss Medical Center", zona: "Barrio Norte, CABA", especialidades: "Diagnóstico por imágenes" }
-    ],
-    beneficiosDetallados: [
-      { icono: "🏥", titulo: "Red de Prestadores", descripcion: "Acceso a más de 500 centros médicos en todo el país" },
-      { icono: "🚑", titulo: "Emergencias", descripcion: "Servicio de urgencias las 24 horas con móviles propios" },
-      { icono: "💊", titulo: "Farmacia", descripcion: "Descuentos del 40% al 70% en medicamentos" },
-      { icono: "🔬", titulo: "Estudios", descripcion: "Laboratorio y diagnóstico por imágenes sin cargo" },
-      { icono: "👶", titulo: "Maternidad", descripcion: "Cobertura integral desde el embarazo hasta el parto" },
-      { icono: "🦷", titulo: "Odontología", descripcion: "Atención odontológica básica incluida" }
-    ],
-    cobertura: "Nacional e internacional según el plan",
-    requisitos: "DNI argentino, validación de preexistencias"
-},
-{
-empresa:"Cristal",
-bg:"cristal",
-logoSrc:"cristal",
-logoAlt:"Cristal",
-beneficios: [
-"Beneficio Descuento 50%",
-"Plan joven 18-25",
-"Servicios Médicos Propios",
-"0"
-],
-backTitle:"Back Title" ,
-backButton: "#",
-backImages: ["cristal.webp", "cristal.webp", "cristal.webp"],
-    descripcion: "OSDE es una de las obras sociales más reconocidas de Argentina, ofreciendo cobertura integral de salud con acceso a la mejor red de prestadores del país.",
-    planes: [
-      { nombre: "OSDE 210", precio: "$45.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación compartida"] },
-      { nombre: "OSDE 310", precio: "$65.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación privada"] },
-      { nombre: "OSDE 410", precio: "$95.000", caracteristicas: ["Plus de reintegros", "Cobertura internacional"] }
-    ],
-    clinicas: [
-      { nombre: "Hospital Italiano", zona: "Almagro, CABA", especialidades: "Todas las especialidades" },
-      { nombre: "Sanatorio Güemes", zona: "Palermo, CABA", especialidades: "Cirugía, Maternidad" },
-      { nombre: "Clínica Bazterrica", zona: "Recoleta, CABA", especialidades: "Cardiología, Traumatología" },
-      { nombre: "Swiss Medical Center", zona: "Barrio Norte, CABA", especialidades: "Diagnóstico por imágenes" }
-    ],
-    beneficiosDetallados: [
-      { icono: "🏥", titulo: "Red de Prestadores", descripcion: "Acceso a más de 500 centros médicos en todo el país" },
-      { icono: "🚑", titulo: "Emergencias", descripcion: "Servicio de urgencias las 24 horas con móviles propios" },
-      { icono: "💊", titulo: "Farmacia", descripcion: "Descuentos del 40% al 70% en medicamentos" },
-      { icono: "🔬", titulo: "Estudios", descripcion: "Laboratorio y diagnóstico por imágenes sin cargo" },
-      { icono: "👶", titulo: "Maternidad", descripcion: "Cobertura integral desde el embarazo hasta el parto" },
-      { icono: "🦷", titulo: "Odontología", descripcion: "Atención odontológica básica incluida" }
-    ],
-    cobertura: "Nacional e internacional según el plan",
-    requisitos: "DNI argentino, validación de preexistencias"
-},
-{
-empresa:"Emergencias",
-bg:"emergencias",
-logoSrc:"emergencias",
-logoAlt:"Emergencias",
-beneficios: [
-"Beneficio Descuento 50%",
-"Plan joven 18-25",
-"Servicios Médicos Propios",
-"0"
-],
-backTitle:"emergencias" ,
-backButton: "#",
-backImages: ["emergencias.webp", "emergencias.webp", "emergencias.webp"],
-    descripcion: "OSDE es una de las obras sociales más reconocidas de Argentina, ofreciendo cobertura integral de salud con acceso a la mejor red de prestadores del país.",
-    planes: [
-      { nombre: "OSDE 210", precio: "$45.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación compartida"] },
-      { nombre: "OSDE 310", precio: "$65.000", caracteristicas: ["Consultas ilimitadas", "Internación en habitación privada"] },
-      { nombre: "OSDE 410", precio: "$95.000", caracteristicas: ["Plus de reintegros", "Cobertura internacional"] }
-    ],
-    clinicas: [
-      { nombre: "Hospital Italiano", zona: "Almagro, CABA", especialidades: "Todas las especialidades" },
-      { nombre: "Sanatorio Güemes", zona: "Palermo, CABA", especialidades: "Cirugía, Maternidad" },
-      { nombre: "Clínica Bazterrica", zona: "Recoleta, CABA", especialidades: "Cardiología, Traumatología" },
-      { nombre: "Swiss Medical Center", zona: "Barrio Norte, CABA", especialidades: "Diagnóstico por imágenes" }
-    ],
-    beneficiosDetallados: [
-      { icono: "🏥", titulo: "Red de Prestadores", descripcion: "Acceso a más de 500 centros médicos en todo el país" },
-      { icono: "🚑", titulo: "Emergencias", descripcion: "Servicio de urgencias las 24 horas con móviles propios" },
-      { icono: "💊", titulo: "Farmacia", descripcion: "Descuentos del 40% al 70% en medicamentos" },
-      { icono: "🔬", titulo: "Estudios", descripcion: "Laboratorio y diagnóstico por imágenes sin cargo" },
-      { icono: "👶", titulo: "Maternidad", descripcion: "Cobertura integral desde el embarazo hasta el parto" },
-      { icono: "🦷", titulo: "Odontología", descripcion: "Atención odontológica básica incluida" }
-    ],
-    cobertura: "Nacional e internacional según el plan",
-    requisitos: "DNI argentino, validación de preexistencias"
+// const cardsData = [ {empresa:'SanCor Salud',bg:'sancorsalud',logoSrc:'sancorsalud',logoAlt:'SanCor Salud',beneficios: [], descripcion:'',planes:[{nombre:'F700',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'F800',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'1000B',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'1500B',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'3000B',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'4000B',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'4500B',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'5000B',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'6000B',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']}],clinicas:[{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''}],beneficiosDetallados:[{icono:'🏥',titulo:'',descripcion:''},{icono:'🚑',titulo:'',descripcion:''},{icono:'💊',titulo:'',descripcion:''},{icono:'🔬',titulo:'',descripcion:''},{icono:'👶',titulo:'',descripcion:''},{icono:'🦷',titulo:'',descripcion:''}],cobertura:'',requisitos:''},]
+// const cardsData = []
+// const cardsData = [{empresa:'Omint',bg:'omint',logoSrc:'omint',logoAlt:'Omint',beneficios: [], descripcion:'',planes:[{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']}],clinicas:[{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''}],beneficiosDetallados:[{icono:'🏥',titulo:'',descripcion:''},{icono:'🚑',titulo:'',descripcion:''},{icono:'💊',titulo:'',descripcion:''},{icono:'🔬',titulo:'',descripcion:''},{icono:'👶',titulo:'',descripcion:''},{icono:'🦷',titulo:'',descripcion:''}],cobertura:'',requisitos:''}]
+// const cardsData = [{empresa:'Galeno',bg:'galeno',logoSrc:'galeno',logoAlt:'Galeno',beneficios: [], descripcion:'',planes:[{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']}],clinicas:[{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''}],beneficiosDetallados:[{icono:'🏥',titulo:'',descripcion:''},{icono:'🚑',titulo:'',descripcion:''},{icono:'💊',titulo:'',descripcion:''},{icono:'🔬',titulo:'',descripcion:''},{icono:'👶',titulo:'',descripcion:''},{icono:'🦷',titulo:'',descripcion:''}],cobertura:'',requisitos:''}]
+// const  cardsData6 = [{empresa:'Prevencion Salud',bg:'prevencion',logoSrc:'prevencionsalud',logoAlt:'Prevencion Salud',beneficios: [], descripcion:'',planes:[{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']}],clinicas:[{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''}],beneficiosDetallados:[{icono:'🏥',titulo:'',descripcion:''},{icono:'🚑',titulo:'',descripcion:''},{icono:'💊',titulo:'',descripcion:''},{icono:'🔬',titulo:'',descripcion:''},{icono:'👶',titulo:'',descripcion:''},{icono:'🦷',titulo:'',descripcion:''}],cobertura:'',requisitos:''}]
+// const  cardsData7 = [{empresa:'Swiss Medical',bg:'swissmedical',logoSrc:'swissmedical',logoAlt:'Swiss Medical',beneficios: [], descripcion:'',planes:[{nombre:'S1',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'SMG02',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'S2',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'SMG20',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'SMG30',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'SMG40',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'SMG50',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'SMG60',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'SMG70',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']}],clinicas:[{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''}],beneficiosDetallados:[{icono:'🏥',titulo:'',descripcion:''},{icono:'🚑',titulo:'',descripcion:''},{icono:'💊',titulo:'',descripcion:''},{icono:'🔬',titulo:'',descripcion:''},{icono:'👶',titulo:'',descripcion:''},{icono:'🦷',titulo:'',descripcion:''}],cobertura:'',requisitos:''}]
+// const  cardsData8 = [{empresa:'Avalian',bg:'avalian',logoSrc:'avalian',logoAlt:'Avalian',beneficios: [], descripcion:'',planes:[{nombre:'Cerca AS100',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'Integral AS204',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'Integral AS200',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'Suprerior AS300',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'Select AS400',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'Select AS500',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']}],clinicas:[{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''}],beneficiosDetallados:[{icono:'🏥',titulo:'',descripcion:''},{icono:'🚑',titulo:'',descripcion:''},{icono:'💊',titulo:'',descripcion:''},{icono:'🔬',titulo:'',descripcion:''},{icono:'👶',titulo:'',descripcion:''},{icono:'🦷',titulo:'',descripcion:''}],cobertura:'',requisitos:''}]
+// const  cardsData9 = [{empresa:'Premedic',bg:'premedic',logoSrc:'premedic',logoAlt:'Premedic',beneficios: [], descripcion:'',planes:[{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']}],clinicas:[{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''}],beneficiosDetallados:[{icono:'🏥',titulo:'',descripcion:''},{icono:'🚑',titulo:'',descripcion:''},{icono:'💊',titulo:'',descripcion:''},{icono:'🔬',titulo:'',descripcion:''},{icono:'👶',titulo:'',descripcion:''},{icono:'🦷',titulo:'',descripcion:''}],cobertura:'',requisitos:''}]
+// const  cardsData10 = [{empresa:'Doctored',bg:'doctored',logoSrc:'doctored',logoAlt:'Doctored',beneficios: [], descripcion:'',planes:[{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']}],clinicas:[{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''}],beneficiosDetallados:[{icono:'🏥',titulo:'',descripcion:''},{icono:'🚑',titulo:'',descripcion:''},{icono:'💊',titulo:'',descripcion:''},{icono:'🔬',titulo:'',descripcion:''},{icono:'👶',titulo:'',descripcion:''},{icono:'🦷',titulo:'',descripcion:''}],cobertura:'',requisitos:''}]
+// const  cardsData11 = [{empresa:'Salud Central',bg:'saludcentral',logoSrc:'saludcentral',logoAlt:'Salud Central',beneficios: [], descripcion:'',planes:[{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']}],clinicas:[{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''}],beneficiosDetallados:[{icono:'🏥',titulo:'',descripcion:''},{icono:'🚑',titulo:'',descripcion:''},{icono:'💊',titulo:'',descripcion:''},{icono:'🔬',titulo:'',descripcion:''},{icono:'👶',titulo:'',descripcion:''},{icono:'🦷',titulo:'',descripcion:''}],cobertura:'',requisitos:''}]
+// const  cardsData = [{empresa:'Cristal',bg:'cristal',logoSrc:'cristal',logoAlt:'Cristal',beneficios: [], descripcion:'',planes:[{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']}],clinicas:[{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''}],beneficiosDetallados:[{icono:'🏥',titulo:'',descripcion:''},{icono:'🚑',titulo:'',descripcion:''},{icono:'💊',titulo:'',descripcion:''},{icono:'🔬',titulo:'',descripcion:''},{icono:'👶',titulo:'',descripcion:''},{icono:'🦷',titulo:'',descripcion:''}],cobertura:'',requisitos:''}]
+// const cardsData = []
+
+
+
+const API_KEY = "AIzaSyDuUhAfHcSUPlOroCuXHfNnO7sl2PFZqI0";
+const SPREADSHEET_ID = "19oVhpum1NSiNiXUiEXnRn7pXZm4t7juQj5HzKUyXT6c";
+const RANGE = "todas!B15"; // Celda correcta
+
+
+let cardsData = []; // Aquí se guardará el array final
+
+function handleClientLoad() {
+  gapi.load('client', initClient);
 }
 
-]
+async function initClient() {
+  await gapi.client.init({
+    apiKey: API_KEY,
+    discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"],
+  });
+  await cargarCardsData();
+}
+
+async function cargarCardsData() {
+  try {
+    const response = await gapi.client.sheets.spreadsheets.values.get({
+      spreadsheetId: SPREADSHEET_ID,
+      range: RANGE,
+    });
+
+    const values = response.result.values;
+
+    if (values && values.length > 0 && values[0][0]) {
+      // Mostrar contenido crudo para depurar
+      console.log("Raw values[0][0]:", JSON.stringify(values[0][0]));
+let raw = values[0][0];
+
+// Quitar comillas externas si existen
+if ((raw.startsWith('"') && raw.endsWith('"')) || (raw.startsWith("'") && raw.endsWith("'"))) {
+    raw = raw.slice(1, -1);
+}
+      // Intentar parsear como JSON
+      try {
+
+        cardsData = eval(raw);
+      } catch (e) {
+        console.warn("JSON.parse falló, usando eval como fallback");
+        cardsData = eval(values[0][0]); // solo si confías en el contenido
+      }
+
+      console.log("💾 cardsData final:", cardsData);
+         renderCards(cardsData);
+
+      // Llama la función que renderiza tus cards
+      if (typeof renderCards === "function") {
+        renderCards(cardsData);
+      }
+    } else {
+      console.warn("⚠️ La celda está vacía o no contiene datos.");
+    }
+  } catch (error) {
+    console.error("Error al obtener los datos:", error);
+  }
+}
 
 
-  
 
- 
 
 
 const testimonios = [

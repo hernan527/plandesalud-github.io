@@ -10,7 +10,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="shortcut icon" sizes="1024x1024" href="./assets/imagenes/logos-web/plan-de-salud-favicon.ico" />
     <link rel="apple-touch-icon" href="./assets/imagenes/logos-web/plan-de-salud-favicon.ico">
-    <!-- jQuery (solo una versión) -->
+<script async defer src="https://apis.google.com/js/api.js" onload="handleClientLoad()"></script>    <!-- jQuery (solo una versión) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Scripts esenciales -->
     <script defer type='text/javascript' src="./assets/js/jquery.validate.min.js"></script>
@@ -21,7 +21,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
     <script defer src="./assets/js/prefixfree.min.js"></script>
     <script defer src="./assets/js/modernizr-2.8.0.dev.js"></script>
+            <script src="./assets/js/funciones.php"></script>
+
   <script src="./assets/js/renderCards.php"></script>
+
     <!-- Pre-carga de imágenes -->
     <!-- <script>
         const images = [
@@ -1754,7 +1757,6 @@ e
 </div>
         </div>
     </div>
- <button id="myBtn">Open Modal</button>
 
 
     <footer id="footer">
@@ -1856,7 +1858,6 @@ e
 </script>
 <script>
 jQuery(document).ready(function(){
-    console.log("linea 699 index.view1.php1");
     jQuery("#contact-form-whats").validate({
         rules:{
             formulario_pagina_whats : { required: false },
@@ -1999,38 +2000,11 @@ document.querySelectorAll('.cardBox').forEach(cardBox => {
   }
 });
 </script>
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
     <!-- Botón Flotante de WhatsApp -->
     <a href="https://api.whatsapp.com/send?phone=5491124985882&text=Hola,%20necesito%20ayuda%20para%20elegir%20mi%20plan%20de%20salud." class="whatsapp-float" target="_blank">
         <img src="./assets/formularios/formulario-whatsapp/icone-whatsapp.svg" style="width: 40px; filter: invert(0);">
     </a>
-        <script src="./assets/js/funciones.php"></script>
 
 </body>
 </html>

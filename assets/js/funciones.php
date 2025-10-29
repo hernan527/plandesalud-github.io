@@ -132,61 +132,54 @@ function finalizarCompleto(formClass) {
 }
 let allCardsHTML = "";
 
-// Iteramos con un for...in sobre el array de cards
-for (let index in cardsData) {
-  const data = cardsData[index];
-  
-  allCardsHTML += `
-    <div class="cardBox" data-bg="${data.bg}">
-      <div class="card">
-        <div class="front">
-          <a class="logo">
-            <img src="./assets/imagenes/cards_header/${data.logoSrc}-logo-medicina-prepaga-planes-de-salud.webp" 
-                 alt="${data.logoAlt}" 
-                 title="${data.logoAlt}" 
-                 loading="lazy">
-          </a>
-          <p>Hover to flip</p>
-          <ul class="features">
-            ${data.beneficios.map(b => `<li>${b}</li>`).join("")}
-          </ul>
-          <strong>&#x21bb;</strong>
-        </div>
-        <div class="back">
-          <!-- 🔹 BOTÓN DE LLAMADA A LA ACCIÓN -->
-          <div class="card-cta-container">
-            <a class="card-cta" 
-               href="#3" 
-               onclick="document.getElementById('logo-${data.logoAlt.replace(/\s+/g, '')}').click(); return false;">
-              ¡PEDIR MI COTIZACIÓN!
+function renderCards(cardsData) {
+  console.log=("iniciada renderCards")
+  let allCardsHTML = "";
+
+  for (let index in cardsData) {
+    const data = cardsData[index];
+    allCardsHTML += `
+      <div class="cardBox" data-bg="${data.bg}">
+        <div class="card">
+          <div class="front">
+            <a class="logo">
+              <img src="./assets/imagenes/cards_header/${data.logoSrc}-logo-medicina-prepaga-planes-de-salud.webp" 
+                   alt="${data.logoAlt}" 
+                   title="${data.logoAlt}" 
+                   loading="lazy">
             </a>
-            <button class="card-cta1 open-modal" 
-                    data-index="${index}">
-              MAS DETALLES
-            </button>
+            <ul class="features">
+              ${data.beneficios.map(b => `<li>${b}</li>`).join("")}
+            </ul>
+            <strong>&#x21bb;</strong>
+          </div>
+          <div class="back">
+            <div class="card-cta-container">
+              <a class="card-cta" href="#3" 
+                 onclick="document.getElementById('logo-${data.logoAlt.replace(/\s+/g, '')}').click(); return false;">
+                ¡PEDIR MI COTIZACIÓN!
+              </a>
+              <button class="card-cta1 open-modal" data-index="${index}">
+                MAS DETALLES
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  `;
-}
+    `;
+  }
 
-
-window.addEventListener("load", () => {
   const contenedor = document.getElementById("contenedor-cards");
   contenedor.innerHTML = allCardsHTML;
-  
-  // 🔹 Aplicamos el fondo en cada .back
+
   const backs = contenedor.querySelectorAll(".back");
   backs.forEach(back => {
     const bgImage = back.closest(".cardBox").dataset.bg;
     back.style.backgroundImage = `url('./assets/imagenes/flyers/${bgImage}.webp')`;
   });
-  
-  // 🔹 INICIALIZAR EL MODAL
-  initModal();
-});
 
+  initModal();
+}
 // 🔹 FUNCIÓN PARA MANEJAR EL MODAL
 // Close the modal
 function closeModal() {

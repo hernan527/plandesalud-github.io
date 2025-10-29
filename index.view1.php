@@ -10,10 +10,6 @@
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="shortcut icon" sizes="1024x1024" href="/assets/imagenes/logos-web/plan-de-salud-favicon.ico" />
     <link rel="apple-touch-icon" href="/assets/imagenes/logos-web/plan-de-salud-favicon.ico">
-          <script src="/assets/js/funciones.php"></script>
-
-  <script src="/assets/js/renderCards.php"></script>
-    <script async defer src="https://apis.google.com/js/api.js" onload="handleClientLoad()"></script>    <!-- jQuery (solo una versión) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Scripts esenciales -->
     <script defer type='text/javascript' src="/assets/js/jquery.validate.min.js"></script>
@@ -24,7 +20,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
     <script defer src="/assets/js/prefixfree.min.js"></script>
     <script defer src="/assets/js/modernizr-2.8.0.dev.js"></script>
-  
+            <script src="/assets/js/funciones.php"></script>
+
+  <script src="/assets/js/renderCards.php"></script>
+<script async defer src="https://apis.google.com/js/api.js" onload="handleClientLoad()"></script>    <!-- jQuery (solo una versión) -->
 
     <!-- Pre-carga de imágenes -->
     <!-- <script>

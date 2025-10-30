@@ -1,6 +1,6 @@
-<?php
-header("Content-Type: application/javascript");
-?>
+// <?php
+// header("Content-Type: application/javascript");
+// ?>
 // const cardsData = [ {empresa:'SanCor Salud',bg:'sancorsalud',logoSrc:'sancorsalud',logoAlt:'SanCor Salud',beneficios: [], descripcion:'',planes:[{nombre:'F700',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'F800',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'1000B',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'1500B',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'3000B',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'4000B',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'4500B',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'5000B',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'6000B',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']}],clinicas:[{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''}],beneficiosDetallados:[{icono:'🏥',titulo:'',descripcion:''},{icono:'🚑',titulo:'',descripcion:''},{icono:'💊',titulo:'',descripcion:''},{icono:'🔬',titulo:'',descripcion:''},{icono:'👶',titulo:'',descripcion:''},{icono:'🦷',titulo:'',descripcion:''}],cobertura:'',requisitos:''},]
 // const cardsData = []
 // const cardsData = [{empresa:'Omint',bg:'omint',logoSrc:'omint',logoAlt:'Omint',beneficios: [], descripcion:'',planes:[{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']},{nombre:'',precio:'',caracteristicas:['caracteristica1','caracteristica2','caracteristica2','caracteristica4']}],clinicas:[{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''},{nombre:'',zona:'',especialidades:''}],beneficiosDetallados:[{icono:'🏥',titulo:'',descripcion:''},{icono:'🚑',titulo:'',descripcion:''},{icono:'💊',titulo:'',descripcion:''},{icono:'🔬',titulo:'',descripcion:''},{icono:'👶',titulo:'',descripcion:''},{icono:'🦷',titulo:'',descripcion:''}],cobertura:'',requisitos:''}]
@@ -18,20 +18,9 @@ header("Content-Type: application/javascript");
 
 const API_KEY = "AIzaSyDuUhAfHcSUPlOroCuXHfNnO7sl2PFZqI0";
 const SPREADSHEET_ID = "19oVhpum1NSiNiXUiEXnRn7pXZm4t7juQj5HzKUyXT6c";
-const Swiss_Medical = "todas!B2";
-const SanCor_Salud = "todas!B3";
-const Medife = "todas!B4"; 
-const Omint = "todas!B5";
-const Prevencion_Salud = "todas!B6";
-const Avalian = "todas!B7";
-const Galeno = "todas!B8";
-const Premedic = "todas!B9";
-const Doctored = "todas!B10";
-const Salud_Central = "todas!B11";
-const Cristal = "todas!B12";
-const Emergencias = "todas!B13";
-const RANGOS = [Swiss_Medical,SanCor_Salud,Medife,Omint,Prevencion_Salud,Avalian,Galeno,Premedic,Doctored,Salud_Central,Cristal,Emergencias]; // Celda correcta
-const RANGE = [];
+const RANGE = "todas!B15"; // Celda correcta
+
+
 let cardsData = []; // Aquí se guardará el array final
 
 function handleClientLoad() {
@@ -48,71 +37,46 @@ async function initClient() {
 
 async function cargarCardsData() {
   try {
-    if (!RANGOS || RANGOS.length === 0) {
-        console.error("⚠️ RANGOS no está definido o está vacío.");
-        return;
-    }
+    const response = await gapi.client.sheets.spreadsheets.values.get({
+      spreadsheetId: SPREADSHEET_ID,
+      range: RANGE,
+    });
 
-    for (let i = 0; i < RANGOS.length; i++) {
-      const currentRange = RANGOS[i];
-      const response = await gapi.client.sheets.spreadsheets.values.get({
-        spreadsheetId: SPREADSHEET_ID,
-        range: currentRange,
-      });
+    const values = response.result.values;
 
-      const values = response.result.values;
-      let cellData;
+    if (values && values.length > 0 && values[0][0]) {
+      // Mostrar contenido crudo para depurar
+      console.log("Raw values[0][0]:", JSON.stringify(values[0][0]));
+let raw = values[0][0];
 
-      if (values && values.length > 0 && values[0] && values[0].length > 0) {
-        cellData = values[0][0];
-        console.log(`Raw JS value for range ${currentRange}:`, cellData);
+// Quitar comillas externas si existen
+if ((raw.startsWith('"') && raw.endsWith('"')) || (raw.startsWith("'") && raw.endsWith("'"))) {
+    raw = raw.slice(1, -1);
+}
+      // Intentar parsear como JSON
+      try {
 
-        let parsedData;
-        
-        // ... (Tu lógica de limpieza y new Function() se mantiene por ahora) ...
-        let cleanedData = cellData.trim();
-        if ((cleanedData.startsWith('"') && cleanedData.endsWith('"')) || 
-            (cleanedData.startsWith("'") && cleanedData.endsWith("'"))) {
-            cleanedData = cleanedData.slice(1, -1);
-        }
-
-        try {
-            const functionBody = `return (${cleanedData});`;
-            const parser = new Function(functionBody);
-            parsedData = parser();
-        } catch (error) {
-            console.error(`❌ Falló la evaluación del código JS para el rango ${currentRange}.`, cellData);
-            console.error("Error de parsing/evaluación:", error);
-            continue; 
-        }
-        
-        // 🔑 CAMBIO CRÍTICO: Usa el operador spread (...)
-        // Esto toma todos los elementos del array (parsedData) y los agrega 
-        // individualmente al array final (RANGE).
-        if (Array.isArray(parsedData)) {
-            RANGE.push(...parsedData);
-        } else {
-            // Si no es un array (ej: un solo objeto o un valor), lo agrega directamente.
-            RANGE.push(parsedData);
-        }
-
-      } else {
-        console.warn(`⚠️ La celda para el rango ${currentRange} está vacía o no contiene datos.`);
+        cardsData = eval(raw);
+      } catch (e) {
+        console.warn("JSON.parse falló, usando eval como fallback");
+        cardsData = eval(values[0][0]); // solo si confías en el contenido
       }
-    } // Fin del bucle for
 
-    // 5. Lógica de renderizado al final del bucle
-    console.log("💾 cardsData final:", RANGE);
-    
-    // Aquí RANGE contendrá todos los objetos de todos los rangos
-    if (typeof renderCards === "function") {
-      renderCards(RANGE);
+      console.log("💾 cardsData final:", cardsData);
+         renderCards(cardsData);
+
+      // Llama la función que renderiza tus cards
+      if (typeof renderCards === "function") {
+        renderCards(cardsData);
+      }
+    } else {
+      console.warn("⚠️ La celda está vacía o no contiene datos.");
     }
-
   } catch (error) {
-    console.error("❌ Error al obtener los datos de Google Sheets:", error);
+    console.error("Error al obtener los datos:", error);
   }
 }
+
 
 
 

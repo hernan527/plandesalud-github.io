@@ -1,6 +1,6 @@
-// <?php
-// header("Content-Type: application/javascript");
-// ?>
+<?php
+header("Content-Type: application/javascript");
+?>
 // Funci車n para guardar las cookies
 function salvaCookies() {
   setCookie('data_lead_formulario_pagina', jQuery('.campo-pagina').val(), 3);
@@ -180,7 +180,7 @@ function renderCards(cardsData) {
     back.style.backgroundImage = `url('./assets/imagenes/flyers/${bgImage}.webp')`;
   });
 
-  initModal();
+  initModal(cardsData);
 }
 // 🔹 FUNCIÓN PARA MANEJAR EL MODAL
 // Close the modal
@@ -188,7 +188,7 @@ function closeModal() {
   document.getElementById('myModal').style.display = "none";
 }
 
-function initModal() {
+function initModal(cardsData) {
   const modal = document.getElementById("myModal");
   const modalContent = document.getElementById("modal-content");
   const closeBtn = document.querySelector(".close");
@@ -203,7 +203,6 @@ function initModal() {
       
       const index = this.getAttribute("data-index");
       const data = cardsData[index];
-      
       // 🔹 CONSTRUIR EL MODAL CON TABS
       const modalHTML = `
         <div class="modal-header-custom">
@@ -260,24 +259,34 @@ function initModal() {
           </div>
 
           <!-- TAB: CLÍNICAS -->
-          <div class="tab-content" id="tab-clinicas">
-            <div class="clinicas-list">
-              ${data.clinicas ? data.clinicas.map(clinica => `
-                <div class="clinica-item">
-                  <div class="clinica-icon">🏥</div>
-                  <div class="clinica-info">
-                    <h4>${clinica.nombre}</h4>
-                    <p class="clinica-zona">📍 ${clinica.zona}</p>
-                    <p class="clinica-especialidades">${clinica.especialidades}</p>
-                  </div>
-                </div>
-              `).join("") : '<p>Consulta por centros médicos disponibles</p>'}
-            </div>
-            <div class="clinicas-footer">
-              <p>💡 <strong>Tip:</strong> Esta es solo una muestra. Hay cientos de prestadores disponibles según tu zona.</p>
-            </div>
-          </div>
-
+<div class="tab-content" id="tab-clinicas">
+  
+  <div class="filter-container">
+    <input 
+      type="text" 
+      id="clinicasFilterInput" 
+      placeholder="Buscar por nombre o zona..." 
+      onkeyup="filterClinicas(event)" 
+      class="filter-input"
+    >
+  </div>
+  <div class="clinicas-list" id="clinicasListContainer">
+    ${data.clinicas ? data.clinicas.map(clinica => `
+      <div class="clinica-item">
+        <div class="clinica-icon">🏥</div>
+        <div class="clinica-info">
+          <h4>${clinica.nombre}</h4>
+          <p class="clinica-zona">📍 ${clinica.zona}</p>
+          <p class="clinica-especialidades">${clinica.especialidades}</p>
+        </div>
+      </div>
+    `).join("") : '<p>Consulta por centros médicos disponibles</p>'}
+  </div>
+  
+  <div class="clinicas-footer">
+    <p>💡 <strong>Tip:</strong> Esta es solo una muestra. Hay cientos de prestadores disponibles según tu zona.</p>
+  </div>
+</div>
           <!-- TAB: BENEFICIOS -->
           <div class="tab-content" id="tab-beneficios">
             <div class="beneficios-grid">
@@ -404,20 +413,38 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-function moveCarousel(button, direction) {
-  const track = button.closest('.carousel').querySelector('.carousel-track');
-  const slides = track.querySelectorAll('.carousel-slide');
-  const totalSlides = slides.length;
-  
-  let currentIndex = parseInt(track.getAttribute('data-index')) || 0;
-  let newIndex = currentIndex + direction;
+// Asegúrate de que esta función esté definida globalmente o dentro de un alcance accesible.
 
-  // Ciclo infinito (opcional): si quieres que no se pueda salir del rango, quita esto
-  if (newIndex < 0) newIndex = totalSlides - 1;
-  if (newIndex >= totalSlides) newIndex = 0;
+function filterClinicas(event) {
+    // 1. Obtener el texto de búsqueda y convertirlo a minúsculas
+    const filterText = event.target.value.toLowerCase();
+    
+    // 2. Obtener el contenedor de la lista de clínicas
+    const container = document.getElementById('clinicasListContainer');
+    
+    if (!container) return; // Salir si el contenedor no existe
 
-  track.style.transform = `translateX(-${newIndex * 100}%)`;
-  track.setAttribute('data-index', newIndex);
+    // 3. Obtener todos los elementos de clínica
+    const clinicaItems = container.getElementsByClassName('clinica-item');
+
+    // 4. Iterar sobre cada elemento de clínica
+    for (let i = 0; i < clinicaItems.length; i++) {
+        const item = clinicaItems[i];
+        
+        // Asumimos que el nombre y la zona son los textos más relevantes para buscar.
+        // Se buscan dentro del elemento <h4> y <p class="clinica-zona">
+        
+        // Obtener el texto completo del ítem para la búsqueda
+        // toLowerCase() para hacer la búsqueda insensible a mayúsculas/minúsculas
+        const itemText = item.textContent.toLowerCase();
+
+        // 5. Comparar el texto del filtro con el contenido de la clínica
+        if (itemText.includes(filterText)) {
+            // Si coincide, mostrar la clínica
+            item.style.display = ""; // O 'flex', 'block', etc., dependiendo de tu CSS original
+        } else {
+            // Si NO coincide, ocultar la clínica
+            item.style.display = "none";
+        }
+    }
 }
-
-

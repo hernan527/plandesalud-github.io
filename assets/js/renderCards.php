@@ -34,86 +34,50 @@ const RANGOS = [Swiss_Medical,SanCor_Salud,Medife,Omint,Prevencion_Salud,Avalian
 const RANGE = [];
 let cardsData = []; // Aquí se guardará el array final
 
-function handleClientLoad() {
-  gapi.load('client', initClient);
-}
 
-async function initClient() {
-  await gapi.client.init({
-    apiKey: API_KEY,
-    discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"],
-  });
-  await cargarCardsData();
-}
+
+
+
+// La URL de tu nuevo endpoint seguro
+const GOOGLE_SHEETS_ENDPOINT = 'https://googlesheets.avalianonline.com.ar/googlesheets'; 
 
 async function cargarCardsData() {
-  try {
-    if (!RANGOS || RANGOS.length === 0) {
-        console.error("⚠️ RANGOS no está definido o está vacío.");
-        return;
-    }
+    try {
+        // 1. Llamar al servidor Node.js (la nueva ruta)
+        const response = await fetch(GOOGLE_SHEETS_ENDPOINT, {
+            method: 'GET', // Usaste POST en tu ruta, aunque GET también podría funcionar
+            headers: {
+                'Content-Type': 'application/json',
+                // Si necesitas enviar rangos específicos desde el cliente, agrégalos aquí
+            },
+            // body: JSON.stringify({ ranges: RANGOS }), // Ejemplo si envías datos
+        });
 
-    for (let i = 0; i < RANGOS.length; i++) {
-      const currentRange = RANGOS[i];
-      const response = await gapi.client.sheets.spreadsheets.values.get({
-        spreadsheetId: SPREADSHEET_ID,
-        range: currentRange,
-      });
+        if (!response.ok) {
+            // Manejar errores HTTP (ej: 404, 500)
+            throw new Error(`Error HTTP: ${response.status}`);
+        }
 
-      const values = response.result.values;
-      let cellData;
-
-      if (values && values.length > 0 && values[0] && values[0].length > 0) {
-        cellData = values[0][0];
-        console.log(`Raw JS value for range ${currentRange}:`, cellData);
-
-        let parsedData;
+        const result = await response.json();
         
-        // ... (Tu lógica de limpieza y new Function() se mantiene por ahora) ...
-        let cleanedData = cellData.trim();
-        if ((cleanedData.startsWith('"') && cleanedData.endsWith('"')) || 
-            (cleanedData.startsWith("'") && cleanedData.endsWith("'"))) {
-            cleanedData = cleanedData.slice(1, -1);
-        }
-
-        try {
-            const functionBody = `return (${cleanedData});`;
-            const parser = new Function(functionBody);
-            parsedData = parser();
-        } catch (error) {
-            console.error(`❌ Falló la evaluación del código JS para el rango ${currentRange}.`, cellData);
-            console.error("Error de parsing/evaluación:", error);
-            continue; 
-        }
+        // El servidor ya te devuelve el array de datos procesado
+        const RANGE = result.data || []; 
         
-        // 🔑 CAMBIO CRÍTICO: Usa el operador spread (...)
-        // Esto toma todos los elementos del array (parsedData) y los agrega 
-        // individualmente al array final (RANGE).
-        if (Array.isArray(parsedData)) {
-            RANGE.push(...parsedData);
-        } else {
-            // Si no es un array (ej: un solo objeto o un valor), lo agrega directamente.
-            RANGE.push(parsedData);
+        // 2. Lógica de renderizado
+        console.log("💾 cardsData final desde el servidor:", RANGE);
+        
+        if (typeof renderCards === "function") {
+            renderCards(RANGE);
         }
 
-      } else {
-        console.warn(`⚠️ La celda para el rango ${currentRange} está vacía o no contiene datos.`);
-      }
-    } // Fin del bucle for
-
-    // 5. Lógica de renderizado al final del bucle
-    console.log("💾 cardsData final:", RANGE);
-    
-    // Aquí RANGE contendrá todos los objetos de todos los rangos
-    if (typeof renderCards === "function") {
-      renderCards(RANGE);
+    } catch (error) {
+        console.error("❌ Error al obtener los datos del servidor (Google Sheets):", error);
+        // Aquí puedes actualizar la UI para mostrar un mensaje de error
     }
-
-  } catch (error) {
-    console.error("❌ Error al obtener los datos de Google Sheets:", error);
-  }
 }
 
+// Llama a la nueva función
+cargarCardsData();
 
 
 

@@ -145,7 +145,7 @@ function renderCards(cardsData) {
         <div class="card">
           <div class="front">
             <a class="logo">
-              <img src="/assets/imagenes/cards_header/${data.logoSrc}-logo-medicina-prepaga-planes-de-salud.webp" 
+              <img src="./assets/imagenes/cards_header/${data.logoSrc}-logo-medicina-prepaga-planes-de-salud.webp" 
                    alt="${data.logoAlt}" 
                    title="${data.logoAlt}" 
                    loading="lazy">
@@ -206,7 +206,7 @@ function initModal(cardsData) {
       // 🔹 CONSTRUIR EL MODAL CON TABS
       const modalHTML = `
         <div class="modal-header-custom">
-          <img src="/assets/imagenes/cards_header/${data.logoSrc}-logo-medicina-prepaga-planes-de-salud.webp" 
+          <img src="./assets/imagenes/cards_header/${data.logoSrc}-logo-medicina-prepaga-planes-de-salud.webp" 
                alt="${data.logoAlt}" 
                class="modal-logo">
           <div class="modal-title-section">

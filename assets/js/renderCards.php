@@ -30,7 +30,7 @@ const Doctored = "todas!B10";
 const Salud_Central = "todas!B11";
 const Cristal = "todas!B12";
 const Emergencias = "todas!B13";
-const RANGOS = [Swiss_Medical,SanCor_Salud,Medife,Omint,Prevencion_Salud,Avalian,Galeno,Premedic,Doctored,Salud_Central,Cristal,Emergencias]; // Celda correcta
+const RANGOS = [Swiss_Medical,SanCor_Salud,Medife,Omint,Prevencion_Salud,Avalian,Galeno,Premedic]; // Celda correcta
 const RANGE = [];
 let cardsData = []; // Aquí se guardará el array final
 

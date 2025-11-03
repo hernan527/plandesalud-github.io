@@ -62,12 +62,13 @@ async function cargarCardsData() {
         
         // El servidor ya te devuelve el array de datos procesado
         const RANGE = result.data || []; 
+        const RANGE_SIN_ULTIMOS_4 = RANGE.slice(0, -4);
         
         // 2. Lógica de renderizado
-        console.log("💾 cardsData final desde el servidor:", RANGE);
+        console.log("💾 cardsData final desde el servidor:", RANGE_SIN_ULTIMOS_4);
         
         if (typeof renderCards === "function") {
-            renderCards(RANGE);
+            renderCards(RANGE_SIN_ULTIMOS_4);
         }
 
     } catch (error) {

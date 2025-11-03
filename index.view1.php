@@ -255,7 +255,7 @@
 
                         <div class="tipo-de-plano">
                             <p><strong>¿Quiénes ingresan al plan?</strong></p>
-                            <label><input type="radio" id="individual" name="idCapitas" value="Individual"> <b class="btn-vos">Vos</b></label>
+                            <label><input type="radio" id="individual" name="idCapitas" value="Individual"> <b class="btn-vos">Titular</b></label>
                             <label><input type="radio" id="pareja" name="idCapitas" value="Pareja"> <b class="btn-pareja">Pareja</b></label>
                             <label><input type="radio" id="indehijo" name="idCapitas" value="Individual Con Hijo/s"> <b class="btn-vosehijo">Vos e hijo/s</b></label>
                             <label><input type="radio" id="parehijo" name="idCapitas" value="Pareja e Hijo/s"> <b class="btn-parejaehijo">Pareja e hijo/s</b></label>

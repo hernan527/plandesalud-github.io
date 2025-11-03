@@ -270,8 +270,10 @@ function initModal(cardsData) {
       class="filter-input"
     >
   </div>
-  <div class="clinicas-list" id="clinicasListContainer">
-    ${data.clinicas ? data.clinicas.map(clinica => `
+<div class="clinicas-list" id="clinicasListContainer">
+  ${data.clinicas ? data.clinicas
+    .slice(0, -1) // Use slice(0, -1) to exclude the last element
+    .map(clinica => `
       <div class="clinica-item">
         <div class="clinica-icon">🏥</div>
         <div class="clinica-info">
@@ -281,7 +283,7 @@ function initModal(cardsData) {
         </div>
       </div>
     `).join("") : '<p>Consulta por centros médicos disponibles</p>'}
-  </div>
+</div>
   
   <div class="clinicas-footer">
     <p>💡 <strong>Tip:</strong> Esta es solo una muestra. Hay cientos de prestadores disponibles según tu zona.</p>

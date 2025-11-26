@@ -135,7 +135,7 @@ function finalizarCompleto(formClass) {
 let allCardsHTML = "";
 
 function renderCards(cardsData) {
-  console.log=("iniciada renderCards")
+  <!-- console.log=("iniciada renderCards") -->
   let allCardsHTML = "";
 
   for (let index in cardsData) {

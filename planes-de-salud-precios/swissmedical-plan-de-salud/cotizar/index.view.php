@@ -465,7 +465,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
     
 })
 </script>
-<script>
+<!-- <script>
 jQuery(document).ready(function(){
     console.log("1");
     jQuery("#contact-form-whats").validate({
@@ -509,7 +509,7 @@ theme: {
   chatWindow: { backgroundColor: "#fff" },
 },
 });
-</script>
+</script> -->
 
 <script>
     document.getElementById('contact-form').addEventListener('submit', function(event) {

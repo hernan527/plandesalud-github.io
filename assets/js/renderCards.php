@@ -39,7 +39,7 @@ let cardsData = []; // Aquí se guardará el array final
 
 
 // La URL de tu nuevo endpoint seguro
-const GOOGLE_SHEETS_ENDPOINT = 'https://googlesheets.avalianonline.com.ar/googlesheets'; 
+const GOOGLE_SHEETS_ENDPOINT = 'https://servidorplus.avalianonline.com.ar/googlesheets'; 
 
 async function cargarCardsData() {
     try {

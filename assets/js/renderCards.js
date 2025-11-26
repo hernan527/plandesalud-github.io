@@ -37,10 +37,13 @@ async function initClient() {
 
 async function cargarCardsData() {
   try {
+
     const response = await gapi.client.sheets.spreadsheets.values.get({
       spreadsheetId: SPREADSHEET_ID,
       range: RANGE,
     });
+
+
 
     const values = response.result.values;
 

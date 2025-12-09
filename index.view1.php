@@ -22,7 +22,7 @@
     <script defer src="./assets/js/modernizr-2.8.0.dev.js"></script>
 
   <script src="./assets/js/renderCards.php"></script>
-              <script src="./assets/js/funciones.php"></script>
+              
 
 
     <!-- Pre-carga de imágenes -->
@@ -657,6 +657,6 @@ document.querySelectorAll('.cardBox').forEach(cardBox => {
     <a href="https://api.whatsapp.com/send?phone=5491124985882&text=Hola,%20necesito%20ayuda%20para%20elegir%20mi%20plan%20de%20salud." class="whatsapp-float" target="_blank">
         <img src="./assets/formularios/formulario-whatsapp/icone-whatsapp.svg" style="width: 40px; filter: invert(0);">
     </a>
-
+<script src="./assets/js/funciones.php"></script>
 </body>
 </html>

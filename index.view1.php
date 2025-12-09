@@ -141,7 +141,7 @@
                
             
   <div class="contador" id="1" >
-        <h3>Hoy más de <span id="contador">0</span> personas solicitaron una cotización</h3>
+        <h3>Más de <span id="contador">0</span> personas solicitaron una cotización</h3>
     </div>   <div class="conteudo-da-pagina"> </div>
 
                             

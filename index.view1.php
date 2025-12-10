@@ -83,6 +83,144 @@
     <style id="global-styles-inline-css" type="text/css">
         body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) ;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) ;}.has-white-color{color: var(--wp--preset--color--white) ;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) ;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) ;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) ;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) ;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) ;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) ;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) ;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) ;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) ;}.has-black-background-color{background-color: var(--wp--preset--color--black) ;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) ;}.has-white-background-color{background-color: var(--wp--preset--color--white) ;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) ;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) ;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) ;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) ;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) ;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) ;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) ;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) ;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) ;}.has-black-border-color{border-color: var(--wp--preset--color--black) ;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) ;}.has-white-border-color{border-color: var(--wp--preset--color--white) ;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) ;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) ;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) ;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) ;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) ;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) ;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) ;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) ;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) ;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) ;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) ;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) ;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) ;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) ;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) ;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) ;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) ;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) ;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) ;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) ;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) ;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) ;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) ;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) ;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) ;}
     </style>
+<style>    
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* --- ESTILOS DEL BOTÓN (Referencia) --- */
+.whatsapp-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65px; 
+  height: 65px;
+  background-color: #25D366; 
+  border-radius: 50%;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
+  text-decoration: none;
+  cursor: pointer;
+  position: relative; 
+  transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+
+
+/* ... (Resto del CSS del Badge y las animaciones se mantiene igual) ... */
+.whatsapp-button:hover {
+  background-color: #128C7E;
+  transform: scale(1.1) rotate(5deg); /* Efecto de "wiggle" suave */
+}
+
+/* Indicador de Nuevo Mensaje (Punto Rojo con el "1") */
+.new-message-indicator {
+  position: absolute;
+  /* La clave: Asegurar que el indicador esté SOBRE el SVG del icono de WhatsApp */
+  z-index: 100; 
+  
+  /* Posición a la izquierda */
+  top: -5px; /* Ajuste para que se vea mejor */
+  left: -5px; /* Ajuste para que se vea mejor */
+  
+  /* Tamaño y Fondo */
+  width: 22px; 
+  height: 22px; 
+  background-color: #E74C3C; 
+  border-radius: 50%;
+  border: 3px solid white; 
+  animation: pulse 1.5s infinite; 
+
+  /* Estilos para el número "1" */
+  color: white; 
+  font-size: 14px; /* Un poco más grande para asegurar visibilidad */
+  font-weight: bold;
+  
+  /* Centrado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1; 
+}
+/* Animación de pulsación para el indicador */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(231, 76, 60, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
+  }
+}
+
+
+/* --- ESTILOS DEL BADGE/BURBUJA (Mucho más bonitos) --- */
+.whatsapp-badge {
+  position: absolute;
+  bottom: 85px; /* Ajustado para el botón más grande */
+  right: 0;
+  
+  /* Estilo Moderno */
+  background: linear-gradient(135deg, #f7f7f7, #ffffff); /* Degradado suave */
+  color: #333;
+  padding: 12px 18px; /* Más padding */
+  border-radius: 12px; /* Más redondeado */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
+  max-width: 250px;
+  text-align: left;
+  font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; /* Fuente del sistema */
+  
+  /* Animación */
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.9) translateY(10px); /* Empieza pequeño y se mueve */
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out, visibility 0.4s;
+}
+
+/* Icono dentro del Badge */
+.badge-icon {
+    font-size: 18px;
+    margin-right: 5px;
+    display: inline-block;
+    animation: wave 1.5s infinite; /* Pequeña animación de saludo */
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(14deg); }
+  30% { transform: rotate(-8deg); }
+  45% { transform: rotate(14deg); }
+  60% { transform: rotate(-4deg); }
+  75% { transform: rotate(8deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Clase para mostrar */
+.whatsapp-badge.show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translateY(0);
+}
+
+/* Flecha/Cola de la burbuja */
+.whatsapp-badge::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 20px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid white; /* El color debe coincidir con el fondo base del badge */
+}
+
+</style>
+
 </head>
 
 <body class="page-template page-template-page-simulador page-template-page-simulador-php page page-id-16">
@@ -652,11 +790,67 @@ document.querySelectorAll('.cardBox').forEach(cardBox => {
   }
 });
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const badge = document.getElementById('whatsappBadge');
+  const link = document.getElementById('whatsappLink');
+  const indicator = document.querySelector('.new-message-indicator');
 
+  // Mostrar la burbuja después de 3 segundos
+  setTimeout(() => {
+    badge.classList.add('show');
+  }, 3000); 
+
+  // Ocultar la burbuja y el indicador al hacer clic
+  link.addEventListener('click', () => {
+    badge.classList.remove('show');
+    if (indicator) {
+      indicator.style.display = 'none'; // Ocultar el punto rojo
+    }
+  });
+
+  // Opcional: Ocultar la burbuja después de otros 8 segundos (si el usuario no interactuó)
+  setTimeout(() => {
+    if (badge.classList.contains('show')) {
+      badge.classList.remove('show');
+    }
+  }, 11000); 
+});
+</script>
     <!-- Botón Flotante de WhatsApp -->
-    <a href="https://api.whatsapp.com/send?phone=5491124985882&text=Hola,%20necesito%20ayuda%20para%20elegir%20mi%20plan%20de%20salud." class="whatsapp-float" target="_blank">
+    <!-- <a href="https://api.whatsapp.com/send?phone=5491124985882&text=Hola,%20necesito%20ayuda%20para%20elegir%20mi%20plan%20de%20salud." class="whatsapp-float" target="_blank">
         <img src="./assets/formularios/formulario-whatsapp/icone-whatsapp.svg" style="width: 40px; filter: invert(0);">
-    </a>
+    </a> -->
 <script src="./assets/js/funciones.php"></script>
+<!-- <div class="whatsapp-container">
+  <div id="whatsappBadge" class="whatsapp-badge">
+    <span class="badge-icon">👋</span>
+    ¡Hola! ¿Podemos ayudarte en algo?
+  </div>
+
+  <a id="whatsappLink" href="https://wa.me/34600123456?text=Quiero%20hacer%20una%20consulta%20por%20la%20web" class="whatsapp-button" target="_blank">
+    <span class="new-message-indicator"></span> 
+        <img src="./assets/formularios/formulario-whatsapp/icone-whatsapp.svg" style="width: 40px; filter: invert(0);">
+    
+  </a>
+</div> -->
+
+<script>
+  (function(d,t) {
+    var BASE_URL="https://chatwootv4.avalianonline.com.ar";
+    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=BASE_URL+"/packs/js/sdk.js";
+    g.defer = true;
+    g.async = true;
+    s.parentNode.insertBefore(g,s);
+    g.onload=function(){
+      window.chatwootSDK.run({
+        websiteToken: 'tLvEA7U8BZGJSW6bnvMSmQm4',
+        baseUrl: BASE_URL
+      })
+    }
+  })(document,"script");
+</script>
+
 </body>
 </html>

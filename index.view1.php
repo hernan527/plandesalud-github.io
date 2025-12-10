@@ -288,9 +288,9 @@
                         </div>
 
                         <div class="possui-plano" id="tiene-os">
-                            <p><strong>¿Consultas por cambio de Obra Social como empleado en relación de dependencia?</strong></p>
-                            <label><input type="radio" id="con-os" name="poseeOS" value="Desregulado"> <b class="btn-con-os">Sí</b></label>
-                            <label><input type="radio" id="sin-os" name="poseeOS" value="Particular"> <b class="btn-sin-os">No</b></label>
+                            <!-- <p><strong>¿Consultas por cambio de Obra Social como empleado en relación de dependencia?</strong></p> -->
+                            <label><input type="radio" id="con-os" name="poseeOS" value="Desregulado"> <b class="btn-con-os">CAMBIO DE OBRA SOCIAL</b></label>
+                            <label><input type="radio" id="sin-os" name="poseeOS" value="Particular"> <b class="btn-sin-os">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PARTICULAR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
                         </div>
 
                         <div class="possui-cnpj">
@@ -339,7 +339,7 @@
 
                         <div class="alert"></div>
                        <input id="submit-completo" type="submit" value="RECIBIR COTIZACIÓN" style="width:100%">                        
-                       <div class="loader" id="loader" style="display: none; margin-top: 20px;"></div>
+                       <div class="loader1" style="display: none; margin-top: 20px;"></div>
                     </form>
                 </div>
                 <!-- Formulario y Contacto -->

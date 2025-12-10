@@ -49,7 +49,7 @@ function finalizarWhatsapp(formClass) {
   // Enviar los datos al webhook de n8n
   const xhr = new XMLHttpRequest();
   
-  xhr.open('POST', 'https://webhook.avalianonline.com.ar/webhook/9eb08e35-97b3-49fa-8706-865151ac2d20');
+  xhr.open('POST', 'https://webhook.avalianonline.com.ar/webhook/get_data');
 
   xhr.onload = function () {
     if (xhr.status === 200) {
@@ -105,7 +105,7 @@ function finalizarCompleto(formClass) {
   
   const xhr = new XMLHttpRequest();
   
-  xhr.open('POST', 'https://webhook.avalianonline.com.ar/webhook/9eb08e35-97b3-49fa-8706-865151ac2d20');
+  xhr.open('POST', 'https://webhook.avalianonline.com.ar/webhook/get_data');
   
   xhr.onload = function () {
     if (xhr.status === 200) {

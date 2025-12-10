@@ -840,17 +840,17 @@ document.addEventListener('DOMContentLoaded', () => {
     var BASE_URL="https://chatwootv4.avalianonline.com.ar";
     var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
     g.src=BASE_URL+"/packs/js/sdk.js";
-    g.defer = true;
     g.async = true;
     s.parentNode.insertBefore(g,s);
     g.onload=function(){
       window.chatwootSDK.run({
-        websiteToken: 'tLvEA7U8BZGJSW6bnvMSmQm4',
+        websiteToken: 'XE9iAZnHApuzRPhaxpt3mySD',
         baseUrl: BASE_URL
       })
     }
   })(document,"script");
 </script>
+
 
 </body>
 </html>

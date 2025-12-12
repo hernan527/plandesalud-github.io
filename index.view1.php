@@ -698,7 +698,7 @@
                             <div class="telefono">
                                 <span>
                                     <i>Teléfono</i>
-                                    <input class="campo-telefone" type="tel" id="telefone" name="telefone" placeholder="Ej: 1165924325" required>
+                                    <input class="campo-telefone" type="tel" id="phone" name="phone" placeholder="Ej: 1165924325" required>
                                 </span>
                             </div>
                             <span>
@@ -746,7 +746,7 @@
                                 </div>
                                 <div>
                                     <b>Teléfono (10 dígitos):</b>
-                                    <input type="tel" id="telefone_whats" name="telefone_whats" placeholder="1122334455" required>
+                                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="1122334455" required>
                                 </div>
                                 <input id="submit" type="submit" value="¡QUIERO MI COTIZACIÓN GRATIS!">
                                 <div class="loader-whats" id="loader-whats"></div>
@@ -884,12 +884,12 @@ jQuery(document).ready(function(){
         rules:{
             formulario_pagina_whats : { required: false },
             Name_whats : { required: true },
-            telefone_whats : { required: true, rangelength: [10,10] },
+            phoneNumber : { required: true, rangelength: [10,10] },
         },
         messages:{
             formulario_pagina_whats : { required: "" },
             Name_whats : { required: "El campo Nombre es necesario" },
-            telefone_whats : { required: "El campo Telefono es necesario" },
+            phoneNumber : { required: "El campo Telefono es necesario" },
         },
         submitHandler: function(form){
             var form = jQuery('#contact-form-whats');
@@ -906,7 +906,7 @@ jQuery(document).ready(function(){
             }
         }
     });
-    jQuery("#telefone_whats").mask("9000000000");
+    jQuery("#phoneNumber").mask("9000000000");
 });
 </script>
 
@@ -967,12 +967,12 @@ document.addEventListener('DOMContentLoaded', function() {
             jQuery("#contact-form-whats").validate({
                 rules:{
                     Name_whats: { required: true },
-                    telefone_whats: { required: true, rangelength: [10,10] },
+                    phoneNumber: { required: true, rangelength: [10,10] },
                     tipo_plan: { required: true }
                 },
                 messages:{
                     Name_whats: { required: "Por favor, ingresa tu nombre" },
-                    telefone_whats: { required: "Por favor, ingresa tu teléfono", rangelength: "El teléfono debe tener 10 dígitos" },
+                    phoneNumber: { required: "Por favor, ingresa tu teléfono", rangelength: "El teléfono debe tener 10 dígitos" },
                     tipo_plan: { required: "Por favor, selecciona una opción" }
                 },
                 submitHandler: function(form){

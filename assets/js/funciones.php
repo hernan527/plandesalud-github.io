@@ -16,7 +16,7 @@ function salvaCookies() {
     setCookie('data_lead_poseeOS', jQuery('input[name=poseeOS]:checked').val(), 3);
     setCookie('data_lead_sueldo', jQuery('.campo-sueldo').val(), 3);
     setCookie('data_lead_Name', jQuery('.campo-nome').val(), 3);
-    setCookie('data_lead_telefone', jQuery('.campo-telefone').val(), 3);
+    setCookie('data_lead_phone', jQuery('.campo-phone').val(), 3);
     setCookie('data_lead_email', jQuery('.campo-email').val(), 3);
 }
 
@@ -48,29 +48,46 @@ function finalizarWhatsapp(formClass) {
     var datawhook = {
         'formulario_pagina': $('#formulario_pagina_whats').val(),
         'Name': $('#Name_whats').val(),
-        'telefone': $('#telefone_whats').val(),
+        'telefone': $('#phoneNumber').val(),
     };
 
     const xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://webhook.avalianonline.com.ar/webhook/get_data');
     xhr.setRequestHeader('Content-Type', 'application/json');
 
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            boton.value = '¡ENVÍO EXITOSO!';
-            loader.style.display = 'none';
-            $('#contact-form-whats')[0].reset();
-            setTimeout(function() {
-                // Redirección opcional
-                 window.location.href = '/gracias';
-            }, 3000);
-        } else {
-            console.log('Error al enviar los datos');
-            boton.disabled = false;
-            boton.value = 'INTENTAR NUEVAMENTE';
-            loader.style.display = 'none';
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+        boton.value = '¡ENVÍO EXITOSO!';
+        loader.style.display = 'none';
+        $('#contact-form-whats')[0].reset();
+        
+        // ✅ PRIMERO verifica que haya teléfono
+        if (datawhook.telefone && datawhook.telefone.trim() !== '') {
+            var conversionData = {
+                'send_to': 'AW-17677606372/7397677812',
+                'value': 1.0,
+                'currency': 'ARS',
+                'phone_number': datawhook.telefone // Obligatorio
+            };
+            
+            // Opcional: agrega el nombre si existe
+            if (datawhook.Name && datawhook.Name.trim() !== '') {
+                conversionData.name = datawhook.Name;
+            }
+            
+            gtag('event', 'conversion', conversionData);
         }
-    };
+        
+        setTimeout(function() {
+            window.location.href = '/gracias';
+        }, 3000);
+    } else {
+        console.log('Error al enviar los datos');
+        boton.disabled = false;
+        boton.value = 'INTENTAR NUEVAMENTE';
+        loader.style.display = 'none';
+    }
+};
     xhr.onerror = function () {
         alert('Error de conexión. Por favor verifique su internet.');
         boton.disabled = false;
@@ -100,7 +117,7 @@ function finalizarCompleto(formClass) {
         'poseeOS': $('input[name="poseeOS"]:checked').val(),
         'sueldo': $('#sueldo').val(),
         'name': $('#Name').val(),
-        'telefone': $('#telefone').val(),
+        'telefone': $('#phone').val(),
         'email': $('#email').val(),
         'categoriaMono': $('#categoriaMono').val(),
         'aportantesMono': $('#aportantesMono').val()
@@ -115,6 +132,27 @@ function finalizarCompleto(formClass) {
             boton.value = '¡COTIZACIÓN ENVIADA!';
             loader.style.display = 'none';
             $('#contact-form')[0].reset();
+        if (datawh.email || datawh.telefone) {
+            var conversionData = {
+                'send_to': 'AW-17677606372/7397677812',
+                'value': 1.0,
+                'currency': 'ARS'
+            };
+            
+            // Campos opcionales (puedes enviarlos o no)
+            if (datawh.name && datawh.name.trim() !== '') {
+                conversionData.name = datawh.name; // Opcional
+            }
+            if (datawh.email && datawh.email.trim() !== '') {
+                conversionData.email = datawh.email;
+            }
+            if (datawh.telefone && datawh.telefone.trim() !== '') {
+                conversionData.phone_number = datawh.telefone;
+            }
+            
+            gtag('event', 'conversion', conversionData);
+        }
+ 
             setTimeout(function() {
                 window.location.href = '/gracias';
             }, 3000);

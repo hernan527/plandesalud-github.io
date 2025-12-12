@@ -56,7 +56,7 @@ function finalizarWhatsapp(formClass) {
         'Name': $('#Name_whats').val(),
         'telefone': $('#phoneNumber').val(),
     };
-
+console.log('En finalizarWhatsapp, gtag es:', typeof gtag);
     const xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://webhook.avalianonline.com.ar/webhook/get_data');
     xhr.setRequestHeader('Content-Type', 'application/json');
@@ -70,7 +70,7 @@ function finalizarWhatsapp(formClass) {
         // ✅ PRIMERO verifica que haya teléfono
         if (datawhook.telefone && datawhook.telefone.trim() !== '') {
             var conversionData = {
-                'send_to': 'AW-17677606372/7397677812',
+                'send_to': 'AW-17677606372/LABEL_DE_PRUEBA_FORZAR_ERROR',
                 'value': 1.0,
                 'currency': 'ARS',
                 'phone_number': datawhook.telefone // Obligatorio
@@ -85,7 +85,7 @@ console.log('Datos capturados:', {
     phone: datawhook?.telefone || datawhook?.telefone || 'No phone',
     name: datawhook?.Name || datawhook?.Name || 'No name'
 });
-console.log('send_to:', 'AW-17677606372/7397677812');
+console.log('send_to:', 'AW-17677606372/LABEL_DE_PRUEBA_FORZAR_ERROR');
 console.log('=== FIN DEBUG ===');
             gtag('event', 'conversion', conversionData);
         }
@@ -146,7 +146,7 @@ function finalizarCompleto(formClass) {
             $('#contact-form')[0].reset();
         if (datawh.email || datawh.telefone) {
             var conversionData = {
-                'send_to': 'AW-17677606372/7397677812',
+                'send_to': 'AW-17677606372/LABEL_DE_PRUEBA_FORZAR_ERROR',
                 'value': 1.0,
                 'currency': 'ARS'
             };
@@ -167,7 +167,7 @@ console.log('Datos capturados:', {
     phone: datawh?.telefone || datawhook?.telefone || 'No phone',
     name: datawh?.name || datawhook?.Name || 'No name'
 });
-console.log('send_to:', 'AW-17677606372/7397677812');
+console.log('send_to:', 'AW-17677606372/LABEL_DE_PRUEBA_FORZAR_ERROR');
 console.log('=== FIN DEBUG ===');
 
             gtag('event', 'conversion', conversionData);

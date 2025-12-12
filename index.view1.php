@@ -18,6 +18,15 @@
     <script defer type="text/javascript" src="./assets/js/formularios-cot.js"></script>
     <!-- Fuentes y librerías modernas -->
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17677606372"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17677606372');
+</script>
     <script defer src="./assets/js/prefixfree.min.js"></script>
     <script defer src="./assets/js/modernizr-2.8.0.dev.js"></script>
 
@@ -83,6 +92,229 @@
     <style id="global-styles-inline-css" type="text/css">
         body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) ;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) ;}.has-white-color{color: var(--wp--preset--color--white) ;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) ;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) ;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) ;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) ;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) ;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) ;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) ;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) ;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) ;}.has-black-background-color{background-color: var(--wp--preset--color--black) ;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) ;}.has-white-background-color{background-color: var(--wp--preset--color--white) ;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) ;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) ;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) ;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) ;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) ;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) ;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) ;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) ;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) ;}.has-black-border-color{border-color: var(--wp--preset--color--black) ;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) ;}.has-white-border-color{border-color: var(--wp--preset--color--white) ;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) ;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) ;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) ;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) ;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) ;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) ;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) ;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) ;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) ;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) ;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) ;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) ;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) ;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) ;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) ;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) ;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) ;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) ;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) ;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) ;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) ;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) ;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) ;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) ;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) ;}
     </style>
+    <style>
+/* =========================================
+   TARJETAS 3D: GRANDES Y MODERNAS
+   ========================================= */
+
+/* 1. EL CONTENEDOR DE LA GRILLA (Para que se acomoden bien) */
+#contenedor-cards {
+    display: grid;
+    /* En escritorio: 3 columnas de mínimo 300px cada una */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+    gap: 30px;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 2. EL CONTENEDOR INDIVIDUAL (Define el tamaño) */
+.cardBox {
+    perspective: 1000px;
+    width: 100%;
+    /* AUMENTADO: Altura fija mayor para que se vean grandes */
+    height: 520px; 
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+/* 3. LA TARJETA QUE GIRA */
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efecto rebote suave */
+    transform-style: preserve-3d;
+    background: transparent;
+}
+
+/* ACCIÓN DE GIRO */
+.cardBox:hover .card {
+    transform: rotateY(180deg);
+}
+
+/* 4. CARAS (FRENTE Y DORSO) */
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px; /* Bordes más redondeados */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1); /* Sombra más pronunciada */
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+/* --- ESTILO DEL FRENTE --- */
+.front {
+    background-color: #fff;
+    z-index: 2;
+    padding: 30px 25px; /* Más espacio interno */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el contenido a lo alto */
+    border: 1px solid #f0f0f0;
+}
+
+.front .logo {
+    height: 80px; /* Espacio fijo para logo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.front .logo img {
+    max-width: 160px; /* Logo más grande */
+    max-height: 100%;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: 0.4s;
+}
+
+.cardBox:hover .front .logo img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Lista de Beneficios más grande */
+.features {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1; /* Ocupa el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.features li {
+    font-size: 16px; /* Letra más grande */
+    margin-bottom: 12px; /* Más separación entre items */
+    color: #444;
+    list-style: none;
+    border-bottom: 1px dashed #e0e0e0;
+    padding-bottom: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.features li:before {
+    content: "✓";
+    color: #ff6b00; /* Naranja */
+    font-weight: 900;
+    font-size: 18px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+/* Icono de rotación abajo */
+.front strong {
+    background: #ff6b00;
+    width: 45px; /* Botón más grande */
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    margin: 10px auto 0;
+    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-10px);}
+  60% {transform: translateY(-5px);}
+}
+
+/* --- ESTILO DEL DORSO --- */
+.back {
+    transform: rotateY(180deg);
+    background-color: #333; /* Fondo de respaldo */
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+/* Capa oscura sobre la imagen para que se lean los botones */
+.back::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 100%);
+    z-index: 1;
+}
+
+.card-cta-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Botones abajo */
+    padding: 0 30px 40px 30px;
+    gap: 15px;
+}
+
+.card-cta {
+    background: #ff6b00;
+    color: white !important;
+    padding: 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+    border: 2px solid #ff6b00;
+}
+
+.card-cta:hover {
+    background: #e65100;
+    transform: scale(1.05);
+}
+
+.card-cta1 {
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.8);
+    color: white;
+    padding: 14px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.card-cta1:hover {
+    background: white;
+    color: #333;
+}
+
+/* AJUSTE RESPONSIVO PARA MÓVILES */
+@media (max-width: 768px) {
+    #contenedor-cards {
+        grid-template-columns: 1fr; /* Una sola columna */
+        padding: 0 15px;
+    }
+    .cardBox {
+        height: 480px; /* Un poco más bajas en móvil para que entren en pantalla */
+        max-width: 380px; /* Ancho máximo en móvil */
+    }
+}
+</style>
 <style>    
 .whatsapp-container {
   position: fixed;
@@ -822,7 +1054,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="./assets/formularios/formulario-whatsapp/icone-whatsapp.svg" style="width: 40px; filter: invert(0);">
     </a> -->
 <script src="./assets/js/funciones.php"></script>
-<!-- <div class="whatsapp-container">
+<div class="whatsapp-container">
   <div id="whatsappBadge" class="whatsapp-badge">
     <span class="badge-icon">👋</span>
     ¡Hola! ¿Podemos ayudarte en algo?
@@ -833,23 +1065,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="./assets/formularios/formulario-whatsapp/icone-whatsapp.svg" style="width: 40px; filter: invert(0);">
     
   </a>
-</div> -->
+</div>
 
-<script>
-  (function(d,t) {
-    var BASE_URL="https://chatwootv4.avalianonline.com.ar";
-    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=BASE_URL+"/packs/js/sdk.js";
-    g.async = true;
-    s.parentNode.insertBefore(g,s);
-    g.onload=function(){
-      window.chatwootSDK.run({
-        websiteToken: 'XE9iAZnHApuzRPhaxpt3mySD',
-        baseUrl: BASE_URL
-      })
-    }
-  })(document,"script");
-</script>
 
 
 </body>

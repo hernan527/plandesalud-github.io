@@ -10,7 +10,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 <meta name="mobile-web-app-capable" content="yes"><link rel="shortcut icon" sizes="1024x1024" href="../assets/imagenes/logos-web/plan-de-salud-favicon.ico" /><link rel="apple-touch-icon" href="../assets/imagenes/logos-web/plan-de-salud-favicon.ico">
-   
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17677606372"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17677606372');
+</script>  
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script defer type='text/javascript' src="../assets/js/jquery.validate.min.js"></script>

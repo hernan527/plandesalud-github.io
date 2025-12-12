@@ -48,9 +48,9 @@ function finalizarWhatsapp(formClass) {
     // VERIFICACIÓN CRÍTICA: ¿gtag existe?
     if (typeof gtag !== 'function') {
         console.error('❌ ERROR: gtag() no está disponible. No se puede enviar conversión.');
-        // Puedes optar por continuar sin la conversión o reintentar
-        // return; // Si quieres detener la ejecución
+        console.log('Se continuará sin tracking, pero deberías solucionar esto.');
     }
+    
     var form = document.querySelector(formClass);
     var boton = form.querySelector('#submit');
     var loader = form.querySelector('.loader-whats');
@@ -63,77 +63,78 @@ function finalizarWhatsapp(formClass) {
         'Name': $('#Name_whats').val(),
         'telefone': $('#phoneNumber').val(),
     };
-console.log('En finalizarWhatsapp, gtag es:', typeof gtag);
+    
+    console.log('En finalizarWhatsapp, gtag es:', typeof gtag);
+
     const xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://webhook.avalianonline.com.ar/webhook/get_data');
     xhr.setRequestHeader('Content-Type', 'application/json');
 
-  xhr.onload = function () {
-    if (xhr.status === 200) {
-        boton.value = '¡ENVÍO EXITOSO!';
-        loader.style.display = 'none';
-        $('#contact-form-whats')[0].reset();
-        
-        // ✅ PRIMERO verifica que haya teléfono
-        if (datawhook.telefone && datawhook.telefone.trim() !== '') {
-            var conversionData = {
-                'send_to': 'AW-17677606372/LABEL_DE_PRUEBA_FORZAR_ERROR',
-                'value': 1.0,
-                'currency': 'ARS',
-                'phone_number': datawhook.telefone // Obligatorio
-            };
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            boton.value = '¡ENVÍO EXITOSO!';
+            loader.style.display = 'none';
+            $('#contact-form-whats')[0].reset();
             
-            // Opcional: agrega el nombre si existe
-            if (datawhook.Name && datawhook.Name.trim() !== '') {
-                conversionData.name = datawhook.Name;
-            }
-            console.log('=== DEBUG: Iniciando evento de conversión ===');
-console.log('Datos capturados:', {
-    phone: datawhook?.telefone || datawhook?.telefone || 'No phone',
-    name: datawhook?.Name || datawhook?.Name || 'No name'
-});
-console.log('send_to:', 'AW-17677606372/LABEL_DE_PRUEBA_FORZAR_ERROR');
-console.log('=== FIN DEBUG ===');
-            gtag('event', 'conversion', conversionData);
+            // ✅ ENVIAR CONVERSIÓN AQUÍ (DESPUÉS DE ÉXITO)
+            enviarConversionWhatsApp(datawhook);
+            
+            setTimeout(function() {
+                window.location.href = '/gracias';
+            }, 3000);
+        } else {
+            console.log('Error al enviar los datos');
+            boton.disabled = false;
+            boton.value = 'INTENTAR NUEVAMENTE';
+            loader.style.display = 'none';
         }
-        
-        setTimeout(function() {
-            window.location.href = '/gracias';
-        }, 3000);
-    } else {
-        console.log('Error al enviar los datos');
-        boton.disabled = false;
-        boton.value = 'INTENTAR NUEVAMENTE';
-        loader.style.display = 'none';
-    }
-};
+    };
+    
     xhr.onerror = function () {
         alert('Error de conexión. Por favor verifique su internet.');
         boton.disabled = false;
         loader.style.display = 'none';
     };
-      // TRACKING PARA LA NUEVA CONVERSIÓN
-    if (typeof gtag === 'function') {
-        console.log('🎯 Enviando conversión: Formulario clientes potenciales');
-        
-        // CONVERSIÓN PRINCIPAL
-        gtag('event', 'conversion', {
-            'send_to': 'AW-17677606372/ulTiCPObudAbEOS7q-1B',
-            'value': " . ($datosCliente['valor'] ?? 0) . ",
-            'currency': 'ARS',
-            'transaction_id': 'WHATSAPP_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
-        });
-        
-        // EVENTO PARA ANALYTICS
-        gtag('event', 'generate_lead', {
-            'event_category': 'whatsapp',
-            'event_label': 'saludok_cotizacion'
-        });
-        
-        console.log('✅ Conversión enviada correctamente');
-    }
-  
+    
     xhr.send(JSON.stringify(datawhook));
+}
+
+// FUNCIÓN SEPARADA PARA ENVIAR CONVERSIÓN
+function enviarConversionWhatsApp(data) {
+    // Verificar que gtag está disponible
+    if (typeof gtag !== 'function') {
+        console.error('❌ gtag no disponible para enviar conversión');
+        return;
+    }
+    
+    // Verificar que hay teléfono (requerido para WhatsApp)
+    if (!data.telefone || data.telefone.trim() === '') {
+        console.warn('⚠️ No hay teléfono, no se enviará conversión');
+        return;
+    }
+    
+    console.log('=== DEBUG: Enviando conversión WhatsApp ===');
+    console.log('Datos:', {
+        phone: data.telefone,
+        name: data.Name || 'No name'
+    });
+    
+    // ENVIAR CONVERSIÓN DE GOOGLE ADS
+    gtag('event', 'conversion', {
+        'send_to': 'AW-17677606372/ulTiCPObudAbEOS7q-1B',
+        'value': 1.0,
+        'currency': 'ARS',
+        'transaction_id': 'WHATSAPP_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
+    });
+    
+    // ENVIAR EVENTO A GOOGLE ANALYTICS 4 (opcional)
+    gtag('event', 'generate_lead', {
+        'method': 'whatsapp',
+        'page_title': document.title,
+        'form_type': 'whatsapp_contact'
+    });
+    
+    console.log('✅ Conversión WhatsApp enviada correctamente');
 }
 
 function finalizarCompleto(formClass) {
@@ -172,35 +173,10 @@ function finalizarCompleto(formClass) {
             boton.value = '¡COTIZACIÓN ENVIADA!';
             loader.style.display = 'none';
             $('#contact-form')[0].reset();
-        if (datawh.email || datawh.telefone) {
-            var conversionData = {
-                'send_to': 'AW-17677606372/LABEL_DE_PRUEBA_FORZAR_ERROR',
-                'value': 1.0,
-                'currency': 'ARS'
-            };
             
-            // Campos opcionales (puedes enviarlos o no)
-            if (datawh.name && datawh.name.trim() !== '') {
-                conversionData.name = datawh.name; // Opcional
-            }
-            if (datawh.email && datawh.email.trim() !== '') {
-                conversionData.email = datawh.email;
-            }
-            if (datawh.telefone && datawh.telefone.trim() !== '') {
-                conversionData.phone_number = datawh.telefone;
-            }
-            console.log('=== DEBUG: Iniciando evento de conversión ===');
-console.log('Datos capturados:', {
-    email: datawh?.email || datawhook?.email || 'No email',
-    phone: datawh?.telefone || datawhook?.telefone || 'No phone',
-    name: datawh?.name || datawhook?.Name || 'No name'
-});
-console.log('send_to:', 'AW-17677606372/LABEL_DE_PRUEBA_FORZAR_ERROR');
-console.log('=== FIN DEBUG ===');
-
-            gtag('event', 'conversion', conversionData);
-        }
- 
+            // ✅ ENVIAR CONVERSIÓN AQUÍ
+            enviarConversionFormulario(datawh);
+            
             setTimeout(function() {
                 window.location.href = '/gracias';
             }, 3000);
@@ -210,35 +186,113 @@ console.log('=== FIN DEBUG ===');
             loader.style.display = 'none';
         }
     };
+    
     xhr.onerror = function () {
         alert('Error en la conexión');
         boton.disabled = false;
         loader.style.display = 'none';
     };
 
-          // TRACKING PARA LA NUEVA CONVERSIÓN
-    if (typeof gtag === 'function') {
-        console.log('🎯 Enviando conversión: Formulario clientes potenciales');
-        
-        // CONVERSIÓN PRINCIPAL
-        gtag('event', 'conversion', {
-            'send_to': 'AW-17677606372/ulTiCPObudAbEOS7q-1B',
-            'value': " . ($datosCliente['valor'] ?? 0) . ",
-            'currency': 'ARS',
-            'transaction_id': 'COTIZACION_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
-        });
-        
-        // EVENTO PARA ANALYTICS
-        gtag('event', 'generate_lead', {
-            'event_category': 'cotizacion',
-            'event_label': 'saludok_cotizacion'
-        });
-        
-        console.log('✅ Conversión enviada correctamente');
-    }
     xhr.send(JSON.stringify(datawh));
 }
 
+// FUNCIÓN SEPARADA PARA ENVIAR CONVERSIÓN DE FORMULARIO
+function enviarConversionFormulario(data) {
+    // Verificar que gtag está disponible
+    if (typeof gtag !== 'function') {
+        console.error('❌ gtag no disponible para enviar conversión');
+        return;
+    }
+    
+    // Verificar que hay email O teléfono
+    const tieneEmail = data.email && data.email.trim() !== '';
+    const tieneTelefono = data.telefone && data.telefone.trim() !== '';
+    
+    if (!tieneEmail && !tieneTelefono) {
+        console.warn('⚠️ No hay email ni teléfono, no se enviará conversión');
+        return;
+    }
+    
+    console.log('=== DEBUG: Enviando conversión Formulario ===');
+    console.log('Datos:', {
+        email: data.email || 'No email',
+        phone: data.telefone || 'No phone',
+        name: data.name || 'No name'
+    });
+    
+    // Preparar datos de conversión
+    var conversionData = {
+        'send_to': 'AW-17677606372/ulTiCPObudAbEOS7q-1B',
+        'value': 1.0,
+        'currency': 'ARS',
+        'transaction_id': 'COTIZACION_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
+    };
+    
+    // Agregar datos de usuario si están disponibles
+    if (data.email && data.email.trim() !== '') {
+        conversionData.email = data.email;
+    }
+    if (data.telefone && data.telefone.trim() !== '') {
+        conversionData.phone_number = data.telefone;
+    }
+    if (data.name && data.name.trim() !== '') {
+        conversionData.name = data.name;
+    }
+    
+    // ENVIAR CONVERSIÓN DE GOOGLE ADS
+    gtag('event', 'conversion', conversionData);
+    
+    // ENVIAR EVENTO A GOOGLE ANALYTICS 4
+    gtag('event', 'generate_lead', {
+        'method': 'formulario_completo',
+        'page_title': document.title,
+        'form_type': 'cotizacion_salud',
+        'plan_type': data.Operadora || 'no_specified'
+    });
+    
+    console.log('✅ Conversión Formulario enviada correctamente');
+}
+// Función para probar manualmente las conversiones
+function probarConversionManual(tipo = 'whatsapp') {
+    console.log('=== PRUEBA MANUAL DE CONVERSIÓN ===');
+    console.log('Tipo:', tipo);
+    console.log('gtag disponible:', typeof gtag === 'function');
+    
+    if (typeof gtag !== 'function') {
+        console.error('❌ ERROR: gtag no está disponible');
+        console.log('Posibles causas:');
+        console.log('1. Google Tag Manager no está cargado');
+        console.log('2. El script de gtag.js no está incluido');
+        console.log('3. Hay un error de JavaScript previo');
+        return;
+    }
+    
+    const conversionId = 'AW-17677606372/ulTiCPObudAbEOS7q-1B';
+    
+    // Datos de prueba
+    const testData = {
+        'send_to': conversionId,
+        'value': 1.0,
+        'currency': 'ARS',
+        'transaction_id': 'TEST_' + tipo + '_' + Date.now()
+    };
+    
+    if (tipo === 'whatsapp') {
+        testData.phone_number = '541100000000';
+    } else {
+        testData.email = 'test@ejemplo.com';
+    }
+    
+    console.log('Enviando datos:', testData);
+    
+    // Enviar conversión de prueba
+    gtag('event', 'conversion', testData);
+    
+    console.log('✅ Prueba enviada. Revisa:');
+    console.log('1. Consola -> Network -> Filtra por "collect"');
+    console.log('2. Google Ads -> Conversiones -> Ver actividad');
+    console.log('3. Google Analytics -> Eventos en tiempo real');
+}
 /* ==========================================================================
    3. DATOS DE PREPAGAS (HARDCODED DATA)
    ========================================================================== */

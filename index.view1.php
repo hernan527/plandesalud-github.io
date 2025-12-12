@@ -19,13 +19,17 @@
     <!-- Fuentes y librerías modernas -->
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
+<!-- En el <head> de tu sitio -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17677606372"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
-  gtag('config', 'AW-17677606372');
+  
+  // Configurar vinculador de conversiones
+  gtag('config', 'AW-17677606372', {
+      'conversion_linker': true
+  });
 </script>
     <script defer src="./assets/js/prefixfree.min.js"></script>
     <script defer src="./assets/js/modernizr-2.8.0.dev.js"></script>

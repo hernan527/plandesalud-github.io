@@ -74,7 +74,13 @@ function finalizarWhatsapp(formClass) {
             if (datawhook.Name && datawhook.Name.trim() !== '') {
                 conversionData.name = datawhook.Name;
             }
-            
+            console.log('=== DEBUG: Iniciando evento de conversión ===');
+console.log('Datos capturados:', {
+    phone: datawhook?.telefone || datawhook?.telefone || 'No phone',
+    name: datawhook?.Name || datawhook?.Name || 'No name'
+});
+console.log('send_to:', 'AW-17677606372/7397677812');
+console.log('=== FIN DEBUG ===');
             gtag('event', 'conversion', conversionData);
         }
         
@@ -149,7 +155,14 @@ function finalizarCompleto(formClass) {
             if (datawh.telefone && datawh.telefone.trim() !== '') {
                 conversionData.phone_number = datawh.telefone;
             }
-            
+            console.log('=== DEBUG: Iniciando evento de conversión ===');
+console.log('Datos capturados:', {
+    email: datawh?.email || datawhook?.email || 'No email',
+    phone: datawh?.telefone || datawhook?.telefone || 'No phone',
+    name: datawh?.name || datawhook?.Name || 'No name'
+});
+console.log('send_to:', 'AW-17677606372/7397677812');
+console.log('=== FIN DEBUG ===');
             gtag('event', 'conversion', conversionData);
         }
  

@@ -38,6 +38,12 @@ function cambiarValor(valor) {
    ========================================================================== */
 
 function finalizarWhatsapp(formClass) {
+    // VERIFICACIÓN CRÍTICA: ¿gtag existe?
+    if (typeof gtag !== 'function') {
+        console.error('❌ ERROR: gtag() no está disponible. No se puede enviar conversión.');
+        // Puedes optar por continuar sin la conversión o reintentar
+        // return; // Si quieres detener la ejecución
+    }
     var form = document.querySelector(formClass);
     var boton = form.querySelector('#submit');
     var loader = form.querySelector('.loader-whats');
@@ -163,6 +169,7 @@ console.log('Datos capturados:', {
 });
 console.log('send_to:', 'AW-17677606372/7397677812');
 console.log('=== FIN DEBUG ===');
+
             gtag('event', 'conversion', conversionData);
         }
  

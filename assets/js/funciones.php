@@ -112,6 +112,27 @@ console.log('=== FIN DEBUG ===');
         boton.disabled = false;
         loader.style.display = 'none';
     };
+      // TRACKING PARA LA NUEVA CONVERSIÓN
+    if (typeof gtag === 'function') {
+        console.log('🎯 Enviando conversión: Formulario clientes potenciales');
+        
+        // CONVERSIÓN PRINCIPAL
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17677606372/ulTiCPObudAbEOS7q-1B',
+            'value': " . ($datosCliente['valor'] ?? 0) . ",
+            'currency': 'ARS',
+            'transaction_id': 'WHATSAPP_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
+        });
+        
+        // EVENTO PARA ANALYTICS
+        gtag('event', 'generate_lead', {
+            'event_category': 'whatsapp',
+            'event_label': 'saludok_cotizacion'
+        });
+        
+        console.log('✅ Conversión enviada correctamente');
+    }
+  
     xhr.send(JSON.stringify(datawhook));
 }
 
@@ -194,6 +215,27 @@ console.log('=== FIN DEBUG ===');
         boton.disabled = false;
         loader.style.display = 'none';
     };
+
+          // TRACKING PARA LA NUEVA CONVERSIÓN
+    if (typeof gtag === 'function') {
+        console.log('🎯 Enviando conversión: Formulario clientes potenciales');
+        
+        // CONVERSIÓN PRINCIPAL
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17677606372/ulTiCPObudAbEOS7q-1B',
+            'value': " . ($datosCliente['valor'] ?? 0) . ",
+            'currency': 'ARS',
+            'transaction_id': 'COTIZACION_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
+        });
+        
+        // EVENTO PARA ANALYTICS
+        gtag('event', 'generate_lead', {
+            'event_category': 'cotizacion',
+            'event_label': 'saludok_cotizacion'
+        });
+        
+        console.log('✅ Conversión enviada correctamente');
+    }
     xhr.send(JSON.stringify(datawh));
 }
 

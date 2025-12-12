@@ -1,7 +1,14 @@
 <?php
 header("Content-Type: application/javascript");
 ?>
-
+// EN LA PARTE SUPERIOR DE TU ARCHIVO JAVASCRIPT (funciones.php)
+// Inicialización EXPLÍCITA de gtag para Google Ads
+if (typeof gtag === 'function') {
+    console.log('✅ gtag está disponible. Configurando para Google Ads...');
+    gtag('config', 'AW-17677606372'); // Esta línea es CRÍTICA
+} else {
+    console.error('❌ gtag NO está disponible como función global.');
+}
 /* ==========================================================================
    1. GESTIÓN DE COOKIES Y UTILIDADES
    ========================================================================== */

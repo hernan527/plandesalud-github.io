@@ -19,68 +19,41 @@
     <!-- Fuentes y librerías modernas -->
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
   <!-- En el <head>, ANTES de GTM -->
+<!-- ====== CONFIGURACIÓN DE CONSENT MODE v2 ====== -->
 <script>
-// ====== CONFIGURACIÓN ÚNICA DE dataLayer Y gtag ======
 window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
 
-// ====== CONSENT MODE v2 (OBLIGATORIO) ======
-gtag('consent', 'default', {
-    'ad_storage': 'denied',
-    'analytics_storage': 'denied', 
-    'personalization_storage': 'denied',
-    'functionality_storage': 'denied',
-    'security_storage': 'granted',
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
-    'wait_for_update': 500
+// Consent Mode v2 - Configuración por defecto
+dataLayer.push({
+  'event': 'consent_default',
+  'ad_storage': 'denied',
+  'analytics_storage': 'denied',
+  'ad_user_data': 'denied', 
+  'ad_personalization': 'denied'
 });
 
-// ====== INICIALIZAR GOOGLE ADS ======
-gtag('js', new Date());
-
-// Configurar Google Ads con vinculador
-gtag('config', 'AW-17677606372', {
-    'conversion_linker': true,
-    // Asegurar que respete Consent Mode
-    'allow_google_signals': false,
-    'allow_ad_personalization_signals': false
-});
-
-// ====== FUNCIÓN PARA ACTUALIZAR CONSENTIMIENTO ======
+// Función para aceptar cookies (para tu banner)
 function acceptCookies() {
-    gtag('consent', 'update', {
-        'ad_storage': 'granted',
-        'analytics_storage': 'granted',
-        'personalization_storage': 'granted',
-        'ad_user_data': 'granted',
-        'ad_personalization': 'granted'
-    });
-    
-    // Reconfigurar Google Ads con permisos
-    gtag('config', 'AW-17677606372', {
-        'allow_google_signals': true,
-        'allow_ad_personalization_signals': true
-    });
-    
-    console.log('✅ Consentimiento aceptado, remarketing activado');
+  dataLayer.push({
+    'event': 'consent_update',
+    'ad_storage': 'granted',
+    'analytics_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted'
+  });
+  localStorage.setItem('cookies_accepted', 'true');
+  console.log('✅ Cookies aceptadas');
 }
 
-// ====== DETECTAR SI ES NECESARIO BANNER DE COOKIES ======
-// (Solo si tienes visitantes de UE/EEA)
-function checkIfNeedsCookieBanner() {
-    // Detectar UE/EEA por IP o navegador
-    const needsBanner = navigator.language.includes('es-ES') || 
-                       navigator.language.includes('fr-FR') ||
-                       navigator.language.includes('de-DE');
-    
-    if (needsBanner && !localStorage.getItem('cookies_accepted')) {
-        showCookieBanner();
-    } else {
-        // Si no es UE/EEA o ya aceptó, activar tracking
-        acceptCookies();
-    }
+// Auto-accept si no es UE/EEA (Argentina)
+if (!navigator.language.includes('es-ES') && 
+    !navigator.language.includes('fr-FR') && 
+    !navigator.language.includes('de-DE')) {
+  acceptCookies();
 }
+</script>
+
+<!-- ====== GOOGLE TAG MANAGER (CÓDIGO PRINCIPAL) ====== -->
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -88,13 +61,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MP7JQTZT');</script>
 <!-- End Google Tag Manager -->
-// Llamar después de que cargue la página
-window.addEventListener('load', checkIfNeedsCookieBanner);
-</script>
 
-<!-- CARGAR GTAG.JS DESPUÉS DE LA CONFIGURACIÓN -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17677606372"></script>
-    <script defer src="./assets/js/prefixfree.min.js"></script>
+<!-- ====== NOSCRIPT FALLBACK ====== -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MP7JQTZT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>    <script defer src="./assets/js/prefixfree.min.js"></script>
     <script defer src="./assets/js/modernizr-2.8.0.dev.js"></script>
 
   <script src="./assets/js/renderCards.php"></script>

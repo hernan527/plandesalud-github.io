@@ -60,8 +60,9 @@ function finalizarWhatsapp(formClass) {
 
     var datawhook = {
         'formulario_pagina': $('#formulario_pagina_whats').val(),
-        'Name': $('#Name_whats').val(),
+        'name': $('#Name_whats').val(),
         'telefone': $('#phoneNumber').val(),
+        'formulario':'whastapp'
     };
     
     console.log('En finalizarWhatsapp, gtag es:', typeof gtag);
@@ -77,7 +78,7 @@ function finalizarWhatsapp(formClass) {
             $('#contact-form-whats')[0].reset();
             
             // ✅ ENVIAR CONVERSIÓN AQUÍ (DESPUÉS DE ÉXITO)
-            enviarConversionWhatsApp(datawhook);
+            enviarConversionFormulario(datawhook);
             
             setTimeout(function() {
                 window.location.href = '/gracias';
@@ -99,43 +100,6 @@ function finalizarWhatsapp(formClass) {
     xhr.send(JSON.stringify(datawhook));
 }
 
-// FUNCIÓN SEPARADA PARA ENVIAR CONVERSIÓN
-function enviarConversionWhatsApp(data) {
-    // Verificar que gtag está disponible
-    if (typeof gtag !== 'function') {
-        console.error('❌ gtag no disponible para enviar conversión');
-        return;
-    }
-    
-    // Verificar que hay teléfono (requerido para WhatsApp)
-    if (!data.telefone || data.telefone.trim() === '') {
-        console.warn('⚠️ No hay teléfono, no se enviará conversión');
-        return;
-    }
-    
-    console.log('=== DEBUG: Enviando conversión WhatsApp ===');
-    console.log('Datos:', {
-        phone: data.telefone,
-        name: data.Name || 'No name'
-    });
-    
-    // ENVIAR CONVERSIÓN DE GOOGLE ADS
-    gtag('event', 'conversion', {
-        'send_to': 'AW-17677606372/ulTiCPObudAbEOS7q-1B',
-        'value': 1.0,
-        'currency': 'ARS',
-        'transaction_id': 'WHATSAPP_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
-    });
-    
-    // ENVIAR EVENTO A GOOGLE ANALYTICS 4 (opcional)
-    gtag('event', 'generate_lead', {
-        'method': 'whatsapp',
-        'page_title': document.title,
-        'form_type': 'whatsapp_contact'
-    });
-    
-    console.log('✅ Conversión WhatsApp enviada correctamente');
-}
 
 function finalizarCompleto(formClass) {
     var form = document.querySelector(formClass);
@@ -161,7 +125,8 @@ function finalizarCompleto(formClass) {
         'telefone': $('#phone').val(),
         'email': $('#email').val(),
         'categoriaMono': $('#categoriaMono').val(),
-        'aportantesMono': $('#aportantesMono').val()
+        'aportantesMono': $('#aportantesMono').val(),
+        'formulario':'completo'
     };
 
     const xhr = new XMLHttpRequest();
@@ -219,15 +184,31 @@ function enviarConversionFormulario(data) {
         phone: data.telefone || 'No phone',
         name: data.name || 'No name'
     });
-    
+    analiticsData = {};
+    if(data.formulario === 'completo'){
     // Preparar datos de conversión
     var conversionData = {
-        'send_to': 'AW-17677606372/ulTiCPObudAbEOS7q-1B',
+        'send_to': 'AW-17677606372/Fe6vCKWtl9AbEOS7q-1B',
         'value': 1.0,
         'currency': 'ARS',
         'transaction_id': 'COTIZACION_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
     };
-    
+    analiticsData.method = 'formulario_completo';
+    analiticsData.page_title = document.title;
+    analiticsData.form_type = 'cotizacion_salud';
+    analiticsData.plan_type = data.Operadora || 'no_specified';
+  } else if(data.formulario === 'whastapp'){
+    // ENVIAR CONVERSIÓN DE GOOGLE ADS
+    var conversionData = {
+        'send_to': 'AW-17677606372/ulTiCPObudAbEOS7q-1B',
+        'value': 1.0,
+        'currency': 'ARS',
+        'transaction_id': 'WHATSAPP_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
+    };
+    analiticsData.method = 'formulario_whatsapp';
+    analiticsData.page_title = document.title;
+    analiticsData.form_type = 'contacto_whatsapp';
+  }
     // Agregar datos de usuario si están disponibles
     if (data.email && data.email.trim() !== '') {
         conversionData.email = data.email;
@@ -243,56 +224,13 @@ function enviarConversionFormulario(data) {
     gtag('event', 'conversion', conversionData);
     
     // ENVIAR EVENTO A GOOGLE ANALYTICS 4
-    gtag('event', 'generate_lead', {
-        'method': 'formulario_completo',
-        'page_title': document.title,
-        'form_type': 'cotizacion_salud',
-        'plan_type': data.Operadora || 'no_specified'
-    });
+    gtag('event', 'generate_lead', analiticsData);
     
-    console.log('✅ Conversión Formulario enviada correctamente');
 }
-// Función para probar manualmente las conversiones
-function probarConversionManual(tipo = 'whatsapp') {
-    console.log('=== PRUEBA MANUAL DE CONVERSIÓN ===');
-    console.log('Tipo:', tipo);
-    console.log('gtag disponible:', typeof gtag === 'function');
-    
-    if (typeof gtag !== 'function') {
-        console.error('❌ ERROR: gtag no está disponible');
-        console.log('Posibles causas:');
-        console.log('1. Google Tag Manager no está cargado');
-        console.log('2. El script de gtag.js no está incluido');
-        console.log('3. Hay un error de JavaScript previo');
-        return;
-    }
-    
-    const conversionId = 'AW-17677606372/ulTiCPObudAbEOS7q-1B';
-    
-    // Datos de prueba
-    const testData = {
-        'send_to': conversionId,
-        'value': 1.0,
-        'currency': 'ARS',
-        'transaction_id': 'TEST_' + tipo + '_' + Date.now()
-    };
-    
-    if (tipo === 'whatsapp') {
-        testData.phone_number = '541100000000';
-    } else {
-        testData.email = 'test@ejemplo.com';
-    }
-    
-    console.log('Enviando datos:', testData);
-    
-    // Enviar conversión de prueba
-    gtag('event', 'conversion', testData);
-    
-    console.log('✅ Prueba enviada. Revisa:');
-    console.log('1. Consola -> Network -> Filtra por "collect"');
-    console.log('2. Google Ads -> Conversiones -> Ver actividad');
-    console.log('3. Google Analytics -> Eventos en tiempo real');
-}
+
+//ulTiCPObudAbEOS7q-1B (from whatsapp)
+//JJmeCJupm7MbEOS7q-1B (/gracias)
+//Fe6vCKWtl9AbEOS7q-1B (form completo)
 /* ==========================================================================
    3. DATOS DE PREPAGAS (HARDCODED DATA)
    ========================================================================== */

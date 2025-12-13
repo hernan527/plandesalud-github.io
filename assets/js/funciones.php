@@ -1,14 +1,7 @@
 <?php
 header("Content-Type: application/javascript");
 ?>
-// EN LA PARTE SUPERIOR DE TU ARCHIVO JAVASCRIPT (funciones.php)
-// Inicialización EXPLÍCITA de gtag para Google Ads
-if (typeof gtag === 'function') {
-    console.log('✅ gtag está disponible. Configurando para Google Ads...');
-    gtag('config', 'AW-17677606372'); // Esta línea es CRÍTICA
-} else {
-    console.error('❌ gtag NO está disponible como función global.');
-}
+
 /* ==========================================================================
    1. GESTIÓN DE COOKIES Y UTILIDADES
    ========================================================================== */
@@ -163,71 +156,40 @@ function finalizarCompleto(formClass) {
 
 // FUNCIÓN SEPARADA PARA ENVIAR CONVERSIÓN DE FORMULARIO
 function enviarConversionFormulario(data) {
-    // Verificar que gtag está disponible
-    if (typeof gtag !== 'function') {
-        console.error('❌ gtag no disponible para enviar conversión');
-        return;
-    }
+    window.dataLayer = window.dataLayer || [];
     
     // Verificar que hay email O teléfono
     const tieneEmail = data.email && data.email.trim() !== '';
     const tieneTelefono = data.telefone && data.telefone.trim() !== '';
     
     if (!tieneEmail && !tieneTelefono) {
-        console.warn('⚠️ No hay email ni teléfono, no se enviará conversión');
+        console.warn('⚠️ No hay email ni teléfono');
         return;
     }
     
-    console.log('=== DEBUG: Enviando conversión Formulario ===');
-    console.log('Datos:', {
-        email: data.email || 'No email',
-        phone: data.telefone || 'No phone',
-        name: data.name || 'No name'
-    });
-    analiticsData = {};
-    if(data.formulario === 'completo'){
-    // Preparar datos de conversión
-    var conversionData = {
-        'send_to': 'AW-17677606372/Fe6vCKWtl9AbEOS7q-1B',
-        'value': 1.0,
-        'currency': 'ARS',
-        'transaction_id': 'COTIZACION_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
-    };
-    analiticsData.method = 'formulario_completo';
-    analiticsData.page_title = document.title;
-    analiticsData.form_type = 'cotizacion_salud';
-    analiticsData.plan_type = data.Operadora || 'no_specified';
-  } else if(data.formulario === 'whastapp'){
-    // ENVIAR CONVERSIÓN DE GOOGLE ADS
-    var conversionData = {
-        'send_to': 'AW-17677606372/ulTiCPObudAbEOS7q-1B',
-        'value': 1.0,
-        'currency': 'ARS',
-        'transaction_id': 'WHATSAPP_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
-    };
-    analiticsData.method = 'formulario_whatsapp';
-    analiticsData.page_title = document.title;
-    analiticsData.form_type = 'contacto_whatsapp';
-  }
-    // Agregar datos de usuario si están disponibles
-    if (data.email && data.email.trim() !== '') {
-        conversionData.email = data.email;
-    }
-    if (data.telefone && data.telefone.trim() !== '') {
-        conversionData.phone_number = data.telefone;
-    }
-    if (data.name && data.name.trim() !== '') {
-        conversionData.name = data.name;
+    if(data.formulario === 'completo') {
+        dataLayer.push({
+            'event': 'form_completo_conversion',
+            'method': 'completo',
+            'name': data.name,
+            'email': data.email,
+            'phone_number': data.telefone,
+            'plan_type': data.Operadora || 'no_specified'
+        });
+        console.log('📤 Formulario Completo enviado a GTM');
+        
+    } else if(data.formulario === 'whatsapp') {
+        dataLayer.push({
+            'event': 'whatsapp_conversion',
+            'method': 'whatsapp',
+            'name': data.name,
+            'phone_number': data.telefone
+        });
+        console.log('📤 WhatsApp enviado a GTM');
     }
     
-    // ENVIAR CONVERSIÓN DE GOOGLE ADS
-    gtag('event', 'conversion', conversionData);
-    
-    // ENVIAR EVENTO A GOOGLE ANALYTICS 4
-    gtag('event', 'generate_lead', analiticsData);
-    
+    // ✅ ¡NO hay más código aquí! GTM se encarga del resto
 }
-
 //ulTiCPObudAbEOS7q-1B (from whatsapp)
 //JJmeCJupm7MbEOS7q-1B (/gracias)
 //Fe6vCKWtl9AbEOS7q-1B (form completo)

@@ -59,12 +59,12 @@ if (!navigator.language.includes('es-ES') &&
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MP7JQTZT');</script>
+})(window,document,'script','dataLayer','GTM-TQC6N8VG');</script>
 <!-- End Google Tag Manager -->
 
-<!-- ====== NOSCRIPT FALLBACK ====== -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MP7JQTZT"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>    <script defer src="./assets/js/prefixfree.min.js"></script>
+
+
+<script defer src="./assets/js/prefixfree.min.js"></script>
     <script defer src="./assets/js/modernizr-2.8.0.dev.js"></script>
 
   <script src="./assets/js/renderCards.php"></script>
@@ -494,7 +494,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <body class="page-template page-template-page-simulador page-template-page-simulador-php page page-id-16">
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MP7JQTZT"
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQC6N8VG"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->  
 <!-- Loader -->

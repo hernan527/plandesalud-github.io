@@ -149,7 +149,7 @@ function gtag_report_conversion(url) {
     <link rel="stylesheet"  href="./assets/css/style-whats.css" type="text/css">
       <link rel="stylesheet"  href="./assets/css/style-whats.css" type="text/css">
  
-      <link rel="stylesheet"  href="./assets/css/style.css" type="text/css">
+      <link rel="stylesheet"  href="./assets/css/style.css?v=1.1" type="text/css">
 
     <!-- Estilos globales de WordPress -->
     <!-- <link rel="stylesheet" id="wp-block-library-css"  href="./assets/css/style.min1eb7.css?ver=6.0.3" type="text/css" media="all" /> -->

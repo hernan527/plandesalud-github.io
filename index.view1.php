@@ -8,8 +8,8 @@
     <meta name="Copyright" content="Copyright Mejor Plan de Salud 2023. Todos los derechos reservados.">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="shortcut icon" sizes="1024x1024" href="./assets/imagenes/logos-web/plan-de-salud-favicon.ico" />
-    <link rel="apple-touch-icon" href="./assets/imagenes/logos-web/plan-de-salud-favicon.ico">
+    <link rel="shortcut icon" sizes="1024x1024" href="./assets/imagenes/logos-web/favicon.ico" />
+    <link rel="apple-touch-icon" href="./assets/imagenes/logos-web/favicon.ico">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Scripts esenciales -->
     <script defer type='text/javascript' src="./assets/js/jquery.validate.min.js"></script>
@@ -126,7 +126,7 @@ function gtag_report_conversion(url) {
     </script> -->
    
     <!-- Hojas de estilo -->
-    <link rel="stylesheet" href="./assets/imagenes/stylea870.css?versao=5.0" />
+    <link rel="stylesheet" href="./assets/imagenes/stylea870.css?versao=5.1" />
     <link href="./assets/css/style-formularioSimuladorGeneral.css" rel="stylesheet" type="text/css">
 
     <!-- <link rel="stylesheet" href="./assets/imagenes/styles871.css" /> -->
@@ -149,7 +149,7 @@ function gtag_report_conversion(url) {
     <link rel="stylesheet"  href="./assets/css/style-whats.css" type="text/css">
       <link rel="stylesheet"  href="./assets/css/style-whats.css" type="text/css">
  
-      <link rel="stylesheet"  href="./assets/css/style.css?v=1.1" type="text/css">
+      <link rel="stylesheet"  href="./assets/css/style.css?v=1.3" type="text/css">
 
     <!-- Estilos globales de WordPress -->
     <!-- <link rel="stylesheet" id="wp-block-library-css"  href="./assets/css/style.min1eb7.css?ver=6.0.3" type="text/css" media="all" /> -->
@@ -831,7 +831,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div>
             <div class="col">
                 <a class="logo" href="index.php">
-                    <img src="./assets/imagenes/logos-web/plan-de-salud-vos-te-mereces-lo-mejor-logo-movil.webp" alt="Plan de Salud" title="Plan de Salud">
+                    <img src="./assets/imagenes/logos-web/saludok-plan-de-salud-vos-te-mereces-lo-mejor-logo.webp" alt="Plan de Salud" title="Plan de Salud">
                 </a>
                 <p>Somos asesores independientes de las mayores prepagas de Argentina. Cotizá con nosotros y podés ahorrar hasta un 50% en tu Plan de Salud. ¡Todo online, simple y sin burocracias!</p>
                 <!-- <p><strong>Asociados a:</strong> <img src="./assets/imagenes/logos-web/sello-confianza.png" alt="Sello de Confianza" style="height: 30px; margin-top: 10px;"></p> -->

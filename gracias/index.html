@@ -4,23 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>¡Solicitud Recibida! - Plan de Salud</title>
-    <meta name="robots" content="noindex, nofollow" /> <!-- IMPORTANTE: Que Google no indexe esta página -->
+    <meta name="robots" content="noindex, nofollow" /> 
     
     <!-- Estilos de tu sitio -->
     <link rel="stylesheet" href="../assets/css/stylea870.css?versao=5.0" />
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    <!-- Google Ads Event Snippet (PEGA AQUÍ TU CÓDIGO DE GOOGLE ADS) -->
-    <!-- <script> gtag('event', 'conversion', {'send_to': 'AW-XXXXXXXX/Label'}); </script> -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17677606372"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- ========================================== -->
+    <!-- 🚀 CÓDIGO MAESTRO DE GOOGLE TAG MANAGER -->
+    <!-- ========================================== -->
+    <script>
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'AW-17677606372');
-</script>
+    // 1. CONFIGURACIÓN DE CONSENTIMIENTO
+    dataLayer.push({
+      'event': 'consent_default',
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied',
+      'ad_user_data': 'denied', 
+      'ad_personalization': 'denied'
+    });
+
+    // 2. FILTRO ANTI-AUTOVISITAS
+    var esAdmin = localStorage.getItem('modo_desarrollador') === 'true';
+
+    if (esAdmin) {
+        // SI ERES TÚ (ADMIN):
+        console.log('🛑 MODO ADMIN: GTM bloqueado en página de gracias. No se enviarán datos.');
+    } else {
+        // SI ES UN CLIENTE REAL:
+        console.log('✅ Visitante Real: Cargando GTM...');
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TQC6N8VG');
+    }
+    </script>
+    <!-- ========================================== -->
+
     <style>
         body {
             background-color: #f4f6f9;
@@ -48,7 +70,7 @@
             border-radius: 20px;
             box-shadow: 0 15px 40px rgba(0,0,0,0.08);
             text-align: center;
-            border-top: 6px solid #25d366; /* Verde éxito */
+            border-top: 6px solid #25d366; 
         }
         .success-icon {
             width: 80px;
@@ -116,11 +138,13 @@
 </head>
 
 <body>
+    <!-- NO BORRAR: Iframe de GTM para navegadores sin JS -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQC6N8VG"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <header id="header" class="com-banner">
         <div id="corpo-topo" style="justify-content: center;">
             <a class="logo" href="../index.php">
-                <!-- Asegúrate de que la ruta de la imagen sea correcta -->
                 <img src="../assets/imagenes/logos-web/saludok-plan-de-salud-vos-te-mereces-lo-mejor-logo.webp" alt="Plan de Salud" style="max-height: 50px;">
             </a>
         </div>
@@ -141,7 +165,11 @@
 
             <p style="font-size: 16px; margin-bottom: 20px;">¿Necesitas agilizar el trámite?</p>
             
-            <a href="https://api.whatsapp.com/send?phone=5491124985882&text=Hola,%20acabo%20de%20enviar%20una%20solicitud%20por%20la%20web%20y%20quiero%20prioridad." class="btn-whatsapp" target="_blank">
+            <!-- HE AGREGADO EL ONCLICK AQUÍ PARA MEDIR TAMBIÉN -->
+            <a href="https://api.whatsapp.com/send?phone=5491124985882&text=Hola,%20acabo%20de%20enviar%20una%20solicitud%20por%20la%20web%20y%20quiero%20prioridad." 
+               class="btn-whatsapp" 
+               target="_blank"
+               onclick="window.dataLayer.push({'event': 'whatsapp_conversion', 'method': 'boton_click_gracias'});">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="24" height="24" style="filter: brightness(0) invert(1);">
                 Hablar con un asesor YA
             </a>
@@ -149,12 +177,6 @@
             <a href="../index.php" class="btn-back">← Volver al inicio</a>
         </div>
     </div>
-
-    <!-- Script de Conversión de Google Ads (Déjalo comentado hasta tener el ID) -->
-    <script>
-        // Si usas Google Ads, descomenta y pon tu ID aquí
-        // gtag('event', 'conversion', {'send_to': 'AW-TU-ID-AQUI/TU-LABEL-AQUI'});
-    </script>
 
 </body>
 </html>

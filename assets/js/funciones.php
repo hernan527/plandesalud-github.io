@@ -55,7 +55,7 @@ function finalizarWhatsapp(formClass) {
         'formulario_pagina': $('#formulario_pagina_whats').val(),
         'name': $('#Name_whats').val(),
         'telefone': $('#phoneNumber').val(),
-        'formulario':'whastapp'
+        'formulario':'whatsapp'
     };
     
     console.log('En finalizarWhatsapp, gtag es:', typeof gtag);

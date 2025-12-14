@@ -19,11 +19,22 @@
     <!-- Fuentes y librerías modernas -->
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
   <!-- En el <head>, ANTES de GTM -->
-<!-- ====== CONFIGURACIÓN DE CONSENT MODE v2 ====== -->
 <script>
 window.dataLayer = window.dataLayer || [];
 
-// Consent Mode v2 - Configuración por defecto
+// ==========================================
+// 1. BLOQUE ANTI-AUTOVISITAS (NUEVO)
+// ==========================================
+// Detectar si en la URL pusiste ?soy_yo=1
+const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('soy_yo') === '1') {
+    localStorage.setItem('modo_desarrollador', 'true');
+    alert('🔧 MODO ADMIN ACTIVADO: Tus pruebas NO se enviarán a GTM/Google Ads.');
+}
+
+// ==========================================
+// 2. CONSENT MODE v2
+// ==========================================
 dataLayer.push({
   'event': 'consent_default',
   'ad_storage': 'denied',
@@ -32,7 +43,7 @@ dataLayer.push({
   'ad_personalization': 'denied'
 });
 
-// Función para aceptar cookies (para tu banner)
+// Función para aceptar cookies
 function acceptCookies() {
   dataLayer.push({
     'event': 'consent_update',
@@ -45,7 +56,7 @@ function acceptCookies() {
   console.log('✅ Cookies aceptadas');
 }
 
-// Auto-accept si no es UE/EEA (Argentina)
+// Auto-accept si no es UE/EEA
 if (!navigator.language.includes('es-ES') && 
     !navigator.language.includes('fr-FR') && 
     !navigator.language.includes('de-DE')) {
@@ -62,6 +73,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-TQC6N8VG');</script>
 <!-- End Google Tag Manager -->
 
+<!-- Event snippet for Clic WhatsApp - Gracias conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17677606372/0Km-CMHkgtEbEOS7q-1B',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 
 
 <script defer src="./assets/js/prefixfree.min.js"></script>
@@ -1101,7 +1128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ¡Hola! ¿Podemos ayudarte en algo?
   </div>
 
-  <a id="whatsappLink" href="https://wa.me/34600123456?text=Quiero%20hacer%20una%20consulta%20por%20la%20web" class="whatsapp-button" target="_blank">
+  <a id="whatsappLink" href="https://wa.me/5491124985882?text=Quiero%20hacer%20una%20consulta%20por%20la%20web" class="whatsapp-button" target="_blank">
     <span class="new-message-indicator"></span> 
         <img src="./assets/formularios/formulario-whatsapp/icone-whatsapp.svg" style="width: 40px; filter: invert(0);">
     

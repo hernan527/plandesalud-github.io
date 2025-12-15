@@ -5,11 +5,16 @@
     <title>Cotizar Plan de Salud - Compará +50 Prepagas y Obras Sociales | Ahorrá hasta 50%</title>
     <meta name="title" content="Cotizar Plan de Salud - Compará +50 Prepagas y Obras Sociales | Ahorrá hasta 50%">
     <meta charset="UTF-8">
-    <meta name="Copyright" content="Copyright Mejor Plan de Salud 2023. Todos los derechos reservados.">
+    <meta name="Copyright" content="Copyright SaludOK 2023. Todos los derechos reservados.">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="shortcut icon" sizes="1024x1024" href="./assets/imagenes/logos-web/favicon.ico" />
-    <link rel="apple-touch-icon" href="./assets/imagenes/logos-web/favicon.ico">
+<!-- Favicon moderno (PNG/SVG) - Para la mayoría de los navegadores -->
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/imagenes/logos-web/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/imagenes/logos-web/favicon-16x16.png">
+<!-- Apple Touch Icon - Para guardar en pantalla de inicio (iOS/iPadOS) -->
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/imagenes/logos-web/apple-touch-icon.png">
+
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Scripts esenciales -->
     <script defer type='text/javascript' src="./assets/js/jquery.validate.min.js"></script>
@@ -126,9 +131,8 @@ function gtag_report_conversion(url) {
     </script> -->
    
     <!-- Hojas de estilo -->
-    <link rel="stylesheet" href="./assets/imagenes/stylea870.css?versao=5.1" />
-    <link href="./assets/css/style-formularioSimuladorGeneral.css" rel="stylesheet" type="text/css">
-
+    <link rel="stylesheet" href="./assets/imagenes/stylea870.css?versao=5.2" />
+    <link href="./assets/css/style-formularioSimuladorGeneral.css?versao=1.1" rel="stylesheet" type="text/css">
     <!-- <link rel="stylesheet" href="./assets/imagenes/styles871.css" /> -->
 
     <!-- SEO Optimizado -->
@@ -146,10 +150,9 @@ function gtag_report_conversion(url) {
     <meta property="og:image:height" content="540" />
 
     <!-- Estilos personalizados -->
-    <link rel="stylesheet"  href="./assets/css/style-whats.css" type="text/css">
-      <link rel="stylesheet"  href="./assets/css/style-whats.css" type="text/css">
+    <link rel="stylesheet"  href="./assets/css/style-whats.css?v=1.2" type="text/css">
  
-      <link rel="stylesheet"  href="./assets/css/style.css?v=1.3" type="text/css">
+      <link rel="stylesheet"  href="./assets/css/style.css?v=1.2" type="text/css">
 
     <!-- Estilos globales de WordPress -->
     <!-- <link rel="stylesheet" id="wp-block-library-css"  href="./assets/css/style.min1eb7.css?ver=6.0.3" type="text/css" media="all" /> -->
@@ -852,7 +855,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <footer id="footer">
         <div id="corpo-rodape"></div>
         <div class="copy">
-            <p>&copy;2025 Mejor Plan de Salud. Todos los derechos reservados.</p>
+            <p>&copy;2025 SaludOK. Todos los derechos reservados.</p>
         </div>
     </footer>
 </div>
@@ -875,7 +878,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 
     jQuery(document).ready(function(){
-        jQuery.validator.addMethod("telefone", function (value) {
+        jQuery.validator.addMethod("phone", function (value) {
         // após o Prefijo, eu pedo os 4 primeiros numeros do telefone
         var numbersFiltered = value.substring(0,4);
         console.log(numbersFiltered)
@@ -894,7 +897,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     cualOS:{required: true },
     sueldo :{required: true,rangelength: [6,7] },
     Name :{required: true },
-    telefone :{required: true,rangelength: [10,10]},
+    phone :{required: true,rangelength: [10,10]},
     email :{required: true,email: true},
         },
  
@@ -922,7 +925,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     jQuery("#edad_1").mask("90");
     jQuery("#edad_2").mask("90");
     jQuery("#hijos_num").mask("9");
-    jQuery("#telefone").mask("9000000000");
+    jQuery("#phone").mask("9000000000");
     jQuery("#sueldo").mask("9000000");
     
     jQuery(".logos-2 img").click(function(){
@@ -986,7 +989,7 @@ jQuery(document).ready(function(){
         const email = document.getElementById('email').value; // Obtén el valor del campo de correo electrónico
 
         // Expresión regular para validar el formato de email
-        const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+/.[a-zA-Z]{2,}$/;
 
         // Elemento para mostrar mensajes
         const mensaje = document.getElementById('mensaje');

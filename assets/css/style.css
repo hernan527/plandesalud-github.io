@@ -435,98 +435,205 @@ body {
 
     
      
-
 /* =========================================
-   ESTILO TESTIMONIOS CON FOTOS REALES
+   SECCIÓN TESTIMONIOS - GRID 2x2
    ========================================= */
 
 .testimonials-section {
-    padding: 60px 20px;
-    background-color: #f9f9f9;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
 }
 
+.testimonials-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #00629b;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.testimonials-section .subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* CONTENEDOR GRID 2x2 */
 .testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
+/* CARD INDIVIDUAL */
 .testimonial-card {
     background: white;
+    border-radius: 15px;
     padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-    border: 1px solid #eee;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eaeaea;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    height: 100%;
 }
 
 .testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
+/* RATING */
 .rating {
     color: #ffb400;
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
     letter-spacing: 2px;
 }
 
+/* TEXTO DEL TESTIMONIO */
 .testimonial-text {
-    font-size: 16px;
+    font-size: 1.05rem;
     line-height: 1.6;
-    color: #555;
+    color: #444;
+    margin-bottom: 25px;
+    flex-grow: 1;
     font-style: italic;
-    margin-bottom: 20px;
 }
 
+/* AUTOR */
 .testimonial-author {
     display: flex;
     align-items: center;
-    gap: 15px; /* Espacio entre foto y texto */
-    margin-top: auto;
-    border-top: 1px solid #f0f0f0;
-    padding-top: 15px;
+    gap: 15px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
 }
 
-/* CONTENEDOR DE LA FOTO */
 .author-avatar {
-    width: 60px; /* Tamaño fijo */
+    width: 60px;
     height: 60px;
-    flex-shrink: 0; /* Evita que se aplaste */
-    border-radius: 50%; /* Lo hace redondo */
+    border-radius: 50%;
     overflow: hidden;
-    border: 3px solid #fff; /* Anillo blanco interno */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra suave */
+    flex-shrink: 0;
+    border: 3px solid #00629b;
 }
 
-/* LA IMAGEN EN SÍ */
 .author-avatar img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* CLAVE: Recorta la imagen sin deformarla */
-    display: block;
-    border-radius: 50%;
+    object-fit: cover;
 }
 
 .author-info h4 {
     margin: 0;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 1.1rem;
     color: #333;
+    font-weight: 600;
 }
 
 .author-info p {
-    margin: 2px 0 0;
-    font-size: 13px;
-    color: #888;
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 0.9rem;
 }
 
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+/* TABLET: Mantener 2x2 pero reducir gap */
+@media (max-width: 1024px) {
+    .testimonials-grid {
+        gap: 25px;
+        padding: 0 15px;
+    }
+    
+    .testimonial-card {
+        padding: 25px;
+    }
+}
+
+/* MÓVIL GRANDE: Cambiar a 1 columna */
+@media (max-width: 768px) {
+    .testimonials-section {
+        padding: 60px 15px;
+    }
+    
+    .testimonials-section h2 {
+        font-size: 2rem;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr; /* 1 columna */
+        gap: 20px;
+        max-width: 500px; /* Ancho máximo para mejor lectura */
+    }
+    
+    .testimonial-card {
+        padding: 20px;
+    }
+    
+    .testimonial-text {
+        font-size: 1rem;
+    }
+}
+
+/* MÓVIL PEQUEÑO */
+@media (max-width: 480px) {
+    .testimonials-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .testimonials-section .subtitle {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    
+    .testimonial-author {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .author-info h4,
+    .author-info p {
+        text-align: center;
+    }
+}
+
+/* =========================================
+   EFECTO DE APARICIÓN (opcional)
+   ========================================= */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.testimonial-card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+/* Retraso escalonado */
+.testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+.testimonial-card:nth-child(2) { animation-delay: 0.2s; }
+.testimonial-card:nth-child(3) { animation-delay: 0.3s; }
+.testimonial-card:nth-child(4) { animation-delay: 0.4s; }
  .banner-mobile {
     position: relative;
     /* background-size: cover; */
@@ -628,9 +735,7 @@ body {
   width: 23.7%;
 }
 
-.cardBox:hover .card {
-  transform: rotateY( 180deg);
-}
+
 
 .card {
     border-radius: 18px  !important;
@@ -639,7 +744,6 @@ body {
   background: #fff;
   cursor: default;
   height: 350px;
-  transform-style: preserve-3d;
   transition: transform 0.4s ease 0s;
   width: 100%;
   -webkit-animation: giro 1s 1;
@@ -651,7 +755,6 @@ body {
 }
 
 .card .front {
-  backface-visibility: hidden;
   box-sizing: border-box;
   color: white;
   display: block;
@@ -663,10 +766,11 @@ body {
   width: 100%;
   padding-left:30px;
   padding-right:30px;
-
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
 }
 .card .back {
-  backface-visibility: hidden;
   box-sizing: border-box;
   color: white;
   display: block;
@@ -686,9 +790,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
   
 }
+.cardBox:hover .front {
+  opacity: 0;
+  visibility: hidden;
+}
 
+.cardBox:hover .back {
+  opacity: 1;
+  visibility: visible;
+}
 /* Viñetas */
 .card .front ul.features {
   list-style: none  !important;
@@ -735,7 +850,6 @@ body {
 .card .back {
   background: #fff;
 
-  transform: rotateY( 180deg);
 }
 
 .card .back a {
@@ -785,23 +899,9 @@ body {
   animation: giro 2.5s 1;
 }
 
-@-webkit-keyframes giro {
-  from {
-    transform: rotateY( 180deg);
-  }
-  to {
-    transform: rotateY( 0deg);
-  }
-}
 
-@keyframes giro {
-  from {
-    transform: rotateY( 180deg);
-  }
-  to {
-    transform: rotateY( 0deg);
-  }
-}
+
+
 
 @media screen and (max-width: 767px) {
   .cardBox {
@@ -1469,4 +1569,301 @@ body {
   .beneficios-grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
+}
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* --- ESTILOS DEL BOTÓN (Referencia) --- */
+.whatsapp-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65px; 
+  height: 65px;
+  background-color: #25D366; 
+  border-radius: 50%;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
+  text-decoration: none;
+  cursor: pointer;
+  position: relative; 
+  transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+
+
+/* ... (Resto del CSS del Badge y las animaciones se mantiene igual) ... */
+.whatsapp-button:hover {
+  background-color: #128C7E;
+  transform: scale(1.1) rotate(5deg); /* Efecto de "wiggle" suave */
+}
+
+/* Indicador de Nuevo Mensaje (Punto Rojo con el "1") */
+.new-message-indicator {
+  position: absolute;
+  /* La clave: Asegurar que el indicador esté SOBRE el SVG del icono de WhatsApp */
+  z-index: 100; 
+  
+  /* Posición a la izquierda */
+  top: -5px; /* Ajuste para que se vea mejor */
+  left: -5px; /* Ajuste para que se vea mejor */
+  
+  /* Tamaño y Fondo */
+  width: 22px; 
+  height: 22px; 
+  background-color: #E74C3C; 
+  border-radius: 50%;
+  border: 3px solid white; 
+  animation: pulse 1.5s infinite; 
+
+  /* Estilos para el número "1" */
+  color: white; 
+  font-size: 14px; /* Un poco más grande para asegurar visibilidad */
+  font-weight: bold;
+  
+  /* Centrado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1; 
+}
+/* Animación de pulsación para el indicador */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(231, 76, 60, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
+  }
+}
+
+
+/* --- ESTILOS DEL BADGE/BURBUJA (Mucho más bonitos) --- */
+.whatsapp-badge {
+  position: absolute;
+  bottom: 85px; /* Ajustado para el botón más grande */
+  right: 0;
+  
+  /* Estilo Moderno */
+  background: linear-gradient(135deg, #f7f7f7, #ffffff); /* Degradado suave */
+  color: #333;
+  padding: 12px 18px; /* Más padding */
+  border-radius: 12px; /* Más redondeado */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
+  max-width: 250px;
+  text-align: left;
+  font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; /* Fuente del sistema */
+  
+  /* Animación */
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.9) translateY(10px); /* Empieza pequeño y se mueve */
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out, visibility 0.4s;
+}
+
+/* Icono dentro del Badge */
+.badge-icon {
+    font-size: 18px;
+    margin-right: 5px;
+    display: inline-block;
+    animation: wave 1.5s infinite; /* Pequeña animación de saludo */
+}
+
+
+
+/* Clase para mostrar */
+.whatsapp-badge.show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translateY(0);
+}
+
+/* Flecha/Cola de la burbuja */
+.whatsapp-badge::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 20px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid white; /* El color debe coincidir con el fondo base del badge */
+}
+/* --- ESTILOS ADICIONALES PARA EL BOTÓN DENTRO DEL QR --- */
+/* --- ESTILOS DEL POP-UP QR (Centrado en la pantalla) --- */
+#qr-popup {
+    /* Ocultar por defecto */
+    display: none; 
+    
+    /* Estilos para centrar el pop-up en la PANTALLA, NO en el contenedor del botón */
+    position: fixed; /* CLAVE para que esté fijo en la pantalla */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* CLAVE para el centrado perfecto */
+    
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Sombra más agradable */
+    border: 1px solid #ddd;
+    z-index: 9999; /* Asegura que esté por encima de TODO */
+    text-align: center;
+    
+}
+
+#qr-popup img {
+    width: 180px; /* Tamaño de tu QR */
+    height: 180px;
+    display: block; /* Para centrar la imagen si agregas texto */
+    margin: 0 auto 10px auto;
+}
+/* Ocultamos el pop-up por defecto */
+.qr-popup-hidden {
+    display: none !important; /* Usar !important si hay conflictos */
+}
+
+/* --- ESTILOS DEL BOTÓN "ABRIR WHATSAPP WEB" --- */
+.qr-action-button {
+    /* Diseño Base */
+    display: inline-flex; /* Usar flex para centrar contenido si agregamos un ícono */
+    align-items: center; 
+    justify-content: center;
+    
+    margin-top: 15px; /* Más espacio superior */
+    padding: 10px 20px; /* Más padding para que se vea más grande */
+    
+    /* Colores y Borde */
+    background-color: #25D366; /* Verde WhatsApp */
+    color: white !important; /* Texto blanco (usamos !important por si hay estilos globales) */
+    text-decoration: none;
+    border-radius: 8px; /* Bordes ligeramente más redondeados */
+    border: none; /* Sin borde */
+    
+    /* Tipografía */
+    font-size: 16px; 
+    font-weight: 600; /* Semi-negrita */
+    line-height: 1; /* Asegura un buen espaciado */
+    
+    /* Sombra y Transición (Mejora visual) */
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4); /* Sombra suave del color del botón */
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+/* Efecto al pasar el ratón (Hover) */
+.qr-action-button:hover {
+    background-color: #128C7E; /* Verde más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Pequeño levantamiento */
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.6); /* Sombra más fuerte */
+}
+
+/* Estilo para el ícono dentro del botón (Si lo agregas) */
+.qr-action-button i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+/* SOLUCIÓN MÍNIMA RESPONSIVA */
+.possui-plano {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.possui-plano label {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.possui-plano b {
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    word-break: break-word;
+    white-space: normal;
+}
+
+/* SOLUCIÓN MÍNIMA PERO EFECTIVA */
+@media (max-width: 767px) {
+    .possui-plano {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* ← LO MÁS IMPORTANTE */
+        width: 100%;
+    }
+    
+    .possui-plano p {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .possui-plano label {
+        width: 100%;
+        max-width: 300px; /* Controlar ancho máximo */
+        display: block; /* Cambiar a block */
+    }
+    
+    .possui-plano b {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin: 5px 0; /* Margen uniforme */
+    }
+}
+.beneficios-list {
+  list-style-type: none;
+  padding: 15px 0;
+  margin: 15px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.beneficios-list li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.beneficios-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #4CAF50;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.plan-precio {
+  background-color: #e8f5e9;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin: 12px 0;
+  font-weight: bold;
+  color: #2e7d32;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* Estilo específico para características que empiezan con ▶ */
+.beneficios-list li:has(:contains("▶")) {
+  color: #333;
+  font-weight: 500;
+}
+
+.beneficios-list li:has(:contains("▶")):before {
+  content: "▶";
+  color: #2196F3;
 }
